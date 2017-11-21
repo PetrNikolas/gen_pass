@@ -9,6 +9,7 @@
     "dev": "node server.js",
     "build": "next build",
     "heroku-postbuild": "npm run build",
+    "serve": "yarn run build && yarn start",
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {

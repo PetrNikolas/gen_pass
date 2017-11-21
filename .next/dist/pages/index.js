@@ -30,7 +30,7 @@ exports.default = function () {
   }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-3556081632'
   }), _react2.default.createElement('title', {
     className: 'jsx-3556081632'
-  }, 'Next.js on Heroku'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-3556081632'
+  }, 'GEN PASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-3556081632'
   }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-3556081632'
   }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-3556081632'
   }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-3556081632'
@@ -44,7 +44,7 @@ exports.default = function () {
   }, _react2.default.createElement('a', { href: '/', className: 'jsx-3556081632' + ' ' + 'btn btn-link'
   }, 'Home')), _react2.default.createElement('section', {
     className: 'jsx-3556081632' + ' ' + 'navbar-center'
-  }, 'Generator of secure password'), _react2.default.createElement('section', {
+  }, 'GEN PASS'), _react2.default.createElement('section', {
     className: 'jsx-3556081632' + ' ' + 'navbar-section'
   }, _react2.default.createElement('a', { href: '#', className: 'jsx-3556081632' + ' ' + 'btn btn-link'
   }, 'Username generator'), _react2.default.createElement('a', { href: '#', className: 'jsx-3556081632' + ' ' + 'btn btn-link'

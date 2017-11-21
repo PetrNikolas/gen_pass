@@ -8,7 +8,7 @@ export default () => (
       <meta charSet="utf-8"/>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
-      <title>Next.js on Heroku</title>
+      <title>GEN PASS</title>
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
       <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css" />
@@ -43,7 +43,7 @@ export default () => (
         <a href="/" className="btn btn-link">Home</a>
       </section>
       <section className="navbar-center">
-        Generator of secure password
+        GEN PASS
       </section>
       <section className="navbar-section">
         <a href="#" className="btn btn-link">Username generator</a>
