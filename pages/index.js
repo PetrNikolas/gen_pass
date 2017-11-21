@@ -1,7 +1,33 @@
+// ------------------------------------------------------------------------------
+// Import libs
+// ------------------------------------------------------------------------------
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
+
+// ------------------------------------------------------------------------------
+// Generate password
+// ------------------------------------------------------------------------------
+const generatorHandleClick = (length) => {
+  /** Password */
+  let password = "";
+
+  /** Possible word, numbers, etc. */
+  const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  /** Iterator */
+  for(let i = 0; i < length; i++) {
+      password += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+
+  console.log(password);
+}
+
+
+// ------------------------------------------------------------------------------
+// Export
+// ------------------------------------------------------------------------------
 export default () => (
   <div className="root">
     <Head>
@@ -65,7 +91,7 @@ export default () => (
                 You can try generate your secure password. So, click on the button and generate your password now!
               </div>
               <div className="card-footer">
-                <a className="btn btn-primary" id="start_button">Generate now!</a>
+                <a onClick={ () => { generatorHandleClick(100) } } className="btn btn-primary" id="start_button">Generate now!</a>
               </div>
             </div>
           </div>

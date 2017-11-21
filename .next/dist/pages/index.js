@@ -22,6 +22,32 @@ var _link2 = _interopRequireDefault(_link);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// ------------------------------------------------------------------------------
+// Generate password
+// ------------------------------------------------------------------------------
+var generatorHandleClick = function generatorHandleClick(length) {
+  /** Password */
+  var password = "";
+
+  /** Possible word, numbers, etc. */
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  /** Iterator */
+  for (var i = 0; i < length; i++) {
+    password += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+
+  console.log(password);
+};
+
+// ------------------------------------------------------------------------------
+// Export
+// ------------------------------------------------------------------------------
+
+// ------------------------------------------------------------------------------
+// Import libs
+// ------------------------------------------------------------------------------
+
 exports.default = function () {
   return _react2.default.createElement('div', {
     className: 'jsx-3556081632' + ' ' + 'root'
@@ -68,6 +94,8 @@ exports.default = function () {
     className: 'jsx-3556081632' + ' ' + 'card-body'
   }, 'You can try generate your secure password. So, click on the button and generate your password now!'), _react2.default.createElement('div', {
     className: 'jsx-3556081632' + ' ' + 'card-footer'
-  }, _react2.default.createElement('a', { id: 'start_button', className: 'jsx-3556081632' + ' ' + 'btn btn-primary'
+  }, _react2.default.createElement('a', { onClick: function onClick() {
+      generatorHandleClick(100);
+    }, id: 'start_button', className: 'jsx-3556081632' + ' ' + 'btn btn-primary'
   }, 'Generate now!'))))))));
 };
