@@ -78,22 +78,27 @@ export default class extends React.Component {
           .root {
             padding: 50px;
             font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-            background: #fefefe !important;
           }
 
           .navbar a {
-            color: #00b4f0 !important;
+            color: #2575fc !important; 
+          }
+
+          .navbar-center {
+            color: #1c1a27;
+            font-size: 35px;
           }
 
           .card {
             width: 50%;
             margin: 0 auto;
-            margin-top: 25vh;
+            margin-top: 10vh;
+            box-shadow: 0 6px 15px rgba(36,37,38,0.08);
           }
 
           .btn-primary, .btn-primary:focus, .btn-primary:active {
-            background: #00b4f0 !important;
-            border-color: #00b4f0 !important;
+            background: #6a11cb !important;
+            border-color: #6a11cb !important;
           }
 
           input {
@@ -101,12 +106,16 @@ export default class extends React.Component {
             margin: 0 auto;
           }
 
+          label {
+            color: #868f96 !important;
+          }
+
           textarea {
             resize: none;
           }
 
           .form-input:focus {
-            border-color: #00b4f0;
+            border-color: #6a11cb;
             box-shadow: none;
           }
         `}</style>
@@ -121,7 +130,7 @@ export default class extends React.Component {
           </section>
 
           <section className="navbar-section">
-            <a href="#" className="btn btn-link">Username generator</a>-->
+            <a href="#" className="btn btn-link">Username generator</a>
             <a href="#" className="btn btn-link">Donate</a>
             <a href="#" className="btn btn-link">Contact</a>
           </section>
