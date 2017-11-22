@@ -4,6 +4,26 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
 var _style = require('styled-jsx/style.js');
 
 var _style2 = _interopRequireDefault(_style);
@@ -23,79 +43,140 @@ var _link2 = _interopRequireDefault(_link);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // ------------------------------------------------------------------------------
-// Generate password
+// Export component
 // ------------------------------------------------------------------------------
-var generatorHandleClick = function generatorHandleClick(length) {
-  /** Password */
-  var password = "";
 
-  /** Possible word, numbers, etc. */
-  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+var _class = function (_React$Component) {
+  (0, _inherits3.default)(_class, _React$Component);
 
-  /** Iterator */
-  for (var i = 0; i < length; i++) {
-    password += possible.charAt(Math.floor(Math.random() * possible.length));
+  function _class(props) {
+    (0, _classCallCheck3.default)(this, _class);
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || (0, _getPrototypeOf2.default)(_class)).call(this, props));
+
+    _this.updateInputValue = function (event) {
+      _this.setState({
+        inputValue: event.target.value
+      });
+    };
+
+    _this.generatorHandleClick = function (length) {
+      /** Password */
+      var password = "";
+
+      /** Possible word, numbers, etc. */
+      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+      /** Check if value exist */
+      if (!length || typeof length === "undefined") {
+        length = 100;
+      }
+
+      if (length < 100001) {
+        try {
+          /** Iterator */
+          for (var i = 0; i < length; i++) {
+            password += possible.charAt(Math.floor(Math.random() * possible.length));
+          }
+
+          _this.setState({
+            generatedPassword: password
+          });
+        } catch (err) {
+          console.log(err);
+        }
+      } else {
+        console.log(length);
+      }
+    };
+
+    _this.state = {
+      inputValue: 100,
+      generatedPassword: ''
+    };
+    return _this;
   }
 
-  console.log(password);
-};
+  /** Update value in input */
 
-// ------------------------------------------------------------------------------
-// Export
-// ------------------------------------------------------------------------------
+  /** Generate password */
 
+  (0, _createClass3.default)(_class, [{
+    key: 'render',
+
+    /** Render HTML */
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement('div', {
+        className: 'jsx-2001126829' + ' ' + 'root'
+      }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-2001126829'
+      }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-2001126829'
+      }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-2001126829'
+      }), _react2.default.createElement('title', {
+        className: 'jsx-2001126829'
+      }, 'GENPASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-2001126829'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-2001126829'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-2001126829'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-2001126829'
+      })), _react2.default.createElement(_style2.default, {
+        styleId: '2001126829',
+        css: ['.root.jsx-2001126829{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;background:#fefefe !important;}', '.navbar.jsx-2001126829 a.jsx-2001126829{color:#00b4f0 !important;}', '.card.jsx-2001126829{width:50%;margin:0 auto;margin-top:25vh;}', '.btn-primary.jsx-2001126829{background:#00b4f0 !important;border-color:#00b4f0 !important;}', 'input.jsx-2001126829{max-width:150px;margin:0 auto;}', 'textarea.jsx-2001126829{resize:none;}']
+      }), _react2.default.createElement('header', {
+        className: 'jsx-2001126829' + ' ' + 'navbar animated fadeInDown'
+      }, _react2.default.createElement('section', {
+        className: 'jsx-2001126829' + ' ' + 'navbar-section'
+      }, _react2.default.createElement('a', { href: '/', className: 'jsx-2001126829' + ' ' + 'btn btn-link'
+      }, 'Home')), _react2.default.createElement('section', {
+        className: 'jsx-2001126829' + ' ' + 'navbar-center'
+      }, 'GENPASS'), _react2.default.createElement('section', {
+        className: 'jsx-2001126829' + ' ' + 'navbar-section'
+      }, _react2.default.createElement('a', { href: '#', className: 'jsx-2001126829' + ' ' + 'btn btn-link'
+      }, 'Username generator'), _react2.default.createElement('a', { href: '#', className: 'jsx-2001126829' + ' ' + 'btn btn-link'
+      }, 'Donate'), _react2.default.createElement('a', { href: '#', className: 'jsx-2001126829' + ' ' + 'btn btn-link'
+      }, 'Contact'))), _react2.default.createElement('main', {
+        className: 'jsx-2001126829'
+      }, _react2.default.createElement('div', {
+        className: 'jsx-2001126829' + ' ' + 'container'
+      }, _react2.default.createElement('div', {
+        className: 'jsx-2001126829' + ' ' + 'columns'
+      }, _react2.default.createElement('div', {
+        className: 'jsx-2001126829' + ' ' + 'column col-xs-12 text-center'
+      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-2001126829' + ' ' + 'card animated fadeInUp'
+      }, _react2.default.createElement('div', {
+        className: 'jsx-2001126829' + ' ' + 'card-header'
+      }, _react2.default.createElement('h1', {
+        className: 'jsx-2001126829' + ' ' + 'card-title h1'
+      }, 'Generator of random password'), _react2.default.createElement('div', {
+        className: 'jsx-2001126829' + ' ' + 'card-subtitle text-gray'
+      }, 'So, click on the button and generate your password now!')), _react2.default.createElement('div', {
+        className: 'jsx-2001126829' + ' ' + 'card-body'
+      }, _react2.default.createElement('div', {
+        className: 'jsx-2001126829' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'count', className: 'jsx-2001126829' + ' ' + 'form-label'
+      }, 'Set lenght of your password ', _react2.default.createElement('br', {
+        className: 'jsx-2001126829'
+      }), ' (default is 100)'), _react2.default.createElement('input', { value: this.state.inputValue, onChange: function onChange(event) {
+          return _this2.updateInputValue(event);
+        }, type: 'number', min: '1', max: '100000', id: 'count', className: 'jsx-2001126829' + ' ' + 'form-input'
+      })), _react2.default.createElement('button', { onClick: function onClick() {
+          _this2.generatorHandleClick(_this2.state.inputValue);
+        }, id: 'start_button', className: 'jsx-2001126829' + ' ' + 'btn btn-primary'
+      }, 'Generate now!')), _react2.default.createElement('div', {
+        className: 'jsx-2001126829' + ' ' + 'card-footer'
+      }, _react2.default.createElement('div', {
+        className: 'jsx-2001126829' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-2001126829' + ' ' + 'form-label'
+      }, 'Your password is:'), _react2.default.createElement('textarea', { value: this.state.generatedPassword, id: 'result', rows: '10', readOnly: true, className: 'jsx-2001126829' + ' ' + 'form-input'
+      })), _react2.default.createElement('div', {
+        className: 'jsx-2001126829' + ' ' + 'card-subtitle text-gray'
+      }, 'Random, secure, custom, easy and fast.'))))))));
+    }
+  }]);
+
+  return _class;
+}(_react2.default.Component);
 // ------------------------------------------------------------------------------
 // Import libs
 // ------------------------------------------------------------------------------
-
-exports.default = function () {
-  return _react2.default.createElement('div', {
-    className: 'jsx-3556081632' + ' ' + 'root'
-  }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-3556081632'
-  }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-3556081632'
-  }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-3556081632'
-  }), _react2.default.createElement('title', {
-    className: 'jsx-3556081632'
-  }, 'GEN PASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-3556081632'
-  }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-3556081632'
-  }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-3556081632'
-  }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-3556081632'
-  })), _react2.default.createElement(_style2.default, {
-    styleId: '3556081632',
-    css: ['.root.jsx-3556081632{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;background:#fefefe !important;}', '.navbar.jsx-3556081632 a.jsx-3556081632{color:#00b4f0 !important;}', '.card.jsx-3556081632{width:50%;margin:0 auto;margin-top:25vh;}', '.btn-primary.jsx-3556081632{background:#00b4f0 !important;border-color:#00b4f0 !important;}']
-  }), _react2.default.createElement('header', {
-    className: 'jsx-3556081632' + ' ' + 'navbar animated fadeInDown'
-  }, _react2.default.createElement('section', {
-    className: 'jsx-3556081632' + ' ' + 'navbar-section'
-  }, _react2.default.createElement('a', { href: '/', className: 'jsx-3556081632' + ' ' + 'btn btn-link'
-  }, 'Home')), _react2.default.createElement('section', {
-    className: 'jsx-3556081632' + ' ' + 'navbar-center'
-  }, 'GEN PASS'), _react2.default.createElement('section', {
-    className: 'jsx-3556081632' + ' ' + 'navbar-section'
-  }, _react2.default.createElement('a', { href: '#', className: 'jsx-3556081632' + ' ' + 'btn btn-link'
-  }, 'Username generator'), _react2.default.createElement('a', { href: '#', className: 'jsx-3556081632' + ' ' + 'btn btn-link'
-  }, 'Donate'), _react2.default.createElement('a', { href: '#', className: 'jsx-3556081632' + ' ' + 'btn btn-link'
-  }, 'Contact'))), _react2.default.createElement('main', {
-    className: 'jsx-3556081632'
-  }, _react2.default.createElement('div', {
-    className: 'jsx-3556081632' + ' ' + 'container'
-  }, _react2.default.createElement('div', {
-    className: 'jsx-3556081632' + ' ' + 'columns'
-  }, _react2.default.createElement('div', {
-    className: 'jsx-3556081632' + ' ' + 'column col-xs-12 text-center'
-  }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-3556081632' + ' ' + 'card animated fadeInUp'
-  }, _react2.default.createElement('div', {
-    className: 'jsx-3556081632' + ' ' + 'card-header'
-  }, _react2.default.createElement('h1', {
-    className: 'jsx-3556081632' + ' ' + 'card-title h1'
-  }, 'Generator of random password'), _react2.default.createElement('div', {
-    className: 'jsx-3556081632' + ' ' + 'card-subtitle text-gray'
-  }, 'Random, secure, custom, easy and fast.')), _react2.default.createElement('div', {
-    className: 'jsx-3556081632' + ' ' + 'card-body'
-  }, 'You can try generate your random password. So, click on the button and generate your password now!'), _react2.default.createElement('div', {
-    className: 'jsx-3556081632' + ' ' + 'card-footer'
-  }, _react2.default.createElement('a', { onClick: function onClick() {
-      generatorHandleClick(100);
-    }, id: 'start_button', className: 'jsx-3556081632' + ' ' + 'btn btn-primary'
-  }, 'Generate now!'))))))));
-};
+exports.default = _class;
