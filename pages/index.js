@@ -91,7 +91,7 @@ export default class extends React.Component {
             margin-top: 25vh;
           }
 
-          .btn-primary {
+          .btn-primary, .btn-primary:focus, .btn-primary:active {
             background: #00b4f0 !important;
             border-color: #00b4f0 !important;
           }
@@ -103,6 +103,11 @@ export default class extends React.Component {
 
           textarea {
             resize: none;
+          }
+
+          .form-input:focus {
+            border-color: #00b4f0;
+            box-shadow: none;
           }
         `}</style>
 
@@ -116,7 +121,7 @@ export default class extends React.Component {
           </section>
 
           <section className="navbar-section">
-            <a href="#" className="btn btn-link">Username generator</a>
+            <a href="#" className="btn btn-link">Username generator</a>-->
             <a href="#" className="btn btn-link">Donate</a>
             <a href="#" className="btn btn-link">Contact</a>
           </section>

@@ -109,67 +109,67 @@ var _class = function (_React$Component) {
       var _this2 = this;
 
       return _react2.default.createElement('div', {
-        className: 'jsx-2001126829' + ' ' + 'root'
-      }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-2001126829'
-      }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-2001126829'
-      }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-2001126829'
+        className: 'jsx-2355793288' + ' ' + 'root'
+      }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-2355793288'
+      }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-2355793288'
+      }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-2355793288'
       }), _react2.default.createElement('title', {
-        className: 'jsx-2001126829'
-      }, 'GENPASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-2001126829'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-2001126829'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-2001126829'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-2001126829'
+        className: 'jsx-2355793288'
+      }, 'GENPASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-2355793288'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-2355793288'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-2355793288'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-2355793288'
       })), _react2.default.createElement(_style2.default, {
-        styleId: '2001126829',
-        css: ['.root.jsx-2001126829{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;background:#fefefe !important;}', '.navbar.jsx-2001126829 a.jsx-2001126829{color:#00b4f0 !important;}', '.card.jsx-2001126829{width:50%;margin:0 auto;margin-top:25vh;}', '.btn-primary.jsx-2001126829{background:#00b4f0 !important;border-color:#00b4f0 !important;}', 'input.jsx-2001126829{max-width:150px;margin:0 auto;}', 'textarea.jsx-2001126829{resize:none;}']
+        styleId: '2355793288',
+        css: ['.root.jsx-2355793288{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;background:#fefefe !important;}', '.navbar.jsx-2355793288 a.jsx-2355793288{color:#00b4f0 !important;}', '.card.jsx-2355793288{width:50%;margin:0 auto;margin-top:25vh;}', '.btn-primary.jsx-2355793288,.btn-primary.jsx-2355793288:focus,.btn-primary.jsx-2355793288:active{background:#00b4f0 !important;border-color:#00b4f0 !important;}', 'input.jsx-2355793288{max-width:150px;margin:0 auto;}', 'textarea.jsx-2355793288{resize:none;}', '.form-input.jsx-2355793288:focus{border-color:#00b4f0;box-shadow:none;}']
       }), _react2.default.createElement('header', {
-        className: 'jsx-2001126829' + ' ' + 'navbar animated fadeInDown'
+        className: 'jsx-2355793288' + ' ' + 'navbar animated fadeInDown'
       }, _react2.default.createElement('section', {
-        className: 'jsx-2001126829' + ' ' + 'navbar-section'
-      }, _react2.default.createElement('a', { href: '/', className: 'jsx-2001126829' + ' ' + 'btn btn-link'
+        className: 'jsx-2355793288' + ' ' + 'navbar-section'
+      }, _react2.default.createElement('a', { href: '/', className: 'jsx-2355793288' + ' ' + 'btn btn-link'
       }, 'Home')), _react2.default.createElement('section', {
-        className: 'jsx-2001126829' + ' ' + 'navbar-center'
+        className: 'jsx-2355793288' + ' ' + 'navbar-center'
       }, 'GENPASS'), _react2.default.createElement('section', {
-        className: 'jsx-2001126829' + ' ' + 'navbar-section'
-      }, _react2.default.createElement('a', { href: '#', className: 'jsx-2001126829' + ' ' + 'btn btn-link'
-      }, 'Username generator'), _react2.default.createElement('a', { href: '#', className: 'jsx-2001126829' + ' ' + 'btn btn-link'
-      }, 'Donate'), _react2.default.createElement('a', { href: '#', className: 'jsx-2001126829' + ' ' + 'btn btn-link'
+        className: 'jsx-2355793288' + ' ' + 'navbar-section'
+      }, _react2.default.createElement('a', { href: '#', className: 'jsx-2355793288' + ' ' + 'btn btn-link'
+      }, 'Username generator'), _react2.default.createElement('a', { href: '#', className: 'jsx-2355793288' + ' ' + 'btn btn-link'
+      }, 'Donate'), _react2.default.createElement('a', { href: '#', className: 'jsx-2355793288' + ' ' + 'btn btn-link'
       }, 'Contact'))), _react2.default.createElement('main', {
-        className: 'jsx-2001126829'
+        className: 'jsx-2355793288'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2001126829' + ' ' + 'container'
+        className: 'jsx-2355793288' + ' ' + 'container'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2001126829' + ' ' + 'columns'
+        className: 'jsx-2355793288' + ' ' + 'columns'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2001126829' + ' ' + 'column col-xs-12 text-center'
-      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-2001126829' + ' ' + 'card animated fadeInUp'
+        className: 'jsx-2355793288' + ' ' + 'column col-xs-12 text-center'
+      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-2355793288' + ' ' + 'card animated fadeInUp'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2001126829' + ' ' + 'card-header'
+        className: 'jsx-2355793288' + ' ' + 'card-header'
       }, _react2.default.createElement('h1', {
-        className: 'jsx-2001126829' + ' ' + 'card-title h1'
+        className: 'jsx-2355793288' + ' ' + 'card-title h1'
       }, 'Generator of random password'), _react2.default.createElement('div', {
-        className: 'jsx-2001126829' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-2355793288' + ' ' + 'card-subtitle text-gray'
       }, 'So, click on the button and generate your password now!')), _react2.default.createElement('div', {
-        className: 'jsx-2001126829' + ' ' + 'card-body'
+        className: 'jsx-2355793288' + ' ' + 'card-body'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2001126829' + ' ' + 'form-group'
-      }, _react2.default.createElement('label', { 'for': 'count', className: 'jsx-2001126829' + ' ' + 'form-label'
+        className: 'jsx-2355793288' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'count', className: 'jsx-2355793288' + ' ' + 'form-label'
       }, 'Set lenght of your password ', _react2.default.createElement('br', {
-        className: 'jsx-2001126829'
+        className: 'jsx-2355793288'
       }), ' (default is 100)'), _react2.default.createElement('input', { value: this.state.inputValue, onChange: function onChange(event) {
           return _this2.updateInputValue(event);
-        }, type: 'number', min: '1', max: '100000', id: 'count', className: 'jsx-2001126829' + ' ' + 'form-input'
+        }, type: 'number', min: '1', max: '100000', id: 'count', className: 'jsx-2355793288' + ' ' + 'form-input'
       })), _react2.default.createElement('button', { onClick: function onClick() {
           _this2.generatorHandleClick(_this2.state.inputValue);
-        }, id: 'start_button', className: 'jsx-2001126829' + ' ' + 'btn btn-primary'
+        }, id: 'start_button', className: 'jsx-2355793288' + ' ' + 'btn btn-primary'
       }, 'Generate now!')), _react2.default.createElement('div', {
-        className: 'jsx-2001126829' + ' ' + 'card-footer'
+        className: 'jsx-2355793288' + ' ' + 'card-footer'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2001126829' + ' ' + 'form-group'
-      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-2001126829' + ' ' + 'form-label'
-      }, 'Your password is:'), _react2.default.createElement('textarea', { value: this.state.generatedPassword, id: 'result', rows: '10', readOnly: true, className: 'jsx-2001126829' + ' ' + 'form-input'
+        className: 'jsx-2355793288' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-2355793288' + ' ' + 'form-label'
+      }, 'Your password is:'), _react2.default.createElement('textarea', { value: this.state.generatedPassword, id: 'result', rows: '10', readOnly: true, className: 'jsx-2355793288' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-2001126829' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-2355793288' + ' ' + 'card-subtitle text-gray'
       }, 'Random, secure, custom, easy and fast.'))))))));
     }
   }]);
