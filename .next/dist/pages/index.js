@@ -88,11 +88,11 @@ exports.default = function () {
     className: 'jsx-3556081632' + ' ' + 'card-header'
   }, _react2.default.createElement('h1', {
     className: 'jsx-3556081632' + ' ' + 'card-title h1'
-  }, 'Generator of your secure password'), _react2.default.createElement('div', {
+  }, 'Generator of random password'), _react2.default.createElement('div', {
     className: 'jsx-3556081632' + ' ' + 'card-subtitle text-gray'
-  }, 'Secure, easy and fast.')), _react2.default.createElement('div', {
+  }, 'Random, secure, custom, easy and fast.')), _react2.default.createElement('div', {
     className: 'jsx-3556081632' + ' ' + 'card-body'
-  }, 'You can try generate your secure password. So, click on the button and generate your password now!'), _react2.default.createElement('div', {
+  }, 'You can try generate your random password. So, click on the button and generate your password now!'), _react2.default.createElement('div', {
     className: 'jsx-3556081632' + ' ' + 'card-footer'
   }, _react2.default.createElement('a', { onClick: function onClick() {
       generatorHandleClick(100);

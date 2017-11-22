@@ -84,11 +84,11 @@ export default () => (
           <div className="column col-xs-12 text-center">
             <div id="main_card" className="card animated fadeInUp">
               <div className="card-header">
-                <h1 className="card-title h1">Generator of your secure password</h1>
-                <div className="card-subtitle text-gray">Secure, easy and fast.</div>
+                <h1 className="card-title h1">Generator of random password</h1>
+                <div className="card-subtitle text-gray">Random, secure, custom, easy and fast.</div>
               </div>
               <div className="card-body">
-                You can try generate your secure password. So, click on the button and generate your password now!
+                You can try generate your random password. So, click on the button and generate your password now!
               </div>
               <div className="card-footer">
                 <a onClick={ () => { generatorHandleClick(100) } } className="btn btn-primary" id="start_button">Generate now!</a>
