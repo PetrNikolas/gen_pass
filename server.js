@@ -14,8 +14,8 @@ app.prepare()
     return app.render(req.req, res.res, '/a', req.query)
   })
 
-  server.get('/b', (req, res) => {
-    return app.render(req.req, res.res, '/b', req.query)
+  server.get('/contact', (req, res) => {
+    return app.render(req.req, res.res, '/contact', req.query)
   })
 
   server.get('/*', (req, res) => {

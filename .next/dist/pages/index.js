@@ -131,10 +131,11 @@ var _class = function (_React$Component) {
         className: 'jsx-4240372712' + ' ' + 'navbar-center'
       }, 'GENPASS'), _react2.default.createElement('section', {
         className: 'jsx-4240372712' + ' ' + 'navbar-section'
-      }, _react2.default.createElement('a', { href: '#', className: 'jsx-4240372712' + ' ' + 'btn btn-link'
-      }, 'Username generator'), _react2.default.createElement('a', { href: '#', className: 'jsx-4240372712' + ' ' + 'btn btn-link'
-      }, 'Donate'), _react2.default.createElement('a', { href: '#', className: 'jsx-4240372712' + ' ' + 'btn btn-link'
-      }, 'Contact'))), _react2.default.createElement('main', {
+      }, _react2.default.createElement(_link2.default, { href: '/a' }, _react2.default.createElement('a', {
+        className: 'jsx-4240372712' + ' ' + 'btn btn-link'
+      }, 'Username generator')), _react2.default.createElement(_link2.default, { href: '/contact' }, _react2.default.createElement('a', {
+        className: 'jsx-4240372712' + ' ' + 'btn btn-link'
+      }, 'Contact')))), _react2.default.createElement('main', {
         className: 'jsx-4240372712'
       }, _react2.default.createElement('div', {
         className: 'jsx-4240372712' + ' ' + 'container'
