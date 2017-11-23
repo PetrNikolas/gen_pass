@@ -50,7 +50,7 @@ export default class extends React.Component {
           .card {
             width: 50%;
             margin: 0 auto;
-            margin-top: 17vh;
+            margin-top: 25vh;
             box-shadow: 0 6px 15px rgba(36,37,38,0.08);
           }
 
@@ -80,7 +80,7 @@ export default class extends React.Component {
 
         <header className="navbar animated fadeInDown">
           <section className="navbar-section">
-            <a href="/" className="btn btn-link">Home</a>
+            <Link href="/"><a className="btn btn-link">Home</a></Link>
           </section>
 
           <section className="navbar-center">
@@ -88,7 +88,7 @@ export default class extends React.Component {
           </section>
 
           <section className="navbar-section">
-            <Link href="/a"><a className="btn btn-link">Username generator</a></Link>
+            <Link href="/username-generator"><a className="btn btn-link">Username generator</a></Link>
             <Link href="/contact"><a className="btn btn-link">Contact</a></Link>
           </section>
         </header>
@@ -99,10 +99,6 @@ export default class extends React.Component {
               <div className="column col-xs-12 text-center">
 
                 <div id="main_card" className="card animated fadeInUp">
-                    <div class="card-image">
-                        <img src="../public/images/Nikolas.jpg" class="img-responsive" />
-                    </div>
-
                     <div className="card-header">
                         <h1 className="card-title h1">Hello!</h1>
                         <div className="card-subtitle text-gray">I'm Petr Nikolas</div>

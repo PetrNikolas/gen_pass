@@ -122,7 +122,7 @@ export default class extends React.Component {
 
         <header className="navbar animated fadeInDown">
           <section className="navbar-section">
-            <a href="/" className="btn btn-link">Home</a>
+            <Link href="/"><a className="btn btn-link">Home</a></Link>
           </section>
 
           <section className="navbar-center">
@@ -130,7 +130,7 @@ export default class extends React.Component {
           </section>
 
           <section className="navbar-section">
-            <Link href="/a"><a className="btn btn-link">Username generator</a></Link>
+            <Link href="/username-generator"><a className="btn btn-link">Username generator</a></Link>
             <Link href="/contact"><a className="btn btn-link">Contact</a></Link>
           </section>
         </header>

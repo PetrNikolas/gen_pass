@@ -10,8 +10,8 @@ app.prepare()
 .then(() => {
   const server = fastify()
 
-  server.get('/a', (req, res) => {
-    return app.render(req.req, res.res, '/a', req.query)
+  server.get('/username-generator', (req, res) => {
+    return app.render(req.req, res.res, '/username-generator', req.query)
   })
 
   server.get('/contact', (req, res) => {
