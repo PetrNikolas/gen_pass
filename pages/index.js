@@ -20,6 +20,9 @@ export default class extends React.Component {
 
   /** Update value in input */
   updateInputValue = (event) => {
+    /** Error message */
+    document.getElementById("error").style.display = "none";
+
     this.setState({
       inputValue: event.target.value
     });
@@ -27,6 +30,9 @@ export default class extends React.Component {
 
   /** Generate password */
   generatorHandleClick = (length) => {
+    /** Error message */
+    document.getElementById("error").style.display = "none";
+
     /** Password */
     let password = "";
 
@@ -52,7 +58,8 @@ export default class extends React.Component {
         console.log(err);
       }
     } else {
-      console.log(length);
+      /** Error message */
+      document.getElementById("error").style.display = "block";
     }
   }
 
@@ -118,6 +125,11 @@ export default class extends React.Component {
             border-color: #6a11cb;
             box-shadow: none;
           }
+
+          #error {
+            color: red;
+            display: none;
+          }
         `}</style>
 
         <header className="navbar animated fadeInDown">
@@ -149,6 +161,7 @@ export default class extends React.Component {
                       <input value={this.state.inputValue} onChange={event => this.updateInputValue(event)} type="number" min="1" max="100000" className="form-input" id="count" />
                     </div>
                     <button onClick={ () => { this.generatorHandleClick(this.state.inputValue) } } className="btn btn-primary" id="start_button">Generate now!</button>
+                    <span id="error">Max value is 100000</span>
                   </div>
 
                   <div className="card-footer">

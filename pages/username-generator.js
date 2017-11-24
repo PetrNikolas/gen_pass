@@ -137,6 +137,11 @@ export default class extends React.Component {
             border-color: #6a11cb;
             box-shadow: none;
           }
+
+          #error {
+            color: red;
+            display: none;
+          }
         `}</style>
 
         <header className="navbar animated fadeInDown">

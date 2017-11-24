@@ -55,12 +55,18 @@ var _class = function (_React$Component) {
     var _this = (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || (0, _getPrototypeOf2.default)(_class)).call(this, props));
 
     _this.updateInputValue = function (event) {
+      /** Error message */
+      document.getElementById("error").style.display = "none";
+
       _this.setState({
         inputValue: event.target.value
       });
     };
 
     _this.generatorHandleClick = function (length) {
+      /** Error message */
+      document.getElementById("error").style.display = "none";
+
       /** Password */
       var password = "";
 
@@ -86,7 +92,8 @@ var _class = function (_React$Component) {
           console.log(err);
         }
       } else {
-        console.log(length);
+        /** Error message */
+        document.getElementById("error").style.display = "block";
       }
     };
 
@@ -109,65 +116,66 @@ var _class = function (_React$Component) {
       var _this2 = this;
 
       return _react2.default.createElement('div', {
-        className: 'jsx-2256111394' + ' ' + 'root'
-      }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-2256111394'
-      }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-2256111394'
-      }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-2256111394'
+        className: 'jsx-68270185' + ' ' + 'root'
+      }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-68270185'
+      }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-68270185'
+      }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-68270185'
       }), _react2.default.createElement('title', {
-        className: 'jsx-2256111394'
-      }, 'GENPASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-2256111394'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-2256111394'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-2256111394'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-2256111394'
+        className: 'jsx-68270185'
+      }, 'GENPASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-68270185'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-68270185'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-68270185'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-68270185'
       })), _react2.default.createElement(_style2.default, {
-        styleId: '2256111394',
-        css: ['.root.jsx-2256111394{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}', '.navbar.jsx-2256111394 a.jsx-2256111394{color:#6a11cb !important;}', '.logo.jsx-2256111394{color:#1c1a27;font-size:35px;}', '.card.jsx-2256111394{width:50%;margin:0 auto;margin-top:10vh;box-shadow:0 6px 15px rgba(36,37,38,0.08);}', '.btn-primary.jsx-2256111394,.btn-primary.jsx-2256111394:focus,.btn-primary.jsx-2256111394:active{background:#6a11cb !important;border-color:#6a11cb !important;}', 'input.jsx-2256111394{max-width:150px;margin:0 auto;}', 'label.jsx-2256111394{color:#868f96 !important;}', 'textarea.jsx-2256111394{resize:none;}', '.form-input.jsx-2256111394:focus{border-color:#6a11cb;box-shadow:none;}']
+        styleId: '68270185',
+        css: ['.root.jsx-68270185{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}', '.navbar.jsx-68270185 a.jsx-68270185{color:#6a11cb !important;}', '.logo.jsx-68270185{color:#1c1a27;font-size:35px;}', '.card.jsx-68270185{width:50%;margin:0 auto;margin-top:10vh;box-shadow:0 6px 15px rgba(36,37,38,0.08);}', '.btn-primary.jsx-68270185,.btn-primary.jsx-68270185:focus,.btn-primary.jsx-68270185:active{background:#6a11cb !important;border-color:#6a11cb !important;}', 'input.jsx-68270185{max-width:150px;margin:0 auto;}', 'label.jsx-68270185{color:#868f96 !important;}', 'textarea.jsx-68270185{resize:none;}', '.form-input.jsx-68270185:focus{border-color:#6a11cb;box-shadow:none;}', '#error.jsx-68270185{color:red;display:none;}']
       }), _react2.default.createElement('header', {
-        className: 'jsx-2256111394' + ' ' + 'navbar animated fadeInDown'
+        className: 'jsx-68270185' + ' ' + 'navbar animated fadeInDown'
       }, _react2.default.createElement('section', {
-        className: 'jsx-2256111394' + ' ' + 'navbar-section logo'
+        className: 'jsx-68270185' + ' ' + 'navbar-section logo'
       }, 'GENPASS'), _react2.default.createElement('section', {
-        className: 'jsx-2256111394' + ' ' + 'navbar-section'
+        className: 'jsx-68270185' + ' ' + 'navbar-section'
       }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement('a', {
-        className: 'jsx-2256111394' + ' ' + 'btn btn-link'
+        className: 'jsx-68270185' + ' ' + 'btn btn-link'
       }, 'Home')), _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', {
-        className: 'jsx-2256111394' + ' ' + 'btn btn-link'
+        className: 'jsx-68270185' + ' ' + 'btn btn-link'
       }, 'Username generator')), _react2.default.createElement(_link2.default, { href: '/contact' }, _react2.default.createElement('a', {
-        className: 'jsx-2256111394' + ' ' + 'btn btn-link'
+        className: 'jsx-68270185' + ' ' + 'btn btn-link'
       }, 'Contact')))), _react2.default.createElement('main', {
-        className: 'jsx-2256111394'
+        className: 'jsx-68270185'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2256111394' + ' ' + 'container'
+        className: 'jsx-68270185' + ' ' + 'container'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2256111394' + ' ' + 'columns'
+        className: 'jsx-68270185' + ' ' + 'columns'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2256111394' + ' ' + 'column col-xs-12 text-center'
-      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-2256111394' + ' ' + 'card animated fadeInUp'
+        className: 'jsx-68270185' + ' ' + 'column col-xs-12 text-center'
+      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-68270185' + ' ' + 'card animated fadeInUp'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2256111394' + ' ' + 'card-header'
+        className: 'jsx-68270185' + ' ' + 'card-header'
       }, _react2.default.createElement('h1', {
-        className: 'jsx-2256111394' + ' ' + 'card-title h1'
+        className: 'jsx-68270185' + ' ' + 'card-title h1'
       }, 'Generator of random password'), _react2.default.createElement('div', {
-        className: 'jsx-2256111394' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-68270185' + ' ' + 'card-subtitle text-gray'
       }, 'So, click on the button and generate your password now!')), _react2.default.createElement('div', {
-        className: 'jsx-2256111394' + ' ' + 'card-body'
+        className: 'jsx-68270185' + ' ' + 'card-body'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2256111394' + ' ' + 'form-group'
-      }, _react2.default.createElement('label', { 'for': 'count', className: 'jsx-2256111394' + ' ' + 'form-label'
+        className: 'jsx-68270185' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'count', className: 'jsx-68270185' + ' ' + 'form-label'
       }, 'Set lenght of your password (default is 100)'), _react2.default.createElement('input', { value: this.state.inputValue, onChange: function onChange(event) {
           return _this2.updateInputValue(event);
-        }, type: 'number', min: '1', max: '100000', id: 'count', className: 'jsx-2256111394' + ' ' + 'form-input'
+        }, type: 'number', min: '1', max: '100000', id: 'count', className: 'jsx-68270185' + ' ' + 'form-input'
       })), _react2.default.createElement('button', { onClick: function onClick() {
           _this2.generatorHandleClick(_this2.state.inputValue);
-        }, id: 'start_button', className: 'jsx-2256111394' + ' ' + 'btn btn-primary'
-      }, 'Generate now!')), _react2.default.createElement('div', {
-        className: 'jsx-2256111394' + ' ' + 'card-footer'
+        }, id: 'start_button', className: 'jsx-68270185' + ' ' + 'btn btn-primary'
+      }, 'Generate now!'), _react2.default.createElement('span', { id: 'error', className: 'jsx-68270185'
+      }, 'Max value is 100000')), _react2.default.createElement('div', {
+        className: 'jsx-68270185' + ' ' + 'card-footer'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2256111394' + ' ' + 'form-group'
-      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-2256111394' + ' ' + 'form-label'
-      }, 'Your password is:'), _react2.default.createElement('textarea', { value: this.state.generatedPassword, id: 'result', rows: '7', readOnly: true, className: 'jsx-2256111394' + ' ' + 'form-input'
+        className: 'jsx-68270185' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-68270185' + ' ' + 'form-label'
+      }, 'Your password is:'), _react2.default.createElement('textarea', { value: this.state.generatedPassword, id: 'result', rows: '7', readOnly: true, className: 'jsx-68270185' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-2256111394' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-68270185' + ' ' + 'card-subtitle text-gray'
       }, 'Random, secure, custom, easy and fast.'))))))));
     }
   }]);
