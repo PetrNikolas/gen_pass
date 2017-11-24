@@ -81,7 +81,7 @@ export default class extends React.Component {
           }
 
           .navbar a {
-            color: #2575fc !important; 
+            color: #6a11cb !important; 
           }
 
           .logo {
@@ -145,7 +145,7 @@ export default class extends React.Component {
 
                   <div className="card-body">
                     <div className="form-group">
-                      <label className="form-label" for="count">Set lenght of your password <br/> (default is 100)</label>
+                      <label className="form-label" for="count">Set lenght of your password (default is 100)</label>
                       <input value={this.state.inputValue} onChange={event => this.updateInputValue(event)} type="number" min="1" max="100000" className="form-input" id="count" />
                     </div>
                     <button onClick={ () => { this.generatorHandleClick(this.state.inputValue) } } className="btn btn-primary" id="start_button">Generate now!</button>
@@ -154,7 +154,7 @@ export default class extends React.Component {
                   <div className="card-footer">
                     <div className="form-group">
                       <label className="form-label" for="result">Your password is:</label>
-                      <textarea value={this.state.generatedPassword} className="form-input" id="result" rows="10" readOnly></textarea>
+                      <textarea value={this.state.generatedPassword} className="form-input" id="result" rows="7" readOnly></textarea>
                     </div>
 
                     <div className="card-subtitle text-gray">Random, secure, custom, easy and fast.</div>

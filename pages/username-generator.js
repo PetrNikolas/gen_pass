@@ -13,46 +13,65 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputValue: 100,
-      generatedPassword: ''
+      nameValue: '',
+      secondNameValue: '',
+      surnameValue: '',
+      generatedUsername: ''
     };
   }
 
-  /** Update value in input */
-  updateInputValue = (event) => {
+  /** Update value in input - name */
+  updateNameValue = (event) => {
     this.setState({
-      inputValue: event.target.value
+      nameValue: event.target.value
+    });
+  }
+
+  /** Update value in input - second name */
+  updateSecondNameValue = (event) => {
+    this.setState({
+      secondNameValue: event.target.value
+    });
+  }
+
+  /** Update value in input - surname */
+  updateSurnameValue = (event) => {
+    this.setState({
+      surnameValue: event.target.value
     });
   }
 
   /** Generate password */
-  generatorHandleClick = (length) => {
+  generatorHandleClick = (name, secondName, surname) => {
     /** Password */
     let password = "";
 
-    /** Possible word, numbers, etc. */
-    const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-    /** Check if value exist */
-    if (!length || typeof length === "undefined") {
-      length = 100;
+    /** Check if values exists */
+    if (!name || typeof name === "undefined") {
+      name = '';
+    }
+    if (!secondName || typeof secondName === "undefined") {
+      secondName = '';
+    }
+    if (!surname || typeof surname === "undefined") {
+      surname = '';
     }
 
-    if (length < 100001) {
-      try {
+    /** Possible variant */
+    const possible = name + secondName + surname;
+    const length = possible.length;
+
+    try {
         /** Iterator */
         for(let i = 0; i < length; i++) {
             password += possible.charAt(Math.floor(Math.random() * possible.length));
         }
 
         this.setState({
-          generatedPassword: password
+            generatedUsername: password
         });
-      } catch (err) {
+    } catch (err) {
         console.log(err);
-      }
-    } else {
-      console.log(length);
     }
   }
 
@@ -81,7 +100,7 @@ export default class extends React.Component {
           }
 
           .navbar a {
-            color: #2575fc !important; 
+            color: #6a11cb !important; 
           }
 
           .logo {
@@ -139,22 +158,38 @@ export default class extends React.Component {
 
                 <div id="main_card" className="card animated fadeInUp">
                   <div className="card-header">
-                    <h1 className="card-title h1">Generator of random password</h1>
-                    <div className="card-subtitle text-gray">So, click on the button and generate your password now!</div>
+                    <h1 className="card-title h1">Generator of random username</h1>
+                    <div className="card-subtitle text-gray">So, click on the button and generate your username from your name and surname now!</div>
+                    <br/>
+                    <div className="card-subtitle text-gray">* second name is not required</div>
                   </div>
 
                   <div className="card-body">
                     <div className="form-group">
-                      <label className="form-label" for="count">Set lenght of your password <br/> (default is 100)</label>
-                      <input value={this.state.inputValue} onChange={event => this.updateInputValue(event)} type="number" min="1" max="100000" className="form-input" id="count" />
+                        <div class="columns">
+                            <div class="column col-xs-4">
+                                <label className="form-label" for="name">Your name</label>
+                                <input value={this.state.nameValue} onChange={event => this.updateNameValue(event)} type="text" className="form-input" id="name" />
+                            </div>
+
+                            <div class="column col-xs-4">
+                                <label className="form-label" for="secondName">Your second name</label>
+                                <input value={this.state.secondNameValue} onChange={event => this.updateSecondNameValue(event)} type="text" className="form-input" id="secondName" />
+                            </div>
+
+                            <div class="column col-xs-4">
+                                <label className="form-label" for="surname">Your surname</label>
+                                <input value={this.state.surnameValue} onChange={event => this.updateSurnameValue(event)} type="text" className="form-input" id="surname" />
+                            </div>
+                        </div>
                     </div>
-                    <button onClick={ () => { this.generatorHandleClick(this.state.inputValue) } } className="btn btn-primary" id="start_button">Generate now!</button>
+                    <button onClick={ () => { this.generatorHandleClick(this.state.nameValue, this.state.secondNameValue, this.state.surnameValue) } } className="btn btn-primary" id="start_button">Generate now!</button>
                   </div>
 
                   <div className="card-footer">
                     <div className="form-group">
-                      <label className="form-label" for="result">Your password is:</label>
-                      <textarea value={this.state.generatedPassword} className="form-input" id="result" rows="10" readOnly></textarea>
+                      <label className="form-label" for="result">Your username is:</label>
+                      <textarea value={this.state.generatedUsername} className="form-input" id="result" rows="3" readOnly></textarea>
                     </div>
 
                     <div className="card-subtitle text-gray">Random, secure, custom, easy and fast.</div>

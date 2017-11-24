@@ -39,7 +39,7 @@ export default class extends React.Component {
           }
 
           .navbar a {
-            color: #2575fc !important; 
+            color: #6a11cb !important; 
           }
 
           .logo {
