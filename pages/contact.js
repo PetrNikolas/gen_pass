@@ -42,7 +42,7 @@ export default class extends React.Component {
             color: #2575fc !important; 
           }
 
-          .navbar-center {
+          .logo {
             color: #1c1a27;
             font-size: 35px;
           }
@@ -79,15 +79,12 @@ export default class extends React.Component {
         `}</style>
 
         <header className="navbar animated fadeInDown">
-          <section className="navbar-section">
-            <Link href="/"><a className="btn btn-link">Home</a></Link>
-          </section>
-
-          <section className="navbar-center">
+          <section className="navbar-section logo">
             GENPASS
           </section>
 
           <section className="navbar-section">
+            <Link href="/"><a className="btn btn-link">Home</a></Link>
             <Link href="/username-generator"><a className="btn btn-link">Username generator</a></Link>
             <Link href="/contact"><a className="btn btn-link">Contact</a></Link>
           </section>

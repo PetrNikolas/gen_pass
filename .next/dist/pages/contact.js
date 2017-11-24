@@ -61,52 +61,50 @@ var _class = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement('div', {
-        className: 'jsx-1152956106' + ' ' + 'root'
-      }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-1152956106'
-      }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-1152956106'
-      }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-1152956106'
+        className: 'jsx-3905956728' + ' ' + 'root'
+      }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-3905956728'
+      }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-3905956728'
+      }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-3905956728'
       }), _react2.default.createElement('title', {
-        className: 'jsx-1152956106'
-      }, 'GENPASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-1152956106'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-1152956106'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-1152956106'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-1152956106'
+        className: 'jsx-3905956728'
+      }, 'GENPASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-3905956728'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-3905956728'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-3905956728'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-3905956728'
       })), _react2.default.createElement(_style2.default, {
-        styleId: '1152956106',
-        css: ['.root.jsx-1152956106{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}', '.navbar.jsx-1152956106 a.jsx-1152956106{color:#2575fc !important;}', '.navbar-center.jsx-1152956106{color:#1c1a27;font-size:35px;}', '.card.jsx-1152956106{width:50%;margin:0 auto;margin-top:25vh;box-shadow:0 6px 15px rgba(36,37,38,0.08);}', '.btn-primary.jsx-1152956106,.btn-primary.jsx-1152956106:focus,.btn-primary.jsx-1152956106:active{background:#6a11cb !important;border-color:#6a11cb !important;}', 'input.jsx-1152956106{max-width:150px;margin:0 auto;}', 'label.jsx-1152956106{color:#868f96 !important;}', 'textarea.jsx-1152956106{resize:none;}', '.form-input.jsx-1152956106:focus{border-color:#6a11cb;box-shadow:none;}']
+        styleId: '3905956728',
+        css: ['.root.jsx-3905956728{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}', '.navbar.jsx-3905956728 a.jsx-3905956728{color:#2575fc !important;}', '.logo.jsx-3905956728{color:#1c1a27;font-size:35px;}', '.card.jsx-3905956728{width:50%;margin:0 auto;margin-top:25vh;box-shadow:0 6px 15px rgba(36,37,38,0.08);}', '.btn-primary.jsx-3905956728,.btn-primary.jsx-3905956728:focus,.btn-primary.jsx-3905956728:active{background:#6a11cb !important;border-color:#6a11cb !important;}', 'input.jsx-3905956728{max-width:150px;margin:0 auto;}', 'label.jsx-3905956728{color:#868f96 !important;}', 'textarea.jsx-3905956728{resize:none;}', '.form-input.jsx-3905956728:focus{border-color:#6a11cb;box-shadow:none;}']
       }), _react2.default.createElement('header', {
-        className: 'jsx-1152956106' + ' ' + 'navbar animated fadeInDown'
+        className: 'jsx-3905956728' + ' ' + 'navbar animated fadeInDown'
       }, _react2.default.createElement('section', {
-        className: 'jsx-1152956106' + ' ' + 'navbar-section'
-      }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement('a', {
-        className: 'jsx-1152956106' + ' ' + 'btn btn-link'
-      }, 'Home'))), _react2.default.createElement('section', {
-        className: 'jsx-1152956106' + ' ' + 'navbar-center'
+        className: 'jsx-3905956728' + ' ' + 'navbar-section logo'
       }, 'GENPASS'), _react2.default.createElement('section', {
-        className: 'jsx-1152956106' + ' ' + 'navbar-section'
-      }, _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', {
-        className: 'jsx-1152956106' + ' ' + 'btn btn-link'
+        className: 'jsx-3905956728' + ' ' + 'navbar-section'
+      }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement('a', {
+        className: 'jsx-3905956728' + ' ' + 'btn btn-link'
+      }, 'Home')), _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', {
+        className: 'jsx-3905956728' + ' ' + 'btn btn-link'
       }, 'Username generator')), _react2.default.createElement(_link2.default, { href: '/contact' }, _react2.default.createElement('a', {
-        className: 'jsx-1152956106' + ' ' + 'btn btn-link'
+        className: 'jsx-3905956728' + ' ' + 'btn btn-link'
       }, 'Contact')))), _react2.default.createElement('main', {
-        className: 'jsx-1152956106'
+        className: 'jsx-3905956728'
       }, _react2.default.createElement('div', {
-        className: 'jsx-1152956106' + ' ' + 'container'
+        className: 'jsx-3905956728' + ' ' + 'container'
       }, _react2.default.createElement('div', {
-        className: 'jsx-1152956106' + ' ' + 'columns'
+        className: 'jsx-3905956728' + ' ' + 'columns'
       }, _react2.default.createElement('div', {
-        className: 'jsx-1152956106' + ' ' + 'column col-xs-12 text-center'
-      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-1152956106' + ' ' + 'card animated fadeInUp'
+        className: 'jsx-3905956728' + ' ' + 'column col-xs-12 text-center'
+      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-3905956728' + ' ' + 'card animated fadeInUp'
       }, _react2.default.createElement('div', {
-        className: 'jsx-1152956106' + ' ' + 'card-header'
+        className: 'jsx-3905956728' + ' ' + 'card-header'
       }, _react2.default.createElement('h1', {
-        className: 'jsx-1152956106' + ' ' + 'card-title h1'
+        className: 'jsx-3905956728' + ' ' + 'card-title h1'
       }, 'Hello!'), _react2.default.createElement('div', {
-        className: 'jsx-1152956106' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-3905956728' + ' ' + 'card-subtitle text-gray'
       }, 'I\'m Petr Nikolas')), _react2.default.createElement('div', {
-        className: 'jsx-1152956106' + ' ' + 'card-body'
+        className: 'jsx-3905956728' + ' ' + 'card-body'
       }, 'You can contact me on my email:', _react2.default.createElement('br', {
-        className: 'jsx-1152956106'
+        className: 'jsx-3905956728'
       }), 'petr.nikolas@icloud.com')))))));
     }
   }]);
