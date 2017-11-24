@@ -178,18 +178,22 @@ var _class = function (_React$Component) {
         className: 'jsx-2256111394' + ' ' + 'card-body'
       }, _react2.default.createElement('div', {
         className: 'jsx-2256111394' + ' ' + 'form-group'
-      }, _react2.default.createElement('div', { 'class': 'columns', className: 'jsx-2256111394'
-      }, _react2.default.createElement('div', { 'class': 'column col-xs-4', className: 'jsx-2256111394'
+      }, _react2.default.createElement('div', {
+        className: 'jsx-2256111394' + ' ' + 'columns'
+      }, _react2.default.createElement('div', {
+        className: 'jsx-2256111394' + ' ' + 'column col-xs-4'
       }, _react2.default.createElement('label', { 'for': 'name', className: 'jsx-2256111394' + ' ' + 'form-label'
       }, 'Your name'), _react2.default.createElement('input', { value: this.state.nameValue, onChange: function onChange(event) {
           return _this2.updateNameValue(event);
         }, type: 'text', id: 'name', className: 'jsx-2256111394' + ' ' + 'form-input'
-      })), _react2.default.createElement('div', { 'class': 'column col-xs-4', className: 'jsx-2256111394'
+      })), _react2.default.createElement('div', {
+        className: 'jsx-2256111394' + ' ' + 'column col-xs-4'
       }, _react2.default.createElement('label', { 'for': 'secondName', className: 'jsx-2256111394' + ' ' + 'form-label'
       }, 'Your second name'), _react2.default.createElement('input', { value: this.state.secondNameValue, onChange: function onChange(event) {
           return _this2.updateSecondNameValue(event);
         }, type: 'text', id: 'secondName', className: 'jsx-2256111394' + ' ' + 'form-input'
-      })), _react2.default.createElement('div', { 'class': 'column col-xs-4', className: 'jsx-2256111394'
+      })), _react2.default.createElement('div', {
+        className: 'jsx-2256111394' + ' ' + 'column col-xs-4'
       }, _react2.default.createElement('label', { 'for': 'surname', className: 'jsx-2256111394' + ' ' + 'form-label'
       }, 'Your surname'), _react2.default.createElement('input', { value: this.state.surnameValue, onChange: function onChange(event) {
           return _this2.updateSurnameValue(event);
