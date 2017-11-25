@@ -47,11 +47,14 @@ export default class extends React.Component {
             font-size: 35px;
           }
 
-          .card {
-            width: 50%;
-            margin: 0 auto;
-            margin-top: 25vh;
+          #main_card {
+            height: 78vh;
+            margin-top: 20px;
             box-shadow: 0 6px 15px rgba(36,37,38,0.08);
+          }
+
+          .padding {
+            padding-top: 20vh;
           }
 
           .btn-primary, .btn-primary:focus, .btn-primary:active {
@@ -95,17 +98,16 @@ export default class extends React.Component {
             <div className="columns">
               <div className="column col-xs-12 text-center">
 
-                <div id="main_card" className="card animated fadeInUp">
-                    <div className="card-header">
-                        <h1 className="card-title h1">Hello!</h1>
-                        <div className="card-subtitle text-gray">I'm Petr Nikolas</div>
-                    </div>
-
-                    <div className="card-body">
-                        You can contact me on my email:
-                        <br/>
-                        petr.nikolas@icloud.com
-                    </div>
+                <div id="main_card" className="empty">
+                  <div className="empty-icon padding">
+                    <i className="icon icon-people"></i>
+                  </div>
+                  <h1 className="card-title h1">Hello!</h1>
+                  <p className="empty-title h5">I'm Petr Nikolas</p>
+                  <p className="empty-subtitle">Click the button to start a conversation with me.</p>
+                  <div className="empty-action">
+                    <a href="mailto:petr.nikolas@icloud.com?subject=Hello%Petr%20Nikolas" className="btn btn-primary">Send a message</a>
+                  </div>
                 </div>
 
               </div>
