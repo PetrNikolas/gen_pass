@@ -56,7 +56,9 @@ export default class extends React.Component {
     document.getElementById("error").style.display = "none";
 
     /** Password */
-    let password = "";
+    let first_variant = "";
+    let second_varinat = "";
+    let username = "";
 
     /** Check if second name exist */
     if (!secondName || typeof secondName === "undefined") {
@@ -64,18 +66,28 @@ export default class extends React.Component {
     }
 
     if (name && typeof name !== "undefined" && surname && typeof surname !== "undefined") {
-      /** Possible variant */
-      const possible = name + secondName + surname;
-      const length = possible.length;
+      /** Possible variants */
+      const possible_of_name = name + secondName;
+      const possible_of_surname = surname;
+
+      const all_possibles = name + secondName + surname;
+      const length = all_possibles.length;
 
       try {
           /** Iterator */
           for(let i = 0; i < length; i++) {
-              password += possible.charAt(Math.floor(Math.random() * possible.length));
+            first_variant += possible_of_name.charAt(Math.floor(Math.random() * possible_of_name.length)); 
+            second_varinat += possible_of_surname.charAt(Math.floor(Math.random() * possible_of_surname.length));
+          }
+
+          username = first_variant + second_varinat;
+
+          for(let i = 0; i < length; i++) {
+            username += username.charAt(Math.floor(Math.random() * username.length)); 
           }
 
           this.setState({
-              generatedUsername: password
+              generatedUsername: username
           });
       } catch (err) {
           console.log(err);
