@@ -182,7 +182,17 @@ var _class = function (_React$Component) {
         className: 'jsx-1398821061'
       }, _react2.default.createElement('div', {
         className: 'jsx-1398821061' + ' ' + 'container'
-      }, _react2.default.createElement('div', {
+      }, _react2.default.createElement('ul', {
+        className: 'jsx-1398821061' + ' ' + 'breadcrumb animated fadeInDown'
+      }, _react2.default.createElement('li', {
+        className: 'jsx-1398821061' + ' ' + 'breadcrumb-item'
+      }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement('a', {
+        className: 'jsx-1398821061'
+      }, 'Home'))), _react2.default.createElement('li', {
+        className: 'jsx-1398821061' + ' ' + 'breadcrumb-item'
+      }, _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', {
+        className: 'jsx-1398821061'
+      }, 'Username generator')))), _react2.default.createElement('div', {
         className: 'jsx-1398821061' + ' ' + 'columns'
       }, _react2.default.createElement('div', {
         className: 'jsx-1398821061' + ' ' + 'column col-xs-12 text-center'

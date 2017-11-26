@@ -48,7 +48,7 @@ export default class extends React.Component {
           }
 
           #main_card {
-            height: 80vh;
+            height: 74vh;
             margin-top: 15px;
             box-shadow: 0 6px 15px rgba(36,37,38,0.08);
           }
@@ -105,6 +105,15 @@ export default class extends React.Component {
 
         <main>
           <div className="container">
+            <ul className="breadcrumb animated fadeInDown">
+              <li className="breadcrumb-item">
+                <Link href="/"><a>Home</a></Link>
+              </li>
+              <li className="breadcrumb-item">
+                <Link href="/contact"><a>Contact</a></Link>
+              </li>
+            </ul>
+
             <div className="columns">
               <div className="column col-xs-12 text-center">
 
