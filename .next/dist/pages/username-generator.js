@@ -242,6 +242,11 @@ var _class = function (_React$Component) {
       }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-1398821061' + ' ' + 'form-label'
       }, 'Your username is:'), _react2.default.createElement('textarea', { value: this.state.generatedUsername, id: 'result', rows: '3', readOnly: true, className: 'jsx-1398821061' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
+        className: 'jsx-1398821061'
+      }, 'Generated from:', _react2.default.createElement('span', { 'class': 'chip', className: 'jsx-1398821061'
+      }, ' ', this.state.nameValue, ' '), _react2.default.createElement('span', { 'class': 'chip', className: 'jsx-1398821061'
+      }, ' ', this.state.secondNameValue, ' '), _react2.default.createElement('span', { 'class': 'chip', className: 'jsx-1398821061'
+      }, ' ', this.state.surnameValue, ' ')), _react2.default.createElement('div', {
         className: 'jsx-1398821061' + ' ' + 'card-subtitle text-gray'
       }, 'Random, secure, custom, easy and fast.'))))))));
     }

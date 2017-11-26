@@ -240,6 +240,13 @@ export default class extends React.Component {
                       <textarea value={this.state.generatedUsername} className="form-input" id="result" rows="3" readOnly></textarea>
                     </div>
 
+                    <div>
+                      Generated from: 
+                      <span class="chip"> {this.state.nameValue} </span>
+                      <span class="chip"> {this.state.secondNameValue} </span>
+                      <span class="chip"> {this.state.surnameValue} </span> 
+                    </div>
+
                     <div className="card-subtitle text-gray">Random, secure, custom, easy and fast.</div>
                   </div>
                 </div>
