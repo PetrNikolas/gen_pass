@@ -48,9 +48,13 @@ export default class extends React.Component {
           }
 
           #main_card {
-            height: 78vh;
-            margin-top: 20px;
+            height: 80vh;
+            margin-top: 15px;
             box-shadow: 0 6px 15px rgba(36,37,38,0.08);
+          }
+
+          i {
+            font-size: 47px;
           }
 
           .padding {
@@ -98,7 +102,7 @@ export default class extends React.Component {
             <div className="columns">
               <div className="column col-xs-12 text-center">
 
-                <div id="main_card" className="empty">
+                <div id="main_card" className="empty animated fadeInUp">
                   <div className="empty-icon padding">
                     <i className="icon icon-people"></i>
                   </div>
@@ -106,7 +110,7 @@ export default class extends React.Component {
                   <p className="empty-title h5">I'm Petr Nikolas</p>
                   <p className="empty-subtitle">Click the button to start a conversation with me.</p>
                   <div className="empty-action">
-                    <a href="mailto:petr.nikolas@icloud.com?subject=Hello%Petr%20Nikolas" className="btn btn-primary">Send a message</a>
+                    <a href="mailto:petr.nikolas@icloud.com?subject=Hello" className="btn btn-primary">Send a message</a>
                   </div>
                 </div>
 
