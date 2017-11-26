@@ -242,9 +242,9 @@ export default class extends React.Component {
 
                     <div>
                       Generated from: 
-                      <span class="chip"> {this.state.nameValue} </span>
-                      <span class="chip"> {this.state.secondNameValue} </span>
-                      <span class="chip"> {this.state.surnameValue} </span> 
+                      <span className="chip"> {this.state.nameValue} </span>
+                      <span className="chip"> {this.state.secondNameValue} </span>
+                      <span className="chip"> {this.state.surnameValue} </span> 
                     </div>
 
                     <div className="card-subtitle text-gray">Random, secure, custom, easy and fast.</div>
