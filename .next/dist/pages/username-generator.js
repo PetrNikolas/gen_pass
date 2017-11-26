@@ -214,19 +214,19 @@ var _class = function (_React$Component) {
       }, _react2.default.createElement('div', {
         className: 'jsx-1398821061' + ' ' + 'columns'
       }, _react2.default.createElement('div', {
-        className: 'jsx-1398821061' + ' ' + 'column col-xs-4'
+        className: 'jsx-1398821061' + ' ' + 'column col-lg-4 col-xs-12'
       }, _react2.default.createElement('label', { 'for': 'name', className: 'jsx-1398821061' + ' ' + 'form-label'
       }, 'Your name'), _react2.default.createElement('input', { value: this.state.nameValue, onChange: function onChange(event) {
           return _this2.updateNameValue(event);
         }, type: 'text', id: 'name', className: 'jsx-1398821061' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-1398821061' + ' ' + 'column col-xs-4'
+        className: 'jsx-1398821061' + ' ' + 'column col-lg-4 col-xs-12'
       }, _react2.default.createElement('label', { 'for': 'secondName', className: 'jsx-1398821061' + ' ' + 'form-label'
       }, 'Your second name'), _react2.default.createElement('input', { value: this.state.secondNameValue, onChange: function onChange(event) {
           return _this2.updateSecondNameValue(event);
         }, type: 'text', id: 'secondName', className: 'jsx-1398821061' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-1398821061' + ' ' + 'column col-xs-4'
+        className: 'jsx-1398821061' + ' ' + 'column col-lg-4 col-xs-12'
       }, _react2.default.createElement('label', { 'for': 'surname', className: 'jsx-1398821061' + ' ' + 'form-label'
       }, 'Your surname'), _react2.default.createElement('input', { value: this.state.surnameValue, onChange: function onChange(event) {
           return _this2.updateSurnameValue(event);
@@ -243,9 +243,12 @@ var _class = function (_React$Component) {
       }, 'Your username is:'), _react2.default.createElement('textarea', { value: this.state.generatedUsername, id: 'result', rows: '3', readOnly: true, className: 'jsx-1398821061' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
         className: 'jsx-1398821061'
-      }, 'Generated from:', _react2.default.createElement('span', { 'class': 'chip', className: 'jsx-1398821061'
-      }, ' ', this.state.nameValue, ' '), _react2.default.createElement('span', { 'class': 'chip', className: 'jsx-1398821061'
-      }, ' ', this.state.secondNameValue, ' '), _react2.default.createElement('span', { 'class': 'chip', className: 'jsx-1398821061'
+      }, 'Generated from:', _react2.default.createElement('span', {
+        className: 'jsx-1398821061' + ' ' + 'chip'
+      }, ' ', this.state.nameValue, ' '), _react2.default.createElement('span', {
+        className: 'jsx-1398821061' + ' ' + 'chip'
+      }, ' ', this.state.secondNameValue, ' '), _react2.default.createElement('span', {
+        className: 'jsx-1398821061' + ' ' + 'chip'
       }, ' ', this.state.surnameValue, ' ')), _react2.default.createElement('div', {
         className: 'jsx-1398821061' + ' ' + 'card-subtitle text-gray'
       }, 'Random, secure, custom, easy and fast.'))))))));

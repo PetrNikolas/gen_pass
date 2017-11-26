@@ -88,6 +88,10 @@ export default class extends React.Component {
             h1 {
               font-size: 1rem;
             }
+
+            #main_card {
+              margin-top: 3px;
+            }
           }
         `}</style>
 

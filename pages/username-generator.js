@@ -214,17 +214,17 @@ export default class extends React.Component {
                   <div className="card-body">
                     <div className="form-group">
                         <div className="columns">
-                            <div className="column col-xs-4">
+                            <div className="column col-lg-4 col-xs-12">
                                 <label className="form-label" for="name">Your name</label>
                                 <input value={this.state.nameValue} onChange={event => this.updateNameValue(event)} type="text" className="form-input" id="name" />
                             </div>
 
-                            <div className="column col-xs-4">
+                            <div className="column col-lg-4 col-xs-12">
                                 <label className="form-label" for="secondName">Your second name</label>
                                 <input value={this.state.secondNameValue} onChange={event => this.updateSecondNameValue(event)} type="text" className="form-input" id="secondName" />
                             </div>
 
-                            <div className="column col-xs-4">
+                            <div className="column col-lg-4 col-xs-12">
                                 <label className="form-label" for="surname">Your surname</label>
                                 <input value={this.state.surnameValue} onChange={event => this.updateSurnameValue(event)} type="text" className="form-input" id="surname" />
                             </div>
