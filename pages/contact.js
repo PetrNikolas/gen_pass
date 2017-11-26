@@ -83,6 +83,12 @@ export default class extends React.Component {
             border-color: #6a11cb;
             box-shadow: none;
           }
+
+          @media only screen and (max-width: 1100px) {
+            h1 {
+              font-size: 1rem;
+            }
+          }
         `}</style>
 
         <header className="navbar animated fadeInDown">

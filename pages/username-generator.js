@@ -142,6 +142,16 @@ export default class extends React.Component {
             color: red;
             display: none;
           }
+
+          @media only screen and (max-width: 1100px) {
+            .card {
+              width: 100%;
+            }
+
+            h1 {
+              font-size: 1rem;
+            }
+          }
         `}</style>
 
         <header className="navbar animated fadeInDown">

@@ -130,85 +130,85 @@ var _class = function (_React$Component) {
       var _this2 = this;
 
       return _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'root'
-      }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-68270185'
-      }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-68270185'
-      }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-68270185'
+        className: 'jsx-1398821061' + ' ' + 'root'
+      }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-1398821061'
+      }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-1398821061'
+      }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-1398821061'
       }), _react2.default.createElement('title', {
-        className: 'jsx-68270185'
-      }, 'GENPASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-68270185'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-68270185'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-68270185'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-68270185'
+        className: 'jsx-1398821061'
+      }, 'GENPASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-1398821061'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-1398821061'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-1398821061'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-1398821061'
       })), _react2.default.createElement(_style2.default, {
-        styleId: '68270185',
-        css: ['.root.jsx-68270185{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}', '.navbar.jsx-68270185 a.jsx-68270185{color:#6a11cb !important;}', '.logo.jsx-68270185{color:#1c1a27;font-size:35px;}', '.card.jsx-68270185{width:50%;margin:0 auto;margin-top:10vh;box-shadow:0 6px 15px rgba(36,37,38,0.08);}', '.btn-primary.jsx-68270185,.btn-primary.jsx-68270185:focus,.btn-primary.jsx-68270185:active{background:#6a11cb !important;border-color:#6a11cb !important;}', 'input.jsx-68270185{max-width:150px;margin:0 auto;}', 'label.jsx-68270185{color:#868f96 !important;}', 'textarea.jsx-68270185{resize:none;}', '.form-input.jsx-68270185:focus{border-color:#6a11cb;box-shadow:none;}', '#error.jsx-68270185{color:red;display:none;}']
+        styleId: '1398821061',
+        css: ['.root.jsx-1398821061{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}', '.navbar.jsx-1398821061 a.jsx-1398821061{color:#6a11cb !important;}', '.logo.jsx-1398821061{color:#1c1a27;font-size:35px;}', '.card.jsx-1398821061{width:50%;margin:0 auto;margin-top:10vh;box-shadow:0 6px 15px rgba(36,37,38,0.08);}', '.btn-primary.jsx-1398821061,.btn-primary.jsx-1398821061:focus,.btn-primary.jsx-1398821061:active{background:#6a11cb !important;border-color:#6a11cb !important;}', 'input.jsx-1398821061{max-width:150px;margin:0 auto;}', 'label.jsx-1398821061{color:#868f96 !important;}', 'textarea.jsx-1398821061{resize:none;}', '.form-input.jsx-1398821061:focus{border-color:#6a11cb;box-shadow:none;}', '#error.jsx-1398821061{color:red;display:none;}', '@media only screen and (max-width:1100px){.card.jsx-1398821061{width:100%;}h1.jsx-1398821061{font-size:1rem;}}']
       }), _react2.default.createElement('header', {
-        className: 'jsx-68270185' + ' ' + 'navbar animated fadeInDown'
+        className: 'jsx-1398821061' + ' ' + 'navbar animated fadeInDown'
       }, _react2.default.createElement('section', {
-        className: 'jsx-68270185' + ' ' + 'navbar-section logo'
+        className: 'jsx-1398821061' + ' ' + 'navbar-section logo'
       }, 'GENPASS'), _react2.default.createElement('section', {
-        className: 'jsx-68270185' + ' ' + 'navbar-section'
+        className: 'jsx-1398821061' + ' ' + 'navbar-section'
       }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement('a', {
-        className: 'jsx-68270185' + ' ' + 'btn btn-link'
+        className: 'jsx-1398821061' + ' ' + 'btn btn-link'
       }, 'Home')), _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', {
-        className: 'jsx-68270185' + ' ' + 'btn btn-link'
+        className: 'jsx-1398821061' + ' ' + 'btn btn-link'
       }, 'Username generator')), _react2.default.createElement(_link2.default, { href: '/contact' }, _react2.default.createElement('a', {
-        className: 'jsx-68270185' + ' ' + 'btn btn-link'
+        className: 'jsx-1398821061' + ' ' + 'btn btn-link'
       }, 'Contact')))), _react2.default.createElement('main', {
-        className: 'jsx-68270185'
+        className: 'jsx-1398821061'
       }, _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'container'
+        className: 'jsx-1398821061' + ' ' + 'container'
       }, _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'columns'
+        className: 'jsx-1398821061' + ' ' + 'columns'
       }, _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'column col-xs-12 text-center'
-      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-68270185' + ' ' + 'card animated fadeInUp'
+        className: 'jsx-1398821061' + ' ' + 'column col-xs-12 text-center'
+      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-1398821061' + ' ' + 'card animated fadeInUp'
       }, _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'card-header'
+        className: 'jsx-1398821061' + ' ' + 'card-header'
       }, _react2.default.createElement('h1', {
-        className: 'jsx-68270185' + ' ' + 'card-title h1'
+        className: 'jsx-1398821061' + ' ' + 'card-title h1'
       }, 'Generator of random username'), _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-1398821061' + ' ' + 'card-subtitle text-gray'
       }, 'So, click on the button and generate your username from your name and surname now!'), _react2.default.createElement('br', {
-        className: 'jsx-68270185'
+        className: 'jsx-1398821061'
       }), _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-1398821061' + ' ' + 'card-subtitle text-gray'
       }, '* second name is not required')), _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'card-body'
+        className: 'jsx-1398821061' + ' ' + 'card-body'
       }, _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'form-group'
+        className: 'jsx-1398821061' + ' ' + 'form-group'
       }, _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'columns'
+        className: 'jsx-1398821061' + ' ' + 'columns'
       }, _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'column col-xs-4'
-      }, _react2.default.createElement('label', { 'for': 'name', className: 'jsx-68270185' + ' ' + 'form-label'
+        className: 'jsx-1398821061' + ' ' + 'column col-xs-4'
+      }, _react2.default.createElement('label', { 'for': 'name', className: 'jsx-1398821061' + ' ' + 'form-label'
       }, 'Your name'), _react2.default.createElement('input', { value: this.state.nameValue, onChange: function onChange(event) {
           return _this2.updateNameValue(event);
-        }, type: 'text', id: 'name', className: 'jsx-68270185' + ' ' + 'form-input'
+        }, type: 'text', id: 'name', className: 'jsx-1398821061' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'column col-xs-4'
-      }, _react2.default.createElement('label', { 'for': 'secondName', className: 'jsx-68270185' + ' ' + 'form-label'
+        className: 'jsx-1398821061' + ' ' + 'column col-xs-4'
+      }, _react2.default.createElement('label', { 'for': 'secondName', className: 'jsx-1398821061' + ' ' + 'form-label'
       }, 'Your second name'), _react2.default.createElement('input', { value: this.state.secondNameValue, onChange: function onChange(event) {
           return _this2.updateSecondNameValue(event);
-        }, type: 'text', id: 'secondName', className: 'jsx-68270185' + ' ' + 'form-input'
+        }, type: 'text', id: 'secondName', className: 'jsx-1398821061' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'column col-xs-4'
-      }, _react2.default.createElement('label', { 'for': 'surname', className: 'jsx-68270185' + ' ' + 'form-label'
+        className: 'jsx-1398821061' + ' ' + 'column col-xs-4'
+      }, _react2.default.createElement('label', { 'for': 'surname', className: 'jsx-1398821061' + ' ' + 'form-label'
       }, 'Your surname'), _react2.default.createElement('input', { value: this.state.surnameValue, onChange: function onChange(event) {
           return _this2.updateSurnameValue(event);
-        }, type: 'text', id: 'surname', className: 'jsx-68270185' + ' ' + 'form-input'
+        }, type: 'text', id: 'surname', className: 'jsx-1398821061' + ' ' + 'form-input'
       })))), _react2.default.createElement('button', { onClick: function onClick() {
           _this2.generatorHandleClick(_this2.state.nameValue, _this2.state.secondNameValue, _this2.state.surnameValue);
-        }, id: 'start_button', className: 'jsx-68270185' + ' ' + 'btn btn-primary'
+        }, id: 'start_button', className: 'jsx-1398821061' + ' ' + 'btn btn-primary'
       }, 'Generate now!')), _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'card-footer'
+        className: 'jsx-1398821061' + ' ' + 'card-footer'
       }, _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'form-group'
-      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-68270185' + ' ' + 'form-label'
-      }, 'Your username is:'), _react2.default.createElement('textarea', { value: this.state.generatedUsername, id: 'result', rows: '3', readOnly: true, className: 'jsx-68270185' + ' ' + 'form-input'
+        className: 'jsx-1398821061' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-1398821061' + ' ' + 'form-label'
+      }, 'Your username is:'), _react2.default.createElement('textarea', { value: this.state.generatedUsername, id: 'result', rows: '3', readOnly: true, className: 'jsx-1398821061' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-68270185' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-1398821061' + ' ' + 'card-subtitle text-gray'
       }, 'Random, secure, custom, easy and fast.'))))))));
     }
   }]);
