@@ -22,6 +22,9 @@ export default class extends React.Component {
 
   /** Update value in input - name */
   updateNameValue = (event) => {
+    /** Error message */
+    document.getElementById("error").style.display = "none";
+
     this.setState({
       nameValue: event.target.value
     });
@@ -29,6 +32,9 @@ export default class extends React.Component {
 
   /** Update value in input - second name */
   updateSecondNameValue = (event) => {
+    /** Error message */
+    document.getElementById("error").style.display = "none";
+
     this.setState({
       secondNameValue: event.target.value
     });
@@ -36,6 +42,9 @@ export default class extends React.Component {
 
   /** Update value in input - surname */
   updateSurnameValue = (event) => {
+    /** Error message */
+    document.getElementById("error").style.display = "none";
+
     this.setState({
       surnameValue: event.target.value
     });
@@ -43,35 +52,37 @@ export default class extends React.Component {
 
   /** Generate password */
   generatorHandleClick = (name, secondName, surname) => {
+    /** Error message */
+    document.getElementById("error").style.display = "none";
+
     /** Password */
     let password = "";
 
-    /** Check if values exists */
-    if (!name || typeof name === "undefined") {
-      name = '';
-    }
+    /** Check if second name exist */
     if (!secondName || typeof secondName === "undefined") {
       secondName = '';
     }
-    if (!surname || typeof surname === "undefined") {
-      surname = '';
-    }
 
-    /** Possible variant */
-    const possible = name + secondName + surname;
-    const length = possible.length;
+    if (name && typeof name !== "undefined" && surname && typeof surname !== "undefined") {
+      /** Possible variant */
+      const possible = name + secondName + surname;
+      const length = possible.length;
 
-    try {
-        /** Iterator */
-        for(let i = 0; i < length; i++) {
-            password += possible.charAt(Math.floor(Math.random() * possible.length));
-        }
+      try {
+          /** Iterator */
+          for(let i = 0; i < length; i++) {
+              password += possible.charAt(Math.floor(Math.random() * possible.length));
+          }
 
-        this.setState({
-            generatedUsername: password
-        });
-    } catch (err) {
-        console.log(err);
+          this.setState({
+              generatedUsername: password
+          });
+      } catch (err) {
+          console.log(err);
+      }
+    } else {
+      /** Error message */
+      document.getElementById("error").style.display = "block";
     }
   }
 
@@ -199,6 +210,7 @@ export default class extends React.Component {
                         </div>
                     </div>
                     <button onClick={ () => { this.generatorHandleClick(this.state.nameValue, this.state.secondNameValue, this.state.surnameValue) } } className="btn btn-primary" id="start_button">Generate now!</button>
+                    <span id="error">Name and surname are required</span>
                   </div>
 
                   <div className="card-footer">

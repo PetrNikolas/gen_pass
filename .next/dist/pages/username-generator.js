@@ -55,53 +55,64 @@ var _class = function (_React$Component) {
     var _this = (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || (0, _getPrototypeOf2.default)(_class)).call(this, props));
 
     _this.updateNameValue = function (event) {
+      /** Error message */
+      document.getElementById("error").style.display = "none";
+
       _this.setState({
         nameValue: event.target.value
       });
     };
 
     _this.updateSecondNameValue = function (event) {
+      /** Error message */
+      document.getElementById("error").style.display = "none";
+
       _this.setState({
         secondNameValue: event.target.value
       });
     };
 
     _this.updateSurnameValue = function (event) {
+      /** Error message */
+      document.getElementById("error").style.display = "none";
+
       _this.setState({
         surnameValue: event.target.value
       });
     };
 
     _this.generatorHandleClick = function (name, secondName, surname) {
+      /** Error message */
+      document.getElementById("error").style.display = "none";
+
       /** Password */
       var password = "";
 
-      /** Check if values exists */
-      if (!name || typeof name === "undefined") {
-        name = '';
-      }
+      /** Check if second name exist */
       if (!secondName || typeof secondName === "undefined") {
         secondName = '';
       }
-      if (!surname || typeof surname === "undefined") {
-        surname = '';
-      }
 
-      /** Possible variant */
-      var possible = name + secondName + surname;
-      var length = possible.length;
+      if (name && typeof name !== "undefined" && surname && typeof surname !== "undefined") {
+        /** Possible variant */
+        var possible = name + secondName + surname;
+        var length = possible.length;
 
-      try {
-        /** Iterator */
-        for (var i = 0; i < length; i++) {
-          password += possible.charAt(Math.floor(Math.random() * possible.length));
+        try {
+          /** Iterator */
+          for (var i = 0; i < length; i++) {
+            password += possible.charAt(Math.floor(Math.random() * possible.length));
+          }
+
+          _this.setState({
+            generatedUsername: password
+          });
+        } catch (err) {
+          console.log(err);
         }
-
-        _this.setState({
-          generatedUsername: password
-        });
-      } catch (err) {
-        console.log(err);
+      } else {
+        /** Error message */
+        document.getElementById("error").style.display = "block";
       }
     };
 
@@ -201,7 +212,8 @@ var _class = function (_React$Component) {
       })))), _react2.default.createElement('button', { onClick: function onClick() {
           _this2.generatorHandleClick(_this2.state.nameValue, _this2.state.secondNameValue, _this2.state.surnameValue);
         }, id: 'start_button', className: 'jsx-1398821061' + ' ' + 'btn btn-primary'
-      }, 'Generate now!')), _react2.default.createElement('div', {
+      }, 'Generate now!'), _react2.default.createElement('span', { id: 'error', className: 'jsx-1398821061'
+      }, 'Name and surname are required')), _react2.default.createElement('div', {
         className: 'jsx-1398821061' + ' ' + 'card-footer'
       }, _react2.default.createElement('div', {
         className: 'jsx-1398821061' + ' ' + 'form-group'
