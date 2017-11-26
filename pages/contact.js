@@ -90,7 +90,12 @@ export default class extends React.Component {
             }
 
             #main_card {
+              height: auto;
               margin-top: 3px;
+            }
+
+            .padding {
+              padding-top: 0;
             }
           }
         `}</style>
