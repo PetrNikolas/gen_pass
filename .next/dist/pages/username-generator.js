@@ -97,20 +97,16 @@ var _class = function (_React$Component) {
 
       if (name && typeof name !== "undefined" && surname && typeof surname !== "undefined") {
         /** Possible variants */
-        var possible_of_name = name + secondName;
-        var possible_of_surname = surname;
-
-        var all_possibles = name + secondName + surname;
-        var length = all_possibles.length;
+        var possible_of_name = name + secondName + surname + '1234567890';
+        var length_of_name = possible_of_name.length;
 
         try {
           /** Iterator */
-          for (var i = 0; i < length; i++) {
+          for (var i = 0; i < length_of_name; i++) {
             first_variant += possible_of_name.charAt(Math.floor(Math.random() * possible_of_name.length));
-            second_varinat += possible_of_surname.charAt(Math.floor(Math.random() * possible_of_surname.length));
           }
 
-          username = first_variant + second_varinat;
+          username = first_variant;
 
           for (var _i = 0; _i < length; _i++) {
             username += username.charAt(Math.floor(Math.random() * username.length));

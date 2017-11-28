@@ -62,7 +62,6 @@ export default class extends React.Component {
       document.getElementById("error").style.display = "block";
     }
   }
-
   
   /** Render HTML */
   render() {

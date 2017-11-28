@@ -67,24 +67,20 @@ export default class extends React.Component {
 
     if (name && typeof name !== "undefined" && surname && typeof surname !== "undefined") {
       /** Possible variants */
-      const possible_of_name = name + secondName;
-      const possible_of_surname = surname;
-
-      const all_possibles = name + secondName + surname;
-      const length = all_possibles.length;
+      const possible_of_name = name + secondName + surname + '1234567890';
+      const length_of_name = possible_of_name.length;
 
       try {
           /** Iterator */
-          for(let i = 0; i < length; i++) {
+          for(let i = 0; i < length_of_name; i++) {
             first_variant += possible_of_name.charAt(Math.floor(Math.random() * possible_of_name.length)); 
-            second_varinat += possible_of_surname.charAt(Math.floor(Math.random() * possible_of_surname.length));
           }
 
-          username = first_variant + second_varinat;
+          username = first_variant;
 
           for(let i = 0; i < length; i++) {
             username += username.charAt(Math.floor(Math.random() * username.length)); 
-          }
+          } 
 
           this.setState({
               generatedUsername: username
@@ -97,7 +93,6 @@ export default class extends React.Component {
       document.getElementById("error").style.display = "block";
     }
   }
-
   
   /** Render HTML */
   render() {
