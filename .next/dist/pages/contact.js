@@ -82,8 +82,7 @@ var _class = function (_React$Component) {
         className: 'jsx-261144264' + ' ' + 'navbar-section'
       }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement('a', {
         className: 'jsx-261144264' + ' ' + 'btn btn-link'
-      }, 'Home')), _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', {
-        className: 'jsx-261144264' + ' ' + 'btn btn-link'
+      }, 'Home')), _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', { 'data-badge': 'beta', className: 'jsx-261144264' + ' ' + 'btn btn-link badge'
       }, 'Username generator')), _react2.default.createElement(_link2.default, { href: '/contact' }, _react2.default.createElement('a', {
         className: 'jsx-261144264' + ' ' + 'btn btn-link'
       }, 'Contact')))), _react2.default.createElement('main', {

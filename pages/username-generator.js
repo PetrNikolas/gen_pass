@@ -179,7 +179,7 @@ export default class extends React.Component {
 
           <section className="navbar-section">
             <Link href="/"><a className="btn btn-link">Home</a></Link>
-            <Link href="/username-generator"><a className="btn btn-link">Username generator</a></Link>
+            <Link href="/username-generator"><a className="btn btn-link badge" data-badge="beta">Username generator</a></Link>
             <Link href="/contact"><a className="btn btn-link">Contact</a></Link>
           </section>
         </header>

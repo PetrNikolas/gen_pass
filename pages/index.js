@@ -95,6 +95,11 @@ export default class extends React.Component {
             font-size: 35px;
           }
 
+          .feedback-btn {
+            margin-top: 30px;
+            position: absolute;
+          }
+
           .card {
             width: 50%;
             margin: 0 auto;
@@ -148,13 +153,15 @@ export default class extends React.Component {
 
           <section className="navbar-section">
             <Link href="/"><a className="btn btn-link">Home</a></Link>
-            <Link href="/username-generator"><a className="btn btn-link">Username generator</a></Link>
+            <Link href="/username-generator"><a className="btn btn-link badge" data-badge="beta">Username generator</a></Link>
             <Link href="/contact"><a className="btn btn-link">Contact</a></Link>
           </section>
         </header>
 
         <main>
           <div className="container">
+            <Link href="/contact"><a className="btn btn-sm feedback-btn animated fadeInUp">feedback</a></Link>
+
             <div className="columns">
               <div className="column col-xs-12 text-center">
 
