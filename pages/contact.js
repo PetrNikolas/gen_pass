@@ -96,6 +96,10 @@ export default class extends React.Component {
             .padding {
               padding-top: 0;
             }
+
+            .root {
+              padding: 3px;
+            }
           }
         `}</style>
 

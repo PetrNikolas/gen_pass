@@ -143,6 +143,10 @@ export default class extends React.Component {
             h1 {
               font-size: 1rem;
             }
+
+            .root {
+              padding: 3px;
+            }
           }
         `}</style>
 
