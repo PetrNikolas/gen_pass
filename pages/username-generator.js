@@ -128,6 +128,7 @@ export default class extends React.Component {
 
           .card {
             width: 50%;
+            border: .3rem dotted #e7e9ed;
             margin: 0 auto;
             margin-top: 10vh;
             box-shadow: 0 6px 15px rgba(36,37,38,0.08);

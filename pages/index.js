@@ -104,6 +104,7 @@ export default class extends React.Component {
             width: 50%;
             margin: 0 auto;
             margin-top: 10vh;
+            border: .3rem dotted #e7e9ed;
             box-shadow: 0 6px 15px rgba(36,37,38,0.08);
           }
 
