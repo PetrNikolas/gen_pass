@@ -103,9 +103,14 @@ export default class extends React.Component {
             color: #6a11cb !important; 
           }
 
-          .logo {
-            color: #1c1a27;
+          .logo a {
+            color: #1c1a27 !important;
             font-size: 35px;
+          }
+
+          .logo a:hover {
+            border-bottom: none;
+            text-decoration: none;
           }
 
           .card {
@@ -161,13 +166,11 @@ export default class extends React.Component {
 
         <header className="navbar animated fadeInDown">
           <section className="navbar-section logo">
-            GENPASS
+            <Link href="/"><a>GENPASS</a></Link>
           </section>
 
           <section className="navbar-section">
-            <Link href="/"><a className="btn btn-link">Home</a></Link>
             <Link href="/username-generator"><a className="btn btn-link badge" data-badge="beta">Username generator</a></Link>
-            <Link href="/contact"><a className="btn btn-link">Contact</a></Link>
           </section>
         </header>
 

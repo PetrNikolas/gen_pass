@@ -26,10 +26,6 @@ app.prepare()
     return app.render(req.req, res.res, '/username-generator', req.query)
   })
 
-  server.get('/contact', (req, res) => {
-    return app.render(req.req, res.res, '/contact', req.query)
-  })
-
   server.get('/*', (req, res) => {
     return handle(req.req, res.res)
   })
