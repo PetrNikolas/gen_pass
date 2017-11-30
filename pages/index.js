@@ -86,6 +86,19 @@ export default class extends React.Component {
             font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
           }
 
+          .footer {
+            color: #acb3c2;
+            padding: .5rem .5rem 1.5rem .5rem;
+          }
+
+          .footer a {
+            color: #667189;
+          }
+
+          .centered {
+            text-align: center;
+          }
+
           .navbar a {
             color: #6a11cb !important; 
           }
@@ -95,15 +108,10 @@ export default class extends React.Component {
             font-size: 35px;
           }
 
-          .feedback-btn {
-            margin-top: 30px;
-            position: absolute;
-          }
-
           .card {
             width: 50%;
             margin: 0 auto;
-            margin-top: 10vh;
+            margin-top: 5vh;
             border: .3rem dotted #e7e9ed;
             box-shadow: 0 6px 15px rgba(36,37,38,0.08);
           }
@@ -165,8 +173,6 @@ export default class extends React.Component {
 
         <main>
           <div className="container">
-            <Link href="/contact"><a className="btn btn-sm feedback-btn animated fadeInUp">feedback</a></Link>
-
             <div className="columns">
               <div className="column col-xs-12 text-center">
 
@@ -199,6 +205,15 @@ export default class extends React.Component {
             </div>
           </div>
         </main>
+
+        <footer className="footer animated fadeInDown">
+          <p className="centered">
+            <a href="mailto:petr.nikolas@icloud.com?subject=Hello">Send me a feedback.</a>
+          </p>
+          <p className="centered">
+            Built with ♥ by <a target="_blank" href="http://www.petrnikolas.com/">Petr Nikolas</a>
+          </p>  
+        </footer>
       </div>
     )
   } 

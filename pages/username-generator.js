@@ -117,6 +117,19 @@ export default class extends React.Component {
             font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
           }
 
+          .footer {
+            color: #acb3c2;
+            padding: .5rem .5rem 1.5rem .5rem;
+          }
+
+          .footer a {
+            color: #667189;
+          }
+
+          .centered {
+            text-align: center;
+          }
+
           .navbar a {
             color: #6a11cb !important; 
           }
@@ -130,7 +143,7 @@ export default class extends React.Component {
             width: 50%;
             border: .3rem dotted #e7e9ed;
             margin: 0 auto;
-            margin-top: 10vh;
+            margin-top: 5vh;
             box-shadow: 0 6px 15px rgba(36,37,38,0.08);
           }
 
@@ -255,6 +268,15 @@ export default class extends React.Component {
             </div>
           </div>
         </main>
+
+        <footer className="footer animated fadeInDown">
+          <p className="centered">
+            <a href="mailto:petr.nikolas@icloud.com?subject=Hello">Send me a feedback.</a>
+          </p>
+          <p className="centered">
+            Built with ♥ by <a target="_blank" href="http://www.petrnikolas.com/">Petr Nikolas</a>
+          </p>  
+        </footer>
       </div>
     )
   } 
