@@ -25,12 +25,17 @@ export default class extends React.Component {
     /** Error message */
     document.getElementById("error").style.display = "none";
 
-    /** Chip */
-    document.getElementById("name_chip").style.display = "inline-block";
-
     this.setState({
       nameValue: event.target.value
     });
+
+    /** Show and hide chip  */
+    if (typeof event.target.value !== 'undefined' && event.target.value) {
+      document.getElementById("name_chip").style.display = "inline-block";
+    } else {
+      /** Chip */
+      document.getElementById("name_chip").style.display = "none";
+    }
   }
 
   /** Update value in input - second name */
@@ -38,12 +43,17 @@ export default class extends React.Component {
     /** Error message */
     document.getElementById("error").style.display = "none";
 
-    /** Chip */
-    document.getElementById("second_name_chip").style.display = "inline-block";
-
     this.setState({
       secondNameValue: event.target.value
     });
+
+    /** Show and hide chip  */
+    if (typeof event.target.value !== 'undefined' && event.target.value) {
+      document.getElementById("second_name_chip").style.display = "inline-block";
+    } else {
+      /** Chip */
+      document.getElementById("second_name_chip").style.display = "none";
+    }
   }
 
   /** Update value in input - surname */
@@ -51,12 +61,17 @@ export default class extends React.Component {
     /** Error message */
     document.getElementById("error").style.display = "none";
 
-    /** Chip */
-    document.getElementById("surname_chip").style.display = "inline-block";
-
     this.setState({
       surnameValue: event.target.value
     });
+
+    /** Show and hide chip  */
+    if (typeof event.target.value !== 'undefined' && event.target.value) {
+      document.getElementById("surname_chip").style.display = "inline-block";
+    } else {
+      /** Chip */
+      document.getElementById("surname_chip").style.display = "none";
+    }
   }
 
   /** Generate password */

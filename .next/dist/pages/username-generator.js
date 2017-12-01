@@ -58,36 +58,51 @@ var _class = function (_React$Component) {
       /** Error message */
       document.getElementById("error").style.display = "none";
 
-      /** Chip */
-      document.getElementById("name_chip").style.display = "inline-block";
-
       _this.setState({
         nameValue: event.target.value
       });
+
+      /** Show and hide chip  */
+      if (typeof event.target.value !== 'undefined' && event.target.value) {
+        document.getElementById("name_chip").style.display = "inline-block";
+      } else {
+        /** Chip */
+        document.getElementById("name_chip").style.display = "none";
+      }
     };
 
     _this.updateSecondNameValue = function (event) {
       /** Error message */
       document.getElementById("error").style.display = "none";
 
-      /** Chip */
-      document.getElementById("second_name_chip").style.display = "inline-block";
-
       _this.setState({
         secondNameValue: event.target.value
       });
+
+      /** Show and hide chip  */
+      if (typeof event.target.value !== 'undefined' && event.target.value) {
+        document.getElementById("second_name_chip").style.display = "inline-block";
+      } else {
+        /** Chip */
+        document.getElementById("second_name_chip").style.display = "none";
+      }
     };
 
     _this.updateSurnameValue = function (event) {
       /** Error message */
       document.getElementById("error").style.display = "none";
 
-      /** Chip */
-      document.getElementById("surname_chip").style.display = "inline-block";
-
       _this.setState({
         surnameValue: event.target.value
       });
+
+      /** Show and hide chip  */
+      if (typeof event.target.value !== 'undefined' && event.target.value) {
+        document.getElementById("surname_chip").style.display = "inline-block";
+      } else {
+        /** Chip */
+        document.getElementById("surname_chip").style.display = "none";
+      }
     };
 
     _this.generatorHandleClick = function (name, secondName, surname) {
