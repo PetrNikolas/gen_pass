@@ -25,6 +25,9 @@ export default class extends React.Component {
     /** Error message */
     document.getElementById("error").style.display = "none";
 
+    /** Chip */
+    document.getElementById("name_chip").style.display = "inline-block";
+
     this.setState({
       nameValue: event.target.value
     });
@@ -35,6 +38,9 @@ export default class extends React.Component {
     /** Error message */
     document.getElementById("error").style.display = "none";
 
+    /** Chip */
+    document.getElementById("second_name_chip").style.display = "inline-block";
+
     this.setState({
       secondNameValue: event.target.value
     });
@@ -44,6 +50,9 @@ export default class extends React.Component {
   updateSurnameValue = (event) => {
     /** Error message */
     document.getElementById("error").style.display = "none";
+
+    /** Chip */
+    document.getElementById("surname_chip").style.display = "inline-block";
 
     this.setState({
       surnameValue: event.target.value
@@ -180,6 +189,10 @@ export default class extends React.Component {
             display: none;
           }
 
+          #name_chip, #second_name_chip, #surname_chip {
+            display: none;
+          }
+
           @media only screen and (max-width: 1100px) {
             .card {
               width: 100%;
@@ -258,9 +271,9 @@ export default class extends React.Component {
 
                     <div>
                       Generated from: 
-                      <span className="chip"> {this.state.nameValue} </span>
-                      <span className="chip"> {this.state.secondNameValue} </span>
-                      <span className="chip"> {this.state.surnameValue} </span> 
+                      <span id="name_chip" className="chip"> {this.state.nameValue} </span>
+                      <span id="second_name_chip" className="chip"> {this.state.secondNameValue} </span>
+                      <span id="surname_chip" className="chip"> {this.state.surnameValue} </span> 
                     </div>
 
                     <div className="card-subtitle text-gray">Random, secure, custom, easy and fast.</div>
