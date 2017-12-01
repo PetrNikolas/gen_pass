@@ -116,71 +116,72 @@ var _class = function (_React$Component) {
       var _this2 = this;
 
       return _react2.default.createElement('div', {
-        className: 'jsx-3482057989' + ' ' + 'root'
-      }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-3482057989'
-      }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-3482057989'
-      }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-3482057989'
+        className: 'jsx-1649734026' + ' ' + 'root'
+      }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-1649734026'
+      }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-1649734026'
+      }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-1649734026'
       }), _react2.default.createElement('title', {
-        className: 'jsx-3482057989'
-      }, 'GENPASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-3482057989'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-3482057989'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-3482057989'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-3482057989'
+        className: 'jsx-1649734026'
+      }, 'GENPASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-1649734026'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-1649734026'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-1649734026'
+      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-1649734026'
       })), _react2.default.createElement(_style2.default, {
-        styleId: '3482057989',
-        css: ['.root.jsx-3482057989{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}', '.footer.jsx-3482057989{color:#acb3c2;padding:.5rem .5rem 1.5rem .5rem;}', '.footer.jsx-3482057989 a.jsx-3482057989{color:#667189;}', '.centered.jsx-3482057989{text-align:center;}', '.navbar.jsx-3482057989 a.jsx-3482057989{color:#6a11cb !important;}', '.logo.jsx-3482057989 a.jsx-3482057989{color:#1c1a27 !important;font-size:35px;}', '.logo.jsx-3482057989 a.jsx-3482057989:hover{border-bottom:none;text-decoration:none;}', '.card.jsx-3482057989{width:50%;margin:0 auto;margin-top:5vh;border:.3rem dotted #e7e9ed;box-shadow:0 6px 15px rgba(36,37,38,0.08);}', '.btn-primary.jsx-3482057989,.btn-primary.jsx-3482057989:focus,.btn-primary.jsx-3482057989:active{background:#6a11cb !important;border-color:#6a11cb !important;}', 'input.jsx-3482057989{max-width:150px;margin:0 auto;}', 'label.jsx-3482057989{color:#868f96 !important;}', 'textarea.jsx-3482057989{resize:none;}', '.form-input.jsx-3482057989:focus{border-color:#6a11cb;box-shadow:none;}', '#error.jsx-3482057989{color:red;display:none;}', '@media only screen and (max-width:1100px){.card.jsx-3482057989{width:100%;}h1.jsx-3482057989{font-size:1rem;}.root.jsx-3482057989{padding:3px;}}']
+        styleId: '1649734026',
+        css: ['.root.jsx-1649734026{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}', '.footer.jsx-1649734026{color:#acb3c2;padding:.5rem .5rem 1.5rem .5rem;}', '.footer.jsx-1649734026 a.jsx-1649734026{color:#667189;}', '.centered.jsx-1649734026{text-align:center;}', '.navbar.jsx-1649734026 a.jsx-1649734026{color:#6a11cb !important;}', '.logo.jsx-1649734026 a.jsx-1649734026{color:#1c1a27 !important;font-size:35px;}', '.logo.jsx-1649734026 a.jsx-1649734026:hover{border-bottom:none;text-decoration:none;}', '.card.jsx-1649734026{width:50%;margin:0 auto;margin-top:7vh;border:.3rem dotted #e7e9ed;box-shadow:0 6px 15px rgba(36,37,38,0.08);}', '.btn-primary.jsx-1649734026,.btn-primary.jsx-1649734026:focus,.btn-primary.jsx-1649734026:active{background:#6a11cb !important;border-color:#6a11cb !important;}', 'input.jsx-1649734026{max-width:150px;margin:0 auto;}', 'label.jsx-1649734026{color:#868f96 !important;}', 'textarea.jsx-1649734026{resize:none;}', '.form-input.jsx-1649734026:focus{border-color:#6a11cb;box-shadow:none;}', '#error.jsx-1649734026{color:red;display:none;}', '@media only screen and (max-width:1100px){.card.jsx-1649734026{width:100%;}h1.jsx-1649734026{font-size:1rem;}.root.jsx-1649734026{padding:3px;}}']
       }), _react2.default.createElement('header', {
-        className: 'jsx-3482057989' + ' ' + 'navbar animated fadeInDown'
+        className: 'jsx-1649734026' + ' ' + 'navbar animated fadeInDown'
       }, _react2.default.createElement('section', {
-        className: 'jsx-3482057989' + ' ' + 'navbar-section logo'
+        className: 'jsx-1649734026' + ' ' + 'navbar-section logo'
       }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement('a', {
-        className: 'jsx-3482057989'
+        className: 'jsx-1649734026'
       }, 'GENPASS'))), _react2.default.createElement('section', {
-        className: 'jsx-3482057989' + ' ' + 'navbar-section'
-      }, _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', { 'data-badge': 'beta', className: 'jsx-3482057989' + ' ' + 'btn btn-link badge'
+        className: 'jsx-1649734026' + ' ' + 'navbar-section'
+      }, _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', {
+        className: 'jsx-1649734026' + ' ' + 'btn btn-link'
       }, 'Username generator')))), _react2.default.createElement('main', {
-        className: 'jsx-3482057989'
+        className: 'jsx-1649734026'
       }, _react2.default.createElement('div', {
-        className: 'jsx-3482057989' + ' ' + 'container'
+        className: 'jsx-1649734026' + ' ' + 'container'
       }, _react2.default.createElement('div', {
-        className: 'jsx-3482057989' + ' ' + 'columns'
+        className: 'jsx-1649734026' + ' ' + 'columns'
       }, _react2.default.createElement('div', {
-        className: 'jsx-3482057989' + ' ' + 'column col-xs-12 text-center'
-      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-3482057989' + ' ' + 'card animated fadeInUp'
+        className: 'jsx-1649734026' + ' ' + 'column col-xs-12 text-center'
+      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-1649734026' + ' ' + 'card animated fadeInUp'
       }, _react2.default.createElement('div', {
-        className: 'jsx-3482057989' + ' ' + 'card-header'
+        className: 'jsx-1649734026' + ' ' + 'card-header'
       }, _react2.default.createElement('h1', {
-        className: 'jsx-3482057989' + ' ' + 'card-title h1'
+        className: 'jsx-1649734026' + ' ' + 'card-title h1'
       }, 'Generator of random password'), _react2.default.createElement('div', {
-        className: 'jsx-3482057989' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-1649734026' + ' ' + 'card-subtitle text-gray'
       }, 'So, click on the button and generate your password now!')), _react2.default.createElement('div', {
-        className: 'jsx-3482057989' + ' ' + 'card-body'
+        className: 'jsx-1649734026' + ' ' + 'card-body'
       }, _react2.default.createElement('div', {
-        className: 'jsx-3482057989' + ' ' + 'form-group'
-      }, _react2.default.createElement('label', { 'for': 'count', className: 'jsx-3482057989' + ' ' + 'form-label'
+        className: 'jsx-1649734026' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'count', className: 'jsx-1649734026' + ' ' + 'form-label'
       }, 'Set lenght of your password (default is 100)'), _react2.default.createElement('input', { value: this.state.inputValue, onChange: function onChange(event) {
           return _this2.updateInputValue(event);
-        }, type: 'number', min: '1', max: '100000', id: 'count', className: 'jsx-3482057989' + ' ' + 'form-input'
+        }, type: 'number', min: '1', max: '100000', id: 'count', className: 'jsx-1649734026' + ' ' + 'form-input'
       })), _react2.default.createElement('button', { onClick: function onClick() {
           _this2.generatorHandleClick(_this2.state.inputValue);
-        }, id: 'start_button', className: 'jsx-3482057989' + ' ' + 'btn btn-primary'
-      }, 'Generate now!'), _react2.default.createElement('span', { id: 'error', className: 'jsx-3482057989'
+        }, id: 'start_button', className: 'jsx-1649734026' + ' ' + 'btn btn-primary'
+      }, 'Generate now!'), _react2.default.createElement('span', { id: 'error', className: 'jsx-1649734026'
       }, 'Max value is 100000')), _react2.default.createElement('div', {
-        className: 'jsx-3482057989' + ' ' + 'card-footer'
+        className: 'jsx-1649734026' + ' ' + 'card-footer'
       }, _react2.default.createElement('div', {
-        className: 'jsx-3482057989' + ' ' + 'form-group'
-      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-3482057989' + ' ' + 'form-label'
-      }, 'Your password is:'), _react2.default.createElement('textarea', { value: this.state.generatedPassword, id: 'result', rows: '7', readOnly: true, className: 'jsx-3482057989' + ' ' + 'form-input'
+        className: 'jsx-1649734026' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-1649734026' + ' ' + 'form-label'
+      }, 'Your password is:'), _react2.default.createElement('textarea', { value: this.state.generatedPassword, id: 'result', rows: '7', readOnly: true, className: 'jsx-1649734026' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-3482057989' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-1649734026' + ' ' + 'card-subtitle text-gray'
       }, 'Random, secure, custom, easy and fast.'))))))), _react2.default.createElement('footer', {
-        className: 'jsx-3482057989' + ' ' + 'footer animated fadeInDown'
+        className: 'jsx-1649734026' + ' ' + 'footer animated fadeInDown'
       }, _react2.default.createElement('p', {
-        className: 'jsx-3482057989' + ' ' + 'centered'
-      }, _react2.default.createElement('a', { href: 'mailto:petr.nikolas@icloud.com?subject=Hello', className: 'jsx-3482057989'
+        className: 'jsx-1649734026' + ' ' + 'centered'
+      }, _react2.default.createElement('a', { href: 'mailto:petr.nikolas@icloud.com?subject=Hello', className: 'jsx-1649734026'
       }, 'Send me a feedback.')), _react2.default.createElement('p', {
-        className: 'jsx-3482057989' + ' ' + 'centered'
-      }, 'Built with \u2665 by ', _react2.default.createElement('a', { target: '_blank', href: 'http://www.petrnikolas.com/', className: 'jsx-3482057989'
+        className: 'jsx-1649734026' + ' ' + 'centered'
+      }, 'Built with \u2665 by ', _react2.default.createElement('a', { target: '_blank', href: 'http://www.petrnikolas.com/', className: 'jsx-1649734026'
       }, 'Petr Nikolas'))));
     }
   }]);

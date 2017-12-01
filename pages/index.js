@@ -116,7 +116,7 @@ export default class extends React.Component {
           .card {
             width: 50%;
             margin: 0 auto;
-            margin-top: 5vh;
+            margin-top: 7vh;
             border: .3rem dotted #e7e9ed;
             box-shadow: 0 6px 15px rgba(36,37,38,0.08);
           }
@@ -170,7 +170,7 @@ export default class extends React.Component {
           </section>
 
           <section className="navbar-section">
-            <Link href="/username-generator"><a className="btn btn-link badge" data-badge="beta">Username generator</a></Link>
+            <Link href="/username-generator"><a className="btn btn-link">Username generator</a></Link>
           </section>
         </header>
 
