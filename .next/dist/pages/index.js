@@ -136,7 +136,7 @@ var _class = function (_React$Component) {
         className: 'jsx-2533204521' + ' ' + 'card-header'
       }, _react2.default.createElement('h1', {
         className: 'jsx-2533204521' + ' ' + 'card-title h1'
-      }, 'Generator of random password'), _react2.default.createElement('div', {
+      }, 'Passwords generator'), _react2.default.createElement('div', {
         className: 'jsx-2533204521' + ' ' + 'card-subtitle text-gray'
       }, 'So, click on the button and generate your password now!')), _react2.default.createElement('div', {
         className: 'jsx-2533204521' + ' ' + 'card-body'

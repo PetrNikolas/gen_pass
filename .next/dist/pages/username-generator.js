@@ -203,7 +203,7 @@ var _class = function (_React$Component) {
         className: 'jsx-4173095701' + ' ' + 'card-header'
       }, _react2.default.createElement('h1', {
         className: 'jsx-4173095701' + ' ' + 'card-title h1'
-      }, 'Generator of random username'), _react2.default.createElement('div', {
+      }, 'Usernames generator'), _react2.default.createElement('div', {
         className: 'jsx-4173095701' + ' ' + 'card-subtitle text-gray'
       }, 'So, click on the button and generate your username from your name and surname now!'), _react2.default.createElement('br', {
         className: 'jsx-4173095701'

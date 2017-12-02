@@ -230,7 +230,7 @@ export default class extends React.Component {
 
               <div id="main_card" className="card animated fadeInUp">
                 <div className="card-header">
-                  <h1 className="card-title h1">Generator of random username</h1>
+                  <h1 className="card-title h1">Usernames generator</h1>
                   <div className="card-subtitle text-gray">So, click on the button and generate your username from your name and surname now!</div>
                   <br/>
                   <div className="card-subtitle text-gray">* second name is not required</div>
