@@ -180,76 +180,76 @@ var _class = function (_React$Component) {
       var _this2 = this;
 
       return _react2.default.createElement(_layout2.default, null, _react2.default.createElement(_style2.default, {
-        styleId: '1774412239',
-        css: ['.card.jsx-1774412239{width:50%;border:.3rem dotted #e7e9ed;margin:0 auto;margin-top:7vh;box-shadow:0 6px 15px rgba(36,37,38,0.08);}', '.btn-primary.jsx-1774412239,.btn-primary.jsx-1774412239:focus,.btn-primary.jsx-1774412239:active{background:#6a11cb !important;border-color:#6a11cb !important;}', 'input.jsx-1774412239{max-width:150px;margin:0 auto;}', 'label.jsx-1774412239{color:#868f96 !important;}', 'textarea.jsx-1774412239{resize:none;}', '.form-input.jsx-1774412239:focus{border-color:#6a11cb;box-shadow:none;}', '#error.jsx-1774412239{color:red;display:none;}', '#name_chip.jsx-1774412239,#second_name_chip.jsx-1774412239,#surname_chip.jsx-1774412239{display:none;}', '@media only screen and (max-width:1100px){.card.jsx-1774412239{width:100%;}h1.jsx-1774412239{font-size:1rem;}}']
+        styleId: '2876828421',
+        css: ['.breadcrumb-item.jsx-2876828421 a.jsx-2876828421{color:#f8114d;}', '.breadcrumb.jsx-2876828421 .breadcrumb-item.jsx-2876828421:not(:last-child) a.jsx-2876828421{color:#667189;}', '.card.jsx-2876828421{background:hsla(0,0%,98%,0.9);width:50%;border:.3rem dotted #e7e9ed;margin:0 auto;margin-top:7vh;box-shadow:0 6px 15px rgba(36,37,38,0.08);}', '.btn-primary.jsx-2876828421,.btn-primary.jsx-2876828421:focus,.btn-primary.jsx-2876828421:active{background:#f8114d !important;border-color:#f8114d !important;}', 'input.jsx-2876828421{max-width:150px;margin:0 auto;}', 'label.jsx-2876828421{color:#868f96 !important;}', 'textarea.jsx-2876828421{resize:none;}', '.form-input.jsx-2876828421:focus{border-color:#868f96;box-shadow:none;}', '#error.jsx-2876828421{color:red;display:none;}', '#name_chip.jsx-2876828421,#second_name_chip.jsx-2876828421,#surname_chip.jsx-2876828421{display:none;}', '@media only screen and (max-width:1100px){.card.jsx-2876828421{width:100%;}h1.jsx-2876828421{font-size:1rem;}}']
       }), _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'container'
+        className: 'jsx-2876828421' + ' ' + 'container'
       }, _react2.default.createElement('ul', {
-        className: 'jsx-1774412239' + ' ' + 'breadcrumb animated fadeInDown'
+        className: 'jsx-2876828421' + ' ' + 'breadcrumb animated fadeInDown'
       }, _react2.default.createElement('li', {
-        className: 'jsx-1774412239' + ' ' + 'breadcrumb-item'
+        className: 'jsx-2876828421' + ' ' + 'breadcrumb-item'
       }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement('a', {
-        className: 'jsx-1774412239'
+        className: 'jsx-2876828421'
       }, 'Home'))), _react2.default.createElement('li', {
-        className: 'jsx-1774412239' + ' ' + 'breadcrumb-item'
+        className: 'jsx-2876828421' + ' ' + 'breadcrumb-item'
       }, _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', {
-        className: 'jsx-1774412239'
+        className: 'jsx-2876828421'
       }, 'Username generator')))), _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'columns'
+        className: 'jsx-2876828421' + ' ' + 'columns'
       }, _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'column col-xs-12 text-center'
-      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-1774412239' + ' ' + 'card animated fadeInUp'
+        className: 'jsx-2876828421' + ' ' + 'column col-xs-12 text-center'
+      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-2876828421' + ' ' + 'card animated fadeInUp'
       }, _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'card-header'
+        className: 'jsx-2876828421' + ' ' + 'card-header'
       }, _react2.default.createElement('h1', {
-        className: 'jsx-1774412239' + ' ' + 'card-title h1'
+        className: 'jsx-2876828421' + ' ' + 'card-title h1'
       }, 'Generator of random username'), _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-2876828421' + ' ' + 'card-subtitle text-gray'
       }, 'So, click on the button and generate your username from your name and surname now!'), _react2.default.createElement('br', {
-        className: 'jsx-1774412239'
+        className: 'jsx-2876828421'
       }), _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-2876828421' + ' ' + 'card-subtitle text-gray'
       }, '* second name is not required')), _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'card-body'
+        className: 'jsx-2876828421' + ' ' + 'card-body'
       }, _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'form-group'
+        className: 'jsx-2876828421' + ' ' + 'form-group'
       }, _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'columns'
+        className: 'jsx-2876828421' + ' ' + 'columns'
       }, _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'column col-lg-4 col-xs-12'
-      }, _react2.default.createElement('label', { 'for': 'name', className: 'jsx-1774412239' + ' ' + 'form-label'
+        className: 'jsx-2876828421' + ' ' + 'column col-lg-4 col-xs-12'
+      }, _react2.default.createElement('label', { 'for': 'name', className: 'jsx-2876828421' + ' ' + 'form-label'
       }, 'Your name'), _react2.default.createElement('input', { value: this.state.nameValue, onChange: function onChange(event) {
           return _this2.updateNameValue(event);
-        }, type: 'text', id: 'name', className: 'jsx-1774412239' + ' ' + 'form-input'
+        }, type: 'text', id: 'name', className: 'jsx-2876828421' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'column col-lg-4 col-xs-12'
-      }, _react2.default.createElement('label', { 'for': 'secondName', className: 'jsx-1774412239' + ' ' + 'form-label'
+        className: 'jsx-2876828421' + ' ' + 'column col-lg-4 col-xs-12'
+      }, _react2.default.createElement('label', { 'for': 'secondName', className: 'jsx-2876828421' + ' ' + 'form-label'
       }, 'Your second name'), _react2.default.createElement('input', { value: this.state.secondNameValue, onChange: function onChange(event) {
           return _this2.updateSecondNameValue(event);
-        }, type: 'text', id: 'secondName', className: 'jsx-1774412239' + ' ' + 'form-input'
+        }, type: 'text', id: 'secondName', className: 'jsx-2876828421' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'column col-lg-4 col-xs-12'
-      }, _react2.default.createElement('label', { 'for': 'surname', className: 'jsx-1774412239' + ' ' + 'form-label'
+        className: 'jsx-2876828421' + ' ' + 'column col-lg-4 col-xs-12'
+      }, _react2.default.createElement('label', { 'for': 'surname', className: 'jsx-2876828421' + ' ' + 'form-label'
       }, 'Your surname'), _react2.default.createElement('input', { value: this.state.surnameValue, onChange: function onChange(event) {
           return _this2.updateSurnameValue(event);
-        }, type: 'text', id: 'surname', className: 'jsx-1774412239' + ' ' + 'form-input'
+        }, type: 'text', id: 'surname', className: 'jsx-2876828421' + ' ' + 'form-input'
       })))), _react2.default.createElement('button', { onClick: function onClick() {
           _this2.generatorHandleClick(_this2.state.nameValue, _this2.state.secondNameValue, _this2.state.surnameValue);
-        }, id: 'start_button', className: 'jsx-1774412239' + ' ' + 'btn btn-primary'
-      }, 'Generate now!'), _react2.default.createElement('span', { id: 'error', className: 'jsx-1774412239'
+        }, id: 'start_button', className: 'jsx-2876828421' + ' ' + 'btn btn-primary'
+      }, 'Generate now!'), _react2.default.createElement('span', { id: 'error', className: 'jsx-2876828421'
       }, 'Name and surname are required')), _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'card-footer'
+        className: 'jsx-2876828421' + ' ' + 'card-footer'
       }, _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'form-group'
-      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-1774412239' + ' ' + 'form-label'
-      }, 'Your username is:'), _react2.default.createElement('textarea', { value: this.state.generatedUsername, id: 'result', rows: '3', readOnly: true, className: 'jsx-1774412239' + ' ' + 'form-input'
+        className: 'jsx-2876828421' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-2876828421' + ' ' + 'form-label'
+      }, 'Your username is:'), _react2.default.createElement('textarea', { value: this.state.generatedUsername, id: 'result', rows: '3', readOnly: true, className: 'jsx-2876828421' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-1774412239'
-      }, 'Generated from:', _react2.default.createElement('span', { id: 'name_chip', className: 'jsx-1774412239' + ' ' + 'chip'
-      }, ' ', this.state.nameValue, ' '), _react2.default.createElement('span', { id: 'second_name_chip', className: 'jsx-1774412239' + ' ' + 'chip'
-      }, ' ', this.state.secondNameValue, ' '), _react2.default.createElement('span', { id: 'surname_chip', className: 'jsx-1774412239' + ' ' + 'chip'
+        className: 'jsx-2876828421'
+      }, 'Generated from:', _react2.default.createElement('span', { id: 'name_chip', className: 'jsx-2876828421' + ' ' + 'chip'
+      }, ' ', this.state.nameValue, ' '), _react2.default.createElement('span', { id: 'second_name_chip', className: 'jsx-2876828421' + ' ' + 'chip'
+      }, ' ', this.state.secondNameValue, ' '), _react2.default.createElement('span', { id: 'surname_chip', className: 'jsx-2876828421' + ' ' + 'chip'
       }, ' ', this.state.surnameValue, ' ')), _react2.default.createElement('div', {
-        className: 'jsx-1774412239' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-2876828421' + ' ' + 'card-subtitle text-gray'
       }, 'Random, secure, custom, easy and fast.')))))));
     }
   }]);

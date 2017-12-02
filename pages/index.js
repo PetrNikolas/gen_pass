@@ -70,6 +70,7 @@ export default class extends React.Component {
       <Page>
         <style jsx>{`
           .card {
+            background: hsla(0, 0%, 98%, 0.9);
             width: 50%;
             margin: 0 auto;
             margin-top: 7vh;
@@ -78,8 +79,8 @@ export default class extends React.Component {
           }
 
           .btn-primary, .btn-primary:focus, .btn-primary:active {
-            background: #6a11cb !important;
-            border-color: #6a11cb !important;
+            background: #f8114d !important;
+            border-color: #f8114d !important;
           }
 
           input {
@@ -96,7 +97,7 @@ export default class extends React.Component {
           }
 
           .form-input:focus {
-            border-color: #6a11cb;
+            border-color: #868f96;
             box-shadow: none;
           }
 

@@ -124,7 +124,16 @@ export default class extends React.Component {
     return (
        <Page>
         <style jsx>{`
+          .breadcrumb-item a {
+            color: #f8114d;
+          }
+
+          .breadcrumb .breadcrumb-item:not(:last-child) a {
+            color: #667189;
+          }
+
           .card {
+            background: hsla(0, 0%, 98%, 0.9);
             width: 50%;
             border: .3rem dotted #e7e9ed;
             margin: 0 auto;
@@ -133,8 +142,8 @@ export default class extends React.Component {
           }
 
           .btn-primary, .btn-primary:focus, .btn-primary:active {
-            background: #6a11cb !important;
-            border-color: #6a11cb !important;
+            background: #f8114d !important;
+            border-color: #f8114d !important;
           }
 
           input {
@@ -151,7 +160,7 @@ export default class extends React.Component {
           }
 
           .form-input:focus {
-            border-color: #6a11cb;
+            border-color: #868f96;
             box-shadow: none;
           }
 

@@ -35,12 +35,21 @@ export default ({ children }) => (
             color: #667189;
           }
 
+          .footer .hearth_icon {
+            color: #f8114d;
+          }
+
           .centered {
             text-align: center;
           }
 
           .navbar a {
-            color: #6a11cb !important; 
+            color: #50596c !important; 
+          }
+
+          .navbar a:hover, .navbar a:focus, .navbar a:active {
+            border: none !important;
+            border-bottom: 2px solid #f8114d !important; 
           }
 
           .logo a {
@@ -62,11 +71,11 @@ export default ({ children }) => (
 
         <header className="navbar animated fadeInDown">
             <section className="navbar-section logo">
-            <Link href="/"><a>GENPASS</a></Link>
+              <Link href="/"><a>GENPASS</a></Link>
             </section>
 
             <section className="navbar-section">
-            <Link href="/username-generator"><a className="btn btn-link">Username generator</a></Link>
+              <Link href="/username-generator"><a className="btn btn-link">Username generator</a></Link>
             </section>
         </header>
 
@@ -76,10 +85,10 @@ export default ({ children }) => (
 
         <footer className="footer animated fadeInDown">
             <p className="centered">
-            <a href="mailto:petr.nikolas@icloud.com?subject=Hello">Send me a feedback.</a>
+              <a href="mailto:petr.nikolas@icloud.com?subject=Hello">Send me a feedback.</a>
             </p>
             <p className="centered">
-            Built with ♥ by <a target="_blank" href="http://www.petrnikolas.com/">Petr Nikolas</a>
+              Built with <span className="hearth_icon">♥</span> by <a target="_blank" href="http://www.petrnikolas.com/">Petr Nikolas</a>
             </p>  
         </footer>
     </div>

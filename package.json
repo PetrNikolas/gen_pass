@@ -1,6 +1,6 @@
 {
   "name": "gen-pass",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "engines": {
     "node": "8.1.4",
     "npm": "5.0.3"
