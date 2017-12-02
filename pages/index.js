@@ -4,6 +4,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Page from '../layout'
 
 
 // ------------------------------------------------------------------------------
@@ -66,53 +67,8 @@ export default class extends React.Component {
   /** Render HTML */
   render() {
     return (
-       <div className="root">
-        <Head>
-          <meta charSet="utf-8"/>
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
-          <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-          <title>GENPASS</title>
-
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-          <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css" />
-          <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css" />
-          <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css" />
-        </Head>
-
+      <Page>
         <style jsx>{`
-          .root {
-            padding: 50px;
-            font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-          }
-
-          .footer {
-            color: #acb3c2;
-            padding: .5rem .5rem 1.5rem .5rem;
-          }
-
-          .footer a {
-            color: #667189;
-          }
-
-          .centered {
-            text-align: center;
-          }
-
-          .navbar a {
-            color: #6a11cb !important; 
-          }
-
-          .logo a {
-            color: #1c1a27 !important;
-            font-size: 35px;
-          }
-
-          .logo a:hover {
-            border-bottom: none;
-            text-decoration: none;
-          }
-
           .card {
             width: 50%;
             margin: 0 auto;
@@ -157,67 +113,42 @@ export default class extends React.Component {
             h1 {
               font-size: 1rem;
             }
-
-            .root {
-              padding: 3px;
-            }
           }
         `}</style>
 
-        <header className="navbar animated fadeInDown">
-          <section className="navbar-section logo">
-            <Link href="/"><a>GENPASS</a></Link>
-          </section>
+        <div className="container">
+          <div className="columns">
+            <div className="column col-xs-12 text-center">
 
-          <section className="navbar-section">
-            <Link href="/username-generator"><a className="btn btn-link">Username generator</a></Link>
-          </section>
-        </header>
-
-        <main>
-          <div className="container">
-            <div className="columns">
-              <div className="column col-xs-12 text-center">
-
-                <div id="main_card" className="card animated fadeInUp">
-                  <div className="card-header">
-                    <h1 className="card-title h1">Generator of random password</h1>
-                    <div className="card-subtitle text-gray">So, click on the button and generate your password now!</div>
-                  </div>
-
-                  <div className="card-body">
-                    <div className="form-group">
-                      <label className="form-label" for="count">Set lenght of your password (default is 100)</label>
-                      <input value={this.state.inputValue} onChange={event => this.updateInputValue(event)} type="number" min="1" max="100000" className="form-input" id="count" />
-                    </div>
-                    <button onClick={ () => { this.generatorHandleClick(this.state.inputValue) } } className="btn btn-primary" id="start_button">Generate now!</button>
-                    <span id="error">Max value is 100000</span>
-                  </div>
-
-                  <div className="card-footer">
-                    <div className="form-group">
-                      <label className="form-label" for="result">Your password is:</label>
-                      <textarea value={this.state.generatedPassword} className="form-input" id="result" rows="7" readOnly></textarea>
-                    </div>
-
-                    <div className="card-subtitle text-gray">Random, secure, custom, easy and fast.</div>
-                  </div>
+              <div id="main_card" className="card animated fadeInUp">
+                <div className="card-header">
+                  <h1 className="card-title h1">Generator of random password</h1>
+                  <div className="card-subtitle text-gray">So, click on the button and generate your password now!</div>
                 </div>
 
+                <div className="card-body">
+                  <div className="form-group">
+                    <label className="form-label" for="count">Set lenght of your password (default is 100)</label>
+                    <input value={this.state.inputValue} onChange={event => this.updateInputValue(event)} type="number" min="1" max="100000" className="form-input" id="count" />
+                  </div>
+                  <button onClick={ () => { this.generatorHandleClick(this.state.inputValue) } } className="btn btn-primary" id="start_button">Generate now!</button>
+                  <span id="error">Max value is 100000</span>
+                </div>
+
+                <div className="card-footer">
+                  <div className="form-group">
+                    <label className="form-label" for="result">Your password is:</label>
+                    <textarea value={this.state.generatedPassword} className="form-input" id="result" rows="7" readOnly></textarea>
+                  </div>
+
+                  <div className="card-subtitle text-gray">Random, secure, custom, easy and fast.</div>
+                </div>
               </div>
+
             </div>
           </div>
-        </main>
-
-        <footer className="footer animated fadeInDown">
-          <p className="centered">
-            <a href="mailto:petr.nikolas@icloud.com?subject=Hello">Send me a feedback.</a>
-          </p>
-          <p className="centered">
-            Built with ♥ by <a target="_blank" href="http://www.petrnikolas.com/">Petr Nikolas</a>
-          </p>  
-        </footer>
-      </div>
+        </div>
+      </Page>
     )
   } 
 }  
@@ -227,37 +158,6 @@ export default class extends React.Component {
 // Styles
 // ------------------------------------------------------------------------------
 const styles = {
-  root: {
-    padding: '50px',
-    font: '14px "Lucida Grande", Helvetica, Arial, sans-serif'
-  },
-
-  footer: {
-    color: '#acb3c2',
-    padding: '.5rem .5rem 1.5rem .5rem'
-  },
-
-  footer_a: {
-    color: '#667189'
-  },
-
-  centered: {
-    textAlign: 'center'
-  },
-
-  navbar_a: {
-    color: '#6a11cb !important'
-  },
-
-  logo_a: {
-    color: '#1c1a27 !important',
-    fontSize: '35px',
-    ':hover': {
-      borderBottom: 'none',
-      textDecoration: 'none'
-    }
-  },
-
   card: {
     width: '50%',
     margin: '0 auto',

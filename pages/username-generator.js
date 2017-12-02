@@ -4,6 +4,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Page from '../layout'
 
 
 // ------------------------------------------------------------------------------
@@ -121,53 +122,8 @@ export default class extends React.Component {
   /** Render HTML */
   render() {
     return (
-       <div className="root">
-        <Head>
-          <meta charSet="utf-8"/>
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
-          <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-          <title>GENPASS</title>
-
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-          <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css" />
-          <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css" />
-          <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css" />
-        </Head>
-
+       <Page>
         <style jsx>{`
-          .root {
-            padding: 50px;
-            font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-          }
-
-          .footer {
-            color: #acb3c2;
-            padding: .5rem .5rem 1.5rem .5rem;
-          }
-
-          .footer a {
-            color: #667189;
-          }
-
-          .centered {
-            text-align: center;
-          }
-
-          .navbar a {
-            color: #6a11cb !important; 
-          }
-
-          .logo a {
-            color: #1c1a27 !important;
-            font-size: 35px;
-          }
-
-          .logo a:hover {
-            border-bottom: none;
-            text-decoration: none;
-          }
-
           .card {
             width: 50%;
             border: .3rem dotted #e7e9ed;
@@ -216,99 +172,126 @@ export default class extends React.Component {
             h1 {
               font-size: 1rem;
             }
-
-            .root {
-              padding: 3px;
-            }
           }
         `}</style>
 
-        <header className="navbar animated fadeInDown">
-          <section className="navbar-section logo">
-            <Link href="/"><a>GENPASS</a></Link>
-          </section>
+        <div className="container">
+          <ul className="breadcrumb animated fadeInDown">
+            <li className="breadcrumb-item">
+              <Link href="/"><a>Home</a></Link>
+            </li>
+            <li className="breadcrumb-item">
+              <Link href="/username-generator"><a>Username generator</a></Link>
+            </li>
+          </ul>
 
-          <section className="navbar-section">
-            <Link href="/username-generator"><a className="btn btn-link">Username generator</a></Link>
-          </section>
-        </header>
+          <div className="columns">
+            <div className="column col-xs-12 text-center">
 
-        <main>
-          <div className="container">
-            <ul className="breadcrumb animated fadeInDown">
-              <li className="breadcrumb-item">
-                <Link href="/"><a>Home</a></Link>
-              </li>
-              <li className="breadcrumb-item">
-                <Link href="/username-generator"><a>Username generator</a></Link>
-              </li>
-            </ul>
-
-            <div className="columns">
-              <div className="column col-xs-12 text-center">
-
-                <div id="main_card" className="card animated fadeInUp">
-                  <div className="card-header">
-                    <h1 className="card-title h1">Generator of random username</h1>
-                    <div className="card-subtitle text-gray">So, click on the button and generate your username from your name and surname now!</div>
-                    <br/>
-                    <div className="card-subtitle text-gray">* second name is not required</div>
-                  </div>
-
-                  <div className="card-body">
-                    <div className="form-group">
-                        <div className="columns">
-                            <div className="column col-lg-4 col-xs-12">
-                                <label className="form-label" for="name">Your name</label>
-                                <input value={this.state.nameValue} onChange={event => this.updateNameValue(event)} type="text" className="form-input" id="name" />
-                            </div>
-
-                            <div className="column col-lg-4 col-xs-12">
-                                <label className="form-label" for="secondName">Your second name</label>
-                                <input value={this.state.secondNameValue} onChange={event => this.updateSecondNameValue(event)} type="text" className="form-input" id="secondName" />
-                            </div>
-
-                            <div className="column col-lg-4 col-xs-12">
-                                <label className="form-label" for="surname">Your surname</label>
-                                <input value={this.state.surnameValue} onChange={event => this.updateSurnameValue(event)} type="text" className="form-input" id="surname" />
-                            </div>
-                        </div>
-                    </div>
-                    <button onClick={ () => { this.generatorHandleClick(this.state.nameValue, this.state.secondNameValue, this.state.surnameValue) } } className="btn btn-primary" id="start_button">Generate now!</button>
-                    <span id="error">Name and surname are required</span>
-                  </div>
-
-                  <div className="card-footer">
-                    <div className="form-group">
-                      <label className="form-label" for="result">Your username is:</label>
-                      <textarea value={this.state.generatedUsername} className="form-input" id="result" rows="3" readOnly></textarea>
-                    </div>
-
-                    <div>
-                      Generated from: 
-                      <span id="name_chip" className="chip"> {this.state.nameValue} </span>
-                      <span id="second_name_chip" className="chip"> {this.state.secondNameValue} </span>
-                      <span id="surname_chip" className="chip"> {this.state.surnameValue} </span> 
-                    </div>
-
-                    <div className="card-subtitle text-gray">Random, secure, custom, easy and fast.</div>
-                  </div>
+              <div id="main_card" className="card animated fadeInUp">
+                <div className="card-header">
+                  <h1 className="card-title h1">Generator of random username</h1>
+                  <div className="card-subtitle text-gray">So, click on the button and generate your username from your name and surname now!</div>
+                  <br/>
+                  <div className="card-subtitle text-gray">* second name is not required</div>
                 </div>
 
+                <div className="card-body">
+                  <div className="form-group">
+                      <div className="columns">
+                          <div className="column col-lg-4 col-xs-12">
+                              <label className="form-label" for="name">Your name</label>
+                              <input value={this.state.nameValue} onChange={event => this.updateNameValue(event)} type="text" className="form-input" id="name" />
+                          </div>
+
+                          <div className="column col-lg-4 col-xs-12">
+                              <label className="form-label" for="secondName">Your second name</label>
+                              <input value={this.state.secondNameValue} onChange={event => this.updateSecondNameValue(event)} type="text" className="form-input" id="secondName" />
+                          </div>
+
+                          <div className="column col-lg-4 col-xs-12">
+                              <label className="form-label" for="surname">Your surname</label>
+                              <input value={this.state.surnameValue} onChange={event => this.updateSurnameValue(event)} type="text" className="form-input" id="surname" />
+                          </div>
+                      </div>
+                  </div>
+                  <button onClick={ () => { this.generatorHandleClick(this.state.nameValue, this.state.secondNameValue, this.state.surnameValue) } } className="btn btn-primary" id="start_button">Generate now!</button>
+                  <span id="error">Name and surname are required</span>
+                </div>
+
+                <div className="card-footer">
+                  <div className="form-group">
+                    <label className="form-label" for="result">Your username is:</label>
+                    <textarea value={this.state.generatedUsername} className="form-input" id="result" rows="3" readOnly></textarea>
+                  </div>
+
+                  <div>
+                    Generated from: 
+                    <span id="name_chip" className="chip"> {this.state.nameValue} </span>
+                    <span id="second_name_chip" className="chip"> {this.state.secondNameValue} </span>
+                    <span id="surname_chip" className="chip"> {this.state.surnameValue} </span> 
+                  </div>
+
+                  <div className="card-subtitle text-gray">Random, secure, custom, easy and fast.</div>
+                </div>
               </div>
+
             </div>
           </div>
-        </main>
-
-        <footer className="footer animated fadeInDown">
-          <p className="centered">
-            <a href="mailto:petr.nikolas@icloud.com?subject=Hello">Send me a feedback.</a>
-          </p>
-          <p className="centered">
-            Built with ♥ by <a target="_blank" href="http://www.petrnikolas.com/">Petr Nikolas</a>
-          </p>  
-        </footer>
-      </div>
+        </div>
+      </Page>
     )
   } 
 }  
+
+
+// ------------------------------------------------------------------------------
+// Styles
+// ------------------------------------------------------------------------------
+const styles = {
+  card: {
+    width: '50%',
+    margin: '0 auto',
+    marginTop: '7vh',
+    border: '.3rem dotted #e7e9ed',
+    boxShadow: '0 6px 15px rgba(36,37,38,0.08)'
+  },
+
+  btn_primary: {
+    background: '#6a11cb !important',
+    borderColor: '#6a11cb !important',
+    ':focus': {
+      background: '#6a11cb !important',
+      borderColor: '#6a11cb !important',
+    },
+    ':active': {
+      background: '#6a11cb !important',
+      borderColor: '#6a11cb !important'
+    }
+  },
+
+  input: {
+    maxWidth: '150px',
+    margin: '0 auto'
+  },
+
+  label: {
+    color: '#868f96 !important'
+  },
+
+  textarea: {
+    resize: 'none'
+  },
+
+  form_input: {
+    ':focus': {
+      borderColor: '#6a11cb',
+      boxShadow: 'none'
+    }
+  },
+
+  error: {
+    color: 'red',
+    display: 'none'
+  }
+}

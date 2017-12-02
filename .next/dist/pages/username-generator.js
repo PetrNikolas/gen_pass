@@ -40,12 +40,19 @@ var _link = require('next/dist/lib/link.js');
 
 var _link2 = _interopRequireDefault(_link);
 
+var _layout = require('../layout');
+
+var _layout2 = _interopRequireDefault(_layout);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // ------------------------------------------------------------------------------
 // Export component
 // ------------------------------------------------------------------------------
 
+// ------------------------------------------------------------------------------
+// Import libs
+// ------------------------------------------------------------------------------
 var _class = function (_React$Component) {
   (0, _inherits3.default)(_class, _React$Component);
 
@@ -172,115 +179,135 @@ var _class = function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'root'
-      }, _react2.default.createElement(_head2.default, null, _react2.default.createElement('meta', { charSet: 'utf-8', className: 'jsx-2525903982'
-      }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', className: 'jsx-2525903982'
-      }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', className: 'jsx-2525903982'
-      }), _react2.default.createElement('title', {
-        className: 'jsx-2525903982'
-      }, 'GENPASS'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', className: 'jsx-2525903982'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre.min.css', className: 'jsx-2525903982'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css', className: 'jsx-2525903982'
-      }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css', className: 'jsx-2525903982'
-      })), _react2.default.createElement(_style2.default, {
-        styleId: '2525903982',
-        css: ['.root.jsx-2525903982{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}', '.footer.jsx-2525903982{color:#acb3c2;padding:.5rem .5rem 1.5rem .5rem;}', '.footer.jsx-2525903982 a.jsx-2525903982{color:#667189;}', '.centered.jsx-2525903982{text-align:center;}', '.navbar.jsx-2525903982 a.jsx-2525903982{color:#6a11cb !important;}', '.logo.jsx-2525903982 a.jsx-2525903982{color:#1c1a27 !important;font-size:35px;}', '.logo.jsx-2525903982 a.jsx-2525903982:hover{border-bottom:none;text-decoration:none;}', '.card.jsx-2525903982{width:50%;border:.3rem dotted #e7e9ed;margin:0 auto;margin-top:7vh;box-shadow:0 6px 15px rgba(36,37,38,0.08);}', '.btn-primary.jsx-2525903982,.btn-primary.jsx-2525903982:focus,.btn-primary.jsx-2525903982:active{background:#6a11cb !important;border-color:#6a11cb !important;}', 'input.jsx-2525903982{max-width:150px;margin:0 auto;}', 'label.jsx-2525903982{color:#868f96 !important;}', 'textarea.jsx-2525903982{resize:none;}', '.form-input.jsx-2525903982:focus{border-color:#6a11cb;box-shadow:none;}', '#error.jsx-2525903982{color:red;display:none;}', '#name_chip.jsx-2525903982,#second_name_chip.jsx-2525903982,#surname_chip.jsx-2525903982{display:none;}', '@media only screen and (max-width:1100px){.card.jsx-2525903982{width:100%;}h1.jsx-2525903982{font-size:1rem;}.root.jsx-2525903982{padding:3px;}}']
-      }), _react2.default.createElement('header', {
-        className: 'jsx-2525903982' + ' ' + 'navbar animated fadeInDown'
-      }, _react2.default.createElement('section', {
-        className: 'jsx-2525903982' + ' ' + 'navbar-section logo'
-      }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement('a', {
-        className: 'jsx-2525903982'
-      }, 'GENPASS'))), _react2.default.createElement('section', {
-        className: 'jsx-2525903982' + ' ' + 'navbar-section'
-      }, _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', {
-        className: 'jsx-2525903982' + ' ' + 'btn btn-link'
-      }, 'Username generator')))), _react2.default.createElement('main', {
-        className: 'jsx-2525903982'
-      }, _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'container'
-      }, _react2.default.createElement('ul', {
-        className: 'jsx-2525903982' + ' ' + 'breadcrumb animated fadeInDown'
-      }, _react2.default.createElement('li', {
-        className: 'jsx-2525903982' + ' ' + 'breadcrumb-item'
-      }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement('a', {
-        className: 'jsx-2525903982'
-      }, 'Home'))), _react2.default.createElement('li', {
-        className: 'jsx-2525903982' + ' ' + 'breadcrumb-item'
-      }, _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', {
-        className: 'jsx-2525903982'
-      }, 'Username generator')))), _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'columns'
-      }, _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'column col-xs-12 text-center'
-      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-2525903982' + ' ' + 'card animated fadeInUp'
-      }, _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'card-header'
-      }, _react2.default.createElement('h1', {
-        className: 'jsx-2525903982' + ' ' + 'card-title h1'
-      }, 'Generator of random username'), _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'card-subtitle text-gray'
-      }, 'So, click on the button and generate your username from your name and surname now!'), _react2.default.createElement('br', {
-        className: 'jsx-2525903982'
+      return _react2.default.createElement(_layout2.default, null, _react2.default.createElement(_style2.default, {
+        styleId: '1774412239',
+        css: ['.card.jsx-1774412239{width:50%;border:.3rem dotted #e7e9ed;margin:0 auto;margin-top:7vh;box-shadow:0 6px 15px rgba(36,37,38,0.08);}', '.btn-primary.jsx-1774412239,.btn-primary.jsx-1774412239:focus,.btn-primary.jsx-1774412239:active{background:#6a11cb !important;border-color:#6a11cb !important;}', 'input.jsx-1774412239{max-width:150px;margin:0 auto;}', 'label.jsx-1774412239{color:#868f96 !important;}', 'textarea.jsx-1774412239{resize:none;}', '.form-input.jsx-1774412239:focus{border-color:#6a11cb;box-shadow:none;}', '#error.jsx-1774412239{color:red;display:none;}', '#name_chip.jsx-1774412239,#second_name_chip.jsx-1774412239,#surname_chip.jsx-1774412239{display:none;}', '@media only screen and (max-width:1100px){.card.jsx-1774412239{width:100%;}h1.jsx-1774412239{font-size:1rem;}}']
       }), _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-1774412239' + ' ' + 'container'
+      }, _react2.default.createElement('ul', {
+        className: 'jsx-1774412239' + ' ' + 'breadcrumb animated fadeInDown'
+      }, _react2.default.createElement('li', {
+        className: 'jsx-1774412239' + ' ' + 'breadcrumb-item'
+      }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement('a', {
+        className: 'jsx-1774412239'
+      }, 'Home'))), _react2.default.createElement('li', {
+        className: 'jsx-1774412239' + ' ' + 'breadcrumb-item'
+      }, _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', {
+        className: 'jsx-1774412239'
+      }, 'Username generator')))), _react2.default.createElement('div', {
+        className: 'jsx-1774412239' + ' ' + 'columns'
+      }, _react2.default.createElement('div', {
+        className: 'jsx-1774412239' + ' ' + 'column col-xs-12 text-center'
+      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-1774412239' + ' ' + 'card animated fadeInUp'
+      }, _react2.default.createElement('div', {
+        className: 'jsx-1774412239' + ' ' + 'card-header'
+      }, _react2.default.createElement('h1', {
+        className: 'jsx-1774412239' + ' ' + 'card-title h1'
+      }, 'Generator of random username'), _react2.default.createElement('div', {
+        className: 'jsx-1774412239' + ' ' + 'card-subtitle text-gray'
+      }, 'So, click on the button and generate your username from your name and surname now!'), _react2.default.createElement('br', {
+        className: 'jsx-1774412239'
+      }), _react2.default.createElement('div', {
+        className: 'jsx-1774412239' + ' ' + 'card-subtitle text-gray'
       }, '* second name is not required')), _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'card-body'
+        className: 'jsx-1774412239' + ' ' + 'card-body'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'form-group'
+        className: 'jsx-1774412239' + ' ' + 'form-group'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'columns'
+        className: 'jsx-1774412239' + ' ' + 'columns'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'column col-lg-4 col-xs-12'
-      }, _react2.default.createElement('label', { 'for': 'name', className: 'jsx-2525903982' + ' ' + 'form-label'
+        className: 'jsx-1774412239' + ' ' + 'column col-lg-4 col-xs-12'
+      }, _react2.default.createElement('label', { 'for': 'name', className: 'jsx-1774412239' + ' ' + 'form-label'
       }, 'Your name'), _react2.default.createElement('input', { value: this.state.nameValue, onChange: function onChange(event) {
           return _this2.updateNameValue(event);
-        }, type: 'text', id: 'name', className: 'jsx-2525903982' + ' ' + 'form-input'
+        }, type: 'text', id: 'name', className: 'jsx-1774412239' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'column col-lg-4 col-xs-12'
-      }, _react2.default.createElement('label', { 'for': 'secondName', className: 'jsx-2525903982' + ' ' + 'form-label'
+        className: 'jsx-1774412239' + ' ' + 'column col-lg-4 col-xs-12'
+      }, _react2.default.createElement('label', { 'for': 'secondName', className: 'jsx-1774412239' + ' ' + 'form-label'
       }, 'Your second name'), _react2.default.createElement('input', { value: this.state.secondNameValue, onChange: function onChange(event) {
           return _this2.updateSecondNameValue(event);
-        }, type: 'text', id: 'secondName', className: 'jsx-2525903982' + ' ' + 'form-input'
+        }, type: 'text', id: 'secondName', className: 'jsx-1774412239' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'column col-lg-4 col-xs-12'
-      }, _react2.default.createElement('label', { 'for': 'surname', className: 'jsx-2525903982' + ' ' + 'form-label'
+        className: 'jsx-1774412239' + ' ' + 'column col-lg-4 col-xs-12'
+      }, _react2.default.createElement('label', { 'for': 'surname', className: 'jsx-1774412239' + ' ' + 'form-label'
       }, 'Your surname'), _react2.default.createElement('input', { value: this.state.surnameValue, onChange: function onChange(event) {
           return _this2.updateSurnameValue(event);
-        }, type: 'text', id: 'surname', className: 'jsx-2525903982' + ' ' + 'form-input'
+        }, type: 'text', id: 'surname', className: 'jsx-1774412239' + ' ' + 'form-input'
       })))), _react2.default.createElement('button', { onClick: function onClick() {
           _this2.generatorHandleClick(_this2.state.nameValue, _this2.state.secondNameValue, _this2.state.surnameValue);
-        }, id: 'start_button', className: 'jsx-2525903982' + ' ' + 'btn btn-primary'
-      }, 'Generate now!'), _react2.default.createElement('span', { id: 'error', className: 'jsx-2525903982'
+        }, id: 'start_button', className: 'jsx-1774412239' + ' ' + 'btn btn-primary'
+      }, 'Generate now!'), _react2.default.createElement('span', { id: 'error', className: 'jsx-1774412239'
       }, 'Name and surname are required')), _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'card-footer'
+        className: 'jsx-1774412239' + ' ' + 'card-footer'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'form-group'
-      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-2525903982' + ' ' + 'form-label'
-      }, 'Your username is:'), _react2.default.createElement('textarea', { value: this.state.generatedUsername, id: 'result', rows: '3', readOnly: true, className: 'jsx-2525903982' + ' ' + 'form-input'
+        className: 'jsx-1774412239' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-1774412239' + ' ' + 'form-label'
+      }, 'Your username is:'), _react2.default.createElement('textarea', { value: this.state.generatedUsername, id: 'result', rows: '3', readOnly: true, className: 'jsx-1774412239' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-2525903982'
-      }, 'Generated from:', _react2.default.createElement('span', { id: 'name_chip', className: 'jsx-2525903982' + ' ' + 'chip'
-      }, ' ', this.state.nameValue, ' '), _react2.default.createElement('span', { id: 'second_name_chip', className: 'jsx-2525903982' + ' ' + 'chip'
-      }, ' ', this.state.secondNameValue, ' '), _react2.default.createElement('span', { id: 'surname_chip', className: 'jsx-2525903982' + ' ' + 'chip'
+        className: 'jsx-1774412239'
+      }, 'Generated from:', _react2.default.createElement('span', { id: 'name_chip', className: 'jsx-1774412239' + ' ' + 'chip'
+      }, ' ', this.state.nameValue, ' '), _react2.default.createElement('span', { id: 'second_name_chip', className: 'jsx-1774412239' + ' ' + 'chip'
+      }, ' ', this.state.secondNameValue, ' '), _react2.default.createElement('span', { id: 'surname_chip', className: 'jsx-1774412239' + ' ' + 'chip'
       }, ' ', this.state.surnameValue, ' ')), _react2.default.createElement('div', {
-        className: 'jsx-2525903982' + ' ' + 'card-subtitle text-gray'
-      }, 'Random, secure, custom, easy and fast.'))))))), _react2.default.createElement('footer', {
-        className: 'jsx-2525903982' + ' ' + 'footer animated fadeInDown'
-      }, _react2.default.createElement('p', {
-        className: 'jsx-2525903982' + ' ' + 'centered'
-      }, _react2.default.createElement('a', { href: 'mailto:petr.nikolas@icloud.com?subject=Hello', className: 'jsx-2525903982'
-      }, 'Send me a feedback.')), _react2.default.createElement('p', {
-        className: 'jsx-2525903982' + ' ' + 'centered'
-      }, 'Built with \u2665 by ', _react2.default.createElement('a', { target: '_blank', href: 'http://www.petrnikolas.com/', className: 'jsx-2525903982'
-      }, 'Petr Nikolas'))));
+        className: 'jsx-1774412239' + ' ' + 'card-subtitle text-gray'
+      }, 'Random, secure, custom, easy and fast.')))))));
     }
   }]);
 
   return _class;
 }(_react2.default.Component);
+
 // ------------------------------------------------------------------------------
-// Import libs
+// Styles
 // ------------------------------------------------------------------------------
+
+
 exports.default = _class;
+
+var styles = {
+  card: {
+    width: '50%',
+    margin: '0 auto',
+    marginTop: '7vh',
+    border: '.3rem dotted #e7e9ed',
+    boxShadow: '0 6px 15px rgba(36,37,38,0.08)'
+  },
+
+  btn_primary: {
+    background: '#6a11cb !important',
+    borderColor: '#6a11cb !important',
+    ':focus': {
+      background: '#6a11cb !important',
+      borderColor: '#6a11cb !important'
+    },
+    ':active': {
+      background: '#6a11cb !important',
+      borderColor: '#6a11cb !important'
+    }
+  },
+
+  input: {
+    maxWidth: '150px',
+    margin: '0 auto'
+  },
+
+  label: {
+    color: '#868f96 !important'
+  },
+
+  textarea: {
+    resize: 'none'
+  },
+
+  form_input: {
+    ':focus': {
+      borderColor: '#6a11cb',
+      boxShadow: 'none'
+    }
+  },
+
+  error: {
+    color: 'red',
+    display: 'none'
+  }
+};
