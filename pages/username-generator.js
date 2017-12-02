@@ -135,7 +135,7 @@ export default class extends React.Component {
           .card {
             width: 100%;
             max-width: 45rem;
-            margin: 2.5rem auto 0;
+            margin: 1.5rem auto 0;
             -webkit-box-shadow: 0 0.5rem 2rem rgba(0,0,0,.15);
             box-shadow: 0 0.5rem 2rem rgba(0,0,0,.15);
             border-radius: .75rem;
@@ -149,8 +149,21 @@ export default class extends React.Component {
           }
 
           input {
-            max-width: 150px;
+            max-width: 200px;
             margin: 0 auto;
+            height: 2.5rem;
+            padding: 0 1rem;
+            border: 0;
+            border-radius: 3px;
+            background-color: #f4f4fb;
+            line-height: 1.5;
+            -webkit-transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
+            transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
+            transition: box-shadow .5s,border-color .25s ease-in-out;
+            transition: box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
           }
 
           label {
@@ -159,6 +172,22 @@ export default class extends React.Component {
 
           textarea {
             resize: none;
+            height: 7.25rem;
+            padding: 0 1.125rem;
+            padding-top: 1.6rem;
+            padding-bottom: 1rem;
+            border: 0;
+            border-radius: 3px;
+            background-color: #f4f4fb !important;
+            border-radius: 3px;
+            line-height: 1.5;
+            -webkit-transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
+            transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
+            transition: box-shadow .5s,border-color .25s ease-in-out;
+            transition: box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
           }
 
           .form-input:focus {
