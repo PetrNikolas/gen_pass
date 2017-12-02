@@ -188,7 +188,92 @@ var _class = function (_React$Component) {
 
   return _class;
 }(_react2.default.Component);
+
+// ------------------------------------------------------------------------------
+// Styles
+// ------------------------------------------------------------------------------
+
+
 // ------------------------------------------------------------------------------
 // Import libs
 // ------------------------------------------------------------------------------
 exports.default = _class;
+
+var styles = {
+  root: {
+    padding: '50px',
+    font: '14px "Lucida Grande", Helvetica, Arial, sans-serif'
+  },
+
+  footer: {
+    color: '#acb3c2',
+    padding: '.5rem .5rem 1.5rem .5rem'
+  },
+
+  footer_a: {
+    color: '#667189'
+  },
+
+  centered: {
+    textAlign: 'center'
+  },
+
+  navbar_a: {
+    color: '#6a11cb !important'
+  },
+
+  logo_a: {
+    color: '#1c1a27 !important',
+    fontSize: '35px',
+    ':hover': {
+      borderBottom: 'none',
+      textDecoration: 'none'
+    }
+  },
+
+  card: {
+    width: '50%',
+    margin: '0 auto',
+    marginTop: '7vh',
+    border: '.3rem dotted #e7e9ed',
+    boxShadow: '0 6px 15px rgba(36,37,38,0.08)'
+  },
+
+  btn_primary: {
+    background: '#6a11cb !important',
+    borderColor: '#6a11cb !important',
+    ':focus': {
+      background: '#6a11cb !important',
+      borderColor: '#6a11cb !important'
+    },
+    ':active': {
+      background: '#6a11cb !important',
+      borderColor: '#6a11cb !important'
+    }
+  },
+
+  input: {
+    maxWidth: '150px',
+    margin: '0 auto'
+  },
+
+  label: {
+    color: '#868f96 !important'
+  },
+
+  textarea: {
+    resize: 'none'
+  },
+
+  form_input: {
+    ':focus': {
+      borderColor: '#6a11cb',
+      boxShadow: 'none'
+    }
+  },
+
+  error: {
+    color: 'red',
+    display: 'none'
+  }
+};
