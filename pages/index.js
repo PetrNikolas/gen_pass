@@ -70,12 +70,14 @@ export default class extends React.Component {
       <Page>
         <style jsx>{`
           .card {
-            background: hsla(0, 0%, 98%, 0.9);
-            width: 50%;
-            margin: 0 auto;
-            margin-top: 7vh;
-            border: .3rem dotted #e7e9ed;
-            box-shadow: 0 6px 15px rgba(36,37,38,0.08);
+            width: 100%;
+            max-width: 45rem;
+            margin: 2.5rem auto 0;
+            -webkit-box-shadow: 0 0.5rem 2rem rgba(0,0,0,.15);
+            box-shadow: 0 0.5rem 2rem rgba(0,0,0,.15);
+            border-radius: .75rem;
+            background-color: #fff;
+            padding: 2rem 1.5rem;
           }
 
           .btn-primary, .btn-primary:focus, .btn-primary:active {

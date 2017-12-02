@@ -58,7 +58,7 @@ export default ({ children }) => (
           }
 
           .logo a:hover {
-            border-bottom: none;
+            border-bottom: none !important;
             text-decoration: none;
           }
 
