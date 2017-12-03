@@ -81,8 +81,8 @@ export default class extends React.Component {
     document.getElementById("error").style.display = "none";
 
     /** Password */
-    let first_variant = "";
-    let second_varinat = "";
+    let name_variant = "";
+    let numbers_varinat = "";
     let username = "";
 
     /** Check if second name exist */
@@ -92,20 +92,22 @@ export default class extends React.Component {
 
     if (name && typeof name !== "undefined" && surname && typeof surname !== "undefined") {
       /** Possible variants */
-      const possible_of_name = name + secondName + surname + '1234567890';
+      const possible_of_name = name + secondName + surname;
+      const possible_of_numbers = '1234567890';
+
       const length_of_name = possible_of_name.length;
 
       try {
           /** Iterator */
-          for(let i = 0; i < length_of_name; i++) {
-            first_variant += possible_of_name.charAt(Math.floor(Math.random() * possible_of_name.length)); 
+          for(let i = 0; i < 5; i++) {
+            name_variant += possible_of_name.charAt(Math.floor(Math.random() * possible_of_name.length)); 
           }
 
-          username = first_variant;
-
-          for(let i = 0; i < length; i++) {
-            username += username.charAt(Math.floor(Math.random() * username.length)); 
+          for(let i = 0; i < 3; i++) {
+            numbers_varinat += possible_of_numbers.charAt(Math.floor(Math.random() * 7)); 
           } 
+
+          username = name_variant + numbers_varinat;
 
           this.setState({
               generatedUsername: username
