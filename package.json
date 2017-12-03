@@ -1,6 +1,7 @@
 {
   "name": "gen-pass",
-  "version": "0.0.7",
+  "license": "MIT",
+  "version": "0.0.8",
   "engines": {
     "node": "8.1.4",
     "npm": "5.0.3"
