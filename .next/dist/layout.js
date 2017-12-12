@@ -20,11 +20,48 @@ var _link = require('next/dist/lib/link.js');
 
 var _link2 = _interopRequireDefault(_link);
 
+var _reactFela = require('react-fela');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // ------------------------------------------------------------------------------
-// Export layout
+// Styles
 // ------------------------------------------------------------------------------
+var styles = {
+  root: {
+    padding: '50px',
+    font: '14px "Lucida Grande", Helvetica, Arial, sans-serif'
+  },
+
+  footer: {
+    color: '#acb3c2',
+    padding: '.5rem .5rem 1.5rem .5rem'
+  },
+
+  footer_a: {
+    color: '#667189'
+  },
+
+  centered: {
+    textAlign: 'center'
+  },
+
+  navbar_a: {
+    color: '#6a11cb !important'
+  },
+
+  logo_a: {
+    color: '#1c1a27 !important',
+    fontSize: '35px',
+    ':hover': {
+      borderBottom: 'none',
+      textDecoration: 'none'
+    }
+
+    // ------------------------------------------------------------------------------
+    // Export layout
+    // ------------------------------------------------------------------------------
+  } };
 exports.default = function (_ref) {
   var children = _ref.children;
   return _react2.default.createElement('div', {
@@ -64,42 +101,4 @@ exports.default = function (_ref) {
     className: 'jsx-1860790629' + ' ' + 'hearth_icon'
   }, '\u2665'), ' by ', _react2.default.createElement('a', { target: '_blank', href: 'http://www.petrnikolas.com/', className: 'jsx-1860790629'
   }, 'Petr Nikolas'))));
-};
-
-// ------------------------------------------------------------------------------
-// Styles
-// ------------------------------------------------------------------------------
-
-
-var styles = {
-  root: {
-    padding: '50px',
-    font: '14px "Lucida Grande", Helvetica, Arial, sans-serif'
-  },
-
-  footer: {
-    color: '#acb3c2',
-    padding: '.5rem .5rem 1.5rem .5rem'
-  },
-
-  footer_a: {
-    color: '#667189'
-  },
-
-  centered: {
-    textAlign: 'center'
-  },
-
-  navbar_a: {
-    color: '#6a11cb !important'
-  },
-
-  logo_a: {
-    color: '#1c1a27 !important',
-    fontSize: '35px',
-    ':hover': {
-      borderBottom: 'none',
-      textDecoration: 'none'
-    }
-  }
 };

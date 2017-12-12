@@ -139,9 +139,6 @@ var _class = function (_React$Component) {
       surnameValue: '',
       generatedUsername: ''
     };
-    _this.props = {
-      showMe: true
-    };
     return _this;
   }
 

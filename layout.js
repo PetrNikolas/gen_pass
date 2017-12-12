@@ -1,5 +1,17 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { createComponent } from 'react-fela'
+
+
+// ------------------------------------------------------------------------------
+// Styles
+// ------------------------------------------------------------------------------
+const Container = createComponent(() => ({
+  maxWidth: 700,
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  lineHeight: 1.5
+}))
 
 
 // ------------------------------------------------------------------------------
@@ -96,40 +108,3 @@ export default ({ children }) => (
         </footer>
     </div>
 )
-
-
-// ------------------------------------------------------------------------------
-// Styles
-// ------------------------------------------------------------------------------
-const styles = {
-  root: {
-    padding: '50px',
-    font: '14px "Lucida Grande", Helvetica, Arial, sans-serif'
-  },
-
-  footer: {
-    color: '#acb3c2',
-    padding: '.5rem .5rem 1.5rem .5rem'
-  },
-
-  footer_a: {
-    color: '#667189'
-  },
-
-  centered: {
-    textAlign: 'center'
-  },
-
-  navbar_a: {
-    color: '#6a11cb !important'
-  },
-
-  logo_a: {
-    color: '#1c1a27 !important',
-    fontSize: '35px',
-    ':hover': {
-      borderBottom: 'none',
-      textDecoration: 'none'
-    }
-  }
-}
