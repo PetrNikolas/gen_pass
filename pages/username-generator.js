@@ -29,14 +29,6 @@ export default class extends React.Component {
     this.setState({
       nameValue: event.target.value
     });
-
-    /** Show and hide chip  */
-    if (typeof event.target.value !== 'undefined' && event.target.value) {
-      document.getElementById("name_chip").style.display = "inline-block";
-    } else {
-      /** Chip */
-      document.getElementById("name_chip").style.display = "none";
-    }
   }
 
   /** Update value in input - second name */
@@ -47,14 +39,6 @@ export default class extends React.Component {
     this.setState({
       secondNameValue: event.target.value
     });
-
-    /** Show and hide chip  */
-    if (typeof event.target.value !== 'undefined' && event.target.value) {
-      document.getElementById("second_name_chip").style.display = "inline-block";
-    } else {
-      /** Chip */
-      document.getElementById("second_name_chip").style.display = "none";
-    }
   }
 
   /** Update value in input - surname */
@@ -65,14 +49,6 @@ export default class extends React.Component {
     this.setState({
       surnameValue: event.target.value
     });
-
-    /** Show and hide chip  */
-    if (typeof event.target.value !== 'undefined' && event.target.value) {
-      document.getElementById("surname_chip").style.display = "inline-block";
-    } else {
-      /** Chip */
-      document.getElementById("surname_chip").style.display = "none";
-    }
   }
 
   /** Generate password */
@@ -202,10 +178,6 @@ export default class extends React.Component {
             display: none;
           }
 
-          #name_chip, #second_name_chip, #surname_chip {
-            display: none;
-          }
-
           @media only screen and (max-width: 1100px) {
             .card {
               width: 100%;
@@ -269,9 +241,15 @@ export default class extends React.Component {
 
                   <div>
                     Generated from: 
-                    <span id="name_chip" className="chip"> {this.state.nameValue} </span>
-                    <span id="second_name_chip" className="chip"> {this.state.secondNameValue} </span>
-                    <span id="surname_chip" className="chip"> {this.state.surnameValue} </span> 
+                    {this.state.nameValue && (
+                      <span id="name_chip" className="chip"> {this.state.nameValue} </span>
+                    )}
+                    {this.state.secondNameValue && (
+                      <span id="second_name_chip" className="chip"> {this.state.secondNameValue} </span>
+                    )}
+                    {this.state.surnameValue && (
+                      <span id="surname_chip" className="chip"> {this.state.surnameValue} </span> 
+                    )}
                   </div>
 
                   <div className="card-subtitle text-gray">Random, secure, custom, easy and fast.</div>
