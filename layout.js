@@ -34,7 +34,7 @@ export default ({ children }) => (
 
         <style jsx>{`
           .root {
-            padding: 50px;
+            padding: 30px 50px 50px 50px;
             font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
           }
 
