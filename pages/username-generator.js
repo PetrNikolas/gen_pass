@@ -113,12 +113,10 @@ export default class extends React.Component {
           .card {
             width: 100%;
             max-width: 45rem;
-            margin: 1.5rem auto 0;
-            -webkit-box-shadow: 0 0.5rem 2rem rgba(0,0,0,.15);
-            box-shadow: 0 0.5rem 2rem rgba(0,0,0,.15);
-            border-radius: .75rem;
+            margin: .5rem auto 0;
             background-color: #fff;
-            padding: 2rem 1.5rem;
+            border: none;
+            padding: 1.5rem;
           }
 
           .btn-primary, .btn-primary:focus, .btn-primary:active {

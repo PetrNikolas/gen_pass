@@ -123,41 +123,41 @@ var _class = function (_React$Component) {
       var _this2 = this;
 
       return _react2.default.createElement(_layout2.default, null, _react2.default.createElement(_style2.default, {
-        styleId: '2533204521',
-        css: ['.card.jsx-2533204521{width:100%;max-width:45rem;margin:1.5rem auto 0;-webkit-box-shadow:0 0.5rem 2rem rgba(0,0,0,.15);box-shadow:0 0.5rem 2rem rgba(0,0,0,.15);border-radius:.75rem;background-color:#fff;padding:2rem 1.5rem;}', '.btn-primary.jsx-2533204521,.btn-primary.jsx-2533204521:focus,.btn-primary.jsx-2533204521:active{background:#f8114d !important;border-color:#f8114d !important;}', 'input.jsx-2533204521{max-width:200px;margin:0 auto;height:2.5rem;padding:0 1rem;border:0;border-radius:3px;background-color:#f4f4fb;-webkit-transition:border-color .25s ease-in-out,-webkit-box-shadow .5s;-webkit-transition:border-color .25s ease-in-out,-webkit-box-shadow .5s;transition:border-color .25s ease-in-out,-webkit-box-shadow .5s;-webkit-transition:box-shadow .5s,border-color .25s ease-in-out;transition:box-shadow .5s,border-color .25s ease-in-out;-webkit-transition:box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;transition:box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;-webkit-appearance:none;-moz-appearance:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;}', 'label.jsx-2533204521{color:#868f96 !important;}', 'textarea.jsx-2533204521{resize:none;height:7.25rem;padding:0 1.125rem;padding-top:1.6rem;padding-bottom:1rem;border:0;border-radius:3px;background-color:#f4f4fb !important;border-radius:3px;line-height:1.5;-webkit-transition:border-color .25s ease-in-out,-webkit-box-shadow .5s;-webkit-transition:border-color .25s ease-in-out,-webkit-box-shadow .5s;transition:border-color .25s ease-in-out,-webkit-box-shadow .5s;-webkit-transition:box-shadow .5s,border-color .25s ease-in-out;transition:box-shadow .5s,border-color .25s ease-in-out;-webkit-transition:box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;transition:box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;-webkit-appearance:none;-moz-appearance:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;}', '.form-input.jsx-2533204521:focus{border-color:#868f96;box-shadow:none;}', '#error.jsx-2533204521{color:red;display:none;}', '@media only screen and (max-width:1100px){.card.jsx-2533204521{width:100%;}h1.jsx-2533204521{font-size:1rem;}}']
+        styleId: '3835206234',
+        css: ['.card.jsx-3835206234{width:100%;max-width:45rem;margin:1.5rem auto 0;background-color:#fff;border:none;padding:2rem 1.5rem;}', '.btn-primary.jsx-3835206234,.btn-primary.jsx-3835206234:focus,.btn-primary.jsx-3835206234:active{background:#f8114d !important;border-color:#f8114d !important;}', 'input.jsx-3835206234{max-width:200px;margin:0 auto;height:2.5rem;padding:0 1rem;border:0;border-radius:3px;background-color:#f4f4fb;-webkit-transition:border-color .25s ease-in-out,-webkit-box-shadow .5s;-webkit-transition:border-color .25s ease-in-out,-webkit-box-shadow .5s;transition:border-color .25s ease-in-out,-webkit-box-shadow .5s;-webkit-transition:box-shadow .5s,border-color .25s ease-in-out;transition:box-shadow .5s,border-color .25s ease-in-out;-webkit-transition:box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;transition:box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;-webkit-appearance:none;-moz-appearance:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;}', 'label.jsx-3835206234{color:#868f96 !important;}', 'textarea.jsx-3835206234{resize:none;height:7.25rem;padding:0 1.125rem;padding-top:1.6rem;padding-bottom:1rem;border:0;border-radius:3px;background-color:#f4f4fb !important;border-radius:3px;line-height:1.5;-webkit-transition:border-color .25s ease-in-out,-webkit-box-shadow .5s;-webkit-transition:border-color .25s ease-in-out,-webkit-box-shadow .5s;transition:border-color .25s ease-in-out,-webkit-box-shadow .5s;-webkit-transition:box-shadow .5s,border-color .25s ease-in-out;transition:box-shadow .5s,border-color .25s ease-in-out;-webkit-transition:box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;transition:box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;-webkit-appearance:none;-moz-appearance:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;}', '.form-input.jsx-3835206234:focus{border-color:#868f96;box-shadow:none;}', '#error.jsx-3835206234{color:red;display:none;}', '@media only screen and (max-width:1100px){.card.jsx-3835206234{width:100%;}h1.jsx-3835206234{font-size:1rem;}}']
       }), _react2.default.createElement('div', {
-        className: 'jsx-2533204521' + ' ' + 'container'
+        className: 'jsx-3835206234' + ' ' + 'container'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2533204521' + ' ' + 'columns'
+        className: 'jsx-3835206234' + ' ' + 'columns'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2533204521' + ' ' + 'column col-xs-12 text-center'
-      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-2533204521' + ' ' + 'card animated fadeInUp'
+        className: 'jsx-3835206234' + ' ' + 'column col-xs-12 text-center'
+      }, _react2.default.createElement('div', { id: 'main_card', className: 'jsx-3835206234' + ' ' + 'card animated fadeInUp'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2533204521' + ' ' + 'card-header'
+        className: 'jsx-3835206234' + ' ' + 'card-header'
       }, _react2.default.createElement('h1', {
-        className: 'jsx-2533204521' + ' ' + 'card-title h1'
+        className: 'jsx-3835206234' + ' ' + 'card-title h1'
       }, 'Passwords generator'), _react2.default.createElement('div', {
-        className: 'jsx-2533204521' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-3835206234' + ' ' + 'card-subtitle text-gray'
       }, 'So, click on the button and generate your password now!')), _react2.default.createElement('div', {
-        className: 'jsx-2533204521' + ' ' + 'card-body'
+        className: 'jsx-3835206234' + ' ' + 'card-body'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2533204521' + ' ' + 'form-group'
-      }, _react2.default.createElement('label', { 'for': 'count', className: 'jsx-2533204521' + ' ' + 'form-label'
+        className: 'jsx-3835206234' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'count', className: 'jsx-3835206234' + ' ' + 'form-label'
       }, 'Set lenght of your password (default is 100)'), _react2.default.createElement('input', { value: this.state.inputValue, onChange: function onChange(event) {
           return _this2.updateInputValue(event);
-        }, type: 'number', min: '1', max: '100000', id: 'count', className: 'jsx-2533204521' + ' ' + 'form-input'
+        }, type: 'number', min: '1', max: '100000', id: 'count', className: 'jsx-3835206234' + ' ' + 'form-input'
       })), _react2.default.createElement('button', { onClick: function onClick() {
           _this2.generatorHandleClick(_this2.state.inputValue);
-        }, id: 'start_button', className: 'jsx-2533204521' + ' ' + 'btn btn-primary'
-      }, 'Generate now!'), _react2.default.createElement('span', { id: 'error', className: 'jsx-2533204521'
+        }, id: 'start_button', className: 'jsx-3835206234' + ' ' + 'btn btn-primary'
+      }, 'Generate now!'), _react2.default.createElement('span', { id: 'error', className: 'jsx-3835206234'
       }, 'Max value is 100000')), _react2.default.createElement('div', {
-        className: 'jsx-2533204521' + ' ' + 'card-footer'
+        className: 'jsx-3835206234' + ' ' + 'card-footer'
       }, _react2.default.createElement('div', {
-        className: 'jsx-2533204521' + ' ' + 'form-group'
-      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-2533204521' + ' ' + 'form-label'
-      }, 'Your password is:'), _react2.default.createElement('textarea', { value: this.state.generatedPassword, id: 'result', rows: '7', readOnly: true, className: 'jsx-2533204521' + ' ' + 'form-input'
+        className: 'jsx-3835206234' + ' ' + 'form-group'
+      }, _react2.default.createElement('label', { 'for': 'result', className: 'jsx-3835206234' + ' ' + 'form-label'
+      }, 'Your password is:'), _react2.default.createElement('textarea', { value: this.state.generatedPassword, id: 'result', rows: '7', readOnly: true, className: 'jsx-3835206234' + ' ' + 'form-input'
       })), _react2.default.createElement('div', {
-        className: 'jsx-2533204521' + ' ' + 'card-subtitle text-gray'
+        className: 'jsx-3835206234' + ' ' + 'card-subtitle text-gray'
       }, 'Random, secure, custom, easy and fast.')))))));
     }
   }]);
@@ -165,57 +165,4 @@ var _class = function (_React$Component) {
   return _class;
 }(_react2.default.Component);
 
-// ------------------------------------------------------------------------------
-// Styles
-// ------------------------------------------------------------------------------
-
-
 exports.default = _class;
-
-var styles = {
-  card: {
-    width: '50%',
-    margin: '0 auto',
-    marginTop: '7vh',
-    border: '.3rem dotted #e7e9ed',
-    boxShadow: '0 6px 15px rgba(36,37,38,0.08)'
-  },
-
-  btn_primary: {
-    background: '#6a11cb !important',
-    borderColor: '#6a11cb !important',
-    ':focus': {
-      background: '#6a11cb !important',
-      borderColor: '#6a11cb !important'
-    },
-    ':active': {
-      background: '#6a11cb !important',
-      borderColor: '#6a11cb !important'
-    }
-  },
-
-  input: {
-    maxWidth: '150px',
-    margin: '0 auto'
-  },
-
-  label: {
-    color: '#868f96 !important'
-  },
-
-  textarea: {
-    resize: 'none'
-  },
-
-  form_input: {
-    ':focus': {
-      borderColor: '#6a11cb',
-      boxShadow: 'none'
-    }
-  },
-
-  error: {
-    color: 'red',
-    display: 'none'
-  }
-};

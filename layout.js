@@ -36,9 +36,6 @@ export default ({ children }) => (
           .root {
             padding: 50px;
             font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-            background: #ece9e6; /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #ece9e6, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #ece9e6, #ffffff);
           }
 
           .footer {
