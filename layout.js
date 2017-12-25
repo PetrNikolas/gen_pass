@@ -97,7 +97,7 @@ export default ({ children }) => (
 
         <footer className="footer animated fadeInDown">
             <p className="centered">
-              <a href="mailto:petr.nikolas@icloud.com?subject=Hello">Send me a feedback.</a>
+              <a href="mailto:petr.nikolas@icloud.com?subject=Hello"><i className="icon icon-mail"></i> Send me a feedback.</a>
             </p>
             <p className="centered">
               Built with <span className="hearth_icon">♥</span> by <a target="_blank" href="http://www.petrnikolas.com/">Petr Nikolas</a>

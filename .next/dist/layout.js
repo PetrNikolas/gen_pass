@@ -73,7 +73,9 @@ exports.default = function (_ref) {
   }, _react2.default.createElement('p', {
     className: 'jsx-1876301701' + ' ' + 'centered'
   }, _react2.default.createElement('a', { href: 'mailto:petr.nikolas@icloud.com?subject=Hello', className: 'jsx-1876301701'
-  }, 'Send me a feedback.')), _react2.default.createElement('p', {
+  }, _react2.default.createElement('i', {
+    className: 'jsx-1876301701' + ' ' + 'icon icon-mail'
+  }), ' Send me a feedback.')), _react2.default.createElement('p', {
     className: 'jsx-1876301701' + ' ' + 'centered'
   }, 'Built with ', _react2.default.createElement('span', {
     className: 'jsx-1876301701' + ' ' + 'hearth_icon'
