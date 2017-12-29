@@ -22,7 +22,11 @@ export default class extends React.Component {
         <style jsx>{`
           h1 {
             padding-top: 7rem;
-            color: #5755d9;
+            color: #f8114d;
+          }
+
+          a {
+            color: #f8114d !important;
           }
 
           .card {
