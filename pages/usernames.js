@@ -102,14 +102,6 @@ export default class extends React.Component {
     return (
        <Page>
         <style jsx>{`
-          .breadcrumb-item a {
-            color: #f8114d;
-          }
-
-          .breadcrumb .breadcrumb-item:not(:last-child) a {
-            color: #667189;
-          }
-
           .card {
             width: 100%;
             max-width: 45rem;
@@ -188,15 +180,6 @@ export default class extends React.Component {
         `}</style>
 
         <div className="container">
-          <ul className="breadcrumb animated fadeInDown">
-            <li className="breadcrumb-item">
-              <Link href="/"><a>Home</a></Link>
-            </li>
-            <li className="breadcrumb-item">
-              <Link href="/username-generator"><a>Username generator</a></Link>
-            </li>
-          </ul>
-
           <div className="columns">
             <div className="column col-xs-12 text-center">
 

@@ -22,8 +22,12 @@ app.prepare()
 .then(() => {
   const server = fastify()
 
-  server.get('/username-generator', (req, res) => {
-    return app.render(req.req, res.res, '/username-generator', req.query)
+  server.get('/usernames', (req, res) => {
+    return app.render(req.req, res.res, '/usernames', req.query)
+  })
+
+  server.get('/passwords', (req, res) => {
+    return app.render(req.req, res.res, '/passwords', req.query)
   })
 
   server.get('/*', (req, res) => {

@@ -64,9 +64,11 @@ exports.default = function (_ref) {
     className: 'jsx-1876301701'
   }, 'GENPASS'))), _react2.default.createElement('section', {
     className: 'jsx-1876301701' + ' ' + 'navbar-section'
-  }, _react2.default.createElement(_link2.default, { href: '/username-generator' }, _react2.default.createElement('a', {
+  }, _react2.default.createElement(_link2.default, { href: '/passwords' }, _react2.default.createElement('a', {
     className: 'jsx-1876301701' + ' ' + 'btn btn-link'
-  }, 'Username generator')))), _react2.default.createElement('main', {
+  }, 'Passwords')), _react2.default.createElement(_link2.default, { href: '/usernames' }, _react2.default.createElement('a', {
+    className: 'jsx-1876301701' + ' ' + 'btn btn-link'
+  }, 'Usernames')))), _react2.default.createElement('main', {
     className: 'jsx-1876301701'
   }, children), _react2.default.createElement('footer', {
     className: 'jsx-1876301701' + ' ' + 'footer animated fadeInDown'

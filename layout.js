@@ -87,7 +87,8 @@ export default ({ children }) => (
             </section>
 
             <section className="navbar-section">
-              <Link href="/username-generator"><a className="btn btn-link">Username generator</a></Link>
+              <Link href="/passwords"><a className="btn btn-link">Passwords</a></Link>
+              <Link href="/usernames"><a className="btn btn-link">Usernames</a></Link>
             </section>
         </header>
 
