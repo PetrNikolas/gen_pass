@@ -1,5 +1,5 @@
 const prod = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  'process.env.BACKEND_URL': prod ? '/Gen-pass' : ''
+  'process.env.BACKEND_URL': prod ? '/gen_pass' : ''
 }

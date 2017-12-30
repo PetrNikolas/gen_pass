@@ -12,5 +12,5 @@ module.exports = {
       '/usernames': { page: '/usernames' }
     }
   },
-  assetPrefix: !debug ? 'gen_pass' : ''
+  assetPrefix: !debug ? 'https://petrnikolas.github.io/gen_pass/' : ''
 }
