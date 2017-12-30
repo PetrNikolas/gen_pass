@@ -12,5 +12,5 @@ module.exports = {
       '/usernames': { page: '/usernames' }
     }
   },
-  assetPrefix: !debug ? '/Gen-pass/' : ''
+  assetPrefix: !debug ? 'gen_pass' : ''
 }
