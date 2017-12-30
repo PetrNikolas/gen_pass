@@ -4,7 +4,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import Page from '../layout'
+import Page from './layout'
 
 
 // ------------------------------------------------------------------------------
@@ -22,7 +22,6 @@ export default class extends React.Component {
         <style jsx>{`
           h1 {
             padding-top: 7rem;
-            color: #f8114d;
           }
 
           a {
@@ -31,6 +30,7 @@ export default class extends React.Component {
 
           .card {
             width: auto;
+            max-width: 300px;
             margin: 1.5rem auto 0;
             background-color: #fff;
             border: none;

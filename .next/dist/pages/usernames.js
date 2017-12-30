@@ -40,7 +40,7 @@ var _link = require('next/dist/lib/link.js');
 
 var _link2 = _interopRequireDefault(_link);
 
-var _layout = require('../layout');
+var _layout = require('./layout');
 
 var _layout2 = _interopRequireDefault(_layout);
 
