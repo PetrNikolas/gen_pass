@@ -99,7 +99,7 @@ export default class extends React.Component {
               width: 100%;
             }
 
-            h1 {
+            h1, h2 {
               font-size: 1rem;
             }
           }

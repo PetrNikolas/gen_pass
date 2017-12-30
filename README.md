@@ -8,3 +8,9 @@ Install it and run:
 npm install
 npm run serve
 ```
+
+Deploy:
+
+```bash
+npm run deploy
+```

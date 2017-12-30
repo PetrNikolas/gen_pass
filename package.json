@@ -9,8 +9,10 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
+    "export": "next export -o docs",
     "heroku-postbuild": "npm run build",
     "serve": "yarn run build && yarn start",
+    "deploy": "yarn run build && yarn run export && touch docs/CNAME && touch docs/.nojekyll && git commit -m \"deploy\" && git push origin master",
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
