@@ -83,12 +83,12 @@ export default ({ children }) => (
 
         <header className="navbar animated fadeInDown">
             <section className="navbar-section logo">
-              <Link href="/" as={ process.env.BACKEND_URL + '/gen_pass'}><a>GENPASS</a></Link>
+              <Link href="/"><a>GENPASS</a></Link>
             </section>
 
             <section className="navbar-section">
-              <Link href="/passwords" as={ process.env.BACKEND_URL + '/passwords'}><a className="btn btn-link">Passwords</a></Link>
-              <Link href="/usernames" as={ process.env.BACKEND_URL + '/usernames'}><a className="btn btn-link">Usernames</a></Link>
+              <Link href="/passwords"><a className="btn btn-link">Passwords</a></Link>
+              <Link href="/usernames"><a className="btn btn-link">Usernames</a></Link>
             </section>
         </header>
 
