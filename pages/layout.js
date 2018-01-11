@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { createComponent } from 'react-fela'
 
-
 // ------------------------------------------------------------------------------
 // Styles
 // ------------------------------------------------------------------------------
@@ -13,96 +12,141 @@ const Container = createComponent(() => ({
   lineHeight: 1.5
 }))
 
-
 // ------------------------------------------------------------------------------
 // Export layout
 // ------------------------------------------------------------------------------
 export default ({ children }) => (
-    <div className="root">
-        <Head>
-            <meta charSet="utf-8"/>
-            <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <div className="root">
+    <Head>
+      <meta charSet="utf-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-            <title>GENPASS</title>
+      <title>GENPASS</title>
 
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-            <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css" />
-            <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css" />
-            <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css" />
-        </Head>
+      <link
+        rel="shortcut icon"
+        type="image/ico"
+        href="/static/img/favicon.ico"
+      />
 
-        <style jsx>{`
-          .root {
-            padding: 30px 50px 50px 50px;
-            font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-          }
+      <meta name="author" content="Petr Nikolas" />
+      <meta name="description" content="Random generators" />
 
-          .footer {
-            color: #acb3c2;
-            padding: .5rem .5rem 1.5rem .5rem;
-          }
+      <meta property="og:title" content="GENPASS" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="http://generator-random.com/" />
+      <meta property="og:description" content="Random generators" />
 
-          .footer a {
-            color: #667189;
-          }
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="GENPASS" />
+      <meta name="twitter:description" content="Random generators" />
+      <meta name="twitter:site" content="@PetrNikolas" />
+      <meta name="twitter:creator" content="@PetrNikolas" />
 
-          .footer .hearth_icon {
-            color: #f8114d;
-          }
+      <meta name="HandheldFriendly" content="True" />
+      <meta name="MobileOptimized" content="320" />
 
-          .centered {
-            text-align: center;
-          }
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/spectre.css/dist/spectre.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"
+      />
+    </Head>
 
-          .navbar a {
-            color: #50596c !important; 
-          }
+    <style jsx>{`
+      .root {
+        padding: 30px 50px 50px 50px;
+        font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+      }
 
-          .navbar a:hover, .navbar a:focus, .navbar a:active {
-            border: none !important;
-            border-bottom: 2px solid #f8114d !important; 
-          }
+      .footer {
+        color: #acb3c2;
+        padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+      }
 
-          .logo a {
-            color: #1c1a27 !important;
-            font-size: 35px;
-          }
+      .footer a {
+        color: #667189;
+      }
 
-          .logo a:hover {
-            border-bottom: none !important;
-            text-decoration: none;
-          }
+      .footer .hearth_icon {
+        color: #f8114d;
+      }
 
-          @media only screen and (max-width: 1100px) {
-            .root {
-              padding: 3px;
-            }
-          }
-        `}</style>
+      .centered {
+        text-align: center;
+      }
 
-        <header className="navbar animated fadeInDown">
-            <section className="navbar-section logo">
-              <Link href="/"><a>GENPASS</a></Link>
-            </section>
+      .navbar a {
+        color: #50596c !important;
+      }
 
-            <section className="navbar-section">
-              <Link href="/passwords"><a className="btn btn-link">Passwords</a></Link>
-              <Link href="/usernames"><a className="btn btn-link">Usernames</a></Link>
-            </section>
-        </header>
+      .navbar a:hover,
+      .navbar a:focus,
+      .navbar a:active {
+        border: none !important;
+        border-bottom: 2px solid #f8114d !important;
+      }
 
-        <main>
-            {children}
-        </main>
+      .logo a {
+        color: #1c1a27 !important;
+        font-size: 35px;
+      }
 
-        <footer className="footer animated fadeInDown">
-            <p className="centered">
-              <a href="mailto:petr.nikolas@icloud.com?subject=Hello"><i className="icon icon-mail"></i> Send me a feedback.</a>
-            </p>
-            <p className="centered">
-              Built with <span className="hearth_icon">♥</span> by <a target="_blank" href="http://www.petrnikolas.com/">Petr Nikolas</a>
-            </p>  
-        </footer>
-    </div>
+      .logo a:hover {
+        border-bottom: none !important;
+        text-decoration: none;
+      }
+
+      @media only screen and (max-width: 1100px) {
+        .root {
+          padding: 3px;
+        }
+      }
+    `}</style>
+
+    <header className="navbar animated fadeInDown">
+      <section className="navbar-section logo">
+        <Link href="/">
+          <a>GENPASS</a>
+        </Link>
+      </section>
+
+      <section className="navbar-section">
+        <Link href="/passwords">
+          <a className="btn btn-link">Passwords</a>
+        </Link>
+        <Link href="/usernames">
+          <a className="btn btn-link">Usernames</a>
+        </Link>
+      </section>
+    </header>
+
+    <main>{children}</main>
+
+    <footer className="footer animated fadeInDown">
+      <p className="centered">
+        <a href="mailto:petr.nikolas@icloud.com?subject=Hello">
+          <i className="icon icon-mail" /> Send me a feedback.
+        </a>
+      </p>
+      <p className="centered">
+        Built with <span className="hearth_icon">♥</span> by{' '}
+        <a target="_blank" href="http://www.petrnikolas.com/">
+          Petr Nikolas
+        </a>
+      </p>
+    </footer>
+  </div>
 )

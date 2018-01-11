@@ -2,17 +2,19 @@
   "name": "gen-pass",
   "license": "MIT",
   "version": "1.0.0",
+  "main": "server.js",
   "engines": {
     "node": "8.1.4",
     "npm": "5.0.3"
   },
   "scripts": {
+    "precommit": "lint-staged",
     "dev": "node server.js",
     "build": "next build",
     "export": "next export -o docs",
     "heroku-postbuild": "npm run build",
     "serve": "yarn run build && yarn start",
-    "deploy": "yarn run build && yarn run export && touch docs/CNAME && touch docs/.nojekyll && git commit -m \"deploy\" && git push origin master",
+    "deploy": "yarn run build && yarn run export && git commit -m \"deploy to githubpages\" && git push origin master",
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
@@ -26,6 +28,15 @@
     "react-fela": "^6.1.1"
   },
   "devDependencies": {
-    "babel-plugin-transform-define": "^1.3.0"
+    "babel-plugin-transform-define": "^1.3.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.10.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "node_modules/.bin/prettier --single-quote --no-semi --write",
+      "git add"
+    ]
   }
 }
