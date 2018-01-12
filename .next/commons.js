@@ -1788,162 +1788,169 @@ webpackJsonp(
         var t = e.children
         return u.default.createElement(
           'div',
-          { className: 'jsx-1876301701 root' },
+          { className: 'jsx-915937761 root' },
           u.default.createElement(
             c.default,
             null,
             u.default.createElement('meta', {
               charSet: 'utf-8',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               httpEquiv: 'X-UA-Compatible',
               content: 'IE=edge',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               name: 'viewport',
               content: 'width=device-width, initial-scale=1',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement(
               'title',
-              { className: 'jsx-1876301701' },
+              { className: 'jsx-915937761' },
               'GENPASS'
             ),
             u.default.createElement('link', {
               rel: 'shortcut icon',
               type: 'image/ico',
               href: '/static/img/favicon.ico',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               name: 'author',
               content: 'Petr Nikolas',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               name: 'description',
               content: 'Random generators',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               property: 'og:title',
               content: 'GENPASS',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               property: 'og:type',
               content: 'website',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               property: 'og:url',
               content: 'http://generator-random.com/',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               property: 'og:description',
               content: 'Random generators',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               name: 'twitter:card',
               content: 'summary',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               name: 'twitter:title',
               content: 'GENPASS',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               name: 'twitter:description',
               content: 'Random generators',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               name: 'twitter:site',
               content: '@PetrNikolas',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               name: 'twitter:creator',
               content: '@PetrNikolas',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               name: 'HandheldFriendly',
               content: 'True',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('meta', {
               name: 'MobileOptimized',
               content: '320',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('link', {
               rel: 'stylesheet',
               href:
                 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('link', {
               rel: 'stylesheet',
               href: 'https://unpkg.com/spectre.css/dist/spectre.min.css',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('link', {
               rel: 'stylesheet',
               href: 'https://unpkg.com/spectre.css/dist/spectre-exp.min.css',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
             }),
             u.default.createElement('link', {
               rel: 'stylesheet',
               href: 'https://unpkg.com/spectre.css/dist/spectre-icons.min.css',
-              className: 'jsx-1876301701'
+              className: 'jsx-915937761'
+            }),
+            u.default.createElement('script', {
+              dangerouslySetInnerHTML: {
+                __html:
+                  '\n          !function(e,t,a,n,c,s,o){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,s=t.createElement(a),o=t.getElementsByTagName(a)[0],s.async=1,s.src=n,o.parentNode.insertBefore(s,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-112389082-1","auto"),ga("send","pageview");\n        '
+              },
+              className: 'jsx-915937761'
             })
           ),
           u.default.createElement(i.default, {
-            styleId: '1876301701',
+            styleId: '915937761',
             css: [
-              '.root.jsx-1876301701{padding:30px 50px 50px 50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}',
-              '.footer.jsx-1876301701{color:#acb3c2;padding:.5rem .5rem 1.5rem .5rem;}',
-              '.footer.jsx-1876301701 a.jsx-1876301701{color:#667189;}',
-              '.footer.jsx-1876301701 .hearth_icon.jsx-1876301701{color:#f8114d;}',
-              '.centered.jsx-1876301701{text-align:center;}',
-              '.navbar.jsx-1876301701 a.jsx-1876301701{color:#50596c !important;}',
-              '.navbar.jsx-1876301701 a.jsx-1876301701:hover,.navbar.jsx-1876301701 a.jsx-1876301701:focus,.navbar.jsx-1876301701 a.jsx-1876301701:active{border:none !important;border-bottom:2px solid #f8114d !important;}',
-              '.logo.jsx-1876301701 a.jsx-1876301701{color:#1c1a27 !important;font-size:35px;}',
-              '.logo.jsx-1876301701 a.jsx-1876301701:hover{border-bottom:none !important;text-decoration:none;}',
-              '@media only screen and (max-width:1100px){.root.jsx-1876301701{padding:3px;}}'
+              ".root.jsx-915937761{padding:30px 50px 50px 50px;font:14px 'Lucida Grande',Helvetica,Arial,sans-serif;}",
+              '.footer.jsx-915937761{color:#acb3c2;padding:0.5rem 0.5rem 1.5rem 0.5rem;}',
+              '.footer.jsx-915937761 a.jsx-915937761{color:#667189;}',
+              '.footer.jsx-915937761 .hearth_icon.jsx-915937761{color:#f8114d;}',
+              '.centered.jsx-915937761{text-align:center;}',
+              '.navbar.jsx-915937761 a.jsx-915937761{color:#50596c !important;}',
+              '.navbar.jsx-915937761 a.jsx-915937761:hover,.navbar.jsx-915937761 a.jsx-915937761:focus,.navbar.jsx-915937761 a.jsx-915937761:active{border:none !important;border-bottom:2px solid #f8114d !important;}',
+              '.logo.jsx-915937761 a.jsx-915937761{color:#1c1a27 !important;font-size:35px;}',
+              '.logo.jsx-915937761 a.jsx-915937761:hover{border-bottom:none !important;text-decoration:none;}',
+              '@media only screen and (max-width:1100px){.root.jsx-915937761{padding:3px;}}'
             ]
           }),
           u.default.createElement(
             'header',
-            { className: 'jsx-1876301701 navbar animated fadeInDown' },
+            { className: 'jsx-915937761 navbar animated fadeInDown' },
             u.default.createElement(
               'section',
-              { className: 'jsx-1876301701 navbar-section logo' },
+              { className: 'jsx-915937761 navbar-section logo' },
               u.default.createElement(
                 f.default,
                 { href: '/' },
                 u.default.createElement(
                   'a',
-                  { className: 'jsx-1876301701' },
+                  { className: 'jsx-915937761' },
                   'GENPASS'
                 )
               )
             ),
             u.default.createElement(
               'section',
-              { className: 'jsx-1876301701 navbar-section' },
+              { className: 'jsx-915937761 navbar-section' },
               u.default.createElement(
                 f.default,
                 { href: '/passwords' },
                 u.default.createElement(
                   'a',
-                  { className: 'jsx-1876301701 btn btn-link' },
+                  { className: 'jsx-915937761 btn btn-link' },
                   'Passwords'
                 )
               ),
@@ -1952,47 +1959,48 @@ webpackJsonp(
                 { href: '/usernames' },
                 u.default.createElement(
                   'a',
-                  { className: 'jsx-1876301701 btn btn-link' },
+                  { className: 'jsx-915937761 btn btn-link' },
                   'Usernames'
                 )
               )
             )
           ),
-          u.default.createElement('main', { className: 'jsx-1876301701' }, t),
+          u.default.createElement('main', { className: 'jsx-915937761' }, t),
           u.default.createElement(
             'footer',
-            { className: 'jsx-1876301701 footer animated fadeInDown' },
+            { className: 'jsx-915937761 footer animated fadeInDown' },
             u.default.createElement(
               'p',
-              { className: 'jsx-1876301701 centered' },
+              { className: 'jsx-915937761 centered' },
               u.default.createElement(
                 'a',
                 {
                   href: 'mailto:petr.nikolas@icloud.com?subject=Hello',
-                  className: 'jsx-1876301701'
+                  className: 'jsx-915937761'
                 },
                 u.default.createElement('i', {
-                  className: 'jsx-1876301701 icon icon-mail'
+                  className: 'jsx-915937761 icon icon-mail'
                 }),
                 ' Send me a feedback.'
               )
             ),
             u.default.createElement(
               'p',
-              { className: 'jsx-1876301701 centered' },
+              { className: 'jsx-915937761 centered' },
               'Built with ',
               u.default.createElement(
                 'span',
-                { className: 'jsx-1876301701 hearth_icon' },
+                { className: 'jsx-915937761 hearth_icon' },
                 '♥'
               ),
-              ' by ',
+              ' by',
+              ' ',
               u.default.createElement(
                 'a',
                 {
                   target: '_blank',
                   href: 'http://www.petrnikolas.com/',
-                  className: 'jsx-1876301701'
+                  className: 'jsx-915937761'
                 },
                 'Petr Nikolas'
               )
