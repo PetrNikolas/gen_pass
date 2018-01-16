@@ -5,12 +5,12 @@
 const debug = process.env.NODE_ENV !== 'production'
 
 module.exports = {
-  exportPathMap: function () {
+  exportPathMap: function() {
     return {
       '/': { page: '/' },
       '/passwords': { page: '/passwords' },
       '/usernames': { page: '/usernames' }
     }
   },
-  assetPrefix: !debug ? 'https://petrnikolas.github.io/gen_pass/' : ''
+  assetPrefix: !debug ? 'http://generator-random.com/' : ''
 }

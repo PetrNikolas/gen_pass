@@ -63,6 +63,7 @@ export default ({ children }) => (
         rel="stylesheet"
         href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"
       />
+      <link rel="stylesheet" href="/static/css/main.css" />
 
       <script
         dangerouslySetInnerHTML={{
@@ -72,57 +73,6 @@ export default ({ children }) => (
         }}
       />
     </Head>
-
-    <style jsx>{`
-      .root {
-        padding: 30px 50px 50px 50px;
-        font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-      }
-
-      .footer {
-        color: #acb3c2;
-        padding: 0.5rem 0.5rem 1.5rem 0.5rem;
-      }
-
-      .footer a {
-        color: #667189;
-      }
-
-      .footer .hearth_icon {
-        color: #f8114d;
-      }
-
-      .centered {
-        text-align: center;
-      }
-
-      .navbar a {
-        color: #50596c !important;
-      }
-
-      .navbar a:hover,
-      .navbar a:focus,
-      .navbar a:active {
-        border: none !important;
-        border-bottom: 2px solid #f8114d !important;
-      }
-
-      .logo a {
-        color: #1c1a27 !important;
-        font-size: 35px;
-      }
-
-      .logo a:hover {
-        border-bottom: none !important;
-        text-decoration: none;
-      }
-
-      @media only screen and (max-width: 1100px) {
-        .root {
-          padding: 3px;
-        }
-      }
-    `}</style>
 
     <header className="navbar animated fadeInDown">
       <section className="navbar-section logo">

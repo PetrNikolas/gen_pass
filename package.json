@@ -1,7 +1,7 @@
 {
   "name": "gen-pass",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "server.js",
   "engines": {
     "node": "8.1.4",
@@ -11,10 +11,10 @@
     "precommit": "lint-staged",
     "dev": "node server.js",
     "build": "next build",
+    "build:deploy": "yarn run build && yarn run export",
     "export": "next export -o docs",
     "heroku-postbuild": "npm run build",
     "serve": "yarn run build && yarn start",
-    "deploy": "yarn run build && yarn run export && git commit -m \"deploy to githubpages\" && git push origin master",
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
