@@ -131,7 +131,7 @@ window.__NEXT_REGISTER_PAGE('/layout', function() {
             ),
             c.default.createElement(
               'header',
-              { className: 'navbar animated fadeInDown' },
+              { className: 'navbar animated fadeIn' },
               c.default.createElement(
                 'section',
                 { className: 'navbar-section logo' },
@@ -164,10 +164,14 @@ window.__NEXT_REGISTER_PAGE('/layout', function() {
                 )
               )
             ),
-            c.default.createElement('main', null, t),
+            c.default.createElement(
+              'main',
+              { className: 'animated fadeIn' },
+              t
+            ),
             c.default.createElement(
               'footer',
-              { className: 'footer animated fadeInDown' },
+              { className: 'footer animated fadeIn' },
               c.default.createElement(
                 'p',
                 { className: 'centered' },

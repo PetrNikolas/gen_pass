@@ -2,21 +2,21 @@
   function n(r) {
     if (t[r]) return t[r].exports
     var o = (t[r] = { i: r, l: !1, exports: {} }),
-      a = !0
+      s = !0
     try {
-      e[r].call(o.exports, o, o.exports, n), (a = !1)
+      e[r].call(o.exports, o, o.exports, n), (s = !1)
     } finally {
-      a && delete t[r]
+      s && delete t[r]
     }
     return (o.l = !0), o.exports
   }
   var r = window.webpackJsonp
-  window.webpackJsonp = function(t, a, s) {
+  window.webpackJsonp = function(t, s, a) {
     for (var u, c, i, l = 0, p = []; l < t.length; l++)
       (c = t[l]), o[c] && p.push(o[c][0]), (o[c] = 0)
-    for (u in a) Object.prototype.hasOwnProperty.call(a, u) && (e[u] = a[u])
-    for (r && r(t, a, s); p.length; ) p.shift()()
-    if (s) for (l = 0; l < s.length; l++) i = n((n.s = s[l]))
+    for (u in s) Object.prototype.hasOwnProperty.call(s, u) && (e[u] = s[u])
+    for (r && r(t, s, a); p.length; ) p.shift()()
+    if (a) for (l = 0; l < a.length; l++) i = n((n.s = a[l]))
     return i
   }
   var t = {},
@@ -35,11 +35,11 @@
         e()
       })
     if (t) return t[2]
-    var a = new Promise(function(n, r) {
+    var s = new Promise(function(n, r) {
       t = o[e] = [n, r]
     })
-    t[2] = a
-    var s = document.getElementsByTagName('head')[0],
+    t[2] = s
+    var a = document.getElementsByTagName('head')[0],
       u = document.createElement('script')
     ;(u.type = 'text/javascript'),
       (u.charset = 'utf-8'),
@@ -60,7 +60,7 @@
           7: 'bundles/pages/index.js'
         }[e] || e))
     var c = setTimeout(r, 12e4)
-    return (u.onerror = u.onload = r), s.appendChild(u), a
+    return (u.onerror = u.onload = r), a.appendChild(u), s
   }),
     (n.m = e),
     (n.c = t),
@@ -86,7 +86,7 @@
     (n.o = function(e, n) {
       return Object.prototype.hasOwnProperty.call(e, n)
     }),
-    (n.p = '/_next/0447d7e2-2ad0-42c7-af41-637d12f18d20/webpack/'),
+    (n.p = '/_next/f86bbd52-4dd3-45b5-b796-6ea5037e1832/webpack/'),
     (n.oe = function(e) {
       throw (console.error(e), e)
     })
@@ -1980,7 +1980,7 @@ webpackJsonp(
           ),
           i.default.createElement(
             'header',
-            { className: 'navbar animated fadeInDown' },
+            { className: 'navbar animated fadeIn' },
             i.default.createElement(
               'section',
               { className: 'navbar-section logo' },
@@ -2013,10 +2013,10 @@ webpackJsonp(
               )
             )
           ),
-          i.default.createElement('main', null, t),
+          i.default.createElement('main', { className: 'animated fadeIn' }, t),
           i.default.createElement(
             'footer',
-            { className: 'footer animated fadeInDown' },
+            { className: 'footer animated fadeIn' },
             i.default.createElement(
               'p',
               { className: 'centered' },

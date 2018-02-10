@@ -120,8 +120,7 @@ window.__NEXT_REGISTER_PAGE('/usernames', function() {
                               'div',
                               {
                                 id: 'main_card',
-                                className:
-                                  'jsx-229388632 card animated fadeInUp'
+                                className: 'jsx-229388632 card'
                               },
                               h.default.createElement(
                                 'div',

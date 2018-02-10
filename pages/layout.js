@@ -74,7 +74,7 @@ export default ({ children }) => (
       />
     </Head>
 
-    <header className="navbar animated fadeInDown">
+    <header className="navbar animated fadeIn">
       <section className="navbar-section logo">
         <Link href="/">
           <a>GENPASS</a>
@@ -91,9 +91,9 @@ export default ({ children }) => (
       </section>
     </header>
 
-    <main>{children}</main>
+    <main className="animated fadeIn">{children}</main>
 
-    <footer className="footer animated fadeInDown">
+    <footer className="footer animated fadeIn">
       <p className="centered">
         <a href="mailto:petr.nikolas@icloud.com?subject=Hello">
           <i className="icon icon-mail" /> Send me a feedback.

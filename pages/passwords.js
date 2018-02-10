@@ -156,7 +156,7 @@ export default class extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column col-xs-12 text-center">
-              <div id="main_card" className="card animated fadeInUp">
+              <div id="main_card" className="card">
                 <div className="card-header">
                   <h1 className="card-title h1">Passwords generator</h1>
                   <div className="card-subtitle text-gray">

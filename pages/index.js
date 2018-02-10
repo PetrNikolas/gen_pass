@@ -35,6 +35,7 @@ export default class extends React.Component {
             border: none;
             padding: 2rem 1.5rem;
             box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
           }
 
           .btn-primary,
@@ -112,35 +113,33 @@ export default class extends React.Component {
         `}</style>
 
         <div className="container">
-          <h1 className="card-title h1 text-center animated fadeInDown">
-            Random generators
-          </h1>
+          <h1 className="card-title h1 text-center">Random generators</h1>
 
           <div className="columns">
             <div className="column col-xs-12 col-4 text-center">
-              <div className="card animated fadeInUp">
-                <div className="card-header">
-                  <h2 className="card-title h2">Passwords generator</h2>
-                  <div className="card-subtitle text-gray">
-                    <Link href="/passwords">
+              <Link href="/passwords">
+                <div className="card">
+                  <div className="card-header">
+                    <h2 className="card-title h2">Passwords generator</h2>
+                    <div className="card-subtitle text-gray">
                       <a className="btn btn-link">Generate now</a>
-                    </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
 
             <div className="column col-xs-12 col-4 text-center">
-              <div className="card animated fadeInUp">
-                <div className="card-header">
-                  <h2 className="card-title h2">Usernames generator</h2>
-                  <div className="card-subtitle text-gray">
-                    <Link href="/usernames">
+              <Link href="/usernames">
+                <div className="card">
+                  <div className="card-header">
+                    <h2 className="card-title h2">Usernames generator</h2>
+                    <div className="card-subtitle text-gray">
                       <a className="btn btn-link">Generate now</a>
-                    </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
