@@ -80,9 +80,8 @@ export default ({ children }) => (
     <header className="navbar animated fadeIn">
       <section className="navbar-section logo">
         <Link href="/">
-          <h1 className="card-title h1">GENPASS</h1>
+          <h1 className="h1">GENPASS</h1>
         </Link>
-        <span>Random generators</span>
       </section>
 
       <section className="navbar-section">
@@ -95,7 +94,7 @@ export default ({ children }) => (
       </section>
     </header>
 
-    <header className="animated fadeIn">
+    <header className="desktop_header animated fadeIn">
       <div className="logo">
         <Link href="/">
           <h1 className="card-title h1">GENPASS</h1>
@@ -112,7 +111,7 @@ export default ({ children }) => (
           </li>
           <li>
             <Link href="/usernames">
-              <a>Usernames</a>
+              <a className="selected">Usernames</a>
             </Link>
           </li>
         </ul>

@@ -74,72 +74,10 @@ export default class extends React.Component {
           .card {
             width: 100%;
             max-width: 45rem;
-            margin: 1.5rem auto 0;
+            margin: 0.7rem auto 0;
             background-color: #fff;
             border: none;
             padding: 2rem 1.5rem;
-          }
-
-          .btn-primary,
-          .btn-primary:focus,
-          .btn-primary:active {
-            background: #f8114d !important;
-            border-color: #f8114d !important;
-          }
-
-          input {
-            max-width: 200px;
-            margin: 0 auto;
-            height: 2.5rem;
-            padding: 0 1rem;
-            border: 0;
-            border-radius: 3px;
-            background-color: #f4f4fb;
-            -webkit-transition: border-color 0.25s ease-in-out,
-              -webkit-box-shadow 0.5s;
-            transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
-            transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
-            transition: box-shadow 0.5s, border-color 0.25s ease-in-out,
-              -webkit-box-shadow 0.5s;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-          }
-
-          label {
-            color: #868f96 !important;
-          }
-
-          textarea {
-            resize: none;
-            height: 7.25rem;
-            padding: 0 1.125rem;
-            padding-top: 1.6rem;
-            padding-bottom: 1rem;
-            border: 0;
-            border-radius: 3px;
-            background-color: #f4f4fb !important;
-            border-radius: 3px;
-            line-height: 1.5;
-            -webkit-transition: border-color 0.25s ease-in-out,
-              -webkit-box-shadow 0.5s;
-            transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
-            transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
-            transition: box-shadow 0.5s, border-color 0.25s ease-in-out,
-              -webkit-box-shadow 0.5s;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-          }
-
-          .form-input:focus {
-            border-color: #868f96;
-            box-shadow: none;
-          }
-
-          #error {
-            color: red;
-            display: none;
           }
 
           @media only screen and (max-width: 1100px) {
@@ -147,7 +85,7 @@ export default class extends React.Component {
               width: 100%;
             }
 
-            h1 {
+            h2 {
               font-size: 1rem;
             }
           }
@@ -158,7 +96,7 @@ export default class extends React.Component {
             <div className="column col-xs-12 text-center">
               <div id="main_card" className="card">
                 <div className="card-header">
-                  <h1 className="card-title h1">Passwords generator</h1>
+                  <h2 className="card-title h3">Passwords generator</h2>
                   <div className="card-subtitle text-gray">
                     So, click on the button and generate your password now!
                   </div>

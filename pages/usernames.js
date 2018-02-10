@@ -14,7 +14,6 @@ export default class extends React.Component {
     super(props)
     this.state = {
       nameValue: '',
-      secondNameValue: '',
       surnameValue: '',
       generatedUsername: ''
     }
@@ -30,16 +29,6 @@ export default class extends React.Component {
     })
   }
 
-  /** Update value in input - second name */
-  updateSecondNameValue = event => {
-    /** Error message */
-    document.getElementById('error').style.display = 'none'
-
-    this.setState({
-      secondNameValue: event.target.value
-    })
-  }
-
   /** Update value in input - surname */
   updateSurnameValue = event => {
     /** Error message */
@@ -51,7 +40,7 @@ export default class extends React.Component {
   }
 
   /** Generate password */
-  generatorHandleClick = (name, secondName, surname) => {
+  generatorHandleClick = (name, surname) => {
     /** Error message */
     document.getElementById('error').style.display = 'none'
 
@@ -60,11 +49,6 @@ export default class extends React.Component {
     let numbers_varinat = ''
     let username = ''
 
-    /** Check if second name exist */
-    if (!secondName || typeof secondName === 'undefined') {
-      secondName = ''
-    }
-
     if (
       name &&
       typeof name !== 'undefined' &&
@@ -72,7 +56,7 @@ export default class extends React.Component {
       typeof surname !== 'undefined'
     ) {
       /** Possible variants */
-      const possible_of_name = name + secondName + surname
+      const possible_of_name = name + surname
       const possible_of_numbers = '1234567890'
 
       const length_of_name = possible_of_name.length
@@ -113,73 +97,10 @@ export default class extends React.Component {
           .card {
             width: 100%;
             max-width: 45rem;
-            margin: 0.5rem auto 0;
+            margin: 0.7rem auto 0;
             background-color: #fff;
             border: none;
             padding: 1.5rem;
-          }
-
-          .btn-primary,
-          .btn-primary:focus,
-          .btn-primary:active {
-            background: #f8114d !important;
-            border-color: #f8114d !important;
-          }
-
-          input {
-            max-width: 200px;
-            margin: 0 auto;
-            height: 2.5rem;
-            padding: 0 1rem;
-            border: 0;
-            border-radius: 3px;
-            background-color: #f4f4fb;
-            line-height: 1.5;
-            -webkit-transition: border-color 0.25s ease-in-out,
-              -webkit-box-shadow 0.5s;
-            transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
-            transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
-            transition: box-shadow 0.5s, border-color 0.25s ease-in-out,
-              -webkit-box-shadow 0.5s;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-          }
-
-          label {
-            color: #868f96 !important;
-          }
-
-          textarea {
-            resize: none;
-            height: 7.25rem;
-            padding: 0 1.125rem;
-            padding-top: 1.6rem;
-            padding-bottom: 1rem;
-            border: 0;
-            border-radius: 3px;
-            background-color: #f4f4fb !important;
-            border-radius: 3px;
-            line-height: 1.5;
-            -webkit-transition: border-color 0.25s ease-in-out,
-              -webkit-box-shadow 0.5s;
-            transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
-            transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
-            transition: box-shadow 0.5s, border-color 0.25s ease-in-out,
-              -webkit-box-shadow 0.5s;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-          }
-
-          .form-input:focus {
-            border-color: #868f96;
-            box-shadow: none;
-          }
-
-          #error {
-            color: red;
-            display: none;
           }
 
           @media only screen and (max-width: 1100px) {
@@ -187,7 +108,7 @@ export default class extends React.Component {
               width: 100%;
             }
 
-            h1 {
+            h2 {
               font-size: 1rem;
             }
           }
@@ -198,7 +119,7 @@ export default class extends React.Component {
             <div className="column col-xs-12 text-center">
               <div id="main_card" className="card">
                 <div className="card-header">
-                  <h1 className="card-title h1">Usernames generator</h1>
+                  <h2 className="card-title h3">Usernames generator</h2>
                   <div className="card-subtitle text-gray">
                     So, click on the button and generate your username from your
                     name and surname now!
@@ -226,19 +147,6 @@ export default class extends React.Component {
                       </div>
 
                       <div className="column col-lg-4 col-xs-12">
-                        <label className="form-label" for="secondName">
-                          Your second name
-                        </label>
-                        <input
-                          value={this.state.secondNameValue}
-                          onChange={event => this.updateSecondNameValue(event)}
-                          type="text"
-                          className="form-input"
-                          id="secondName"
-                        />
-                      </div>
-
-                      <div className="column col-lg-4 col-xs-12">
                         <label className="form-label" for="surname">
                           Your surname
                         </label>
@@ -256,7 +164,6 @@ export default class extends React.Component {
                     onClick={() => {
                       this.generatorHandleClick(
                         this.state.nameValue,
-                        this.state.secondNameValue,
                         this.state.surnameValue
                       )
                     }}
@@ -288,12 +195,6 @@ export default class extends React.Component {
                       <span id="name_chip" className="chip">
                         {' '}
                         {this.state.nameValue}{' '}
-                      </span>
-                    )}
-                    {this.state.secondNameValue && (
-                      <span id="second_name_chip" className="chip">
-                        {' '}
-                        {this.state.secondNameValue}{' '}
                       </span>
                     )}
                     {this.state.surnameValue && (

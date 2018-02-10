@@ -85,3 +85,71 @@ h1, h2, h3, h4, h5 ,h6{
     background: #fff;
     clear: both;
 }
+
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active {
+    background: #f8114d !important;
+    border-color: #f8114d !important;
+    color: #fff !important;
+}
+
+input {
+    max-width: 200px !important;
+    margin: 0 auto !important;
+    height: 2.5rem !important;
+    padding: 0 1rem !important;
+    border: 0 !important;
+    border-radius: 3px !important;
+    background-color: #f4f4fb !important;
+    -webkit-transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s !important;
+    transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s !important;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out !important;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+label {
+    color: #868f96 !important;
+}
+
+textarea {
+    resize: none !important;
+    height: 7.25rem !important;
+    padding: 0 1.125rem !important;
+    padding-top: 1.6rem !important;
+    padding-bottom: 1rem !important;
+    border: 0 !important;
+    border-radius: 3px !important;
+    background-color: #f4f4fb !important;
+    border-radius: 3px !important;
+    line-height: 1.5 !important;
+    -webkit-transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s !important;
+    transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s !important;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out !important;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    max-width: 620px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.form-input:focus {
+    border-color: #868f96 !important;
+    box-shadow: none !important;
+}
+
+input,
+textarea {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+#error {
+    color: red;
+    display: none;
+}

@@ -19,17 +19,23 @@ export default class extends React.Component {
     return (
       <Page>
         <style jsx>{`
-          a {
-            color: #f8114d !important;
-          }
-
           .card {
             width: auto;
             background-color: #fff;
             border: none;
             padding: 2rem 1.5rem;
-            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
             cursor: pointer;
+            -moz-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            margin: 0 0.5rem;
+          }
+
+          .card:hover {
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+            -moz-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
           }
 
           @media only screen and (max-width: 1100px) {
@@ -44,15 +50,20 @@ export default class extends React.Component {
         `}</style>
 
         <div className="container">
+          <h2 className="h1 rwd_title text-center">Random generators</h2>
+
           <div className="columns">
             <div className="column col-xs-12 col-4 text-center">
               <Link href="/passwords">
                 <div className="card">
                   <div className="card-header">
                     <h2 className="card-title h3">Passwords generator</h2>
-                    <div className="card-subtitle text-gray">
-                      <a className="btn btn-link">Generate now</a>
-                    </div>
+                  </div>
+                  <div className="card-body">
+                    <img src="static/img/pen.svg" width="105" alt="Passwords" />
+                  </div>
+                  <div className="card-footer">
+                    <a className="btn btn-primary">Generate now</a>
                   </div>
                 </div>
               </Link>
@@ -63,9 +74,17 @@ export default class extends React.Component {
                 <div className="card">
                   <div className="card-header">
                     <h2 className="card-title h3">Usernames generator</h2>
-                    <div className="card-subtitle text-gray">
-                      <a className="btn btn-link">Generate now</a>
-                    </div>
+                  </div>
+                  <div className="card-body">
+                    <img
+                      src="static/img/user.svg"
+                      width="105"
+                      height="121"
+                      alt="Usernames"
+                    />
+                  </div>
+                  <div className="card-footer">
+                    <a className="btn btn-primary">Generate now</a>
                   </div>
                 </div>
               </Link>

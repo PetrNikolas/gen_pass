@@ -1,4 +1,12 @@
 @media (min-width:1099px) {
+    .rwd_title {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
     header {
         display: block;
         position: fixed;
@@ -103,58 +111,13 @@
 }
 
 @media (max-width:1099px) {
-    header {
-        display: block;
-        width: 100%;
-        min-height: 100px;
-        padding: 0;
-        position: relative;
+    .rwd_title {
+        margin: 4.5rem 0;
+        font-size: 2rem !important;
     }
 
-    header .logo {
-        margin: 40px 0 0 30px;
-        float: left;
-    }
-
-    header .footer {
+    .desktop_header {
         display: none;
-    }
-
-    header #menu_icon,
-    header .close_menu {
-        float: right;
-        margin: 30px 30px 0 0;
-    }
-    
-    header nav {
-        width: 100%;
-        position: absolute;
-        top: 100px;
-        left: 0;
-        z-index: 9999;
-    }
-
-    header nav ul {
-        list-style: none;
-        display: none;
-        position: relative;
-    }
-
-    header nav ul li a {
-        display: block;
-        width: 100%;
-        padding: 30px 0;
-        text-align: center;
-        color: #454545;
-        font-family: "raleway-regular", arial;
-        font-size: 14px;
-        text-decoration: none;
-        border-top: 1px solid #f7f5f5;
-        background: #fff;
-    }
-
-    header nav ul li a:active {
-        background: #f7f5f5;
     }
 
     .main {
