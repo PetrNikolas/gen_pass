@@ -2,21 +2,21 @@
   function n(r) {
     if (t[r]) return t[r].exports
     var o = (t[r] = { i: r, l: !1, exports: {} }),
-      s = !0
+      a = !0
     try {
-      e[r].call(o.exports, o, o.exports, n), (s = !1)
+      e[r].call(o.exports, o, o.exports, n), (a = !1)
     } finally {
-      s && delete t[r]
+      a && delete t[r]
     }
     return (o.l = !0), o.exports
   }
   var r = window.webpackJsonp
-  window.webpackJsonp = function(t, s, a) {
-    for (var u, c, i, l = 0, p = []; l < t.length; l++)
-      (c = t[l]), o[c] && p.push(o[c][0]), (o[c] = 0)
-    for (u in s) Object.prototype.hasOwnProperty.call(s, u) && (e[u] = s[u])
-    for (r && r(t, s, a); p.length; ) p.shift()()
-    if (a) for (l = 0; l < a.length; l++) i = n((n.s = a[l]))
+  window.webpackJsonp = function(t, a, s) {
+    for (var u, c, i, l = 0, f = []; l < t.length; l++)
+      (c = t[l]), o[c] && f.push(o[c][0]), (o[c] = 0)
+    for (u in a) Object.prototype.hasOwnProperty.call(a, u) && (e[u] = a[u])
+    for (r && r(t, a, s); f.length; ) f.shift()()
+    if (s) for (l = 0; l < s.length; l++) i = n((n.s = s[l]))
     return i
   }
   var t = {},
@@ -35,11 +35,11 @@
         e()
       })
     if (t) return t[2]
-    var s = new Promise(function(n, r) {
+    var a = new Promise(function(n, r) {
       t = o[e] = [n, r]
     })
-    t[2] = s
-    var a = document.getElementsByTagName('head')[0],
+    t[2] = a
+    var s = document.getElementsByTagName('head')[0],
       u = document.createElement('script')
     ;(u.type = 'text/javascript'),
       (u.charset = 'utf-8'),
@@ -60,7 +60,7 @@
           7: 'bundles/pages/index.js'
         }[e] || e))
     var c = setTimeout(r, 12e4)
-    return (u.onerror = u.onload = r), a.appendChild(u), s
+    return (u.onerror = u.onload = r), s.appendChild(u), a
   }),
     (n.m = e),
     (n.c = t),
@@ -86,7 +86,7 @@
     (n.o = function(e, n) {
       return Object.prototype.hasOwnProperty.call(e, n)
     }),
-    (n.p = '/_next/f86bbd52-4dd3-45b5-b796-6ea5037e1832/webpack/'),
+    (n.p = '/_next/5efcdcd4-f413-487a-98fc-2ccf553a65b7/webpack/'),
     (n.oe = function(e) {
       throw (console.error(e), e)
     })
@@ -635,8 +635,8 @@ webpackJsonp(
       t.defaultHead = o
       var k = n(0),
         C = r(k),
-        O = n(8),
-        S = r(O),
+        S = n(8),
+        O = r(S),
         E = n(252),
         j = r(E),
         P = (function(e) {
@@ -662,7 +662,7 @@ webpackJsonp(
             t
           )
         })(C.default.Component)
-      P.contextTypes = { headManager: S.default.object }
+      P.contextTypes = { headManager: O.default.object }
       var T = ['name', 'httpEquiv', 'charSet', 'itemProp', 'property']
       t.default = (0, j.default)(i, u, a)(P)
     },
@@ -805,9 +805,9 @@ webpackJsonp(
         x = n(8),
         k = r(x),
         C = n(255),
-        O = r(C),
-        S = n(48),
-        E = r(S),
+        S = r(C),
+        O = n(48),
+        E = r(O),
         j = n(28),
         P = (function(e) {
           function t(e) {
@@ -926,7 +926,7 @@ webpackJsonp(
                     o.href &&
                       'undefined' != typeof __NEXT_DATA__ &&
                       __NEXT_DATA__.nextExport &&
-                      (o.href = (0, S._rewriteUrlForNextExport)(o.href)),
+                      (o.href = (0, O._rewriteUrlForNextExport)(o.href)),
                     w.default.cloneElement(r, o)
                   )
                 }
@@ -935,7 +935,7 @@ webpackJsonp(
             t
           )
         })(_.Component)
-      ;(P.propTypes = (0, O.default)({
+      ;(P.propTypes = (0, S.default)({
         href: k.default.oneOfType([k.default.string, k.default.object])
           .isRequired,
         as: k.default.oneOfType([k.default.string, k.default.object]),
@@ -1434,7 +1434,7 @@ webpackJsonp(
           _,
           w,
           x = function(e) {
-            if (!d && e in S) return S[e]
+            if (!d && e in O) return O[e]
             switch (e) {
               case 'keys':
               case 'values':
@@ -1448,12 +1448,12 @@ webpackJsonp(
           },
           k = t + ' Iterator',
           C = 'values' == y,
-          O = !1,
-          S = e.prototype,
-          E = S[p] || S['@@iterator'] || (y && S[y]),
+          S = !1,
+          O = e.prototype,
+          E = O[p] || O['@@iterator'] || (y && O[y]),
           j = (!d && E) || x(y),
           P = y ? (C ? x('entries') : j) : void 0,
-          T = 'Array' == t ? S.entries || E : E
+          T = 'Array' == t ? O.entries || E : E
         if (
           (T &&
             (w = f(T.call(new e()))) !== Object.prototype &&
@@ -1462,11 +1462,11 @@ webpackJsonp(
           C &&
             E &&
             'values' !== E.name &&
-            ((O = !0),
+            ((S = !0),
             (j = function() {
               return E.call(this)
             })),
-          (r && !g) || (!d && !O && S[p]) || a(S, p, j),
+          (r && !g) || (!d && !S && O[p]) || a(O, p, j),
           (l[t] = j),
           (l[k] = h),
           y)
@@ -1479,8 +1479,8 @@ webpackJsonp(
             }),
             g)
           )
-            for (_ in b) _ in S || i(S, _, b[_])
-          else o(o.P + o.F * (d || O), t, b)
+            for (_ in b) _ in O || i(O, _, b[_])
+          else o(o.P + o.F * (d || S), t, b)
         return b
       }
     },
@@ -1952,6 +1952,10 @@ webpackJsonp(
             }),
             i.default.createElement('link', {
               rel: 'stylesheet',
+              href: '/static/css/reset.css'
+            }),
+            i.default.createElement('link', {
+              rel: 'stylesheet',
               href:
                 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'
             }),
@@ -1971,6 +1975,14 @@ webpackJsonp(
               rel: 'stylesheet',
               href: '/static/css/main.css'
             }),
+            i.default.createElement('link', {
+              rel: 'stylesheet',
+              href: '/static/css/components.css'
+            }),
+            i.default.createElement('link', {
+              rel: 'stylesheet',
+              href: '/static/css/responsive.css'
+            }),
             i.default.createElement('script', {
               dangerouslySetInnerHTML: {
                 __html:
@@ -1987,7 +1999,7 @@ webpackJsonp(
               i.default.createElement(
                 c.default,
                 { href: '/' },
-                i.default.createElement('a', null, 'GENPASS')
+                i.default.createElement('h1', { className: 'h1' }, 'GENPASS')
               )
             ),
             i.default.createElement(
@@ -2013,37 +2025,130 @@ webpackJsonp(
               )
             )
           ),
-          i.default.createElement('main', { className: 'animated fadeIn' }, t),
           i.default.createElement(
-            'footer',
-            { className: 'footer animated fadeIn' },
+            'header',
+            { className: 'desktop_header animated fadeIn' },
             i.default.createElement(
-              'p',
-              { className: 'centered' },
+              'div',
+              { className: 'logo' },
               i.default.createElement(
-                'a',
-                { href: 'mailto:petr.nikolas@icloud.com?subject=Hello' },
-                i.default.createElement('i', { className: 'icon icon-mail' }),
-                ' Send me a feedback.'
+                c.default,
+                { href: '/' },
+                i.default.createElement(
+                  'h1',
+                  { className: 'card-title h1' },
+                  'GENPASS'
+                )
+              ),
+              i.default.createElement('span', null, 'Random generators')
+            ),
+            i.default.createElement(
+              'nav',
+              null,
+              i.default.createElement(
+                'ul',
+                null,
+                i.default.createElement(
+                  'li',
+                  null,
+                  i.default.createElement(
+                    c.default,
+                    { href: '/passwords' },
+                    i.default.createElement(
+                      'a',
+                      { className: 'selected' },
+                      'Passwords'
+                    )
+                  )
+                ),
+                i.default.createElement(
+                  'li',
+                  null,
+                  i.default.createElement(
+                    c.default,
+                    { href: '/usernames' },
+                    i.default.createElement(
+                      'a',
+                      { className: 'selected' },
+                      'Usernames'
+                    )
+                  )
+                )
               )
             ),
             i.default.createElement(
-              'p',
-              { className: 'centered' },
-              'Built with ',
+              'div',
+              { className: 'footer clearfix' },
               i.default.createElement(
-                'span',
-                { className: 'hearth_icon' },
-                '♥'
+                'ul',
+                { className: 'social clearfix' },
+                i.default.createElement(
+                  'li',
+                  null,
+                  i.default.createElement('a', {
+                    href: 'https://www.facebook.com/peta.prokop',
+                    target: '_blank',
+                    className: 'fb',
+                    'data-title': 'Facebook'
+                  })
+                ),
+                i.default.createElement(
+                  'li',
+                  null,
+                  i.default.createElement('a', {
+                    href: 'https://plus.google.com/111138628395528220719',
+                    target: '_blank',
+                    className: 'google',
+                    'data-title': 'Google +'
+                  })
+                ),
+                i.default.createElement(
+                  'li',
+                  null,
+                  i.default.createElement('a', {
+                    href: 'https://twitter.com/PetrNikolas',
+                    target: '_blank',
+                    className: 'twitter',
+                    'data-title': 'Twitter'
+                  })
+                )
               ),
-              ' by',
-              ' ',
               i.default.createElement(
-                'a',
-                { target: '_blank', href: 'http://www.petrnikolas.com/' },
-                'Petr Nikolas'
+                'div',
+                { className: 'rights' },
+                i.default.createElement(
+                  'p',
+                  null,
+                  i.default.createElement(
+                    'a',
+                    { href: 'mailto:petr.nikolas@icloud.com?subject=Hello' },
+                    'Send me a feedback.'
+                  )
+                ),
+                i.default.createElement(
+                  'p',
+                  null,
+                  'Built with ',
+                  i.default.createElement(
+                    'span',
+                    { className: 'hearth_icon' },
+                    '♥'
+                  ),
+                  ' by',
+                  ' ',
+                  i.default.createElement(
+                    'a',
+                    { target: '_blank', href: 'http://www.petrnikolas.com/' },
+                    'Petr Nikolas.'
+                  )
+                )
               )
             )
+          ),
+          i.default.createElement(
+            'main',
+            { className: 'main animated fadeIn' },
+            t
           )
         )
       }
@@ -2975,24 +3080,24 @@ object-assign
           !C || (d && w[d]) || ((u = u.substr(2)), (this.slashes = !0))
         }
         if (!w[d] && (C || (d && !x[d]))) {
-          for (var O = -1, S = 0; S < m.length; S++) {
-            var E = u.indexOf(m[S])
-            ;-1 !== E && (-1 === O || E < O) && (O = E)
+          for (var S = -1, O = 0; O < m.length; O++) {
+            var E = u.indexOf(m[O])
+            ;-1 !== E && (-1 === S || E < S) && (S = E)
           }
           var j, P
-          ;(P = -1 === O ? u.lastIndexOf('@') : u.lastIndexOf('@', O)),
+          ;(P = -1 === S ? u.lastIndexOf('@') : u.lastIndexOf('@', S)),
             -1 !== P &&
               ((j = u.slice(0, P)),
               (u = u.slice(P + 1)),
               (this.auth = decodeURIComponent(j))),
-            (O = -1)
-          for (var S = 0; S < y.length; S++) {
-            var E = u.indexOf(y[S])
-            ;-1 !== E && (-1 === O || E < O) && (O = E)
+            (S = -1)
+          for (var O = 0; O < y.length; O++) {
+            var E = u.indexOf(y[O])
+            ;-1 !== E && (-1 === S || E < S) && (S = E)
           }
-          ;-1 === O && (O = u.length),
-            (this.host = u.slice(0, O)),
-            (u = u.slice(O)),
+          ;-1 === S && (S = u.length),
+            (this.host = u.slice(0, S)),
+            (u = u.slice(S)),
             this.parseHost(),
             (this.hostname = this.hostname || '')
           var T =
@@ -3000,17 +3105,17 @@ object-assign
             ']' === this.hostname[this.hostname.length - 1]
           if (!T)
             for (
-              var N = this.hostname.split(/\./), S = 0, R = N.length;
-              S < R;
-              S++
+              var N = this.hostname.split(/\./), O = 0, R = N.length;
+              O < R;
+              O++
             ) {
-              var M = N[S]
+              var M = N[O]
               if (M && !M.match(g)) {
                 for (var A = '', I = 0, F = M.length; I < F; I++)
                   M.charCodeAt(I) > 127 ? (A += 'x') : (A += M[I])
                 if (!A.match(g)) {
-                  var L = N.slice(0, S),
-                    D = N.slice(S + 1),
+                  var L = N.slice(0, O),
+                    D = N.slice(O + 1),
                     U = M.match(b)
                   U && (L.push(U[1]), D.unshift(U[2])),
                     D.length && (u = '/' + D.join('.') + u),
@@ -3035,8 +3140,8 @@ object-assign
               '/' !== u[0] && (u = '/' + u))
         }
         if (!_[h])
-          for (var S = 0, R = v.length; S < R; S++) {
-            var B = v[S]
+          for (var O = 0, R = v.length; O < R; O++) {
+            var B = v[O]
             if (-1 !== u.indexOf(B)) {
               var V = encodeURIComponent(B)
               V === B && (V = escape(B)), (u = u.split(B).join(V))
@@ -3209,8 +3314,8 @@ object-assign
           else if (!c.isNullOrUndefined(e.search)) {
             if (C) {
               n.hostname = n.host = k.shift()
-              var O = !!(n.host && n.host.indexOf('@') > 0) && n.host.split('@')
-              O && ((n.auth = O.shift()), (n.host = n.hostname = O.shift()))
+              var S = !!(n.host && n.host.indexOf('@') > 0) && n.host.split('@')
+              S && ((n.auth = S.shift()), (n.host = n.hostname = S.shift()))
             }
             return (
               (n.search = e.search),
@@ -3230,20 +3335,20 @@ object-assign
               n
             )
           for (
-            var S = k.slice(-1)[0],
+            var O = k.slice(-1)[0],
               E =
                 ((n.host || e.host || k.length > 1) &&
-                  ('.' === S || '..' === S)) ||
-                '' === S,
+                  ('.' === O || '..' === O)) ||
+                '' === O,
               j = 0,
               P = k.length;
             P >= 0;
             P--
           )
-            (S = k[P]),
-              '.' === S
+            (O = k[P]),
+              '.' === O
                 ? k.splice(P, 1)
-                : '..' === S
+                : '..' === O
                   ? (k.splice(P, 1), j++)
                   : j && (k.splice(P, 1), j--)
           if (!b && !_) for (; j--; j) k.unshift('..')
@@ -3255,8 +3360,8 @@ object-assign
           var T = '' === k[0] || (k[0] && '/' === k[0].charAt(0))
           if (C) {
             n.hostname = n.host = T ? '' : k.length ? k.shift() : ''
-            var O = !!(n.host && n.host.indexOf('@') > 0) && n.host.split('@')
-            O && ((n.auth = O.shift()), (n.host = n.hostname = O.shift()))
+            var S = !!(n.host && n.host.indexOf('@') > 0) && n.host.split('@')
+            S && ((n.auth = S.shift()), (n.host = n.hostname = S.shift()))
           }
           return (
             (b = b || (n.host && k.length)),
@@ -3773,8 +3878,8 @@ object-assign
                 v = t.style,
                 k = t.as,
                 C = t.className,
-                O = t.passThrough,
-                S = void 0 === O ? [] : O,
+                S = t.passThrough,
+                O = void 0 === S ? [] : S,
                 E = x(t, [
                   'children',
                   '_felaTheme',
@@ -3804,14 +3909,14 @@ object-assign
                 N = [].concat(
                   w(i),
                   w(b(l, E)),
-                  w(b(S, E)),
+                  w(b(O, E)),
                   w(r ? _(j, E) : [])
                 ),
-                R = Oe({}, E, { theme: s, as: k, id: h })
+                R = Se({}, E, { theme: s, as: k, id: h })
               if (u._isFelaComponent)
                 return e(
                   u,
-                  Oe(
+                  Se(
                     {
                       _felaRule: T,
                       passThrough: N,
@@ -3847,7 +3952,7 @@ object-assign
       function C() {
         return document.head || {}
       }
-      function O(e, t) {
+      function S(e, t) {
         var n =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
           r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -3864,12 +3969,12 @@ object-assign
           i
         )
       }
-      function S(e, t, n) {
+      function O(e, t, n) {
         var r =
             arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : '',
           o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
           i = n + r + (o ? 'support' : '')
-        return e.hasOwnProperty(i) || (e[i] = O(n, t, r, o)), e[i]
+        return e.hasOwnProperty(i) || (e[i] = S(n, t, r, o)), e[i]
       }
       function E(e, t) {
         var n =
@@ -3897,9 +4002,9 @@ object-assign
             return ue()(e, function(e) {
               e.textContent = ''
             })
-          var r = Se[n.type]
+          var r = Oe[n.type]
           if (r) {
-            r(S(e, t, n.type, n.media, !!n.support), n)
+            r(O(e, t, n.type, n.media, !!n.support), n)
           }
         }
       }
@@ -3907,7 +4012,7 @@ object-assign
         var o =
             arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '',
           i = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          a = S(e, t, r, o, i)
+          a = O(e, t, r, o, i)
         a.textContent !== n && (a.textContent = n)
       }
       function N() {
@@ -4340,7 +4445,7 @@ object-assign
                 ? 'symbol'
                 : typeof e
             }),
-        Oe =
+        Se =
           Object.assign ||
           function(e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -4350,7 +4455,7 @@ object-assign
             }
             return e
           },
-        Se = ((ne = {}),
+        Oe = ((ne = {}),
         j(ne, ye, function(e, t) {
           var n = t.selector,
             r = t.declaration,
@@ -5186,7 +5291,7 @@ object-assign
           this._invoke = n
         }
         function c(e, t, n) {
-          var o = O
+          var o = S
           return function(i, a) {
             if (o === E) throw new Error('Generator is already running')
             if (o === j) {
@@ -5204,13 +5309,13 @@ object-assign
               }
               if ('next' === n.method) n.sent = n._sent = n.arg
               else if ('throw' === n.method) {
-                if (o === O) throw ((o = j), n.arg)
+                if (o === S) throw ((o = j), n.arg)
                 n.dispatchException(n.arg)
               } else 'return' === n.method && n.abrupt('return', n.arg)
               o = E
               var c = r(e, t, n)
               if ('normal' === c.type) {
-                if (((o = n.done ? j : S), c.arg === P)) continue
+                if (((o = n.done ? j : O), c.arg === P)) continue
                 return { value: c.arg, done: n.done }
               }
               'throw' === c.type &&
@@ -5300,8 +5405,8 @@ object-assign
           C = t.regeneratorRuntime
         if (C) return void (k && (e.exports = C))
         ;(C = t.regeneratorRuntime = k ? e.exports : {}), (C.wrap = n)
-        var O = 'suspendedStart',
-          S = 'suspendedYield',
+        var S = 'suspendedStart',
+          O = 'suspendedYield',
           E = 'executing',
           j = 'completed',
           P = {},
@@ -5652,18 +5757,18 @@ object-assign
         x = l.TypeError,
         k = l.process,
         C = l.Promise,
-        O = 'process' == s(k),
-        S = function() {},
+        S = 'process' == s(k),
+        O = function() {},
         E = (o = b.f),
         j = !!(function() {
           try {
             var e = C.resolve(1),
               t = ((e.constructor = {})[n(5)('species')] = function(e) {
-                e(S, S)
+                e(O, O)
               })
             return (
-              (O || 'function' == typeof PromiseRejectionEvent) &&
-              e.then(S) instanceof t
+              (S || 'function' == typeof PromiseRejectionEvent) &&
+              e.then(O) instanceof t
             )
           } catch (e) {}
         })(),
@@ -5712,7 +5817,7 @@ object-assign
             if (
               (i &&
                 ((t = _(function() {
-                  O
+                  S
                     ? k.emit('unhandledRejection', o, e)
                     : (n = l.onunhandledrejection)
                       ? n({ promise: e, reason: o })
@@ -5720,7 +5825,7 @@ object-assign
                         r.error &&
                         r.error('Unhandled promise rejection', o)
                 })),
-                (e._h = O || R(e) ? 2 : 1)),
+                (e._h = S || R(e) ? 2 : 1)),
               (e._a = void 0),
               i && t.e)
             )
@@ -5733,7 +5838,7 @@ object-assign
         M = function(e) {
           m.call(l, function() {
             var t
-            O
+            S
               ? k.emit('rejectionHandled', e)
               : (t = l.onrejectionhandled) && t({ promise: e, reason: e._v })
           })
@@ -5794,7 +5899,7 @@ object-assign
             return (
               (n.ok = 'function' != typeof e || e),
               (n.fail = 'function' == typeof t && t),
-              (n.domain = O ? k.domain : void 0),
+              (n.domain = S ? k.domain : void 0),
               this._c.push(n),
               this._a && this._a.push(n),
               this._s && T(this, !1),
@@ -5835,7 +5940,7 @@ object-assign
               !(
                 j &&
                 n(109)(function(e) {
-                  C.all(e).catch(S)
+                  C.all(e).catch(O)
                 })
               ),
           'Promise',
@@ -6041,7 +6146,7 @@ object-assign
           for (r in (void 0 !== t.ref && (a = t.ref),
           void 0 !== t.key && (i = '' + t.key),
           t))
-            O.call(t, r) && !E.hasOwnProperty(r) && (o[r] = t[r])
+            S.call(t, r) && !E.hasOwnProperty(r) && (o[r] = t[r])
         var u = arguments.length - 2
         if (1 === u) o.children = n
         else if (1 < u) {
@@ -6051,7 +6156,7 @@ object-assign
         if (e && e.defaultProps)
           for (r in (u = e.defaultProps)) void 0 === o[r] && (o[r] = u[r])
         return {
-          $$typeof: S,
+          $$typeof: O,
           type: e,
           key: i,
           ref: a,
@@ -6060,7 +6165,7 @@ object-assign
         }
       }
       function c(e) {
-        return 'object' == typeof e && null !== e && e.$$typeof === S
+        return 'object' == typeof e && null !== e && e.$$typeof === O
       }
       function s(e) {
         var t = { '=': '=0', ':': '=2' }
@@ -6149,7 +6254,7 @@ object-assign
                     : ('' + e.key).replace(N, '$&/') + '/') +
                   n),
                 (e = {
-                  $$typeof: S,
+                  $$typeof: O,
                   type: e.type,
                   key: t,
                   ref: e.ref,
@@ -6205,8 +6310,8 @@ object-assign
           return this.props.children
         })
       var C = { current: null },
-        O = Object.prototype.hasOwnProperty,
-        S =
+        S = Object.prototype.hasOwnProperty,
+        O =
           ('function' == typeof Symbol &&
             Symbol.for &&
             Symbol.for('react.element')) ||
@@ -6265,7 +6370,7 @@ object-assign
               )
                 var u = e.type.defaultProps
               for (l in t)
-                O.call(t, l) &&
+                S.call(t, l) &&
                   !E.hasOwnProperty(l) &&
                   (r[l] = void 0 === t[l] && void 0 !== u ? u[l] : t[l])
             }
@@ -6277,7 +6382,7 @@ object-assign
               r.children = u
             }
             return {
-              $$typeof: S,
+              $$typeof: O,
               type: e.type,
               key: o,
               ref: i,
@@ -6526,11 +6631,11 @@ object-assign
         for (; e && (r = e[or]); e = t.pop()) n = r
         return n
       }
-      function O(e) {
+      function S(e) {
         if (5 === e.tag || 6 === e.tag) return e.stateNode
         r('33')
       }
-      function S(e) {
+      function O(e) {
         return e[ir] || null
       }
       function E(e) {
@@ -6730,19 +6835,19 @@ object-assign
       }
       function Q(e) {
         if ((e = Jn(e))) {
-          ;(Or && 'function' == typeof Or.restoreControlledState) || r('194')
+          ;(Sr && 'function' == typeof Sr.restoreControlledState) || r('194')
           var t = Xn(e.stateNode)
-          Or.restoreControlledState(e.stateNode, e.type, t)
+          Sr.restoreControlledState(e.stateNode, e.type, t)
         }
       }
       function Y(e) {
-        Sr ? (Er ? Er.push(e) : (Er = [e])) : (Sr = e)
+        Or ? (Er ? Er.push(e) : (Er = [e])) : (Or = e)
       }
       function X() {
-        if (Sr) {
-          var e = Sr,
+        if (Or) {
+          var e = Or,
             t = Er
-          if (((Er = Sr = null), Q(e), t))
+          if (((Er = Or = null), Q(e), t))
             for (e = 0; e < t.length; e++) Q(t[e])
         }
       }
@@ -6853,7 +6958,7 @@ object-assign
         x(e), k(!1)
       }
       function ce(e) {
-        if (ae(O(e))) return e
+        if (ae(S(e))) return e
       }
       function se(e, t) {
         if ('topChange' === e) return t
@@ -6924,7 +7029,7 @@ object-assign
       function Ce(e) {
         2 !== xe(e) && r('188')
       }
-      function Oe(e) {
+      function Se(e) {
         var t = e.alternate
         if (!t) return (t = xe(e)), 3 === t && r('188'), 1 === t ? null : e
         for (var n = e, o = t; ; ) {
@@ -6972,8 +7077,8 @@ object-assign
         }
         return 3 !== n.tag && r('188'), n.stateNode.current === n ? e : t
       }
-      function Se(e) {
-        if (!(e = Oe(e))) return null
+      function Oe(e) {
+        if (!(e = Se(e))) return null
         for (var t = e; ; ) {
           if (5 === t.tag || 6 === t.tag) return t
           if (t.child) (t.child.return = t), (t = t.child)
@@ -6989,7 +7094,7 @@ object-assign
         return null
       }
       function Ee(e) {
-        if (!(e = Oe(e))) return null
+        if (!(e = Se(e))) return null
         for (var t = e; ; ) {
           if (5 === t.tag || 6 === t.tag) return t
           if (t.child && 4 !== t.tag) (t.child.return = t), (t = t.child)
@@ -7631,13 +7736,13 @@ object-assign
           implementation: n
         }
       }
-      function Ot(e) {
+      function St(e) {
         return null === e || void 0 === e
           ? null
           : ((e = (Co && e[Co]) || e['@@iterator']),
             'function' == typeof e ? e : null)
       }
-      function St(e, t) {
+      function Ot(e, t) {
         var n = t.ref
         if (null !== n && 'function' != typeof n) {
           if (t._owner) {
@@ -7724,9 +7829,9 @@ object-assign
         }
         function s(e, t, n, r) {
           return null !== t && t.type === n.type
-            ? ((r = a(t, n.props, r)), (r.ref = St(t, n)), (r.return = e), r)
+            ? ((r = a(t, n.props, r)), (r.ref = Ot(t, n)), (r.return = e), r)
             : ((r = ut(n, e.internalContextTag, r)),
-              (r.ref = St(t, n)),
+              (r.ref = Ot(t, n)),
               (r.return = e),
               r)
         }
@@ -7767,7 +7872,7 @@ object-assign
                     (t.return = e),
                     t)
                   : ((n = ut(t, e.internalContextTag, n)),
-                    (n.ref = St(null, t)),
+                    (n.ref = Ot(null, t)),
                     (n.return = e),
                     n)
               case ho:
@@ -7782,7 +7887,7 @@ object-assign
               case xo:
                 return (t = pt(t, e.internalContextTag, n)), (t.return = e), t
             }
-            if (ko(t) || Ot(t))
+            if (ko(t) || St(t))
               return (
                 (t = lt(t, e.internalContextTag, n, null)), (t.return = e), t
               )
@@ -7809,7 +7914,7 @@ object-assign
               case xo:
                 return n.key === o ? d(e, t, n, r) : null
             }
-            if (ko(n) || Ot(n)) return null !== o ? null : h(e, t, n, r, null)
+            if (ko(n) || St(n)) return null !== o ? null : h(e, t, n, r, null)
             Et(e, n)
           }
           return null
@@ -7837,7 +7942,7 @@ object-assign
                   (e = e.get(null === r.key ? n : r.key) || null), d(t, e, r, o)
                 )
             }
-            if (ko(r) || Ot(r))
+            if (ko(r) || St(r))
               return (e = e.get(n) || null), h(t, e, r, o, null)
             Et(t, r)
           }
@@ -7887,7 +7992,7 @@ object-assign
           )
         }
         function b(e, a, l, c) {
-          var s = Ot(l)
+          var s = St(l)
           'function' != typeof s && r('150'),
             null == (l = s.call(l)) && r('151')
           for (
@@ -7948,7 +8053,7 @@ object-assign
                             i.type === yo ? i.props.children : i.props,
                             u
                           )),
-                          (t.ref = St(c, i)),
+                          (t.ref = Ot(c, i)),
                           (t.return = e),
                           (e = t)
                         break e
@@ -7968,7 +8073,7 @@ object-assign
                       (i.return = e),
                       (e = i))
                     : ((u = ut(i, e.internalContextTag, u)),
-                      (u.ref = St(t, i)),
+                      (u.ref = Ot(t, i)),
                       (u.return = e),
                       (e = u))
                 }
@@ -8046,7 +8151,7 @@ object-assign
               l(e)
             )
           if (ko(i)) return g(e, t, i, u)
-          if (Ot(i)) return b(e, t, i, u)
+          if (St(i)) return b(e, t, i, u)
           if ((c && Et(e, i), void 0 === i))
             switch (e.tag) {
               case 2:
@@ -8065,8 +8170,8 @@ object-assign
             null === e
               ? Eo(t, t.child, n, r)
               : e.child === t.child
-                ? Oo(t, t.child, n, r)
-                : So(t, t.child, n, r)
+                ? So(t, t.child, n, r)
+                : Oo(t, t.child, n, r)
         }
         function l(e, t) {
           var n = t.ref
@@ -8223,20 +8328,20 @@ object-assign
                 )
               case 5:
                 y(t), null === e && _(t), (i = t.type)
-                var O = t.memoizedProps
+                var S = t.memoizedProps
                 return (
                   (o = t.pendingProps),
-                  null === o && null === (o = O) && r('154'),
+                  null === o && null === (o = S) && r('154'),
                   (u = null !== e ? e.memoizedProps : null),
-                  go.current || (null !== o && O !== o)
-                    ? ((O = o.children),
+                  go.current || (null !== o && S !== o)
+                    ? ((S = o.children),
                       d(i, o)
-                        ? (O = null)
+                        ? (S = null)
                         : u && d(i, u) && (t.effectTag |= 16),
                       l(e, t),
                       2147483647 !== n && !h && v(i, o)
                         ? ((t.expirationTime = 2147483647), (t = null))
-                        : (a(e, t, O), (t.memoizedProps = o), (t = t.child)))
+                        : (a(e, t, S), (t.memoizedProps = o), (t = t.child)))
                     : (t = f(e, t)),
                   t
                 )
@@ -8264,8 +8369,8 @@ object-assign
                     null === e
                       ? Eo(t, t.stateNode, o, n)
                       : e.child === t.child
-                        ? Oo(t, t.stateNode, o, n)
-                        : So(t, t.stateNode, o, n)),
+                        ? So(t, t.stateNode, o, n)
+                        : Oo(t, t.stateNode, o, n)),
                   (t.memoizedProps = i),
                   t.stateNode
                 )
@@ -8283,7 +8388,7 @@ object-assign
                     t = f(e, t)
                     break e
                   }
-                  null === e ? (t.child = So(t, t.child, i, n)) : a(e, t, i),
+                  null === e ? (t.child = Oo(t, t.child, i, n)) : a(e, t, i),
                     (t.memoizedProps = i),
                     (t = t.child)
                 }
@@ -8450,7 +8555,7 @@ object-assign
                   return (
                     (x = s.handler),
                     (s = x(s.props, w)),
-                    (t.child = Oo(t, null !== e ? e.child : null, s, n)),
+                    (t.child = So(t, null !== e ? e.child : null, s, n)),
                     t.child
                   )
                 case 8:
@@ -9047,13 +9152,13 @@ object-assign
                         et(u)
                         break
                       case 5:
-                        S(u)
+                        O(u)
                         break
                       case 3:
-                        O(u)
+                        S(u)
                         break
                       case 4:
-                        O(u)
+                        S(u)
                     }
                     if (u === c || u.alternate === c) break
                     u = u.return
@@ -9301,8 +9406,8 @@ object-assign
         }
         var k = Rt(e),
           C = Mt(e),
-          O = k.popHostContainer,
-          S = k.popHostContext,
+          S = k.popHostContainer,
+          O = k.popHostContext,
           E = k.resetHostContainer,
           j = Pt(e, k, C, d, p),
           P = j.beginWork,
@@ -9408,7 +9513,7 @@ object-assign
       }
       function It(e) {
         function t(e) {
-          return (e = Se(e)), null === e ? null : e.stateNode
+          return (e = Oe(e)), null === e ? null : e.stateNode
         }
         var n = e.getPublicInstance
         e = At(e)
@@ -10135,8 +10240,8 @@ object-assign
         xn = n(177),
         kn = n(178),
         Cn = n(179),
-        On = n(180),
-        Sn = n(183),
+        Sn = n(180),
+        On = n(183),
         En = n(111)
       gn || r('227')
       var jn = {
@@ -10386,8 +10491,8 @@ object-assign
           getInstanceFromNode: function(e) {
             return (e = e[or]), !e || (5 !== e.tag && 6 !== e.tag) ? null : e
           },
-          getNodeFromInstance: O,
-          getFiberCurrentPropsFromNode: S,
+          getNodeFromInstance: S,
+          getFiberCurrentPropsFromNode: O,
           updateFiberProps: function(e, t) {
             e[ir] = t
           }
@@ -10569,12 +10674,12 @@ object-assign
             )
           }
         },
-        Or = null,
         Sr = null,
+        Or = null,
         Er = null,
         jr = {
           injectFiberControlledHostComponent: function(e) {
-            Or = e
+            Sr = e
           }
         },
         Pr = Object.freeze({
@@ -10626,7 +10731,7 @@ object-assign
         eventTypes: Rr,
         _isInputEventSupported: Ir,
         extractEvents: function(e, t, n, r) {
-          var o = t ? O(t) : window,
+          var o = t ? S(t) : window,
             i = o.nodeName && o.nodeName.toLowerCase()
           if ('select' === i || ('input' === i && 'file' === o.type)) var a = se
           else if (ee(o))
@@ -10711,8 +10816,8 @@ object-assign
               e === t)
             )
               return null
-            var i = null == e ? o : O(e)
-            o = null == t ? o : O(t)
+            var i = null == e ? o : S(e)
+            o = null == t ? o : S(t)
             var a = _e.getPooled(Dr.mouseLeave, e, n, r)
             return (
               (a.type = 'mouseleave'),
@@ -10882,7 +10987,7 @@ object-assign
               o = !i
             }
             if (o) return null
-            switch (((i = t ? O(t) : window), e)) {
+            switch (((i = t ? S(t) : window), e)) {
               case 'topFocus':
                 ;(ee(i) || 'true' === i.contentEditable) &&
                   ((eo = i), (to = t), (no = null))
@@ -11158,8 +11263,8 @@ object-assign
           (vo = Symbol.for('react.return')),
           (yo = Symbol.for('react.fragment')))
         : ((po = 60103), (ho = 60104), (vo = 60105), (yo = 60107))
-      var Oo = jt(!0, !0),
-        So = jt(!1, !0),
+      var So = jt(!0, !0),
+        Oo = jt(!1, !0),
         Eo = jt(!1, !1),
         jo = {},
         Po = Object.freeze({ default: It }),
@@ -11435,7 +11540,7 @@ object-assign
                   ) {
                     var o = n[t]
                     if (o !== e && o.form === e.form) {
-                      var i = S(o)
+                      var i = O(o)
                       i || r('90'), Bt(o, i)
                     }
                   }
@@ -11537,7 +11642,7 @@ object-assign
               t = kn(),
               n = e.focusedElem,
               r = e.selectionRange
-            if (t !== n && On(document.documentElement, n)) {
+            if (t !== n && Sn(document.documentElement, n)) {
               if (De(n))
                 if (
                   ((t = r.start),
@@ -11575,7 +11680,7 @@ object-assign
               for (t = [], e = n; (e = e.parentNode); )
                 1 === e.nodeType &&
                   t.push({ element: e, left: e.scrollLeft, top: e.scrollTop })
-              for (Sn(n), n = 0; n < t.length; n++)
+              for (On(n), n = 0; n < t.length; n++)
                 (e = t[n]),
                   (e.element.scrollLeft = e.left),
                   (e.element.scrollTop = e.top)
@@ -11963,11 +12068,11 @@ object-assign
         x = n(35),
         k = n(42),
         C = n(202),
-        O = n(116),
-        S = n(9),
+        S = n(116),
+        O = n(9),
         E = n(36),
-        j = O.f,
-        P = S.f,
+        j = S.f,
+        P = O.f,
         T = C.f,
         N = r.Symbol,
         R = r.JSON,
@@ -12080,8 +12185,8 @@ object-assign
         u(N.prototype, 'toString', function() {
           return this._k
         }),
-        (O.f = X),
-        (S.f = K),
+        (S.f = X),
+        (O.f = K),
         (n(115).f = C.f = J),
         (n(51).f = Y),
         (n(78).f = Z),
@@ -12401,9 +12506,9 @@ object-assign
         x = n(83),
         k = r(x),
         C = n(125),
-        O = r(C),
-        S = n(231),
-        E = r(S),
+        S = r(C),
+        O = n(231),
+        E = r(O),
         j = n(28),
         P = n(48),
         T = (function() {
@@ -12845,7 +12950,7 @@ object-assign
               {
                 key: 'urlIsNew',
                 value: function(e, t) {
-                  return this.pathname !== e || !(0, O.default)(t, this.query)
+                  return this.pathname !== e || !(0, S.default)(t, this.query)
                 }
               },
               {
@@ -13247,7 +13352,7 @@ object-assign
           function d(e, t, n) {
             var r = 0
             for (
-              e = n ? A(e / O) : e >> 1, e += A(e / t);
+              e = n ? A(e / S) : e >> 1, e += A(e / t);
               e > (M * k) >> 1;
               r += w
             )
@@ -13269,7 +13374,7 @@ object-assign
               y = e.length,
               m = 0,
               g = E,
-              b = S
+              b = O
             for (n = e.lastIndexOf(j), n < 0 && (n = 0), r = 0; r < n; ++r)
               e.charCodeAt(r) >= 128 && a('not-basic'), v.push(e.charCodeAt(r))
             for (o = n > 0 ? n + 1 : 0; o < y; ) {
@@ -13310,7 +13415,7 @@ object-assign
               g,
               b,
               C = []
-            for (e = c(e), y = e.length, t = E, n = 0, i = S, u = 0; u < y; ++u)
+            for (e = c(e), y = e.length, t = E, n = 0, i = O, u = 0; u < y; ++u)
               (v = e[u]) < 128 && C.push(I(v))
             for (r = o = C.length, o && C.push(j); r < y; ) {
               for (l = _, u = 0; u < y; ++u) (v = e[u]) >= t && v < l && (l = v)
@@ -13358,8 +13463,8 @@ object-assign
             x = 1,
             k = 26,
             C = 38,
-            O = 700,
-            S = 72,
+            S = 700,
+            O = 72,
             E = 128,
             j = '-',
             P = /^xn--/,
@@ -15136,26 +15241,26 @@ object-assign
         ;(w = w == d ? v : w), (x = x == d ? v : x)
         var k = w == v,
           C = x == v,
-          O = w == x
-        if (O && s(e)) {
+          S = w == x
+        if (S && s(e)) {
           if (!s(t)) return !1
           ;(b = !0), (k = !1)
         }
-        if (O && !k)
+        if (S && !k)
           return (
             g || (g = new o()),
             b || f(e) ? i(e, t, n, r, y, g) : a(e, t, w, n, r, y, g)
           )
         if (!(n & p)) {
-          var S = k && m.call(e, '__wrapped__'),
+          var O = k && m.call(e, '__wrapped__'),
             E = C && m.call(t, '__wrapped__')
-          if (S || E) {
-            var j = S ? e.value() : e,
+          if (O || E) {
+            var j = O ? e.value() : e,
               P = E ? t.value() : t
             return g || (g = new o()), y(j, P, n, r, g)
           }
         }
-        return !!O && (g || (g = new o()), u(e, t, n, r, y, g))
+        return !!S && (g || (g = new o()), u(e, t, n, r, y, g))
       }
       var o = n(142),
         i = n(145),
@@ -15214,7 +15319,7 @@ object-assign
       e.exports = n
     },
     function(e, t, n) {
-      function r(e, t, n, r, o, k, O) {
+      function r(e, t, n, r, o, k, S) {
         switch (n) {
           case x:
             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset)
@@ -15232,15 +15337,15 @@ object-assign
           case b:
             return e == t + ''
           case v:
-            var S = l
+            var O = l
           case g:
             var E = r & s
-            if ((S || (S = c), e.size != t.size && !E)) return !1
-            var j = O.get(e)
+            if ((O || (O = c), e.size != t.size && !E)) return !1
+            var j = S.get(e)
             if (j) return j == t
-            ;(r |= f), O.set(e, t)
-            var P = u(S(e), S(t), r, o, k, O)
-            return O.delete(e), P
+            ;(r |= f), S.set(e, t)
+            var P = u(O(e), O(t), r, o, k, S)
+            return S.delete(e), P
           case _:
             if (C) return C.call(e) == C.call(t)
         }

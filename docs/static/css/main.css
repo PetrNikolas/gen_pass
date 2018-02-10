@@ -3,23 +3,6 @@
     font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
-.footer {
-    color: #acb3c2;
-    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
-}
-
-.footer a {
-    color: #667189;
-}
-
-.footer .hearth_icon {
-    color: #f8114d;
-}
-
-.centered {
-    text-align: center;
-}
-
 .navbar a {
     color: #50596c !important;
 }
@@ -31,12 +14,13 @@
     border-bottom: 2px solid #f8114d !important;
 }
 
-.logo a {
+.logo h1 {
     color: #1c1a27 !important;
     font-size: 35px;
+    cursor: pointer;
 }
 
-.logo a:hover {
+.logo h1:hover {
     border-bottom: none !important;
     text-decoration: none;
 }

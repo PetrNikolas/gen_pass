@@ -1,0 +1,128 @@
+@media (min-width:1099px) {
+    .rwd_title {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    header {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        min-height: 100%;
+        padding: 0 0 0 50px;
+        background: #ffffff; 
+        float: left;
+        overflow: hidden;
+        z-index: 9999;
+    }
+
+    header .logo {
+        margin-top: 100px;
+    }
+
+    header nav ul {
+        display: block;
+        overflow: hidden;
+        margin-top: 100px;
+        list-style: none;
+    }
+
+    header nav ul li {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    header nav ul li a {
+        color: #454545;
+        font-family: "raleway-regular", arial;
+        font-size: 14px;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    header nav ul li a:hover,
+    header nav ul li a.selected {
+        color: #969595;
+    }
+
+    header .footer {
+        position: absolute;
+        bottom: 50px;
+    }
+
+    header ul.social {
+        list-style: none;
+        margin-bottom: 5px;
+    }
+
+    header ul.social li {
+        display: block;
+        float: left;
+        position: relative;
+        margin: 0 15px 15px 0;
+    }
+
+    header ul.social li a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url('../img/sm.png') no-repeat;
+        background-position: 0 0;
+    }
+
+    header ul.social li a:hover {
+        background: url('../img/sm_hover.png') no-repeat;
+    }
+
+    header ul.social li a.fb,
+    header ul.social li a.fb:hover {
+        background-position: 0 0;
+    }
+
+    header ul.social li a.google,
+    header ul.social li a.google:hover {
+        background-position: -31px 0;
+    }
+
+    header ul.social li a.twitter,
+    header ul.social li a.twitter:hover {
+        background-position: -93px 0;
+    }
+
+    header .rights p {
+        color: #454545;
+        font-family: "raleway-regular", arial;
+        font-size: 11px;
+        letter-spacing: 1px;
+        line-height: 18px;
+    }
+
+    header .rights a {
+        font-family: "raleway-bold", arial;
+        font-weight: bold;
+        text-decoration: none;
+        color: #f8114d;
+    }
+}
+
+@media (max-width:1099px) {
+    .rwd_title {
+        margin: 4.5rem 0;
+        font-size: 2rem !important;
+    }
+
+    .desktop_header {
+        display: none;
+    }
+
+    .main {
+        width: 100%;
+        position: relative;
+        padding-left: 0;
+    }
+}
