@@ -1,5 +1,13 @@
 # GENPASS
 
+## Main libs
+
+* [Next.js](https://github.com/zeit/next.js/)
+* [Fela.js](http://fela.js.org/)
+* [fastify](https://www.fastify.io/)
+* [prettier](https://prettier.io/)
+* [Babel](https://babeljs.io/)
+
 ## How to use
 
 Install it and run:

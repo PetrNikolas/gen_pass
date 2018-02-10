@@ -47,6 +47,7 @@ export default ({ children }) => (
       <meta name="HandheldFriendly" content="True" />
       <meta name="MobileOptimized" content="320" />
 
+      <link rel="stylesheet" href="/static/css/reset.css" />
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
@@ -64,6 +65,7 @@ export default ({ children }) => (
         href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"
       />
       <link rel="stylesheet" href="/static/css/main.css" />
+      <link rel="stylesheet" href="/static/css/components.css" />
 
       <script
         dangerouslySetInnerHTML={{
@@ -91,20 +93,72 @@ export default ({ children }) => (
       </section>
     </header>
 
-    <main className="animated fadeIn">{children}</main>
+    <header>
+      <div className="logo">
+        <Link href="/">
+          <a>GENPASS</a>
+        </Link>
+      </div>
 
-    <footer className="footer animated fadeIn">
-      <p className="centered">
-        <a href="mailto:petr.nikolas@icloud.com?subject=Hello">
-          <i className="icon icon-mail" /> Send me a feedback.
-        </a>
-      </p>
-      <p className="centered">
-        Built with <span className="hearth_icon">♥</span> by{' '}
-        <a target="_blank" href="http://www.petrnikolas.com/">
-          Petr Nikolas
-        </a>
-      </p>
-    </footer>
+      <nav>
+        <ul>
+          <li>
+            <Link href="/passwords">
+              <a className="selected">Passwords</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/usernames">
+              <a>Usernames</a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div className="footer clearfix">
+        <ul className="social clearfix">
+          <li>
+            <a
+              href="https://www.facebook.com/peta.prokop"
+              target="_blank"
+              className="fb"
+              data-title="Facebook"
+            />
+          </li>
+          <li>
+            <a
+              href="https://plus.google.com/111138628395528220719"
+              target="_blank"
+              className="google"
+              data-title="Google +"
+            />
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/PetrNikolas"
+              target="_blank"
+              className="twitter"
+              data-title="Twitter"
+            />
+          </li>
+        </ul>
+
+        <div className="rights">
+          <p>
+            <a href="mailto:petr.nikolas@icloud.com?subject=Hello">
+              Send me a feedback.
+            </a>
+          </p>
+          <p>
+            Built with <span className="hearth_icon">♥</span> by{' '}
+            <a target="_blank" href="http://www.petrnikolas.com/">
+              Petr Nikolas
+            </a>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main className="main animated fadeIn">{children}</main>
   </div>
 )

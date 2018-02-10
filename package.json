@@ -10,7 +10,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "dev": "node server.js",
-    "build": "next build",
+    "build": "npm run precommit && next build",
     "build:deploy": "yarn run build && yarn run export",
     "export": "next export -o docs",
     "heroku-postbuild": "npm run build",
