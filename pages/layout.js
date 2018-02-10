@@ -95,7 +95,7 @@ export default ({ children }) => (
       </section>
     </header>
 
-    <header>
+    <header className="animated fadeIn">
       <div className="logo">
         <Link href="/">
           <h1 className="card-title h1">GENPASS</h1>
