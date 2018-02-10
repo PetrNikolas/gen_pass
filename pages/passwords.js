@@ -6,64 +6,66 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Page from './layout'
 
-
 // ------------------------------------------------------------------------------
 // Export component
 // ------------------------------------------------------------------------------
 export default class extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      inputValue: 100,
+      inputValue: 20,
       generatedPassword: ''
-    };
+    }
   }
 
   /** Update value in input */
-  updateInputValue = (event) => {
+  updateInputValue = event => {
     /** Error message */
-    document.getElementById("error").style.display = "none";
+    document.getElementById('error').style.display = 'none'
 
     this.setState({
       inputValue: event.target.value
-    });
+    })
   }
 
   /** Generate password */
-  generatorHandleClick = (length) => {
+  generatorHandleClick = length => {
     /** Error message */
-    document.getElementById("error").style.display = "none";
+    document.getElementById('error').style.display = 'none'
 
     /** Password */
-    let password = "";
+    let password = ''
 
     /** Possible word, numbers, etc. */
-    const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const possible =
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
     /** Check if value exist */
-    if (!length || typeof length === "undefined") {
-      length = 100;
+    if (!length || typeof length === 'undefined') {
+      length = 20
     }
 
     if (length < 100001) {
       try {
         /** Iterator */
-        for(let i = 0; i < length; i++) {
-            password += possible.charAt(Math.floor(Math.random() * possible.length));
+        for (let i = 0; i < length; i++) {
+          password += possible.charAt(
+            Math.floor(Math.random() * possible.length)
+          )
         }
 
         this.setState({
           generatedPassword: password
-        });
+        })
       } catch (err) {
-        console.log(err);
+        console.log(err)
       }
     } else {
       /** Error message */
-      document.getElementById("error").style.display = "block";
+      document.getElementById('error').style.display = 'block'
     }
   }
-  
+
   /** Render HTML */
   render() {
     return (
@@ -78,7 +80,9 @@ export default class extends React.Component {
             padding: 2rem 1.5rem;
           }
 
-          .btn-primary, .btn-primary:focus, .btn-primary:active {
+          .btn-primary,
+          .btn-primary:focus,
+          .btn-primary:active {
             background: #f8114d !important;
             border-color: #f8114d !important;
           }
@@ -91,10 +95,12 @@ export default class extends React.Component {
             border: 0;
             border-radius: 3px;
             background-color: #f4f4fb;
-            -webkit-transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
-            transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
-            transition: box-shadow .5s,border-color .25s ease-in-out;
-            transition: box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;
+            -webkit-transition: border-color 0.25s ease-in-out,
+              -webkit-box-shadow 0.5s;
+            transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+            transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+            transition: box-shadow 0.5s, border-color 0.25s ease-in-out,
+              -webkit-box-shadow 0.5s;
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
@@ -115,10 +121,12 @@ export default class extends React.Component {
             background-color: #f4f4fb !important;
             border-radius: 3px;
             line-height: 1.5;
-            -webkit-transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
-            transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
-            transition: box-shadow .5s,border-color .25s ease-in-out;
-            transition: box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;
+            -webkit-transition: border-color 0.25s ease-in-out,
+              -webkit-box-shadow 0.5s;
+            transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+            transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+            transition: box-shadow 0.5s, border-color 0.25s ease-in-out,
+              -webkit-box-shadow 0.5s;
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
@@ -148,36 +156,64 @@ export default class extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column col-xs-12 text-center">
-
               <div id="main_card" className="card animated fadeInUp">
                 <div className="card-header">
                   <h1 className="card-title h1">Passwords generator</h1>
-                  <div className="card-subtitle text-gray">So, click on the button and generate your password now!</div>
+                  <div className="card-subtitle text-gray">
+                    So, click on the button and generate your password now!
+                  </div>
                 </div>
 
                 <div className="card-body">
                   <div className="form-group">
-                    <label className="form-label" for="count">Set lenght of your password (default is 100)</label>
-                    <input value={this.state.inputValue} onChange={event => this.updateInputValue(event)} type="number" min="1" max="100000" className="form-input" id="count" />
+                    <label className="form-label" for="count">
+                      Set lenght of your password (default is 20)
+                    </label>
+                    <input
+                      value={this.state.inputValue}
+                      onChange={event => this.updateInputValue(event)}
+                      type="number"
+                      min="1"
+                      max="100000"
+                      className="form-input"
+                      id="count"
+                    />
                   </div>
-                  <button onClick={ () => { this.generatorHandleClick(this.state.inputValue) } } className="btn btn-primary" id="start_button">Generate now!</button>
+                  <button
+                    onClick={() => {
+                      this.generatorHandleClick(this.state.inputValue)
+                    }}
+                    className="btn btn-primary"
+                    id="start_button"
+                  >
+                    Generate now!
+                  </button>
                   <span id="error">Max value is 100000</span>
                 </div>
 
                 <div className="card-footer">
                   <div className="form-group">
-                    <label className="form-label" for="result">Your password is:</label>
-                    <textarea value={this.state.generatedPassword} className="form-input" id="result" rows="7" readOnly></textarea>
+                    <label className="form-label" for="result">
+                      Your password is:
+                    </label>
+                    <textarea
+                      value={this.state.generatedPassword}
+                      className="form-input"
+                      id="result"
+                      rows="7"
+                      readOnly
+                    />
                   </div>
 
-                  <div className="card-subtitle text-gray">Random, secure, custom, easy and fast.</div>
+                  <div className="card-subtitle text-gray">
+                    Random, secure, custom, easy and fast.
+                  </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </Page>
     )
-  } 
-}  
+  }
+}

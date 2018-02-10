@@ -14,7 +14,7 @@
     "build:deploy": "yarn run build && yarn run export",
     "export": "next export -o docs",
     "heroku-postbuild": "npm run build",
-    "serve": "yarn run build && yarn start",
+    "serve": "yarn run build && NODE_ENV=development node server.js",
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {

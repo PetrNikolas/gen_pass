@@ -6,15 +6,14 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Page from './layout'
 
-
 // ------------------------------------------------------------------------------
 // Export component
 // ------------------------------------------------------------------------------
 export default class extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
-  
+
   /** Render HTML */
   render() {
     return (
@@ -35,10 +34,12 @@ export default class extends React.Component {
             background-color: #fff;
             border: none;
             padding: 2rem 1.5rem;
-            box-shadow: 0 3px 20px rgba(0,0,0,.1);
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
           }
 
-          .btn-primary, .btn-primary:focus, .btn-primary:active {
+          .btn-primary,
+          .btn-primary:focus,
+          .btn-primary:active {
             background: #f8114d !important;
             border-color: #f8114d !important;
           }
@@ -51,10 +52,12 @@ export default class extends React.Component {
             border: 0;
             border-radius: 3px;
             background-color: #f4f4fb;
-            -webkit-transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
-            transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
-            transition: box-shadow .5s,border-color .25s ease-in-out;
-            transition: box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;
+            -webkit-transition: border-color 0.25s ease-in-out,
+              -webkit-box-shadow 0.5s;
+            transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+            transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+            transition: box-shadow 0.5s, border-color 0.25s ease-in-out,
+              -webkit-box-shadow 0.5s;
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
@@ -75,10 +78,12 @@ export default class extends React.Component {
             background-color: #f4f4fb !important;
             border-radius: 3px;
             line-height: 1.5;
-            -webkit-transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
-            transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
-            transition: box-shadow .5s,border-color .25s ease-in-out;
-            transition: box-shadow .5s,border-color .25s ease-in-out,-webkit-box-shadow .5s;
+            -webkit-transition: border-color 0.25s ease-in-out,
+              -webkit-box-shadow 0.5s;
+            transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+            transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+            transition: box-shadow 0.5s, border-color 0.25s ease-in-out,
+              -webkit-box-shadow 0.5s;
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
@@ -99,30 +104,41 @@ export default class extends React.Component {
               width: 100%;
             }
 
-            h1, h2 {
+            h1,
+            h2 {
               font-size: 1rem;
             }
           }
         `}</style>
 
         <div className="container">
-          <h1 className="card-title h1 text-center animated fadeInDown">Random generators</h1>
+          <h1 className="card-title h1 text-center animated fadeInDown">
+            Random generators
+          </h1>
 
           <div className="columns">
-            <div className="column col-xs-12 col-6 text-center">
+            <div className="column col-xs-12 col-4 text-center">
               <div className="card animated fadeInUp">
                 <div className="card-header">
                   <h2 className="card-title h2">Passwords generator</h2>
-                  <div className="card-subtitle text-gray"><Link href="/passwords"><a className="btn btn-link">Generate now</a></Link></div>
+                  <div className="card-subtitle text-gray">
+                    <Link href="/passwords">
+                      <a className="btn btn-link">Generate now</a>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="column col-xs-12 col-6 text-center">
+            <div className="column col-xs-12 col-4 text-center">
               <div className="card animated fadeInUp">
                 <div className="card-header">
                   <h2 className="card-title h2">Usernames generator</h2>
-                  <div className="card-subtitle text-gray"><Link href="/usernames"><a className="btn btn-link">Generate now</a></Link></div>
+                  <div className="card-subtitle text-gray">
+                    <Link href="/usernames">
+                      <a className="btn btn-link">Generate now</a>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,5 +146,5 @@ export default class extends React.Component {
         </div>
       </Page>
     )
-  } 
-}  
+  }
+}
