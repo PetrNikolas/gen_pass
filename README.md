@@ -5,12 +5,18 @@
 Install it and run:
 
 ```bash
-npm install
-npm run serve
+yarn install
+yarn run serve
 ```
 
-Deploy:
+Build:
 
 ```bash
-npm run deploy
+yarn run build
+```
+
+Build docs:
+
+```bash
+yarn run build:deploy
 ```
