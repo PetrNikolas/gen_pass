@@ -19,18 +19,12 @@ export default class extends React.Component {
     return (
       <Page>
         <style jsx>{`
-          h1 {
-            padding-top: 7rem;
-          }
-
           a {
             color: #f8114d !important;
           }
 
           .card {
             width: auto;
-            max-width: 300px;
-            margin: 1.5rem auto 0;
             background-color: #fff;
             border: none;
             padding: 2rem 1.5rem;
@@ -113,8 +107,6 @@ export default class extends React.Component {
         `}</style>
 
         <div className="container">
-          <h1 className="card-title h1 text-center">Random generators</h1>
-
           <div className="columns">
             <div className="column col-xs-12 col-4 text-center">
               <Link href="/passwords">

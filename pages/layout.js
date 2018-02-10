@@ -66,6 +66,7 @@ export default ({ children }) => (
       />
       <link rel="stylesheet" href="/static/css/main.css" />
       <link rel="stylesheet" href="/static/css/components.css" />
+      <link rel="stylesheet" href="/static/css/responsive.css" />
 
       <script
         dangerouslySetInnerHTML={{
@@ -79,8 +80,9 @@ export default ({ children }) => (
     <header className="navbar animated fadeIn">
       <section className="navbar-section logo">
         <Link href="/">
-          <a>GENPASS</a>
+          <h1 className="card-title h1">GENPASS</h1>
         </Link>
+        <span>Random generators</span>
       </section>
 
       <section className="navbar-section">
@@ -96,8 +98,9 @@ export default ({ children }) => (
     <header>
       <div className="logo">
         <Link href="/">
-          <a>GENPASS</a>
+          <h1 className="card-title h1">GENPASS</h1>
         </Link>
+        <span>Random generators</span>
       </div>
 
       <nav>
@@ -152,7 +155,7 @@ export default ({ children }) => (
           <p>
             Built with <span className="hearth_icon">♥</span> by{' '}
             <a target="_blank" href="http://www.petrnikolas.com/">
-              Petr Nikolas
+              Petr Nikolas.
             </a>
           </p>
         </div>

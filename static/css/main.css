@@ -14,12 +14,13 @@
     border-bottom: 2px solid #f8114d !important;
 }
 
-.logo a {
+.logo h1 {
     color: #1c1a27 !important;
     font-size: 35px;
+    cursor: pointer;
 }
 
-.logo a:hover {
+.logo h1:hover {
     border-bottom: none !important;
     text-decoration: none;
 }
