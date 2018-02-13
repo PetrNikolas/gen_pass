@@ -1,40 +1,40 @@
 window.__NEXT_REGISTER_PAGE('/usernames', function() {
   var comp = (module.exports = webpackJsonp(
-    [4],
+    [5],
     {
-      360: function(e, a, t) {
-        e.exports = t(361)
+      430: function(e, a, t) {
+        e.exports = t(431)
       },
-      361: function(e, a, t) {
+      431: function(e, a, t) {
         'use strict'
         function l(e) {
           return e && e.__esModule ? e : { default: e }
         }
         Object.defineProperty(a, '__esModule', { value: !0 })
-        var r = t(11),
-          n = l(r),
+        var n = t(9),
+          r = l(n),
           s = t(2),
           u = l(s),
           m = t(3),
           d = l(m),
-          c = t(12),
+          c = t(10),
           o = l(c),
-          i = t(13),
+          i = t(11),
           f = l(i),
-          x = t(84),
+          x = t(61),
           h = l(x),
           p = t(0),
           E = l(p),
-          j = t(29),
-          v = (l(j), t(40)),
-          N = (l(v), t(86)),
+          j = t(26),
+          v = (l(j), t(33)),
+          N = (l(v), t(62)),
           g = l(N),
           y = (function(e) {
             function a(e) {
               ;(0, u.default)(this, a)
               var t = (0, o.default)(
                 this,
-                (a.__proto__ || (0, n.default)(a)).call(this, e)
+                (a.__proto__ || (0, r.default)(a)).call(this, e)
               )
               return (
                 (t.updateNameValue = function(e) {
@@ -48,8 +48,8 @@ window.__NEXT_REGISTER_PAGE('/usernames', function() {
                 (t.generatorHandleClick = function(e, a) {
                   document.getElementById('error').style.display = 'none'
                   var l = '',
-                    r = '',
-                    n = ''
+                    n = '',
+                    r = ''
                   if (e && void 0 !== e && a && void 0 !== a) {
                     var s = e + a
                     s.length
@@ -57,8 +57,8 @@ window.__NEXT_REGISTER_PAGE('/usernames', function() {
                       for (var u = 0; u < 5; u++)
                         l += s.charAt(Math.floor(Math.random() * s.length))
                       for (var m = 0; m < 3; m++)
-                        r += '1234567890'.charAt(Math.floor(7 * Math.random()))
-                      ;(n = l + r), t.setState({ generatedUsername: n })
+                        n += '1234567890'.charAt(Math.floor(7 * Math.random()))
+                      ;(r = l + n), t.setState({ generatedUsername: r })
                     } catch (e) {
                       console.log(e)
                     }
@@ -154,7 +154,6 @@ window.__NEXT_REGISTER_PAGE('/usernames', function() {
                                       E.default.createElement(
                                         'label',
                                         {
-                                          for: 'name',
                                           className: 'jsx-2831617738 form-label'
                                         },
                                         'Your name'
@@ -178,7 +177,6 @@ window.__NEXT_REGISTER_PAGE('/usernames', function() {
                                       E.default.createElement(
                                         'label',
                                         {
-                                          for: 'surname',
                                           className: 'jsx-2831617738 form-label'
                                         },
                                         'Your surname'
@@ -223,10 +221,7 @@ window.__NEXT_REGISTER_PAGE('/usernames', function() {
                                   { className: 'jsx-2831617738 form-group' },
                                   E.default.createElement(
                                     'label',
-                                    {
-                                      for: 'result',
-                                      className: 'jsx-2831617738 form-label'
-                                    },
+                                    { className: 'jsx-2831617738 form-label' },
                                     'Your username is:'
                                   ),
                                   E.default.createElement('textarea', {
@@ -287,7 +282,7 @@ window.__NEXT_REGISTER_PAGE('/usernames', function() {
         a.default = y
       }
     },
-    [360]
+    [430]
   ))
   return { page: comp.default }
 })

@@ -1,11 +1,11 @@
 window.__NEXT_REGISTER_PAGE('/layout', function() {
   var comp = (module.exports = webpackJsonp(
-    [6],
+    [7],
     {
-      356: function(e, t, a) {
-        e.exports = a(357)
+      387: function(e, t, a) {
+        e.exports = a(388)
       },
-      357: function(e, t, a) {
+      388: function(e, t, a) {
         'use strict'
         function l(e) {
           return e && e.__esModule ? e : { default: e }
@@ -13,11 +13,11 @@ window.__NEXT_REGISTER_PAGE('/layout', function() {
         Object.defineProperty(t, '__esModule', { value: !0 })
         var n = a(0),
           r = l(n),
-          c = a(29),
+          c = a(26),
           s = l(c),
-          m = a(40),
+          m = a(33),
           d = l(m),
-          o = a(132)
+          o = a(147)
         ;(0, o.createComponent)(function() {
           return {
             maxWidth: 700,
@@ -158,6 +158,15 @@ window.__NEXT_REGISTER_PAGE('/layout', function() {
                 { className: 'navbar-section' },
                 r.default.createElement(
                   d.default,
+                  { href: '/qr-code' },
+                  r.default.createElement(
+                    'a',
+                    { className: 'btn btn-link' },
+                    'QR codes'
+                  )
+                ),
+                r.default.createElement(
+                  d.default,
                   { href: '/passwords' },
                   r.default.createElement(
                     'a',
@@ -199,6 +208,19 @@ window.__NEXT_REGISTER_PAGE('/layout', function() {
                 r.default.createElement(
                   'ul',
                   null,
+                  r.default.createElement(
+                    'li',
+                    null,
+                    r.default.createElement(
+                      d.default,
+                      { href: '/qr-code' },
+                      r.default.createElement(
+                        'a',
+                        { className: 'selected' },
+                        'QR codes'
+                      )
+                    )
+                  ),
                   r.default.createElement(
                     'li',
                     null,
@@ -305,7 +327,7 @@ window.__NEXT_REGISTER_PAGE('/layout', function() {
         }
       }
     },
-    [356]
+    [387]
   ))
   return { page: comp.default }
 })

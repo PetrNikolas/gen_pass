@@ -1,39 +1,39 @@
 window.__NEXT_REGISTER_PAGE('/', function() {
   var comp = (module.exports = webpackJsonp(
-    [7],
+    [8],
     {
-      234: function(e, a, t) {
-        e.exports = t(235)
+      265: function(e, a, t) {
+        e.exports = t(266)
       },
-      235: function(e, a, t) {
+      266: function(e, a, t) {
         'use strict'
         function s(e) {
           return e && e.__esModule ? e : { default: e }
         }
         Object.defineProperty(a, '__esModule', { value: !0 })
-        var l = t(11),
+        var l = t(9),
           r = s(l),
-          n = t(2),
-          c = s(n),
-          d = t(3),
-          m = s(d),
-          o = t(12),
+          c = t(2),
+          d = s(c),
+          n = t(3),
+          m = s(n),
+          o = t(10),
           u = s(o),
-          i = t(13),
+          i = t(11),
           f = s(i),
-          x = t(84),
+          x = t(61),
           j = s(x),
-          h = t(0),
-          E = s(h),
-          N = t(29),
-          v = (s(N), t(40)),
+          E = t(0),
+          h = s(E),
+          N = t(26),
+          v = (s(N), t(33)),
           w = s(v),
-          b = t(86),
-          p = s(b),
-          g = (function(e) {
+          b = t(62),
+          g = s(b),
+          p = (function(e) {
             function a(e) {
               return (
-                (0, c.default)(this, a),
+                (0, d.default)(this, a),
                 (0, u.default)(
                   this,
                   (a.__proto__ || (0, r.default)(a)).call(this, e)
@@ -46,10 +46,10 @@ window.__NEXT_REGISTER_PAGE('/', function() {
                 {
                   key: 'render',
                   value: function() {
-                    return E.default.createElement(
-                      p.default,
+                    return h.default.createElement(
+                      g.default,
                       null,
-                      E.default.createElement(j.default, {
+                      h.default.createElement(j.default, {
                         styleId: '1168513960',
                         css: [
                           '.card.jsx-1168513960{width:auto;background-color:#fff;border:none;padding:2rem 1.5rem;cursor:pointer;-moz-transition:all 0.3s;-webkit-transition:all 0.3s;-webkit-transition:all 0.3s;transition:all 0.3s;margin:0 0.5rem;}',
@@ -57,56 +57,56 @@ window.__NEXT_REGISTER_PAGE('/', function() {
                           '@media only screen and (max-width:1100px){.card.jsx-1168513960{width:100%;}h2.jsx-1168513960{font-size:1rem;}}'
                         ]
                       }),
-                      E.default.createElement(
+                      h.default.createElement(
                         'div',
                         { className: 'jsx-1168513960 container' },
-                        E.default.createElement(
+                        h.default.createElement(
                           'h2',
                           {
                             className: 'jsx-1168513960 h1 rwd_title text-center'
                           },
                           'Random generators'
                         ),
-                        E.default.createElement(
+                        h.default.createElement(
                           'div',
                           { className: 'jsx-1168513960 columns' },
-                          E.default.createElement(
+                          h.default.createElement(
                             'div',
                             {
                               className:
                                 'jsx-1168513960 column col-xs-12 col-4 text-center'
                             },
-                            E.default.createElement(
+                            h.default.createElement(
                               w.default,
-                              { href: '/passwords' },
-                              E.default.createElement(
+                              { href: '/qr-code' },
+                              h.default.createElement(
                                 'div',
                                 { className: 'jsx-1168513960 card' },
-                                E.default.createElement(
+                                h.default.createElement(
                                   'div',
                                   { className: 'jsx-1168513960 card-header' },
-                                  E.default.createElement(
+                                  h.default.createElement(
                                     'h2',
                                     {
                                       className: 'jsx-1168513960 card-title h3'
                                     },
-                                    'Passwords generator'
+                                    'QR codes generator'
                                   )
                                 ),
-                                E.default.createElement(
+                                h.default.createElement(
                                   'div',
                                   { className: 'jsx-1168513960 card-body' },
-                                  E.default.createElement('img', {
+                                  h.default.createElement('img', {
                                     src: 'static/img/pen.svg',
                                     width: '105',
                                     alt: 'Passwords',
                                     className: 'jsx-1168513960'
                                   })
                                 ),
-                                E.default.createElement(
+                                h.default.createElement(
                                   'div',
                                   { className: 'jsx-1168513960 card-footer' },
-                                  E.default.createElement(
+                                  h.default.createElement(
                                     'a',
                                     {
                                       className:
@@ -118,22 +118,70 @@ window.__NEXT_REGISTER_PAGE('/', function() {
                               )
                             )
                           ),
-                          E.default.createElement(
+                          h.default.createElement(
                             'div',
                             {
                               className:
                                 'jsx-1168513960 column col-xs-12 col-4 text-center'
                             },
-                            E.default.createElement(
+                            h.default.createElement(
                               w.default,
-                              { href: '/usernames' },
-                              E.default.createElement(
+                              { href: '/passwords' },
+                              h.default.createElement(
                                 'div',
                                 { className: 'jsx-1168513960 card' },
-                                E.default.createElement(
+                                h.default.createElement(
                                   'div',
                                   { className: 'jsx-1168513960 card-header' },
-                                  E.default.createElement(
+                                  h.default.createElement(
+                                    'h2',
+                                    {
+                                      className: 'jsx-1168513960 card-title h3'
+                                    },
+                                    'Passwords generator'
+                                  )
+                                ),
+                                h.default.createElement(
+                                  'div',
+                                  { className: 'jsx-1168513960 card-body' },
+                                  h.default.createElement('img', {
+                                    src: 'static/img/pen.svg',
+                                    width: '105',
+                                    alt: 'Passwords',
+                                    className: 'jsx-1168513960'
+                                  })
+                                ),
+                                h.default.createElement(
+                                  'div',
+                                  { className: 'jsx-1168513960 card-footer' },
+                                  h.default.createElement(
+                                    'a',
+                                    {
+                                      className:
+                                        'jsx-1168513960 btn btn-primary'
+                                    },
+                                    'Generate now'
+                                  )
+                                )
+                              )
+                            )
+                          ),
+                          h.default.createElement(
+                            'div',
+                            {
+                              className:
+                                'jsx-1168513960 column col-xs-12 col-4 text-center'
+                            },
+                            h.default.createElement(
+                              w.default,
+                              { href: '/usernames' },
+                              h.default.createElement(
+                                'div',
+                                { className: 'jsx-1168513960 card' },
+                                h.default.createElement(
+                                  'div',
+                                  { className: 'jsx-1168513960 card-header' },
+                                  h.default.createElement(
                                     'h2',
                                     {
                                       className: 'jsx-1168513960 card-title h3'
@@ -141,10 +189,10 @@ window.__NEXT_REGISTER_PAGE('/', function() {
                                     'Usernames generator'
                                   )
                                 ),
-                                E.default.createElement(
+                                h.default.createElement(
                                   'div',
                                   { className: 'jsx-1168513960 card-body' },
-                                  E.default.createElement('img', {
+                                  h.default.createElement('img', {
                                     src: 'static/img/user.svg',
                                     width: '105',
                                     height: '121',
@@ -152,10 +200,10 @@ window.__NEXT_REGISTER_PAGE('/', function() {
                                     className: 'jsx-1168513960'
                                   })
                                 ),
-                                E.default.createElement(
+                                h.default.createElement(
                                   'div',
                                   { className: 'jsx-1168513960 card-footer' },
-                                  E.default.createElement(
+                                  h.default.createElement(
                                     'a',
                                     {
                                       className:
@@ -175,11 +223,11 @@ window.__NEXT_REGISTER_PAGE('/', function() {
               ]),
               a
             )
-          })(E.default.Component)
-        a.default = g
+          })(h.default.Component)
+        a.default = p
       }
     },
-    [234]
+    [265]
   ))
   return { page: comp.default }
 })

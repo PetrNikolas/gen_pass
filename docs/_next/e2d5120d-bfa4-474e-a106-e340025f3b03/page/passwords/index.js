@@ -1,33 +1,33 @@
 window.__NEXT_REGISTER_PAGE('/passwords', function() {
   var comp = (module.exports = webpackJsonp(
-    [5],
+    [6],
     {
-      358: function(e, t, a) {
-        e.exports = a(359)
+      389: function(e, t, a) {
+        e.exports = a(390)
       },
-      359: function(e, t, a) {
+      390: function(e, t, a) {
         'use strict'
         function l(e) {
           return e && e.__esModule ? e : { default: e }
         }
         Object.defineProperty(t, '__esModule', { value: !0 })
-        var r = a(11),
+        var r = a(9),
           s = l(r),
           n = a(2),
           d = l(n),
           u = a(3),
           o = l(u),
-          c = a(12),
+          c = a(10),
           m = l(c),
-          i = a(13),
+          i = a(11),
           f = l(i),
-          x = a(84),
+          x = a(61),
           p = l(x),
           v = a(0),
           y = l(v),
-          E = a(29),
-          g = (l(E), a(40)),
-          h = (l(g), a(86)),
+          E = a(26),
+          g = (l(E), a(33)),
+          h = (l(g), a(62)),
           j = l(h),
           b = (function(e) {
             function t(e) {
@@ -120,10 +120,7 @@ window.__NEXT_REGISTER_PAGE('/passwords', function() {
                                   { className: 'jsx-3042443449 form-group' },
                                   y.default.createElement(
                                     'label',
-                                    {
-                                      for: 'count',
-                                      className: 'jsx-3042443449 form-label'
-                                    },
+                                    { className: 'jsx-3042443449 form-label' },
                                     'Set lenght of your password (default is 20)'
                                   ),
                                   y.default.createElement('input', {
@@ -163,10 +160,7 @@ window.__NEXT_REGISTER_PAGE('/passwords', function() {
                                   { className: 'jsx-3042443449 form-group' },
                                   y.default.createElement(
                                     'label',
-                                    {
-                                      for: 'result',
-                                      className: 'jsx-3042443449 form-label'
-                                    },
+                                    { className: 'jsx-3042443449 form-label' },
                                     'Your password is:'
                                   ),
                                   y.default.createElement('textarea', {
@@ -200,7 +194,7 @@ window.__NEXT_REGISTER_PAGE('/passwords', function() {
         t.default = b
       }
     },
-    [358]
+    [389]
   ))
   return { page: comp.default }
 })

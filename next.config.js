@@ -8,6 +8,7 @@ module.exports = {
   exportPathMap: function() {
     return {
       '/': { page: '/' },
+      '/qr-code': { page: '/qr-code' },
       '/passwords': { page: '/passwords' },
       '/usernames': { page: '/usernames' }
     }
