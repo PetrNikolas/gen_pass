@@ -135,9 +135,7 @@ export default class extends React.Component {
                   <div className="form-group">
                     <div className="columns">
                       <div className="column col-lg-4 col-xs-12">
-                        <label className="form-label" for="name">
-                          Your name
-                        </label>
+                        <label className="form-label">Your name</label>
                         <input
                           value={this.state.nameValue}
                           onChange={event => this.updateNameValue(event)}
@@ -148,9 +146,7 @@ export default class extends React.Component {
                       </div>
 
                       <div className="column col-lg-4 col-xs-12">
-                        <label className="form-label" for="surname">
-                          Your surname
-                        </label>
+                        <label className="form-label">Your surname</label>
                         <input
                           value={this.state.surnameValue}
                           onChange={event => this.updateSurnameValue(event)}
@@ -178,9 +174,7 @@ export default class extends React.Component {
 
                 <div className="card-footer">
                   <div className="form-group">
-                    <label className="form-label" for="result">
-                      Your username is:
-                    </label>
+                    <label className="form-label">Your username is:</label>
                     <textarea
                       value={this.state.generatedUsername}
                       className="form-input"

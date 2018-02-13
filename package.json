@@ -22,6 +22,7 @@
     "fela": "^6.1.0",
     "fela-dom": "^7.0.0",
     "fela-preset-web": "^8.0.0",
+    "html2canvas": "^1.0.0-alpha.9",
     "next": "^4.1.4",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",

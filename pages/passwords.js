@@ -105,7 +105,7 @@ export default class extends React.Component {
 
                 <div className="card-body">
                   <div className="form-group">
-                    <label className="form-label" for="count">
+                    <label className="form-label">
                       Set lenght of your password (default is 20)
                     </label>
                     <input
@@ -132,9 +132,7 @@ export default class extends React.Component {
 
                 <div className="card-footer">
                   <div className="form-group">
-                    <label className="form-label" for="result">
-                      Your password is:
-                    </label>
+                    <label className="form-label">Your password is:</label>
                     <textarea
                       value={this.state.generatedPassword}
                       className="form-input"
