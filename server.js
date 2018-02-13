@@ -4,13 +4,11 @@
 const fastify = require('fastify')
 const Next = require('next')
 
-
 // ------------------------------------------------------------------------------
 // Config
 // ------------------------------------------------------------------------------
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
-
 
 // ------------------------------------------------------------------------------
 // Create app
@@ -18,9 +16,12 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = Next({ dev })
 const handle = app.getRequestHandler()
 
-app.prepare()
-.then(() => {
+app.prepare().then(() => {
   const server = fastify()
+
+  server.get('/qr-code', (req, res) => {
+    return app.render(req.req, res.res, '/qr-code', req.query)
+  })
 
   server.get('/usernames', (req, res) => {
     return app.render(req.req, res.res, '/usernames', req.query)
@@ -34,7 +35,7 @@ app.prepare()
     return handle(req.req, res.res)
   })
 
-  server.listen(port, (err) => {
+  server.listen(port, err => {
     if (err) throw err
     console.log(`> Ready on http://localhost:${port}`)
   })

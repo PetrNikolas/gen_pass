@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+
 import { createComponent } from 'react-fela'
 
 // ------------------------------------------------------------------------------
@@ -85,6 +86,9 @@ export default ({ children }) => (
       </section>
 
       <section className="navbar-section">
+        <Link href="/qr-code">
+          <a className="btn btn-link">QR codes</a>
+        </Link>
         <Link href="/passwords">
           <a className="btn btn-link">Passwords</a>
         </Link>
@@ -104,6 +108,11 @@ export default ({ children }) => (
 
       <nav>
         <ul>
+          <li>
+            <Link href="/qr-code">
+              <a className="selected">QR codes</a>
+            </Link>
+          </li>
           <li>
             <Link href="/passwords">
               <a className="selected">Passwords</a>

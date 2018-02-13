@@ -4,6 +4,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+
 import Page from './layout'
 
 // ------------------------------------------------------------------------------
@@ -53,6 +54,22 @@ export default class extends React.Component {
           <h2 className="h1 rwd_title text-center">Random generators</h2>
 
           <div className="columns">
+            <div className="column col-xs-12 col-4 text-center">
+              <Link href="/qr-code">
+                <div className="card">
+                  <div className="card-header">
+                    <h2 className="card-title h3">QR codes generator</h2>
+                  </div>
+                  <div className="card-body">
+                    <img src="static/img/pen.svg" width="105" alt="Passwords" />
+                  </div>
+                  <div className="card-footer">
+                    <a className="btn btn-primary">Generate now</a>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
             <div className="column col-xs-12 col-4 text-center">
               <Link href="/passwords">
                 <div className="card">
