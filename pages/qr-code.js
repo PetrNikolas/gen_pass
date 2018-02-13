@@ -114,9 +114,6 @@ export default class extends React.Component {
               <div id="main_card" className="card">
                 <div className="card-header">
                   <h2 className="card-title h3">QR codes generator</h2>
-                  <div className="card-subtitle text-gray">
-                    So, click on the button and generate your QR code now!
-                  </div>
                 </div>
 
                 <div className="card-body">

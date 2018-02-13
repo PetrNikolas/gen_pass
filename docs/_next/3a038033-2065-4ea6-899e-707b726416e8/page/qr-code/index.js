@@ -2561,8 +2561,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           N = t(415),
           I = t(416),
           T = t(417),
-          m = t(418),
-          K = t(22),
+          K = t(418),
+          m = t(22),
           v = t(178),
           y = t(110),
           b = ['INPUT', 'TEXTAREA', 'SELECT'],
@@ -2620,7 +2620,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   transform: (0, N.parseTransform)(M),
                   visibility: (0, I.parseVisibility)(M.visibility),
                   wordBreak: (0, T.parseWordBreak)(M.wordBreak),
-                  zIndex: (0, m.parseZIndex)(
+                  zIndex: (0, K.parseZIndex)(
                     P !== h.POSITION.STATIC ? M.zIndex : 'auto'
                   )
                 }),
@@ -2642,8 +2642,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               }
               'IMG' === e.tagName &&
                 e.addEventListener('load', function() {
-                  ;(a.bounds = (0, K.parseBounds)(e, S, D)),
-                    (a.curvedBounds = (0, K.parseBoundCurves)(
+                  ;(a.bounds = (0, m.parseBounds)(e, S, D)),
+                    (a.curvedBounds = (0, m.parseBoundCurves)(
                       a.bounds,
                       a.style.border,
                       a.style.borderRadius
@@ -2651,9 +2651,9 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 }),
                 (this.image = _(e, n)),
                 (this.bounds = R
-                  ? (0, v.reformatInputBounds)((0, K.parseBounds)(e, S, D))
-                  : (0, K.parseBounds)(e, S, D)),
-                (this.curvedBounds = (0, K.parseBoundCurves)(
+                  ? (0, v.reformatInputBounds)((0, m.parseBounds)(e, S, D))
+                  : (0, m.parseBounds)(e, S, D)),
+                (this.curvedBounds = (0, m.parseBoundCurves)(
                   this.bounds,
                   this.style.border,
                   this.style.borderRadius
@@ -2667,7 +2667,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     var A = this.parent ? this.parent.getClipPaths() : []
                     return this.style.overflow !== C.OVERFLOW.VISIBLE
                       ? A.concat([
-                          (0, K.calculatePaddingBoxPath)(this.curvedBounds)
+                          (0, m.calculatePaddingBoxPath)(this.curvedBounds)
                         ])
                       : A
                   }
@@ -2913,14 +2913,6 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                                   'h2',
                                   { className: 'jsx-239669031 card-title h3' },
                                   'QR codes generator'
-                                ),
-                                d.default.createElement(
-                                  'div',
-                                  {
-                                    className:
-                                      'jsx-239669031 card-subtitle text-gray'
-                                  },
-                                  'So, click on the button and generate your QR code now!'
                                 )
                               ),
                               d.default.createElement(
@@ -4982,8 +4974,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             )
               return Q
             if (41 === s && 41 === c) {
-              for (var T = t[B], m = 1; T > 0 && (T--, 41 === e[T]); ) m++
-              if (m % 2 != 0) return Q
+              for (var T = t[B], K = 1; T > 0 && (T--, 41 === e[T]); ) K++
+              if (K % 2 != 0) return Q
             }
             return 32 === s && 33 === c ? Q : w
           },
@@ -5019,7 +5011,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               ]
             )
           }),
-          m = ((e.inlineBreakOpportunities = function(A, e) {
+          K = ((e.inlineBreakOpportunities = function(A, e) {
             var t = (0, c.toCodePoints)(A),
               r = Q,
               n = T(t, e),
@@ -5074,7 +5066,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               if (u >= i) return { done: !0 }
               for (var A = Q; u < i && (A = I(t, a, B, ++u, s)) === Q; );
               if (A !== Q || u === i) {
-                var e = new m(t, A, l, u)
+                var e = new K(t, A, l, u)
                 return (l = u), { value: e, done: !1 }
               }
               return { done: !0 }
@@ -5704,7 +5696,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               o = B
                 ? null !== r
                   ? I(t ? r - 0.5 * Math.PI : r, e)
-                  : n ? m(A[0], e) : K(A[0], e)
+                  : n ? K(A[0], e) : m(A[0], e)
                 : I(Math.PI, e),
               s = B ? 1 : 0,
               i = Math.min(
@@ -5778,7 +5770,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               A.width / 2 / ((0, u.distance)(A.width, A.height) / 2)
             )
           },
-          m = function(A, e) {
+          K = function(A, e) {
             switch (A) {
               case 'bottom':
               case 'to top':
@@ -5815,7 +5807,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 return I(Math.PI, e)
             }
           },
-          K = function(A, e) {
+          m = function(A, e) {
             var t = A.split(' ').map(parseFloat),
               r = B(t, 2),
               n = r[0],
@@ -6201,7 +6193,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     }
                     if (A instanceof HTMLIFrameElement) {
                       var r = A.cloneNode(!1),
-                        n = K()
+                        n = m()
                       r.setAttribute('data-html2canvas-internal-iframe-key', n)
                       var B = (0, a.parseBounds)(A, 0, 0),
                         o = B.width,
@@ -6482,14 +6474,14 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             var t = A.ownerDocument.createElement('style')
             ;(t.innerHTML = e), A.appendChild(t)
           },
-          m = function(A) {
+          K = function(A) {
             var e = B(A, 3),
               t = e[0],
               r = e[1],
               n = e[2]
             ;(t.scrollLeft = r), (t.scrollTop = n)
           },
-          K = function() {
+          m = function() {
             return Math.ceil(Date.now() + 1e7 * Math.random()).toString(16)
           },
           v = /^data:text\/(.+);(base64)?,(.*)$/i,
@@ -6564,7 +6556,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 B = n.document,
                 i = L(r).then(function() {
                   return (
-                    o.scrolledElements.forEach(m),
+                    o.scrolledElements.forEach(K),
                     n.scrollTo(e.left, e.top),
                     !/(iPad|iPhone|iPod)/g.test(navigator.userAgent) ||
                       (n.scrollY === e.top && n.scrollX === e.left) ||
