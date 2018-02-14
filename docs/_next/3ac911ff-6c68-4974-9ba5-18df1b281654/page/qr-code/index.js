@@ -17,8 +17,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             DASHED: 3,
             WAVY: 4
           }),
-          o = (e.TEXT_DECORATION = { NONE: null }),
-          a = (e.TEXT_DECORATION_LINE = {
+          a = (e.TEXT_DECORATION = { NONE: null }),
+          o = (e.TEXT_DECORATION_LINE = {
             UNDERLINE: 1,
             OVERLINE: 2,
             LINE_THROUGH: 3,
@@ -27,13 +27,13 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           s = function(A) {
             switch (A) {
               case 'underline':
-                return a.UNDERLINE
+                return o.UNDERLINE
               case 'overline':
-                return a.OVERLINE
+                return o.OVERLINE
               case 'line-through':
-                return a.LINE_THROUGH
+                return o.LINE_THROUGH
             }
-            return a.BLINK
+            return o.BLINK
           },
           i = function(A) {
             return 'none' === A ? null : A.split(' ').map(s)
@@ -56,7 +56,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             A.textDecorationLine ? A.textDecorationLine : A.textDecoration
           )
           return null === e
-            ? o.NONE
+            ? a.NONE
             : {
                 textDecorationLine: e,
                 textDecorationColor: A.textDecorationColor
@@ -75,8 +75,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             return A && A.__esModule ? A : { default: A }
           })(r),
           B = (e.BORDER_STYLE = { NONE: 0, SOLID: 1 }),
-          o = (e.BORDER_SIDES = { TOP: 0, RIGHT: 1, BOTTOM: 2, LEFT: 3 }),
-          a = Object.keys(o).map(function(A) {
+          a = (e.BORDER_SIDES = { TOP: 0, RIGHT: 1, BOTTOM: 2, LEFT: 3 }),
+          o = Object.keys(a).map(function(A) {
             return A.toLowerCase()
           }),
           s = function(A) {
@@ -87,7 +87,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             return B.SOLID
           }
         e.parseBorder = function(A) {
-          return a.map(function(e) {
+          return o.map(function(e) {
             var t = new n.default(A.getPropertyValue('border-' + e + '-color')),
               r = s(A.getPropertyValue('border-' + e + '-style')),
               B = parseFloat(A.getPropertyValue('border-' + e + '-width'))
@@ -143,8 +143,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             t = A.length,
             r = void 0,
             B = 0,
-            o = void 0,
             a = void 0,
+            o = void 0,
             s = void 0,
             i = void 0
           '=' === A[A.length - 1] && (e--, '=' === A[A.length - 2] && e--)
@@ -156,12 +156,12 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 : new Array(e),
             l = Array.isArray(c) ? c : new Uint8Array(c)
           for (r = 0; r < t; r += 4)
-            (o = n[A.charCodeAt(r)]),
-              (a = n[A.charCodeAt(r + 1)]),
+            (a = n[A.charCodeAt(r)]),
+              (o = n[A.charCodeAt(r + 1)]),
               (s = n[A.charCodeAt(r + 2)]),
               (i = n[A.charCodeAt(r + 3)]),
-              (l[B++] = (o << 2) | (a >> 4)),
-              (l[B++] = ((15 & a) << 4) | (s >> 2)),
+              (l[B++] = (a << 2) | (o >> 4)),
+              (l[B++] = ((15 & o) << 4) | (s >> 2)),
               (l[B++] = ((3 & s) << 6) | (63 & i))
           return c
         }),
@@ -187,9 +187,9 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           (e.createCounterText = e.inlineListItemElement = e.getListOwner = void 0)
         var n = t(38),
           B = t(37),
-          o = r(B),
-          a = t(72),
-          s = r(a),
+          a = r(B),
+          o = t(72),
+          s = r(o),
           i = t(71),
           c = t(181),
           l = ['OL', 'UL', 'MENU'],
@@ -206,30 +206,30 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             var r = e.style.listStyle
             if (r) {
               var B = A.ownerDocument.defaultView.getComputedStyle(A, null),
-                a = A.ownerDocument.createElement('html2canvaswrapper')
-              switch (((0, n.copyCSSStyles)(B, a),
-              (a.style.position = 'absolute'),
-              (a.style.bottom = 'auto'),
-              (a.style.display = 'block'),
-              (a.style.letterSpacing = 'normal'),
+                o = A.ownerDocument.createElement('html2canvaswrapper')
+              switch (((0, n.copyCSSStyles)(B, o),
+              (o.style.position = 'absolute'),
+              (o.style.bottom = 'auto'),
+              (o.style.display = 'block'),
+              (o.style.letterSpacing = 'normal'),
               r.listStylePosition)) {
                 case i.LIST_STYLE_POSITION.OUTSIDE:
-                  ;(a.style.left = 'auto'),
-                    (a.style.right =
+                  ;(o.style.left = 'auto'),
+                    (o.style.right =
                       A.ownerDocument.defaultView.innerWidth -
                       e.bounds.left -
                       e.style.margin[1].getAbsoluteValue(e.bounds.width) +
                       7 +
                       'px'),
-                    (a.style.textAlign = 'right')
+                    (o.style.textAlign = 'right')
                   break
                 case i.LIST_STYLE_POSITION.INSIDE:
-                  ;(a.style.left =
+                  ;(o.style.left =
                     e.bounds.left -
                     e.style.margin[3].getAbsoluteValue(e.bounds.width) +
                     'px'),
-                    (a.style.right = 'auto'),
-                    (a.style.textAlign = 'left')
+                    (o.style.right = 'auto'),
+                    (o.style.textAlign = 'left')
               }
               var c = void 0,
                 l = e.style.margin[0].getAbsoluteValue(e.bounds.width),
@@ -238,31 +238,31 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 if ('url' === u.method) {
                   var Q = A.ownerDocument.createElement('img')
                   ;(Q.src = u.args[0]),
-                    (a.style.top = e.bounds.top - l + 'px'),
-                    (a.style.width = 'auto'),
-                    (a.style.height = 'auto'),
-                    a.appendChild(Q)
+                    (o.style.top = e.bounds.top - l + 'px'),
+                    (o.style.width = 'auto'),
+                    (o.style.height = 'auto'),
+                    o.appendChild(Q)
                 } else {
                   var w = 0.5 * parseFloat(e.style.font.fontSize)
-                  ;(a.style.top =
+                  ;(o.style.top =
                     e.bounds.top - l + e.bounds.height - 1.5 * w + 'px'),
-                    (a.style.width = w + 'px'),
-                    (a.style.height = w + 'px'),
-                    (a.style.backgroundImage = B.listStyleImage)
+                    (o.style.width = w + 'px'),
+                    (o.style.height = w + 'px'),
+                    (o.style.backgroundImage = B.listStyleImage)
                 }
               else
                 'number' == typeof e.listIndex &&
                   ((c = A.ownerDocument.createTextNode(
                     h(e.listIndex, r.listStyleType, !0)
                   )),
-                  a.appendChild(c),
-                  (a.style.top = e.bounds.top - l + 'px'))
+                  o.appendChild(c),
+                  (o.style.top = e.bounds.top - l + 'px'))
               var g = A.ownerDocument.body
-              g.appendChild(a),
+              g.appendChild(o),
                 c
                   ? (e.childNodes.push(s.default.fromTextNode(c, e)),
-                    g.removeChild(a))
-                  : e.childNodes.push(new o.default(a, e, t, 0))
+                    g.removeChild(o))
+                  : e.childNodes.push(new a.default(o, e, t, 0))
             }
           }),
           {
@@ -546,7 +546,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 n)
             )
           },
-          F = function(A, e) {
+          f = function(A, e) {
             var t =
                 arguments.length > 2 && void 0 !== arguments[2]
                   ? arguments[2]
@@ -558,24 +558,24 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               }) + t
             )
           },
-          f = function(A, e, t, r, B, o) {
+          F = function(A, e, t, r, B, a) {
             if (A < -9999 || A > 9999)
               return h(A, i.LIST_STYLE_TYPE.CJK_DECIMAL, B.length > 0)
-            var a = Math.abs(A),
+            var o = Math.abs(A),
               s = B
-            if (0 === a) return e[0] + s
-            for (var c = 0; a > 0 && c <= 4; c++) {
-              var l = a % 10
-              0 === l && (0, n.contains)(o, 1) && '' !== s
+            if (0 === o) return e[0] + s
+            for (var c = 0; o > 0 && c <= 4; c++) {
+              var l = o % 10
+              0 === l && (0, n.contains)(a, 1) && '' !== s
                 ? (s = e[l] + s)
                 : l > 1 ||
                   (1 === l && 0 === c) ||
-                  (1 === l && 1 === c && (0, n.contains)(o, 2)) ||
-                  (1 === l && 1 === c && (0, n.contains)(o, 4) && A > 100) ||
-                  (1 === l && c > 1 && (0, n.contains)(o, 8))
+                  (1 === l && 1 === c && (0, n.contains)(a, 2)) ||
+                  (1 === l && 1 === c && (0, n.contains)(a, 4) && A > 100) ||
+                  (1 === l && c > 1 && (0, n.contains)(a, 8))
                   ? (s = e[l] + (c > 0 ? t[c - 1] : '') + s)
                   : 1 === l && c > 0 && (s = t[c - 1] + s),
-                (a = Math.floor(a / 10))
+                (o = Math.floor(o / 10))
             }
             return (A < 0 ? r : '') + s
           },
@@ -591,10 +591,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               case i.LIST_STYLE_TYPE.SQUARE:
                 return '◾'
               case i.LIST_STYLE_TYPE.DECIMAL_LEADING_ZERO:
-                var o = C(A, 48, 57, !0, r)
-                return o.length < 4 ? '0' + o : o
+                var a = C(A, 48, 57, !0, r)
+                return a.length < 4 ? '0' + a : a
               case i.LIST_STYLE_TYPE.CJK_DECIMAL:
-                return F(A, '〇一二三四五六七八九', n)
+                return f(A, '〇一二三四五六七八九', n)
               case i.LIST_STYLE_TYPE.LOWER_ROMAN:
                 return U(
                   A,
@@ -632,20 +632,20 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               case i.LIST_STYLE_TYPE.KHMER:
                 return C(A, 6112, 6121, !0, r)
               case i.LIST_STYLE_TYPE.CJK_EARTHLY_BRANCH:
-                return F(A, '子丑寅卯辰巳午未申酉戌亥', n)
+                return f(A, '子丑寅卯辰巳午未申酉戌亥', n)
               case i.LIST_STYLE_TYPE.CJK_HEAVENLY_STEM:
-                return F(A, '甲乙丙丁戊己庚辛壬癸', n)
+                return f(A, '甲乙丙丁戊己庚辛壬癸', n)
               case i.LIST_STYLE_TYPE.CJK_IDEOGRAPHIC:
               case i.LIST_STYLE_TYPE.TRAD_CHINESE_INFORMAL:
-                return f(A, '零一二三四五六七八九', '十百千萬', '負', n, 14)
+                return F(A, '零一二三四五六七八九', '十百千萬', '負', n, 14)
               case i.LIST_STYLE_TYPE.TRAD_CHINESE_FORMAL:
-                return f(A, '零壹貳參肆伍陸柒捌玖', '拾佰仟萬', '負', n, 15)
+                return F(A, '零壹貳參肆伍陸柒捌玖', '拾佰仟萬', '負', n, 15)
               case i.LIST_STYLE_TYPE.SIMP_CHINESE_INFORMAL:
-                return f(A, '零一二三四五六七八九', '十百千萬', '负', n, 14)
+                return F(A, '零一二三四五六七八九', '十百千萬', '负', n, 14)
               case i.LIST_STYLE_TYPE.SIMP_CHINESE_FORMAL:
-                return f(A, '零壹贰叁肆伍陆柒捌玖', '拾佰仟萬', '负', n, 15)
+                return F(A, '零壹贰叁肆伍陆柒捌玖', '拾佰仟萬', '负', n, 15)
               case i.LIST_STYLE_TYPE.JAPANESE_INFORMAL:
-                return f(
+                return F(
                   A,
                   '〇一二三四五六七八九',
                   '十百千万',
@@ -654,7 +654,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   0
                 )
               case i.LIST_STYLE_TYPE.JAPANESE_FORMAL:
-                return f(
+                return F(
                   A,
                   '零壱弐参四伍六七八九',
                   '拾百千万',
@@ -663,7 +663,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   7
                 )
               case i.LIST_STYLE_TYPE.KOREAN_HANGUL_FORMAL:
-                return f(
+                return F(
                   A,
                   '영일이삼사오육칠팔구',
                   '십백천만',
@@ -672,7 +672,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   7
                 )
               case i.LIST_STYLE_TYPE.KOREAN_HANJA_INFORMAL:
-                return f(
+                return F(
                   A,
                   '零一二三四五六七八九',
                   '十百千萬',
@@ -681,7 +681,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   0
                 )
               case i.LIST_STYLE_TYPE.KOREAN_HANJA_FORMAL:
-                return f(A, '零壹貳參四五六七八九', '拾百千', '마이너스 ', B, 7)
+                return F(A, '零壹貳參四五六七八九', '拾百千', '마이너스 ', B, 7)
               case i.LIST_STYLE_TYPE.DEVANAGARI:
                 return C(A, 2406, 2415, !0, r)
               case i.LIST_STYLE_TYPE.GEORGIAN:
@@ -693,25 +693,25 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               case i.LIST_STYLE_TYPE.HEBREW:
                 return U(A, 1, 10999, w, i.LIST_STYLE_TYPE.DECIMAL, r)
               case i.LIST_STYLE_TYPE.HIRAGANA:
-                return F(
+                return f(
                   A,
                   'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわゐゑをん'
                 )
               case i.LIST_STYLE_TYPE.HIRAGANA_IROHA:
-                return F(
+                return f(
                   A,
                   'いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす'
                 )
               case i.LIST_STYLE_TYPE.KANNADA:
                 return C(A, 3302, 3311, !0, r)
               case i.LIST_STYLE_TYPE.KATAKANA:
-                return F(
+                return f(
                   A,
                   'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヰヱヲン',
                   n
                 )
               case i.LIST_STYLE_TYPE.KATAKANA_IROHA:
-                return F(
+                return f(
                   A,
                   'イロハニホヘトチリヌルヲワカヨタレソツネナラムウヰノオクヤマケフコエテアサキユメミシヱヒモセス',
                   n
@@ -844,8 +844,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             }
           })(),
           B = t(69),
-          o = t(107),
-          a = function(A, e) {
+          a = t(107),
+          o = function(A, e) {
             var t = Math.max.apply(
                 null,
                 A.colorStops.map(function(A) {
@@ -986,7 +986,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                       A.left + e.direction.x0,
                       A.top + e.direction.y0
                     )
-                    a(e, t),
+                    o(e, t),
                       (this.ctx.fillStyle = t),
                       this.ctx.fillRect(A.left, A.top, A.width, A.height)
                   }
@@ -1007,15 +1007,15 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                       )
                     if (B)
                       if (
-                        (a(e, B),
+                        (o(e, B),
                         (this.ctx.fillStyle = B),
                         e.radius.x !== e.radius.y)
                       ) {
-                        var o = A.left + 0.5 * A.width,
+                        var a = A.left + 0.5 * A.width,
                           s = A.top + 0.5 * A.height,
                           i = e.radius.y / e.radius.x,
                           c = 1 / i
-                        this.transform(o, s, [1, 0, 0, i, 0, 0], function() {
+                        this.transform(a, s, [1, 0, 0, i, 0, 0], function() {
                           return t.ctx.fillRect(
                             A.left,
                             c * (A.top - s) + s,
@@ -1077,10 +1077,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                               ),
                           null !== r)
                         ) {
-                          var a = r.textDecorationColor || e
+                          var o = r.textDecorationColor || e
                           r.textDecorationLine.forEach(function(e) {
                             switch (e) {
-                              case o.TEXT_DECORATION_LINE.UNDERLINE:
+                              case a.TEXT_DECORATION_LINE.UNDERLINE:
                                 var r = B.options.fontMetrics.getMetrics(t),
                                   n = r.baseline
                                 B.rectangle(
@@ -1090,19 +1090,19 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                                   ),
                                   A.bounds.width,
                                   1,
-                                  a
+                                  o
                                 )
                                 break
-                              case o.TEXT_DECORATION_LINE.OVERLINE:
+                              case a.TEXT_DECORATION_LINE.OVERLINE:
                                 B.rectangle(
                                   A.bounds.left,
                                   Math.round(A.bounds.top),
                                   A.bounds.width,
                                   1,
-                                  a
+                                  o
                                 )
                                 break
-                              case o.TEXT_DECORATION_LINE.LINE_THROUGH:
+                              case a.TEXT_DECORATION_LINE.LINE_THROUGH:
                                 var s = B.options.fontMetrics.getMetrics(t),
                                   i = s.middle
                                 B.rectangle(
@@ -1110,7 +1110,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                                   Math.ceil(A.bounds.top + i),
                                   A.bounds.width,
                                   1,
-                                  a
+                                  o
                                 )
                             }
                           })
@@ -1344,8 +1344,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           (e.reformatInputBounds = e.inlineSelectElement = e.inlineTextAreaElement = e.inlineInputElement = e.getInputBorderRadius = e.INPUT_BACKGROUND = e.INPUT_BORDERS = e.INPUT_COLOR = void 0)
         var n = t(72),
           B = r(n),
-          o = t(46),
-          a = t(108),
+          a = t(46),
+          o = t(108),
           s = t(423),
           i = r(s),
           c = t(70),
@@ -1358,25 +1358,25 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           d = ((e.INPUT_COLOR = new Q.default([42, 42, 42])),
           new Q.default([165, 165, 165])),
           C = new Q.default([222, 222, 222]),
-          F = {
+          f = {
             borderWidth: 1,
             borderColor: d,
-            borderStyle: a.BORDER_STYLE.SOLID
+            borderStyle: o.BORDER_STYLE.SOLID
           },
-          f = ((e.INPUT_BORDERS = [F, F, F, F]),
+          F = ((e.INPUT_BORDERS = [f, f, f, f]),
           (e.INPUT_BACKGROUND = {
             backgroundColor: C,
             backgroundImage: [],
-            backgroundClip: o.BACKGROUND_CLIP.PADDING_BOX,
-            backgroundOrigin: o.BACKGROUND_ORIGIN.PADDING_BOX
+            backgroundClip: a.BACKGROUND_CLIP.PADDING_BOX,
+            backgroundOrigin: a.BACKGROUND_ORIGIN.PADDING_BOX
           }),
           new g.default('50%')),
-          h = [f, f],
+          h = [F, F],
           E = [h, h, h, h],
           H = new g.default('3px'),
           p = [H, H],
           N = [p, p, p, p],
-          I = ((e.getInputBorderRadius = function(A) {
+          m = ((e.getInputBorderRadius = function(A) {
             return 'radio' === A.type ? E : N
           }),
           (e.inlineInputElement = function(A, e) {
@@ -1422,14 +1422,14 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                       )
                 )
               }
-            } else I(T(A), A, e, !1)
+            } else m(I(A), A, e, !1)
           }),
           (e.inlineTextAreaElement = function(A, e) {
-            I(A.value, A, e, !0)
+            m(A.value, A, e, !0)
           }),
           (e.inlineSelectElement = function(A, e) {
             var t = A.options[A.selectedIndex || 0]
-            I(t ? t.text || '' : '', A, e, !1)
+            m(t ? t.text || '' : '', A, e, !1)
           }),
           (e.reformatInputBounds = function(A) {
             return (
@@ -1443,23 +1443,23 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           function(A, e, t, r) {
             var n = e.ownerDocument.body
             if (A.length > 0 && n) {
-              var o = e.ownerDocument.createElement('html2canvaswrapper')
+              var a = e.ownerDocument.createElement('html2canvaswrapper')
               ;(0, U.copyCSSStyles)(
                 e.ownerDocument.defaultView.getComputedStyle(e, null),
-                o
+                a
               ),
-                (o.style.position = 'absolute'),
-                (o.style.left = t.bounds.left + 'px'),
-                (o.style.top = t.bounds.top + 'px'),
-                r || (o.style.whiteSpace = 'nowrap')
-              var a = e.ownerDocument.createTextNode(A)
-              o.appendChild(a),
-                n.appendChild(o),
-                t.childNodes.push(B.default.fromTextNode(a, t)),
-                n.removeChild(o)
+                (a.style.position = 'absolute'),
+                (a.style.left = t.bounds.left + 'px'),
+                (a.style.top = t.bounds.top + 'px'),
+                r || (a.style.whiteSpace = 'nowrap')
+              var o = e.ownerDocument.createTextNode(A)
+              a.appendChild(o),
+                n.appendChild(a),
+                t.childNodes.push(B.default.fromTextNode(o, t)),
+                n.removeChild(a)
             }
           }),
-          T = function(A) {
+          I = function(A) {
             var e =
               'password' === A.type
                 ? new Array(A.value.length + 1).join('•')
@@ -1477,10 +1477,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           (e.parseTextBounds = e.TextBounds = void 0)
         var n = t(22),
           B = t(107),
-          o = t(73),
-          a = (function(A) {
+          a = t(73),
+          o = (function(A) {
             return A && A.__esModule ? A : { default: A }
-          })(o),
+          })(a),
           s = t(181),
           i = (e.TextBounds = function A(e, t) {
             r(this, A), (this.text = e), (this.bounds = t)
@@ -1493,7 +1493,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                       return (0, s.fromCodePoint)(A)
                     })
                   : (0, s.breakWords)(A, e),
-                o = n.length,
+                a = n.length,
                 u = t.parentNode
                   ? t.parentNode.ownerDocument.defaultView
                   : null,
@@ -1502,7 +1502,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 g = [],
                 U = 0,
                 d = 0;
-              d < o;
+              d < a;
               d++
             ) {
               var C = n[d]
@@ -1510,13 +1510,13 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 e.style.textDecoration !== B.TEXT_DECORATION.NONE ||
                 C.trim().length > 0
               )
-                if (a.default.SUPPORT_RANGE_BOUNDS)
+                if (o.default.SUPPORT_RANGE_BOUNDS)
                   g.push(new i(C, l(t, U, C.length, Q, w)))
                 else {
-                  var F = t.splitText(C.length)
-                  g.push(new i(C, c(t, Q, w))), (t = F)
+                  var f = t.splitText(C.length)
+                  g.push(new i(C, c(t, Q, w))), (t = f)
                 }
-              else a.default.SUPPORT_RANGE_BOUNDS || (t = t.splitText(C.length))
+              else o.default.SUPPORT_RANGE_BOUNDS || (t = t.splitText(C.length))
               U += C.length
             }
             return g
@@ -1527,17 +1527,17 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             var B = A.parentNode
             if (B) {
               B.replaceChild(r, A)
-              var o = (0, n.parseBounds)(r, e, t)
-              return r.firstChild && B.replaceChild(r.firstChild, r), o
+              var a = (0, n.parseBounds)(r, e, t)
+              return r.firstChild && B.replaceChild(r.firstChild, r), a
             }
             return new n.Bounds(0, 0, 0, 0)
           }),
           l = function(A, e, t, r, B) {
-            var o = A.ownerDocument.createRange()
+            var a = A.ownerDocument.createRange()
             return (
-              o.setStart(A, e),
-              o.setEnd(A, e + t),
-              n.Bounds.fromClientRect(o.getBoundingClientRect(), r, B)
+              a.setStart(A, e),
+              a.setEnd(A, e + t),
+              n.Bounds.fromClientRect(a.getBoundingClientRect(), r, B)
             )
           }
       },
@@ -1591,14 +1591,14 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                           ') with scale ' +
                           A.scale
                       )
-                    var t = o(
+                    var t = a(
                       Math.max(A.windowWidth, A.width) * A.scale,
                       Math.max(A.windowHeight, A.height) * A.scale,
                       A.scrollX * A.scale,
                       A.scrollY * A.scale,
                       this.element
                     )
-                    return a(t).then(function(t) {
+                    return o(t).then(function(t) {
                       return (
                         A.backgroundColor &&
                           ((e.ctx.fillStyle = A.backgroundColor.toString()),
@@ -1619,24 +1619,24 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             )
           })()
         e.default = B
-        var o = (e.createForeignObjectSVG = function(A, e, t, r, n) {
+        var a = (e.createForeignObjectSVG = function(A, e, t, r, n) {
             var B = 'http://www.w3.org/2000/svg',
-              o = document.createElementNS(B, 'svg'),
-              a = document.createElementNS(B, 'foreignObject')
+              a = document.createElementNS(B, 'svg'),
+              o = document.createElementNS(B, 'foreignObject')
             return (
-              o.setAttributeNS(null, 'width', A),
-              o.setAttributeNS(null, 'height', e),
-              a.setAttributeNS(null, 'width', '100%'),
-              a.setAttributeNS(null, 'height', '100%'),
-              a.setAttributeNS(null, 'x', t),
-              a.setAttributeNS(null, 'y', r),
-              a.setAttributeNS(null, 'externalResourcesRequired', 'true'),
-              o.appendChild(a),
-              a.appendChild(n),
-              o
+              a.setAttributeNS(null, 'width', A),
+              a.setAttributeNS(null, 'height', e),
+              o.setAttributeNS(null, 'width', '100%'),
+              o.setAttributeNS(null, 'height', '100%'),
+              o.setAttributeNS(null, 'x', t),
+              o.setAttributeNS(null, 'y', r),
+              o.setAttributeNS(null, 'externalResourcesRequired', 'true'),
+              a.appendChild(o),
+              o.appendChild(n),
+              a
             )
           }),
-          a = (e.loadSerializedSVG = function(A) {
+          o = (e.loadSerializedSVG = function(A) {
             return new Promise(function(e, t) {
               var r = new Image()
               ;(r.onload = function() {
@@ -1681,11 +1681,11 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     : e.style.wordBreak
               }),
               n = [],
-              o = void 0;
-            !(o = t.next()).done;
+              a = void 0;
+            !(a = t.next()).done;
 
           )
-            n.push(o.value.slice())
+            n.push(a.value.slice())
           return n
         }
       },
@@ -1745,13 +1745,13 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     r.appendChild(this._document.createTextNode('Hidden Text')),
                     e.appendChild(r),
                     e.appendChild(t)
-                  var o = t.offsetTop - r.offsetTop + 2
+                  var a = t.offsetTop - r.offsetTop + 2
                   e.removeChild(r),
                     e.appendChild(this._document.createTextNode('Hidden Text')),
                     (e.style.lineHeight = 'normal'),
                     (t.style.verticalAlign = 'super')
-                  var a = t.offsetTop - e.offsetTop + 2
-                  return n.removeChild(e), { baseline: o, middle: a }
+                  var o = t.offsetTop - e.offsetTop + 2
+                  return n.removeChild(e), { baseline: a, middle: o }
                 }
               },
               {
@@ -1782,18 +1782,18 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           if (!e.proxy) return Promise.reject(null)
           var t = e.proxy
           return new Promise(function(r, B) {
-            var o =
+            var a =
                 n.default.SUPPORT_CORS_XHR && n.default.SUPPORT_RESPONSE_TYPE
                   ? 'blob'
                   : 'text',
-              a = n.default.SUPPORT_CORS_XHR
+              o = n.default.SUPPORT_CORS_XHR
                 ? new XMLHttpRequest()
                 : new XDomainRequest()
             if (
-              ((a.onload = function() {
-                if (a instanceof XMLHttpRequest)
-                  if (200 === a.status)
-                    if ('text' === o) r(a.response)
+              ((o.onload = function() {
+                if (o instanceof XMLHttpRequest)
+                  if (200 === o.status)
+                    if ('text' === a) r(o.response)
                     else {
                       var A = new FileReader()
                       A.addEventListener(
@@ -1810,28 +1810,28 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                           },
                           !1
                         ),
-                        A.readAsDataURL(a.response)
+                        A.readAsDataURL(o.response)
                     }
                   else B('')
-                else r(a.responseText)
+                else r(o.responseText)
               }),
-              (a.onerror = B),
-              a.open(
+              (o.onerror = B),
+              o.open(
                 'GET',
-                t + '?url=' + encodeURIComponent(A) + '&responseType=' + o
+                t + '?url=' + encodeURIComponent(A) + '&responseType=' + a
               ),
-              'text' !== o &&
-                a instanceof XMLHttpRequest &&
-                (a.responseType = o),
+              'text' !== a &&
+                o instanceof XMLHttpRequest &&
+                (o.responseType = a),
               e.imageTimeout)
             ) {
               var s = e.imageTimeout
-              ;(a.timeout = s),
-                (a.ontimeout = function() {
+              ;(o.timeout = s),
+                (o.ontimeout = function() {
                   return B('')
                 })
             }
-            a.send()
+            o.send()
           })
         }
       },
@@ -1850,16 +1850,16 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 B = void 0
               try {
                 for (
-                  var o, a = A[Symbol.iterator]();
-                  !(r = (o = a.next()).done) &&
-                  (t.push(o.value), !e || t.length !== e);
+                  var a, o = A[Symbol.iterator]();
+                  !(r = (a = o.next()).done) &&
+                  (t.push(a.value), !e || t.length !== e);
                   r = !0
                 );
               } catch (A) {
                 ;(n = !0), (B = A)
               } finally {
                 try {
-                  !r && a.return && a.return()
+                  !r && o.return && o.return()
                 } finally {
                   if (n) throw B
                 }
@@ -1888,9 +1888,9 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               return t && A(e.prototype, t), r && A(e, r), e
             }
           })(),
-          o = /^#([a-f0-9]{3})$/i,
-          a = function(A) {
-            var e = A.match(o)
+          a = /^#([a-f0-9]{3})$/i,
+          o = function(A) {
+            var e = A.match(a)
             return (
               !!e && [
                 parseInt(e[1][0] + e[1][0], 16),
@@ -1946,13 +1946,13 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               r(this, A)
               var t = Array.isArray(e)
                   ? w(e)
-                  : a(e) || l(e) || Q(e) || g(e) || i(e) || [0, 0, 0, null],
+                  : o(e) || l(e) || Q(e) || g(e) || i(e) || [0, 0, 0, null],
                 B = n(t, 4),
-                o = B[0],
+                a = B[0],
                 s = B[1],
                 c = B[2],
                 u = B[3]
-              ;(this.r = o), (this.g = s), (this.b = c), (this.a = u)
+              ;(this.r = a), (this.g = s), (this.b = c), (this.a = u)
             }
             return (
               B(A, [
@@ -2161,8 +2161,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               return t && A(e.prototype, t), r && A(e, r), e
             }
           })(),
-          o = t(70),
-          a = r(o),
+          a = t(70),
+          o = r(a),
           s = t(405),
           i = r(s),
           c = (e.Bounds = (function() {
@@ -2200,11 +2200,11 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             var r = e[0].value,
               n = e[1].value,
               B = e[2].value,
-              o = e[3].value
+              a = e[3].value
             return new c(
-              A.left + o + t[3].borderWidth,
+              A.left + a + t[3].borderWidth,
               A.top + r + t[0].borderWidth,
-              A.width - (t[1].borderWidth + t[3].borderWidth + o + n),
+              A.width - (t[1].borderWidth + t[3].borderWidth + a + n),
               A.height - (t[0].borderWidth + t[2].borderWidth + r + B)
             )
           }),
@@ -2291,7 +2291,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             var r = t[u.TOP_LEFT][0].getAbsoluteValue(A.width),
               n = t[u.TOP_LEFT][1].getAbsoluteValue(A.height),
               B = t[u.TOP_RIGHT][0].getAbsoluteValue(A.width),
-              o = t[u.TOP_RIGHT][1].getAbsoluteValue(A.height),
+              a = t[u.TOP_RIGHT][1].getAbsoluteValue(A.height),
               s = t[u.BOTTOM_RIGHT][0].getAbsoluteValue(A.width),
               i = t[u.BOTTOM_RIGHT][1].getAbsoluteValue(A.height),
               c = t[u.BOTTOM_LEFT][0].getAbsoluteValue(A.width),
@@ -2300,13 +2300,13 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             w.push((r + B) / A.width),
               w.push((c + s) / A.width),
               w.push((n + l) / A.height),
-              w.push((o + i) / A.height)
+              w.push((a + i) / A.height)
             var g = Math.max.apply(Math, w)
             g > 1 &&
               ((r /= g),
               (n /= g),
               (B /= g),
-              (o /= g),
+              (a /= g),
               (s /= g),
               (i /= g),
               (c /= g),
@@ -2314,12 +2314,12 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             var U = A.width - B,
               d = A.height - i,
               C = A.width - s,
-              F = A.height - l
+              f = A.height - l
             return {
               topLeftOuter:
                 r > 0 || n > 0
                   ? Q(A.left, A.top, r, n, u.TOP_LEFT)
-                  : new a.default(A.left, A.top),
+                  : new o.default(A.left, A.top),
               topLeftInner:
                 r > 0 || n > 0
                   ? Q(
@@ -2329,31 +2329,31 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                       Math.max(0, n - e[0].borderWidth),
                       u.TOP_LEFT
                     )
-                  : new a.default(
+                  : new o.default(
                       A.left + e[3].borderWidth,
                       A.top + e[0].borderWidth
                     ),
               topRightOuter:
-                B > 0 || o > 0
-                  ? Q(A.left + U, A.top, B, o, u.TOP_RIGHT)
-                  : new a.default(A.left + A.width, A.top),
+                B > 0 || a > 0
+                  ? Q(A.left + U, A.top, B, a, u.TOP_RIGHT)
+                  : new o.default(A.left + A.width, A.top),
               topRightInner:
-                B > 0 || o > 0
+                B > 0 || a > 0
                   ? Q(
                       A.left + Math.min(U, A.width + e[3].borderWidth),
                       A.top + e[0].borderWidth,
                       U > A.width + e[3].borderWidth ? 0 : B - e[3].borderWidth,
-                      o - e[0].borderWidth,
+                      a - e[0].borderWidth,
                       u.TOP_RIGHT
                     )
-                  : new a.default(
+                  : new o.default(
                       A.left + A.width - e[1].borderWidth,
                       A.top + e[0].borderWidth
                     ),
               bottomRightOuter:
                 s > 0 || i > 0
                   ? Q(A.left + C, A.top + d, s, i, u.BOTTOM_RIGHT)
-                  : new a.default(A.left + A.width, A.top + A.height),
+                  : new o.default(A.left + A.width, A.top + A.height),
               bottomRightInner:
                 s > 0 || i > 0
                   ? Q(
@@ -2363,24 +2363,24 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                       i - e[2].borderWidth,
                       u.BOTTOM_RIGHT
                     )
-                  : new a.default(
+                  : new o.default(
                       A.left + A.width - e[1].borderWidth,
                       A.top + A.height - e[2].borderWidth
                     ),
               bottomLeftOuter:
                 c > 0 || l > 0
-                  ? Q(A.left, A.top + F, c, l, u.BOTTOM_LEFT)
-                  : new a.default(A.left, A.top + A.height),
+                  ? Q(A.left, A.top + f, c, l, u.BOTTOM_LEFT)
+                  : new o.default(A.left, A.top + A.height),
               bottomLeftInner:
                 c > 0 || l > 0
                   ? Q(
                       A.left + e[3].borderWidth,
-                      A.top + F,
+                      A.top + f,
                       Math.max(0, c - e[3].borderWidth),
                       l - e[2].borderWidth,
                       u.BOTTOM_LEFT
                     )
-                  : new a.default(
+                  : new o.default(
                       A.left + e[3].borderWidth,
                       A.top + A.height - e[2].borderWidth
                     )
@@ -2389,39 +2389,39 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           { TOP_LEFT: 0, TOP_RIGHT: 1, BOTTOM_RIGHT: 2, BOTTOM_LEFT: 3 }),
           Q = function(A, e, t, r, n) {
             var B = (Math.sqrt(2) - 1) / 3 * 4,
-              o = t * B,
+              a = t * B,
               s = r * B,
               c = A + t,
               l = e + r
             switch (n) {
               case u.TOP_LEFT:
                 return new i.default(
-                  new a.default(A, l),
-                  new a.default(A, l - s),
-                  new a.default(c - o, e),
-                  new a.default(c, e)
+                  new o.default(A, l),
+                  new o.default(A, l - s),
+                  new o.default(c - a, e),
+                  new o.default(c, e)
                 )
               case u.TOP_RIGHT:
                 return new i.default(
-                  new a.default(A, e),
-                  new a.default(A + o, e),
-                  new a.default(c, l - s),
-                  new a.default(c, l)
+                  new o.default(A, e),
+                  new o.default(A + a, e),
+                  new o.default(c, l - s),
+                  new o.default(c, l)
                 )
               case u.BOTTOM_RIGHT:
                 return new i.default(
-                  new a.default(c, e),
-                  new a.default(c, e + s),
-                  new a.default(A + o, l),
-                  new a.default(A, l)
+                  new o.default(c, e),
+                  new o.default(c, e + s),
+                  new o.default(A + a, l),
+                  new o.default(A, l)
                 )
               case u.BOTTOM_LEFT:
               default:
                 return new i.default(
-                  new a.default(c, l),
-                  new a.default(c - o, l),
-                  new a.default(A, e + s),
-                  new a.default(A, e)
+                  new o.default(c, l),
+                  new o.default(c - a, l),
+                  new o.default(A, e + s),
+                  new o.default(A, e)
                 )
             }
           }
@@ -2449,15 +2449,15 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             }
           })(),
           B = t(37),
-          o = ((function(A) {
+          a = ((function(A) {
             A && A.__esModule
           })(B),
           (e.LENGTH_TYPE = { PX: 0, PERCENTAGE: 1 })),
-          a = (function() {
+          o = (function() {
             function A(e) {
               r(this, A),
                 (this.type =
-                  '%' === e.substr(e.length - 1) ? o.PERCENTAGE : o.PX)
+                  '%' === e.substr(e.length - 1) ? a.PERCENTAGE : a.PX)
               var t = parseFloat(e)
               this.value = isNaN(t) ? 0 : t
             }
@@ -2468,7 +2468,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   {
                     key: 'isPercentage',
                     value: function() {
-                      return this.type === o.PERCENTAGE
+                      return this.type === a.PERCENTAGE
                     }
                   },
                   {
@@ -2492,7 +2492,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               A
             )
           })()
-        e.default = a
+        e.default = o
         var s = function A(e) {
           var t = e.parent
           return t ? A(t) : parseFloat(e.style.font.fontSize)
@@ -2501,17 +2501,17 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           switch (t) {
             case 'px':
             case '%':
-              return new a(e + t)
+              return new o(e + t)
             case 'em':
             case 'rem':
-              var r = new a(e)
+              var r = new o(e)
               return (
                 (r.value *=
                   'em' === t ? parseFloat(A.style.font.fontSize) : s(A)),
                 r
               )
             default:
-              return new a('0')
+              return new o('0')
           }
         }
       },
@@ -2537,10 +2537,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             }
           })(),
           B = t(21),
-          o = (function(A) {
+          a = (function(A) {
             return A && A.__esModule ? A : { default: A }
           })(B),
-          a = t(38),
+          o = t(38),
           s = t(46),
           i = t(108),
           c = t(406),
@@ -2552,23 +2552,23 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           U = t(71),
           d = t(412),
           C = t(413),
-          F = t(175),
-          f = t(174),
+          f = t(175),
+          F = t(174),
           h = t(176),
           E = t(107),
           H = t(414),
           p = t(177),
           N = t(415),
-          I = t(416),
-          T = t(417),
-          K = t(418),
-          m = t(22),
+          m = t(416),
+          I = t(417),
+          T = t(418),
+          K = t(22),
           v = t(178),
           y = t(110),
           b = ['INPUT', 'TEXTAREA', 'SELECT'],
           L = (function() {
             function A(e, t, n, B) {
-              var a = this
+              var o = this
               r(this, A),
                 (this.parent = t),
                 (this.tagName = e.tagName),
@@ -2595,7 +2595,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     R
                       ? (0, v.getInputBorderRadius)(e)
                       : (0, c.parseBorderRadius)(M),
-                  color: R ? v.INPUT_COLOR : new o.default(M.color),
+                  color: R ? v.INPUT_COLOR : new a.default(M.color),
                   display: O,
                   float: (0, u.parseCSSFloat)(M.float),
                   font: (0, Q.parseFont)(M),
@@ -2609,18 +2609,18 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     -1 === b.indexOf(e.tagName)
                       ? (0, C.parseOverflow)(M.overflow)
                       : C.OVERFLOW.HIDDEN,
-                  overflowWrap: (0, F.parseOverflowWrap)(
+                  overflowWrap: (0, f.parseOverflowWrap)(
                     M.overflowWrap ? M.overflowWrap : M.wordWrap
                   ),
-                  padding: (0, f.parsePadding)(M),
+                  padding: (0, F.parsePadding)(M),
                   position: P,
                   textDecoration: (0, E.parseTextDecoration)(M),
                   textShadow: (0, H.parseTextShadow)(M.textShadow),
                   textTransform: (0, p.parseTextTransform)(M.textTransform),
                   transform: (0, N.parseTransform)(M),
-                  visibility: (0, I.parseVisibility)(M.visibility),
-                  wordBreak: (0, T.parseWordBreak)(M.wordBreak),
-                  zIndex: (0, K.parseZIndex)(
+                  visibility: (0, m.parseVisibility)(M.visibility),
+                  wordBreak: (0, I.parseWordBreak)(M.wordBreak),
+                  zIndex: (0, T.parseZIndex)(
                     P !== h.POSITION.STATIC ? M.zIndex : 'auto'
                   )
                 }),
@@ -2630,30 +2630,30 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               ) {
                 var X = (0, y.getListOwner)(this)
                 if (X) {
-                  var k = X.listItems.length
+                  var x = X.listItems.length
                   X.listItems.push(this),
                     (this.listIndex =
                       e.hasAttribute('value') && 'number' == typeof e.value
                         ? e.value
-                        : 0 === k
+                        : 0 === x
                           ? 'number' == typeof X.listStart ? X.listStart : 1
-                          : X.listItems[k - 1].listIndex + 1)
+                          : X.listItems[x - 1].listIndex + 1)
                 }
               }
               'IMG' === e.tagName &&
                 e.addEventListener('load', function() {
-                  ;(a.bounds = (0, m.parseBounds)(e, S, D)),
-                    (a.curvedBounds = (0, m.parseBoundCurves)(
-                      a.bounds,
-                      a.style.border,
-                      a.style.borderRadius
+                  ;(o.bounds = (0, K.parseBounds)(e, S, D)),
+                    (o.curvedBounds = (0, K.parseBoundCurves)(
+                      o.bounds,
+                      o.style.border,
+                      o.style.borderRadius
                     ))
                 }),
                 (this.image = _(e, n)),
                 (this.bounds = R
-                  ? (0, v.reformatInputBounds)((0, m.parseBounds)(e, S, D))
-                  : (0, m.parseBounds)(e, S, D)),
-                (this.curvedBounds = (0, m.parseBoundCurves)(
+                  ? (0, v.reformatInputBounds)((0, K.parseBounds)(e, S, D))
+                  : (0, K.parseBounds)(e, S, D)),
+                (this.curvedBounds = (0, K.parseBoundCurves)(
                   this.bounds,
                   this.style.border,
                   this.style.borderRadius
@@ -2667,7 +2667,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     var A = this.parent ? this.parent.getClipPaths() : []
                     return this.style.overflow !== C.OVERFLOW.VISIBLE
                       ? A.concat([
-                          (0, m.calculatePaddingBoxPath)(this.curvedBounds)
+                          (0, K.calculatePaddingBoxPath)(this.curvedBounds)
                         ])
                       : A
                   }
@@ -2686,9 +2686,9 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   key: 'isVisible',
                   value: function() {
                     return (
-                      !(0, a.contains)(this.style.display, l.DISPLAY.NONE) &&
+                      !(0, o.contains)(this.style.display, l.DISPLAY.NONE) &&
                       this.style.opacity > 0 &&
-                      this.style.visibility === I.VISIBILITY.VISIBLE
+                      this.style.visibility === m.VISIBILITY.VISIBLE
                     )
                   }
                 },
@@ -2735,24 +2735,24 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   key: 'isInlineLevel',
                   value: function() {
                     return (
-                      (0, a.contains)(this.style.display, l.DISPLAY.INLINE) ||
-                      (0, a.contains)(
+                      (0, o.contains)(this.style.display, l.DISPLAY.INLINE) ||
+                      (0, o.contains)(
                         this.style.display,
                         l.DISPLAY.INLINE_BLOCK
                       ) ||
-                      (0, a.contains)(
+                      (0, o.contains)(
                         this.style.display,
                         l.DISPLAY.INLINE_FLEX
                       ) ||
-                      (0, a.contains)(
+                      (0, o.contains)(
                         this.style.display,
                         l.DISPLAY.INLINE_GRID
                       ) ||
-                      (0, a.contains)(
+                      (0, o.contains)(
                         this.style.display,
                         l.DISPLAY.INLINE_LIST_ITEM
                       ) ||
-                      (0, a.contains)(
+                      (0, o.contains)(
                         this.style.display,
                         l.DISPLAY.INLINE_TABLE
                       )
@@ -2763,11 +2763,11 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   key: 'isInlineBlockOrInlineTable',
                   value: function() {
                     return (
-                      (0, a.contains)(
+                      (0, o.contains)(
                         this.style.display,
                         l.DISPLAY.INLINE_BLOCK
                       ) ||
-                      (0, a.contains)(
+                      (0, o.contains)(
                         this.style.display,
                         l.DISPLAY.INLINE_TABLE
                       )
@@ -2833,8 +2833,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
         Object.defineProperty(e, '__esModule', { value: !0 })
         var n = t(9),
           B = r(n),
-          o = t(2),
-          a = r(o),
+          a = t(2),
+          o = r(a),
           s = t(3),
           i = r(s),
           c = t(10),
@@ -2846,24 +2846,41 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           U = t(0),
           d = r(U),
           C = t(26),
-          F = (r(C), t(33)),
-          f = (r(F), t(393)),
+          f = (r(C), t(33)),
+          F = (r(f), t(393)),
           h = t(400),
-          E = (r(h), t(62)),
-          H = r(E),
-          p = (function(A) {
+          E = r(h),
+          H = t(62),
+          p = r(H),
+          N = (function(A) {
             function e(A) {
-              ;(0, a.default)(this, e)
+              ;(0, o.default)(this, e)
               var t = (0, l.default)(
                 this,
                 (e.__proto__ || (0, B.default)(e)).call(this, A)
               )
               return (
                 (t.updateInputValue = function(A) {
-                  document.getElementById('rendered_canvas') &&
-                    (document.getElementById('rendered_canvas').style.display =
-                      'none'),
-                    t.setState({ inputValue: A.target.value })
+                  t.setState({ inputValue: A.target.value })
+                }),
+                (t.closeModal = function(A) {
+                  document.getElementById('rendered_canvas').remove(),
+                    (document.getElementById('modal-id').style.display = 'none')
+                }),
+                (t.generatorHandleClick = function(A) {
+                  if (A) {
+                    var e = document.querySelector('#qr')
+                    ;(0, E.default)(e, { scale: 0.52 })
+                      .then(function(A) {
+                        ;(document.getElementById('modal-id').style.display =
+                          'flex'),
+                          document.getElementById('qr_result').appendChild(A),
+                          (A.id = 'rendered_canvas')
+                      })
+                      .catch(function(A) {
+                        console.error(A)
+                      })
+                  }
                 }),
                 (t.state = { inputValue: 'some text' }),
                 t
@@ -2877,53 +2894,106 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   value: function() {
                     var A = this
                     return d.default.createElement(
-                      H.default,
+                      p.default,
                       null,
                       d.default.createElement(g.default, {
-                        styleId: '239669031',
+                        styleId: '3778141828',
                         css: [
-                          '#modal-id.jsx-239669031{display:none;}',
-                          '.form-input.jsx-239669031{max-width:450px !important;}',
-                          '.card.jsx-239669031{width:100%;max-width:45rem;margin:0.7rem auto 0;background-color:#fff;border:none;padding:2rem 1.5rem;}',
-                          '@media only screen and (max-width:1100px){.card.jsx-239669031{width:100%;}h2.jsx-239669031{font-size:1rem;}}'
+                          '#modal-id.jsx-3778141828{display:none;}',
+                          '#qr_result.jsx-3778141828{margin-left:-100px;}',
+                          '.modal-container.jsx-3778141828 .modal-body.jsx-3778141828{max-height:60vh !important;}',
+                          '#start_button.jsx-3778141828{margin-top:40px;}',
+                          '.form-input.jsx-3778141828{max-width:450px !important;}',
+                          '.card.jsx-3778141828{width:100%;max-width:45rem;margin:0.7rem auto 0;background-color:#fff;border:none;padding:2rem 1.5rem;}',
+                          '@media only screen and (max-width:1100px){.card.jsx-3778141828{width:100%;}h2.jsx-3778141828{font-size:1rem;}}'
                         ]
                       }),
                       d.default.createElement(
                         'div',
-                        { className: 'jsx-239669031 container' },
+                        {
+                          id: 'modal-id',
+                          className: 'jsx-3778141828 modal active'
+                        },
+                        d.default.createElement('a', {
+                          onClick: function() {
+                            A.closeModal()
+                          },
+                          'aria-label': 'Close',
+                          className: 'jsx-3778141828 modal-overlay'
+                        }),
                         d.default.createElement(
                           'div',
-                          { className: 'jsx-239669031 columns' },
+                          { className: 'jsx-3778141828 modal-container' },
+                          d.default.createElement(
+                            'div',
+                            { className: 'jsx-3778141828 modal-header' },
+                            d.default.createElement('a', {
+                              onClick: function() {
+                                A.closeModal()
+                              },
+                              'aria-label': 'Close',
+                              className:
+                                'jsx-3778141828 btn btn-clear float-right'
+                            }),
+                            d.default.createElement(
+                              'div',
+                              {
+                                className:
+                                  'jsx-3778141828 modal-title h5 text-center'
+                              },
+                              'Your QR Code'
+                            )
+                          ),
+                          d.default.createElement(
+                            'div',
+                            { className: 'jsx-3778141828 modal-body' },
+                            d.default.createElement(
+                              'div',
+                              { className: 'jsx-3778141828 content' },
+                              d.default.createElement('div', {
+                                id: 'qr_result',
+                                className: 'jsx-3778141828'
+                              })
+                            )
+                          )
+                        )
+                      ),
+                      d.default.createElement(
+                        'div',
+                        { className: 'jsx-3778141828 container' },
+                        d.default.createElement(
+                          'div',
+                          { className: 'jsx-3778141828 columns' },
                           d.default.createElement(
                             'div',
                             {
                               className:
-                                'jsx-239669031 column col-xs-12 text-center'
+                                'jsx-3778141828 column col-xs-12 text-center'
                             },
                             d.default.createElement(
                               'div',
                               {
                                 id: 'main_card',
-                                className: 'jsx-239669031 card'
+                                className: 'jsx-3778141828 card'
                               },
                               d.default.createElement(
                                 'div',
-                                { className: 'jsx-239669031 card-header' },
+                                { className: 'jsx-3778141828 card-header' },
                                 d.default.createElement(
                                   'h2',
-                                  { className: 'jsx-239669031 card-title h3' },
+                                  { className: 'jsx-3778141828 card-title h3' },
                                   'QR codes generator'
                                 )
                               ),
                               d.default.createElement(
                                 'div',
-                                { className: 'jsx-239669031 card-body' },
+                                { className: 'jsx-3778141828 card-body' },
                                 d.default.createElement(
                                   'div',
-                                  { className: 'jsx-239669031 form-group' },
+                                  { className: 'jsx-3778141828 form-group' },
                                   d.default.createElement(
                                     'label',
-                                    { className: 'jsx-239669031 form-label' },
+                                    { className: 'jsx-3778141828 form-label' },
                                     'Set value of your QR code and see the code update in real-time!'
                                   ),
                                   d.default.createElement('input', {
@@ -2932,23 +3002,35 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                                       return A.updateInputValue(e)
                                     },
                                     type: 'text',
-                                    className: 'jsx-239669031 form-input'
+                                    className: 'jsx-3778141828 form-input'
                                   })
                                 )
                               ),
                               d.default.createElement(
                                 'div',
-                                {
-                                  id: 'qr',
-                                  className: 'jsx-239669031 card-footer'
-                                },
-                                d.default.createElement(f.QRCode, {
-                                  bgColor: '#FFFFFF',
-                                  fgColor: '#000000',
-                                  level: 'Q',
-                                  style: { width: 250 },
-                                  value: this.state.inputValue
-                                })
+                                { className: 'jsx-3778141828 card-footer' },
+                                d.default.createElement(
+                                  'div',
+                                  { id: 'qr', className: 'jsx-3778141828' },
+                                  d.default.createElement(F.QRCode, {
+                                    bgColor: '#FFFFFF',
+                                    fgColor: '#000000',
+                                    level: 'Q',
+                                    style: { width: 250 },
+                                    value: this.state.inputValue
+                                  })
+                                ),
+                                d.default.createElement(
+                                  'button',
+                                  {
+                                    onClick: function() {
+                                      A.generatorHandleClick(A.state.inputValue)
+                                    },
+                                    id: 'start_button',
+                                    className: 'jsx-3778141828 btn btn-primary'
+                                  },
+                                  'Generate image'
+                                )
                               )
                             )
                           )
@@ -2961,7 +3043,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               e
             )
           })(d.default.Component)
-        e.default = p
+        e.default = N
       },
       393: function(A, e, t) {
         'use strict'
@@ -2989,8 +3071,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             t = void 0 === e ? '' : e,
             r = A.level,
             B = void 0 === r ? 'L' : r,
-            a = A.bgColor,
-            i = void 0 === a ? '#FFFFFF' : a,
+            o = A.bgColor,
+            i = void 0 === o ? '#FFFFFF' : o,
             c = A.fgColor,
             Q = void 0 === c ? '#000000' : c,
             w = n(A, ['value', 'level', 'bgColor', 'fgColor']),
@@ -3000,7 +3082,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             d = 0
           return s.default.createElement(
             'svg',
-            o(
+            a(
               {
                 shapeRendering: 'crispEdges',
                 viewBox: [0, 0, U.length, U.length].join(' ')
@@ -3022,7 +3104,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           )
         }
         Object.defineProperty(e, '__esModule', { value: !0 })
-        var o =
+        var a =
           Object.assign ||
           function(A) {
             for (var e = 1; e < arguments.length; e++) {
@@ -3033,8 +3115,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             return A
           }
         e.QRCode = B
-        var a = t(0),
-          s = r(a),
+        var o = t(0),
+          s = r(o),
           i = t(7),
           c = r(i),
           l = t(395),
@@ -3058,8 +3140,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
         }
         var n = t(396),
           B = t(397),
-          o = t(398),
-          a = t(399),
+          a = t(398),
+          o = t(399),
           s = t(170),
           i = r.prototype
         ;(i.addData = function(A) {
@@ -3085,7 +3167,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               for (A = 1; A < 40; A++) {
                 for (
                   var e = B.getRSBlocks(A, this.errorCorrectLevel),
-                    t = new o(),
+                    t = new a(),
                     r = 0,
                     n = 0;
                   n < e.length;
@@ -3095,7 +3177,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 for (var n = 0; n < this.dataList.length; n++) {
                   var s = this.dataList[n]
                   t.put(s.mode, 4),
-                    t.put(s.getLength(), a.getLengthInBits(s.mode, A)),
+                    t.put(s.getLength(), o.getLengthInBits(s.mode, A)),
                     s.write(t)
                 }
                 if (t.getLengthInBits() <= 8 * r) break
@@ -3141,7 +3223,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           (i.getBestMaskPattern = function() {
             for (var A = 0, e = 0, t = 0; t < 8; t++) {
               this.makeImpl(!0, t)
-              var r = a.getLostPoint(this)
+              var r = o.getLostPoint(this)
               ;(0 == t || A > r) && ((A = r), (e = t))
             }
             return e
@@ -3150,15 +3232,15 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             var r = A.createEmptyMovieClip(e, t)
             this.make()
             for (var n = 0; n < this.modules.length; n++)
-              for (var B = 1 * n, o = 0; o < this.modules[n].length; o++) {
-                var a = 1 * o,
-                  s = this.modules[n][o]
+              for (var B = 1 * n, a = 0; a < this.modules[n].length; a++) {
+                var o = 1 * a,
+                  s = this.modules[n][a]
                 s &&
                   (r.beginFill(0, 100),
-                  r.moveTo(a, B),
-                  r.lineTo(a + 1, B),
-                  r.lineTo(a + 1, B + 1),
-                  r.lineTo(a, B + 1),
+                  r.moveTo(o, B),
+                  r.lineTo(o + 1, B),
+                  r.lineTo(o + 1, B + 1),
+                  r.lineTo(o, B + 1),
                   r.endFill())
               }
             return r
@@ -3171,7 +3253,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           }),
           (i.setupPositionAdjustPattern = function() {
             for (
-              var A = a.getPatternPosition(this.typeNumber), e = 0;
+              var A = o.getPatternPosition(this.typeNumber), e = 0;
               e < A.length;
               e++
             )
@@ -3180,18 +3262,18 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   n = A[t]
                 if (null == this.modules[r][n])
                   for (var B = -2; B <= 2; B++)
-                    for (var o = -2; o <= 2; o++)
-                      this.modules[r + B][n + o] =
+                    for (var a = -2; a <= 2; a++)
+                      this.modules[r + B][n + a] =
                         -2 == B ||
                         2 == B ||
-                        -2 == o ||
-                        2 == o ||
-                        (0 == B && 0 == o)
+                        -2 == a ||
+                        2 == a ||
+                        (0 == B && 0 == a)
               }
           }),
           (i.setupTypeNumber = function(A) {
             for (
-              var e = a.getBCHTypeNumber(this.typeNumber), t = 0;
+              var e = o.getBCHTypeNumber(this.typeNumber), t = 0;
               t < 18;
               t++
             ) {
@@ -3210,7 +3292,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           (i.setupTypeInfo = function(A, e) {
             for (
               var t = (this.errorCorrectLevel << 3) | e,
-                r = a.getBCHTypeInfo(t),
+                r = o.getBCHTypeInfo(t),
                 n = 0;
               n < 15;
               n++
@@ -3238,18 +3320,18 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 r = this.moduleCount - 1,
                 n = 7,
                 B = 0,
-                o = this.moduleCount - 1;
-              o > 0;
-              o -= 2
+                a = this.moduleCount - 1;
+              a > 0;
+              a -= 2
             )
-              for (6 == o && o--; ; ) {
+              for (6 == a && a--; ; ) {
                 for (var s = 0; s < 2; s++)
-                  if (null == this.modules[r][o - s]) {
+                  if (null == this.modules[r][a - s]) {
                     var i = !1
                     B < A.length && (i = 1 == ((A[B] >>> n) & 1))
-                    var c = a.getMask(e, r, o - s)
+                    var c = o.getMask(e, r, a - s)
                     c && (i = !i),
-                      (this.modules[r][o - s] = i),
+                      (this.modules[r][a - s] = i),
                       n--,
                       -1 == n && (B++, (n = 7))
                   }
@@ -3263,13 +3345,13 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           (r.PAD1 = 17),
           (r.createData = function(A, e, t) {
             for (
-              var n = B.getRSBlocks(A, e), s = new o(), i = 0;
+              var n = B.getRSBlocks(A, e), s = new a(), i = 0;
               i < t.length;
               i++
             ) {
               var c = t[i]
               s.put(c.mode, 4),
-                s.put(c.getLength(), a.getLengthInBits(c.mode, A)),
+                s.put(c.getLength(), o.getLengthInBits(c.mode, A)),
                 c.write(s)
             }
             for (var l = 0, i = 0; i < n.length; i++) l += n[i].dataCount
@@ -3300,7 +3382,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 r = 0,
                 n = 0,
                 B = new Array(e.length),
-                o = new Array(e.length),
+                a = new Array(e.length),
                 i = 0;
               i < e.length;
               i++
@@ -3311,22 +3393,22 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               for (var u = 0; u < B[i].length; u++)
                 B[i][u] = 255 & A.buffer[u + t]
               t += c
-              var Q = a.getErrorCorrectPolynomial(l),
+              var Q = o.getErrorCorrectPolynomial(l),
                 w = new s(B[i], Q.getLength() - 1),
                 g = w.mod(Q)
-              o[i] = new Array(Q.getLength() - 1)
-              for (var u = 0; u < o[i].length; u++) {
-                var U = u + g.getLength() - o[i].length
-                o[i][u] = U >= 0 ? g.get(U) : 0
+              a[i] = new Array(Q.getLength() - 1)
+              for (var u = 0; u < a[i].length; u++) {
+                var U = u + g.getLength() - a[i].length
+                a[i][u] = U >= 0 ? g.get(U) : 0
               }
             }
             for (var d = 0, u = 0; u < e.length; u++) d += e[u].totalCount
-            for (var C = new Array(d), F = 0, u = 0; u < r; u++)
+            for (var C = new Array(d), f = 0, u = 0; u < r; u++)
               for (var i = 0; i < e.length; i++)
-                u < B[i].length && (C[F++] = B[i][u])
+                u < B[i].length && (C[f++] = B[i][u])
             for (var u = 0; u < n; u++)
               for (var i = 0; i < e.length; i++)
-                u < o[i].length && (C[F++] = o[i][u])
+                u < a[i].length && (C[f++] = a[i][u])
             return C
           }),
           (A.exports = r)
@@ -3520,10 +3602,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               throw new Error(
                 'bad rs block @ typeNumber:' + A + '/errorCorrectLevel:' + e
               )
-            for (var n = t.length / 3, B = new Array(), o = 0; o < n; o++)
+            for (var n = t.length / 3, B = new Array(), a = 0; a < n; a++)
               for (
-                var a = t[3 * o + 0], s = t[3 * o + 1], i = t[3 * o + 2], c = 0;
-                c < a;
+                var o = t[3 * a + 0], s = t[3 * a + 1], i = t[3 * a + 2], c = 0;
+                c < o;
                 c++
               )
                 B.push(new r(s, i))
@@ -3574,7 +3656,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
         var r = t(168),
           n = t(170),
           B = t(171),
-          o = {
+          a = {
             PATTERN000: 0,
             PATTERN001: 1,
             PATTERN010: 2,
@@ -3584,7 +3666,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             PATTERN110: 6,
             PATTERN111: 7
           },
-          a = {
+          o = {
             PATTERN_POSITION_TABLE: [
               [],
               [6, 18],
@@ -3633,19 +3715,19 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             getBCHTypeInfo: function(A) {
               for (
                 var e = A << 10;
-                a.getBCHDigit(e) - a.getBCHDigit(a.G15) >= 0;
+                o.getBCHDigit(e) - o.getBCHDigit(o.G15) >= 0;
 
               )
-                e ^= a.G15 << (a.getBCHDigit(e) - a.getBCHDigit(a.G15))
-              return ((A << 10) | e) ^ a.G15_MASK
+                e ^= o.G15 << (o.getBCHDigit(e) - o.getBCHDigit(o.G15))
+              return ((A << 10) | e) ^ o.G15_MASK
             },
             getBCHTypeNumber: function(A) {
               for (
                 var e = A << 12;
-                a.getBCHDigit(e) - a.getBCHDigit(a.G18) >= 0;
+                o.getBCHDigit(e) - o.getBCHDigit(o.G18) >= 0;
 
               )
-                e ^= a.G18 << (a.getBCHDigit(e) - a.getBCHDigit(a.G18))
+                e ^= o.G18 << (o.getBCHDigit(e) - o.getBCHDigit(o.G18))
               return (A << 12) | e
             },
             getBCHDigit: function(A) {
@@ -3653,25 +3735,25 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               return e
             },
             getPatternPosition: function(A) {
-              return a.PATTERN_POSITION_TABLE[A - 1]
+              return o.PATTERN_POSITION_TABLE[A - 1]
             },
             getMask: function(A, e, t) {
               switch (A) {
-                case o.PATTERN000:
+                case a.PATTERN000:
                   return (e + t) % 2 == 0
-                case o.PATTERN001:
+                case a.PATTERN001:
                   return e % 2 == 0
-                case o.PATTERN010:
+                case a.PATTERN010:
                   return t % 3 == 0
-                case o.PATTERN011:
+                case a.PATTERN011:
                   return (e + t) % 3 == 0
-                case o.PATTERN100:
+                case a.PATTERN100:
                   return (Math.floor(e / 2) + Math.floor(t / 3)) % 2 == 0
-                case o.PATTERN101:
+                case a.PATTERN101:
                   return (e * t) % 2 + (e * t) % 3 == 0
-                case o.PATTERN110:
+                case a.PATTERN110:
                   return ((e * t) % 2 + (e * t) % 3) % 2 == 0
-                case o.PATTERN111:
+                case a.PATTERN111:
                   return ((e * t) % 3 + (e + t) % 2) % 2 == 0
                 default:
                   throw new Error('bad maskPattern:' + A)
@@ -3727,13 +3809,13 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             getLostPoint: function(A) {
               for (var e = A.getModuleCount(), t = 0, r = 0; r < e; r++)
                 for (var n = 0; n < e; n++) {
-                  for (var B = 0, o = A.isDark(r, n), a = -1; a <= 1; a++)
-                    if (!(r + a < 0 || e <= r + a))
+                  for (var B = 0, a = A.isDark(r, n), o = -1; o <= 1; o++)
+                    if (!(r + o < 0 || e <= r + o))
                       for (var s = -1; s <= 1; s++)
                         n + s < 0 ||
                           e <= n + s ||
-                          (0 == a && 0 == s) ||
-                          (o == A.isDark(r + a, n + s) && B++)
+                          (0 == o && 0 == s) ||
+                          (a == A.isDark(r + o, n + s) && B++)
                   B > 5 && (t += 3 + B - 5)
                 }
               for (var r = 0; r < e - 1; r++)
@@ -3770,7 +3852,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               return (t += Math.abs(100 * c / e / e - 50) / 5 * 10)
             }
           }
-        A.exports = a
+        A.exports = o
       },
       400: function(A, e, t) {
         'use strict'
@@ -3800,8 +3882,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     ? 'symbol'
                     : typeof A
                 },
-          o = t(172),
-          a = r(o),
+          a = t(172),
+          o = r(a),
           s = t(173),
           i = r(s),
           c = t(401),
@@ -3813,19 +3895,19 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               console.log('html2canvas $npm_package_version')
             var t = e || {},
               r = new i.default('boolean' != typeof t.logging || t.logging),
-              o = A.ownerDocument
-            if (!o)
+              a = A.ownerDocument
+            if (!a)
               return Promise.reject('Provided element is not within a Document')
-            var s = o.defaultView,
+            var s = a.defaultView,
               u = s.pageXOffset,
               Q = s.pageYOffset,
               w = 'HTML' === A.tagName || 'BODY' === A.tagName,
-              g = w ? (0, l.parseDocumentSize)(o) : (0, l.parseBounds)(A, u, Q),
+              g = w ? (0, l.parseDocumentSize)(a) : (0, l.parseBounds)(A, u, Q),
               U = g.width,
               d = g.height,
               C = g.left,
-              F = g.top,
-              f = {
+              f = g.top,
+              F = {
                 async: !0,
                 allowTaint: !1,
                 backgroundColor: '#ffffff',
@@ -3835,10 +3917,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 removeContainer: !0,
                 foreignObjectRendering: !1,
                 scale: s.devicePixelRatio || 1,
-                target: new a.default(t.canvas),
+                target: new o.default(t.canvas),
                 useCORS: !1,
                 x: C,
-                y: F,
+                y: f,
                 width: Math.ceil(U),
                 height: Math.ceil(d),
                 windowWidth: s.innerWidth,
@@ -3846,10 +3928,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 scrollX: s.pageXOffset,
                 scrollY: s.pageYOffset
               },
-              h = (0, c.renderElement)(A, n({}, f, t), r)
+              h = (0, c.renderElement)(A, n({}, F, t), r)
             return h
           }
-        ;(u.CanvasRenderer = a.default), (A.exports = u)
+        ;(u.CanvasRenderer = o.default), (A.exports = u)
       },
       401: function(A, e, t) {
         'use strict'
@@ -3866,16 +3948,16 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 B = void 0
               try {
                 for (
-                  var o, a = A[Symbol.iterator]();
-                  !(r = (o = a.next()).done) &&
-                  (t.push(o.value), !e || t.length !== e);
+                  var a, o = A[Symbol.iterator]();
+                  !(r = (a = o.next()).done) &&
+                  (t.push(a.value), !e || t.length !== e);
                   r = !0
                 );
               } catch (A) {
                 ;(n = !0), (B = A)
               } finally {
                 try {
-                  !r && a.return && a.return()
+                  !r && o.return && o.return()
                 } finally {
                   if (n) throw B
                 }
@@ -3891,9 +3973,9 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             }
           })(),
           B = t(173),
-          o = (r(B), t(402)),
-          a = t(424),
-          s = r(a),
+          a = (r(B), t(402)),
+          o = t(424),
+          s = r(o),
           i = t(180),
           c = r(i),
           l = t(73),
@@ -3905,7 +3987,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           d = r(U)
         e.renderElement = function A(e, t, r) {
           var B = e.ownerDocument,
-            a = new Q.Bounds(
+            o = new Q.Bounds(
               t.scrollX,
               t.scrollY,
               t.windowWidth,
@@ -3955,13 +4037,13 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                       })
                     })
                 })(new w.DocumentCloner(e, t, r, !0, A))
-              : (0, w.cloneWindow)(B, a, e, t, r, A).then(function(A) {
+              : (0, w.cloneWindow)(B, o, e, t, r, A).then(function(A) {
                   var e = n(A, 3),
                     B = e[0],
-                    a = e[1],
+                    o = e[1],
                     i = e[2],
-                    c = (0, o.NodeParser)(a, i, r),
-                    l = a.ownerDocument
+                    c = (0, a.NodeParser)(o, i, r),
+                    l = o.ownerDocument
                   return (
                     C === c.container.style.background.backgroundColor &&
                       (c.container.style.background.backgroundColor =
@@ -3985,13 +4067,13 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                             return new s.default(A, n).render(c)
                           })
                         )
-                      var o = new s.default(t.target, n),
-                        a = o.render(c)
+                      var a = new s.default(t.target, n),
+                        o = a.render(c)
                       return (
                         !0 === t.removeContainer &&
                           B.parentNode &&
                           B.parentNode.removeChild(B),
-                        a
+                        o
                       )
                     })
                   )
@@ -4008,8 +4090,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           (e.NodeParser = void 0)
         var n = t(403),
           B = r(n),
-          o = t(37),
-          a = r(o),
+          a = t(37),
+          o = r(a),
           s = t(72),
           i = r(s),
           c = t(178),
@@ -4017,12 +4099,12 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           u = t(71),
           Q = ((e.NodeParser = function(A, e, t) {
             var r = 0,
-              n = new a.default(A, null, e, r++),
-              o = new B.default(n, null, !0)
-            return w(A, n, o, e, r), o
+              n = new o.default(A, null, e, r++),
+              a = new B.default(n, null, !0)
+            return w(A, n, a, e, r), a
           }),
           ['SCRIPT', 'HEAD', 'TITLE', 'OBJECT', 'BR', 'OPTION']),
-          w = function A(e, t, r, n, o) {
+          w = function A(e, t, r, n, a) {
             for (var s, w = e.firstChild; w; w = s) {
               s = w.nextSibling
               var d = w.ownerDocument.defaultView
@@ -4039,7 +4121,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 (d.parent && w instanceof d.parent.HTMLElement)
               ) {
                 if (-1 === Q.indexOf(w.nodeName)) {
-                  var C = new a.default(w, t, n, o++)
+                  var C = new o.default(w, t, n, a++)
                   if (C.isVisible()) {
                     'INPUT' === w.tagName
                       ? (0, c.inlineInputElement)(w, C)
@@ -4051,16 +4133,16 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                             C.style.listStyle.listStyleType !==
                               u.LIST_STYLE_TYPE.NONE &&
                             (0, l.inlineListItemElement)(w, C, n)
-                    var F = 'TEXTAREA' !== w.tagName,
-                      f = g(C, w)
-                    if (f || U(C)) {
+                    var f = 'TEXTAREA' !== w.tagName,
+                      F = g(C, w)
+                    if (F || U(C)) {
                       var h =
-                          f || C.isPositioned()
+                          F || C.isPositioned()
                             ? r.getRealParentStackingContext()
                             : r,
-                        E = new B.default(C, h, f)
-                      h.contexts.push(E), F && A(w, C, E, n, o)
-                    } else r.children.push(C), F && A(w, C, r, n, o)
+                        E = new B.default(C, h, F)
+                      h.contexts.push(E), f && A(w, C, E, n, a)
+                    } else r.children.push(C), f && A(w, C, r, n, a)
                   }
                 }
               } else if (
@@ -4068,15 +4150,15 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 w instanceof SVGSVGElement ||
                 (d.parent && w instanceof d.parent.SVGSVGElement)
               ) {
-                var H = new a.default(w, t, n, o++),
+                var H = new o.default(w, t, n, a++),
                   p = g(H, w)
                 if (p || U(H)) {
                   var N =
                       p || H.isPositioned()
                         ? r.getRealParentStackingContext()
                         : r,
-                    I = new B.default(H, N, p)
-                  N.contexts.push(I)
+                    m = new B.default(H, N, p)
+                  N.contexts.push(m)
                 } else r.children.push(H)
               }
             }
@@ -4096,7 +4178,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           d = function(A, e) {
             return (
               'BODY' === e.nodeName &&
-              A.parent instanceof a.default &&
+              A.parent instanceof o.default &&
               A.parent.style.background.backgroundColor.isTransparent()
             )
           }
@@ -4123,7 +4205,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             }
           })(),
           B = t(37),
-          o = ((function(A) {
+          a = ((function(A) {
             A && A.__esModule
           })(B),
           t(176),
@@ -4158,7 +4240,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               A
             )
           })())
-        e.default = o
+        e.default = a
       },
       404: function(A, e, t) {
         'use strict'
@@ -4194,21 +4276,21 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             }
           })(),
           B = t(69),
-          o = t(70),
-          a = (function(A) {
+          a = t(70),
+          o = (function(A) {
             return A && A.__esModule ? A : { default: A }
-          })(o),
+          })(a),
           s = function(A, e, t) {
-            return new a.default(A.x + (e.x - A.x) * t, A.y + (e.y - A.y) * t)
+            return new o.default(A.x + (e.x - A.x) * t, A.y + (e.y - A.y) * t)
           },
           i = (function() {
-            function A(e, t, n, o) {
+            function A(e, t, n, a) {
               r(this, A),
                 (this.type = B.PATH.BEZIER_CURVE),
                 (this.start = e),
                 (this.startControl = t),
                 (this.endControl = n),
-                (this.end = o)
+                (this.end = a)
             }
             return (
               n(A, [
@@ -4218,12 +4300,12 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     var r = s(this.start, this.startControl, e),
                       n = s(this.startControl, this.endControl, e),
                       B = s(this.endControl, this.end, e),
-                      o = s(r, n, e),
-                      a = s(n, B, e),
-                      i = s(o, a, e)
+                      a = s(r, n, e),
+                      o = s(n, B, e),
+                      i = s(a, o, e)
                     return t
-                      ? new A(this.start, r, o, i)
-                      : new A(i, a, B, this.end)
+                      ? new A(this.start, r, a, i)
+                      : new A(i, o, B, this.end)
                   }
                 },
                 {
@@ -4255,16 +4337,16 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 B = void 0
               try {
                 for (
-                  var o, a = A[Symbol.iterator]();
-                  !(r = (o = a.next()).done) &&
-                  (t.push(o.value), !e || t.length !== e);
+                  var a, o = A[Symbol.iterator]();
+                  !(r = (a = o.next()).done) &&
+                  (t.push(a.value), !e || t.length !== e);
                   r = !0
                 );
               } catch (A) {
                 ;(n = !0), (B = A)
               } finally {
                 try {
-                  !r && a.return && a.return()
+                  !r && o.return && o.return()
                 } finally {
                   if (n) throw B
                 }
@@ -4283,15 +4365,15 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           B = (function(A) {
             return A && A.__esModule ? A : { default: A }
           })(n),
-          o = ['top-left', 'top-right', 'bottom-right', 'bottom-left']
+          a = ['top-left', 'top-right', 'bottom-right', 'bottom-left']
         e.parseBorderRadius = function(A) {
-          return o.map(function(e) {
+          return a.map(function(e) {
             var t = A.getPropertyValue('border-' + e + '-radius'),
               n = t.split(' ').map(B.default.create),
-              o = r(n, 2),
-              a = o[0],
-              s = o[1]
-            return void 0 === s ? [a, a] : [a, s]
+              a = r(n, 2),
+              o = a[0],
+              s = a[1]
+            return void 0 === s ? [o, o] : [o, s]
           })
         }
       },
@@ -4518,8 +4600,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             var e = '',
               t = !1,
               r = [],
-              o = [],
-              a = 0,
+              a = [],
+              o = 0,
               s = null,
               i = function() {
                 e.length &&
@@ -4530,7 +4612,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               c = function() {
                 r.length &&
                   null !== s &&
-                  o.push({
+                  a.push({
                     color: s,
                     offsetX: r[0] || 0,
                     offsetY: r[1] || 0,
@@ -4546,22 +4628,22 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             var u = A[l]
             switch (u) {
               case '(':
-                ;(e += u), a++
+                ;(e += u), o++
                 break
               case ')':
-                ;(e += u), a--
+                ;(e += u), o--
                 break
               case ',':
-                0 === a ? (i(), c()) : (e += u)
+                0 === o ? (i(), c()) : (e += u)
                 break
               case ' ':
-                0 === a ? i() : (e += u)
+                0 === o ? i() : (e += u)
                 break
               default:
                 0 === e.length && B.test(u) && (t = !0), (e += u)
             }
           }
-          return i(), c(), 0 === o.length ? null : o
+          return i(), c(), 0 === a.length ? null : a
         }
       },
       415: function(A, e, t) {
@@ -4575,8 +4657,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           B = function(A) {
             return parseFloat(A.trim())
           },
-          o = /(matrix|matrix3d)\((.+)\)/,
-          a = ((e.parseTransform = function(A) {
+          a = /(matrix|matrix3d)\((.+)\)/,
+          o = ((e.parseTransform = function(A) {
             var e = s(
               A.transform ||
                 A.webkitTransform ||
@@ -4588,7 +4670,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               ? null
               : {
                   transform: e,
-                  transformOrigin: a(
+                  transformOrigin: o(
                     A.transformOrigin ||
                       A.webkitTransformOrigin ||
                       A.mozTransformOrigin ||
@@ -4607,7 +4689,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           }),
           s = function(A) {
             if ('none' === A || 'string' != typeof A) return null
-            var e = A.match(o)
+            var e = A.match(a)
             if (e) {
               if ('matrix' === e[1]) {
                 var t = e[2].split(',').map(B)
@@ -4716,7 +4798,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               return t && A(e.prototype, t), r && A(e, r), e
             }
           })(),
-          o = (function() {
+          a = (function() {
             function A(A, e) {
               var t = [],
                 r = !0,
@@ -4724,16 +4806,16 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 B = void 0
               try {
                 for (
-                  var o, a = A[Symbol.iterator]();
-                  !(r = (o = a.next()).done) &&
-                  (t.push(o.value), !e || t.length !== e);
+                  var a, o = A[Symbol.iterator]();
+                  !(r = (a = o.next()).done) &&
+                  (t.push(a.value), !e || t.length !== e);
                   r = !0
                 );
               } catch (A) {
                 ;(n = !0), (B = A)
               } finally {
                 try {
-                  !r && a.return && a.return()
+                  !r && o.return && o.return()
                 } finally {
                   if (n) throw B
                 }
@@ -4748,7 +4830,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               )
             }
           })(),
-          a = t(421),
+          o = t(421),
           s = t(422),
           i = (function(A) {
             return A && A.__esModule ? A : { default: A }
@@ -4803,12 +4885,12 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           (e.BREAK_MANDATORY = '!')),
           Q = (e.BREAK_NOT_ALLOWED = '×'),
           w = (e.BREAK_ALLOWED = '÷'),
-          g = (e.UnicodeTrie = (0, a.createTrieFromBase64)(i.default)),
+          g = (e.UnicodeTrie = (0, o.createTrieFromBase64)(i.default)),
           U = [30, 36],
           d = [1, 2, 3, 5],
           C = [10, 8],
-          F = [27, 26],
-          f = d.concat(C),
+          f = [27, 26],
+          F = d.concat(C),
           h = [38, 39, 40, 34, 35],
           E = [15, 13],
           H = (e.codePointsToCharacterClasses = function(A) {
@@ -4821,34 +4903,34 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               n = []
             return (
               A.forEach(function(A, B) {
-                var o = g.get(A)
+                var a = g.get(A)
                 if (
-                  (o > l ? (n.push(!0), (o -= l)) : n.push(!1),
+                  (a > l ? (n.push(!0), (a -= l)) : n.push(!1),
                   -1 !== ['normal', 'auto', 'loose'].indexOf(e) &&
                     -1 !== [8208, 8211, 12316, 12448].indexOf(A))
                 )
                   return r.push(B), t.push(16)
-                if (4 === o || 11 === o) {
+                if (4 === a || 11 === a) {
                   if (0 === B) return r.push(B), t.push(30)
-                  var a = t[B - 1]
-                  return -1 === f.indexOf(a)
-                    ? (r.push(r[B - 1]), t.push(a))
+                  var o = t[B - 1]
+                  return -1 === F.indexOf(o)
+                    ? (r.push(r[B - 1]), t.push(o))
                     : (r.push(B), t.push(30))
                 }
                 return (
                   r.push(B),
-                  31 === o
+                  31 === a
                     ? t.push('strict' === e ? 21 : 37)
-                    : 42 === o
+                    : 42 === a
                       ? t.push(30)
-                      : 29 === o
+                      : 29 === a
                         ? t.push(30)
-                        : 43 === o
+                        : 43 === a
                           ? (A >= 131072 && A <= 196605) ||
                             (A >= 196608 && A <= 262141)
                             ? t.push(37)
                             : t.push(30)
-                          : void t.push(o)
+                          : void t.push(a)
                 )
               }),
               [r, t, n]
@@ -4859,14 +4941,14 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             if (Array.isArray(A) ? -1 !== A.indexOf(n) : A === n)
               for (var B = t; B <= r.length; ) {
                 B++
-                var o = r[B]
-                if (o === e) return !0
-                if (10 !== o) break
+                var a = r[B]
+                if (a === e) return !0
+                if (10 !== a) break
               }
             if (10 === n)
-              for (var a = t; a > 0; ) {
-                a--
-                var s = r[a]
+              for (var o = t; o > 0; ) {
+                o--
+                var s = r[o]
                 if (Array.isArray(A) ? -1 !== A.indexOf(s) : A === s)
                   for (var i = t; i <= r.length; ) {
                     i++
@@ -4886,15 +4968,15 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             }
             return 0
           },
-          I = function(A, e, t, r, n) {
+          m = function(A, e, t, r, n) {
             if (0 === t[r]) return Q
             var B = r - 1
             if (Array.isArray(n) && !0 === n[B]) return Q
-            var o = B - 1,
-              a = B + 1,
+            var a = B - 1,
+              o = B + 1,
               s = e[B],
-              i = o >= 0 ? e[o] : 0,
-              c = e[a]
+              i = a >= 0 ? e[a] : 0,
+              c = e[o]
             if (2 === s && 3 === c) return Q
             if (-1 !== d.indexOf(s)) return u
             if (-1 !== d.indexOf(c)) return Q
@@ -4929,30 +5011,30 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             )
               return Q
             if (
-              (-1 !== U.indexOf(s) && -1 !== F.indexOf(c)) ||
-              (-1 !== F.indexOf(s) && -1 !== U.indexOf(c))
+              (-1 !== U.indexOf(s) && -1 !== f.indexOf(c)) ||
+              (-1 !== f.indexOf(s) && -1 !== U.indexOf(c))
             )
               return Q
             if (
               (-1 !== [27, 26].indexOf(s) &&
                 (25 === c ||
-                  (-1 !== [22, 15].indexOf(c) && 25 === e[a + 1]))) ||
+                  (-1 !== [22, 15].indexOf(c) && 25 === e[o + 1]))) ||
               (-1 !== [22, 15].indexOf(s) && 25 === c) ||
               (25 === s && -1 !== [25, 28, 24].indexOf(c))
             )
               return Q
             if (-1 !== [25, 28, 24, 17, 18].indexOf(c))
               for (var l = B; l >= 0; ) {
-                var f = e[l]
-                if (25 === f) return Q
-                if (-1 === [28, 24].indexOf(f)) break
+                var F = e[l]
+                if (25 === F) return Q
+                if (-1 === [28, 24].indexOf(F)) break
                 l--
               }
             if (-1 !== [27, 26].indexOf(c))
-              for (var H = -1 !== [17, 18].indexOf(s) ? o : B; H >= 0; ) {
-                var I = e[H]
-                if (25 === I) return Q
-                if (-1 === [28, 24].indexOf(I)) break
+              for (var H = -1 !== [17, 18].indexOf(s) ? a : B; H >= 0; ) {
+                var m = e[H]
+                if (25 === m) return Q
+                if (-1 === [28, 24].indexOf(m)) break
                 H--
               }
             if (
@@ -4974,27 +5056,27 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             )
               return Q
             if (41 === s && 41 === c) {
-              for (var T = t[B], K = 1; T > 0 && (T--, 41 === e[T]); ) K++
-              if (K % 2 != 0) return Q
+              for (var I = t[B], T = 1; I > 0 && (I--, 41 === e[I]); ) T++
+              if (T % 2 != 0) return Q
             }
             return 32 === s && 33 === c ? Q : w
           },
-          T = ((e.lineBreakAtIndex = function(A, e) {
+          I = ((e.lineBreakAtIndex = function(A, e) {
             if (0 === e) return Q
             if (e >= A.length) return u
             var t = H(A),
-              r = o(t, 2),
+              r = a(t, 2),
               n = r[0],
               B = r[1]
-            return I(A, B, n, e)
+            return m(A, B, n, e)
           }),
           function(A, e) {
             e || (e = { lineBreak: 'normal', wordBreak: 'normal' })
             var t = H(A, e.lineBreak),
-              r = o(t, 3),
+              r = a(t, 3),
               n = r[0],
               B = r[1],
-              a = r[2]
+              o = r[2]
             return (
               ('break-all' !== e.wordBreak && 'break-word' !== e.wordBreak) ||
                 (B = B.map(function(A) {
@@ -5004,26 +5086,26 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 n,
                 B,
                 'keep-all' === e.wordBreak
-                  ? a.map(function(e, t) {
+                  ? o.map(function(e, t) {
                       return e && A[t] >= 19968 && A[t] <= 40959
                     })
                   : null
               ]
             )
           }),
-          K = ((e.inlineBreakOpportunities = function(A, e) {
+          T = ((e.inlineBreakOpportunities = function(A, e) {
             var t = (0, c.toCodePoints)(A),
               r = Q,
-              n = T(t, e),
-              B = o(n, 3),
-              a = B[0],
+              n = I(t, e),
+              B = a(n, 3),
+              o = B[0],
               s = B[1],
               i = B[2]
             return (
               t.forEach(function(A, e) {
                 r +=
                   (0, c.fromCodePoint)(A) +
-                  (e >= t.length - 1 ? u : I(t, s, a, e + 1, i))
+                  (e >= t.length - 1 ? u : m(t, s, o, e + 1, i))
               }),
               r
             )
@@ -5053,10 +5135,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           })())
         e.LineBreaker = function(A, e) {
           var t = (0, c.toCodePoints)(A),
-            r = T(t, e),
-            n = o(r, 3),
+            r = I(t, e),
+            n = a(r, 3),
             B = n[0],
-            a = n[1],
+            o = n[1],
             s = n[2],
             i = t.length,
             l = 0,
@@ -5064,9 +5146,9 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           return {
             next: function() {
               if (u >= i) return { done: !0 }
-              for (var A = Q; u < i && (A = I(t, a, B, ++u, s)) === Q; );
+              for (var A = Q; u < i && (A = m(t, o, B, ++u, s)) === Q; );
               if (A !== Q || u === i) {
-                var e = new K(t, A, l, u)
+                var e = new T(t, A, l, u)
                 return (l = u), { value: e, done: !1 }
               }
               return { done: !0 }
@@ -5097,21 +5179,21 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             }
           })(),
           B = t(109),
-          o = (e.UTRIE2_SHIFT_2 = 5),
-          a = (e.UTRIE2_SHIFT_1 = 11),
+          a = (e.UTRIE2_SHIFT_2 = 5),
+          o = (e.UTRIE2_SHIFT_1 = 11),
           s = (e.UTRIE2_INDEX_SHIFT = 2),
-          i = (e.UTRIE2_SHIFT_1_2 = a - o),
-          c = (e.UTRIE2_LSCP_INDEX_2_OFFSET = 65536 >> o),
-          l = (e.UTRIE2_DATA_BLOCK_LENGTH = 1 << o),
+          i = (e.UTRIE2_SHIFT_1_2 = o - a),
+          c = (e.UTRIE2_LSCP_INDEX_2_OFFSET = 65536 >> a),
+          l = (e.UTRIE2_DATA_BLOCK_LENGTH = 1 << a),
           u = (e.UTRIE2_DATA_MASK = l - 1),
-          Q = (e.UTRIE2_LSCP_INDEX_2_LENGTH = 1024 >> o),
+          Q = (e.UTRIE2_LSCP_INDEX_2_LENGTH = 1024 >> a),
           w = (e.UTRIE2_INDEX_2_BMP_LENGTH = c + Q),
           g = (e.UTRIE2_UTF8_2B_INDEX_2_OFFSET = w),
           U = (e.UTRIE2_UTF8_2B_INDEX_2_LENGTH = 32),
           d = (e.UTRIE2_INDEX_1_OFFSET = g + U),
-          C = (e.UTRIE2_OMITTED_BMP_INDEX_1_LENGTH = 65536 >> a),
-          F = (e.UTRIE2_INDEX_2_BLOCK_LENGTH = 1 << i),
-          f = (e.UTRIE2_INDEX_2_MASK = F - 1),
+          C = (e.UTRIE2_OMITTED_BMP_INDEX_1_LENGTH = 65536 >> o),
+          f = (e.UTRIE2_INDEX_2_BLOCK_LENGTH = 1 << i),
+          F = (e.UTRIE2_INDEX_2_MASK = f - 1),
           h = ((e.createTrieFromBase64 = function(A) {
             var e = (0, B.decode)(A),
               t = Array.isArray(e)
@@ -5121,21 +5203,21 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 ? (0, B.polyUint16Array)(e)
                 : new Uint16Array(e),
               n = r.slice(12, t[4] / 2),
-              o =
+              a =
                 2 === t[5]
                   ? r.slice((24 + t[4]) / 2)
                   : t.slice(Math.ceil((24 + t[4]) / 4))
-            return new h(t[0], t[1], t[2], t[3], n, o)
+            return new h(t[0], t[1], t[2], t[3], n, a)
           }),
           (e.Trie = (function() {
-            function A(e, t, n, B, o, a) {
+            function A(e, t, n, B, a, o) {
               r(this, A),
                 (this.initialValue = e),
                 (this.errorValue = t),
                 (this.highStart = n),
                 (this.highValueIndex = B),
-                (this.index = o),
-                (this.data = a)
+                (this.index = a),
+                (this.data = o)
             }
             return (
               n(A, [
@@ -5146,21 +5228,21 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     if (A >= 0) {
                       if (A < 55296 || (A > 56319 && A <= 65535))
                         return (
-                          (e = this.index[A >> o]),
+                          (e = this.index[A >> a]),
                           (e = (e << s) + (A & u)),
                           this.data[e]
                         )
                       if (A <= 65535)
                         return (
-                          (e = this.index[c + ((A - 55296) >> o)]),
+                          (e = this.index[c + ((A - 55296) >> a)]),
                           (e = (e << s) + (A & u)),
                           this.data[e]
                         )
                       if (A < this.highStart)
                         return (
-                          (e = d - C + (A >> a)),
+                          (e = d - C + (A >> o)),
                           (e = this.index[e]),
-                          (e += (A >> o) & f),
+                          (e += (A >> a) & F),
                           (e = this.index[e]),
                           (e = (e << s) + (A & u)),
                           this.data[e]
@@ -5212,16 +5294,16 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 B = void 0
               try {
                 for (
-                  var o, a = A[Symbol.iterator]();
-                  !(r = (o = a.next()).done) &&
-                  (t.push(o.value), !e || t.length !== e);
+                  var a, o = A[Symbol.iterator]();
+                  !(r = (a = o.next()).done) &&
+                  (t.push(a.value), !e || t.length !== e);
                   r = !0
                 );
               } catch (A) {
                 ;(n = !0), (B = A)
               } finally {
                 try {
-                  !r && a.return && a.return()
+                  !r && o.return && o.return()
                 } finally {
                   if (n) throw B
                 }
@@ -5250,8 +5332,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               return t && A(e.prototype, t), r && A(e, r), e
             }
           })(),
-          o = t(22),
-          a = (t(182), t(425)),
+          a = t(22),
+          o = (t(182), t(425)),
           s = t(72),
           i = (function(A) {
             return A && A.__esModule ? A : { default: A }
@@ -5295,7 +5377,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                         ) {
                           var t = e.options.imageStore.get(A.image)
                           if (t) {
-                            var r = (0, o.calculateContentBox)(
+                            var r = (0, a.calculateContentBox)(
                                 A.bounds,
                                 A.style.padding,
                                 A.style.border
@@ -5312,12 +5394,12 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                               B > 0 &&
                               e.target.clip(
                                 [
-                                  (0, o.calculatePaddingBoxPath)(A.curvedBounds)
+                                  (0, a.calculatePaddingBoxPath)(A.curvedBounds)
                                 ],
                                 function() {
                                   e.target.drawImage(
                                     t,
-                                    new o.Bounds(0, 0, n, B),
+                                    new a.Bounds(0, 0, n, B),
                                     r
                                   )
                                 }
@@ -5397,16 +5479,16 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                           n,
                           r
                         ),
-                        o = (0, c.calculateBackgroundRepeatPath)(
+                        a = (0, c.calculateBackgroundRepeatPath)(
                           e,
                           B,
                           n,
                           r,
                           A.bounds
                         ),
-                        a = Math.round(r.left + B.x),
+                        o = Math.round(r.left + B.x),
                         s = Math.round(r.top + B.y)
-                      this.target.renderRepeat(o, t, n, a, s)
+                      this.target.renderRepeat(a, t, n, o, s)
                     }
                   }
                 },
@@ -5421,19 +5503,19 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                       ),
                       r = (0, c.calculateGradientBackgroundSize)(e, t),
                       n = (0, c.calculateBackgroundPosition)(e.position, r, t),
-                      B = new o.Bounds(
+                      B = new a.Bounds(
                         Math.round(t.left + n.x),
                         Math.round(t.top + n.y),
                         r.width,
                         r.height
                       ),
-                      s = (0, a.parseGradient)(A, e.source, B)
+                      s = (0, o.parseGradient)(A, e.source, B)
                     if (s)
                       switch (s.type) {
-                        case a.GRADIENT_TYPE.LINEAR_GRADIENT:
+                        case o.GRADIENT_TYPE.LINEAR_GRADIENT:
                           this.target.renderLinearGradient(B, s)
                           break
-                        case a.GRADIENT_TYPE.RADIAL_GRADIENT:
+                        case o.GRADIENT_TYPE.RADIAL_GRADIENT:
                           this.target.renderRadialGradient(B, s)
                       }
                   }
@@ -5442,7 +5524,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   key: 'renderBorder',
                   value: function(A, e, t) {
                     this.target.drawShape(
-                      (0, o.parsePathForBorder)(t, e),
+                      (0, a.parsePathForBorder)(t, e),
                       A.borderColor
                     )
                   }
@@ -5478,8 +5560,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                       t = n(e, 5),
                       r = t[0],
                       B = t[1],
-                      o = t[2],
-                      a = t[3],
+                      a = t[2],
+                      o = t[3],
                       s = t[4],
                       i = Q(A),
                       c = n(i, 2),
@@ -5489,11 +5571,11 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                       r.sort(g).forEach(this.renderStack, this),
                       this.renderNodeContent(A.container),
                       u.forEach(this.renderNode, this),
-                      a.forEach(this.renderStack, this),
+                      o.forEach(this.renderStack, this),
                       s.forEach(this.renderStack, this),
                       l.forEach(this.renderNode, this),
                       B.forEach(this.renderStack, this),
-                      o.sort(g).forEach(this.renderStack, this)
+                      a.sort(g).forEach(this.renderStack, this)
                   }
                 },
                 {
@@ -5531,12 +5613,12 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 r = [],
                 n = [],
                 B = [],
-                o = A.contexts.length,
-                a = 0;
-              a < o;
-              a++
+                a = A.contexts.length,
+                o = 0;
+              o < a;
+              o++
             ) {
-              var s = A.contexts[a]
+              var s = A.contexts[o]
               s.container.isPositioned() ||
               s.container.style.opacity < 1 ||
               s.container.isTransformed()
@@ -5575,16 +5657,16 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 B = void 0
               try {
                 for (
-                  var o, a = A[Symbol.iterator]();
-                  !(r = (o = a.next()).done) &&
-                  (t.push(o.value), !e || t.length !== e);
+                  var a, o = A[Symbol.iterator]();
+                  !(r = (a = o.next()).done) &&
+                  (t.push(a.value), !e || t.length !== e);
                   r = !0
                 );
               } catch (A) {
                 ;(n = !0), (B = A)
               } finally {
                 try {
-                  !r && a.return && a.return()
+                  !r && o.return && o.return()
                 } finally {
                   if (n) throw B
                 }
@@ -5599,8 +5681,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               )
             }
           })(),
-          o = t(37),
-          a = (r(o), t(426)),
+          a = t(37),
+          o = (r(a), t(426)),
           s = t(21),
           i = r(s),
           c = t(27),
@@ -5612,8 +5694,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           U = /^(from|to|color-stop)\((?:([\d.]+)(%)?,\s*)?(.+?)\)$/i,
           d = /^\s*(circle|ellipse)?\s*((?:([\d.]+)(px|r?em|%)\s*(?:([\d.]+)(px|r?em|%))?)|closest-side|closest-corner|farthest-side|farthest-corner)?\s*(?:at\s*(?:(left|center|right)|([\d.]+)(px|r?em|%))\s+(?:(top|center|bottom)|([\d.]+)(px|r?em|%)))?(?:\s|$)/i,
           C = (e.GRADIENT_TYPE = { LINEAR_GRADIENT: 0, RADIAL_GRADIENT: 1 }),
-          F = (e.RADIAL_GRADIENT_SHAPE = { CIRCLE: 0, ELLIPSE: 1 }),
-          f = {
+          f = (e.RADIAL_GRADIENT_SHAPE = { CIRCLE: 0, ELLIPSE: 1 }),
+          F = {
             left: new l.default('0%'),
             top: new l.default('0%'),
             center: new l.default('50%'),
@@ -5651,11 +5733,11 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           function(A, e, t) {
             for (var r = [], n = e; n < A.length; n++) {
               var B = A[n],
-                o = g.test(B),
-                a = B.lastIndexOf(' '),
-                s = new i.default(o ? B.substring(0, a) : B),
-                c = o
-                  ? new l.default(B.substring(a + 1))
+                a = g.test(B),
+                o = B.lastIndexOf(' '),
+                s = new i.default(a ? B.substring(0, o) : B),
+                c = a
+                  ? new l.default(B.substring(o + 1))
                   : n === e
                     ? new l.default('0%')
                     : n === A.length - 1 ? new l.default('100%') : null
@@ -5680,43 +5762,43 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 if (null === U) {
                   for (var d = w; null === u[d].stop; ) d++
                   for (
-                    var C = d - w + 1, F = u[d].stop, f = (F - Q) / C;
+                    var C = d - w + 1, f = u[d].stop, F = (f - Q) / C;
                     w < d;
                     w++
                   )
-                    Q = u[w].stop = Q + f
+                    Q = u[w].stop = Q + F
                 } else Q = U
               }
             return u
           }),
           p = function(A, e, t) {
-            var r = (0, a.parseAngle)(A[0]),
+            var r = (0, o.parseAngle)(A[0]),
               n = Q.test(A[0]),
               B = n || null !== r || w.test(A[0]),
-              o = B
+              a = B
                 ? null !== r
-                  ? I(t ? r - 0.5 * Math.PI : r, e)
-                  : n ? K(A[0], e) : m(A[0], e)
-                : I(Math.PI, e),
+                  ? m(t ? r - 0.5 * Math.PI : r, e)
+                  : n ? T(A[0], e) : K(A[0], e)
+                : m(Math.PI, e),
               s = B ? 1 : 0,
               i = Math.min(
                 (0, u.distance)(
-                  Math.abs(o.x0) + Math.abs(o.x1),
-                  Math.abs(o.y0) + Math.abs(o.y1)
+                  Math.abs(a.x0) + Math.abs(a.x1),
+                  Math.abs(a.y0) + Math.abs(a.y1)
                 ),
                 2 * e.width,
                 2 * e.height
               )
-            return new h(H(A, s, i), o)
+            return new h(H(A, s, i), a)
           },
           N = function(A, e, t) {
             var r = e[0].match(d),
               n =
                 r && ('circle' === r[1] || (void 0 !== r[3] && void 0 === r[5]))
-                  ? F.CIRCLE
-                  : F.ELLIPSE,
+                  ? f.CIRCLE
+                  : f.ELLIPSE,
               B = {},
-              o = {}
+              a = {}
             r &&
               (void 0 !== r[3] &&
                 (B.x = (0, c.calculateLengthFromValueWithUnit)(
@@ -5731,89 +5813,89 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   r[6]
                 ).getAbsoluteValue(t.height)),
               r[7]
-                ? (o.x = f[r[7].toLowerCase()])
+                ? (a.x = F[r[7].toLowerCase()])
                 : void 0 !== r[8] &&
-                  (o.x = (0, c.calculateLengthFromValueWithUnit)(
+                  (a.x = (0, c.calculateLengthFromValueWithUnit)(
                     A,
                     r[8],
                     r[9]
                   )),
               r[10]
-                ? (o.y = f[r[10].toLowerCase()])
+                ? (a.y = F[r[10].toLowerCase()])
                 : void 0 !== r[11] &&
-                  (o.y = (0, c.calculateLengthFromValueWithUnit)(
+                  (a.y = (0, c.calculateLengthFromValueWithUnit)(
                     A,
                     r[11],
                     r[12]
                   )))
-            var a = {
-                x: void 0 === o.x ? t.width / 2 : o.x.getAbsoluteValue(t.width),
+            var o = {
+                x: void 0 === a.x ? t.width / 2 : a.x.getAbsoluteValue(t.width),
                 y:
-                  void 0 === o.y ? t.height / 2 : o.y.getAbsoluteValue(t.height)
+                  void 0 === a.y ? t.height / 2 : a.y.getAbsoluteValue(t.height)
               },
-              s = y((r && r[2]) || 'farthest-corner', n, a, B, t)
-            return new E(H(e, r ? 1 : 0, Math.min(s.x, s.y)), n, a, s)
+              s = y((r && r[2]) || 'farthest-corner', n, o, B, t)
+            return new E(H(e, r ? 1 : 0, Math.min(s.x, s.y)), n, o, s)
           },
-          I = function(A, e) {
+          m = function(A, e) {
             var t = e.width,
               r = e.height,
               n = 0.5 * t,
               B = 0.5 * r,
-              o = Math.abs(t * Math.sin(A)) + Math.abs(r * Math.cos(A)),
-              a = o / 2,
-              s = n + Math.sin(A) * a,
-              i = B - Math.cos(A) * a
+              a = Math.abs(t * Math.sin(A)) + Math.abs(r * Math.cos(A)),
+              o = a / 2,
+              s = n + Math.sin(A) * o,
+              i = B - Math.cos(A) * o
             return { x0: s, x1: t - s, y0: i, y1: r - i }
           },
-          T = function(A) {
+          I = function(A) {
             return Math.acos(
               A.width / 2 / ((0, u.distance)(A.width, A.height) / 2)
             )
           },
-          K = function(A, e) {
+          T = function(A, e) {
             switch (A) {
               case 'bottom':
               case 'to top':
-                return I(0, e)
+                return m(0, e)
               case 'left':
               case 'to right':
-                return I(Math.PI / 2, e)
+                return m(Math.PI / 2, e)
               case 'right':
               case 'to left':
-                return I(3 * Math.PI / 2, e)
+                return m(3 * Math.PI / 2, e)
               case 'top right':
               case 'right top':
               case 'to bottom left':
               case 'to left bottom':
-                return I(Math.PI + T(e), e)
+                return m(Math.PI + I(e), e)
               case 'top left':
               case 'left top':
               case 'to bottom right':
               case 'to right bottom':
-                return I(Math.PI - T(e), e)
+                return m(Math.PI - I(e), e)
               case 'bottom left':
               case 'left bottom':
               case 'to top right':
               case 'to right top':
-                return I(T(e), e)
+                return m(I(e), e)
               case 'bottom right':
               case 'right bottom':
               case 'to top left':
               case 'to left top':
-                return I(2 * Math.PI - T(e), e)
+                return m(2 * Math.PI - I(e), e)
               case 'top':
               case 'to bottom':
               default:
-                return I(Math.PI, e)
+                return m(Math.PI, e)
             }
           },
-          m = function(A, e) {
+          K = function(A, e) {
             var t = A.split(' ').map(parseFloat),
               r = B(t, 2),
               n = r[0],
-              o = r[1],
-              a = n / 100 * e.width / (o / 100 * e.height)
-            return I(Math.atan(isNaN(a) ? 1 : a) + Math.PI / 2, e)
+              a = r[1],
+              o = n / 100 * e.width / (a / 100 * e.height)
+            return m(Math.atan(isNaN(o) ? 1 : o) + Math.PI / 2, e)
           },
           v = function(A, e, t, r) {
             return [
@@ -5833,70 +5915,70 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           },
           y = function(A, e, t, r, n) {
             var B = t.x,
-              o = t.y,
-              a = 0,
+              a = t.y,
+              o = 0,
               s = 0
             switch (A) {
               case 'closest-side':
-                e === F.CIRCLE
-                  ? (a = s = Math.min(
+                e === f.CIRCLE
+                  ? (o = s = Math.min(
                       Math.abs(B),
                       Math.abs(B - n.width),
-                      Math.abs(o),
-                      Math.abs(o - n.height)
+                      Math.abs(a),
+                      Math.abs(a - n.height)
                     ))
-                  : e === F.ELLIPSE &&
-                    ((a = Math.min(Math.abs(B), Math.abs(B - n.width))),
-                    (s = Math.min(Math.abs(o), Math.abs(o - n.height))))
+                  : e === f.ELLIPSE &&
+                    ((o = Math.min(Math.abs(B), Math.abs(B - n.width))),
+                    (s = Math.min(Math.abs(a), Math.abs(a - n.height))))
                 break
               case 'closest-corner':
-                if (e === F.CIRCLE)
-                  a = s = Math.min(
-                    (0, u.distance)(B, o),
-                    (0, u.distance)(B, o - n.height),
-                    (0, u.distance)(B - n.width, o),
-                    (0, u.distance)(B - n.width, o - n.height)
+                if (e === f.CIRCLE)
+                  o = s = Math.min(
+                    (0, u.distance)(B, a),
+                    (0, u.distance)(B, a - n.height),
+                    (0, u.distance)(B - n.width, a),
+                    (0, u.distance)(B - n.width, a - n.height)
                   )
-                else if (e === F.ELLIPSE) {
+                else if (e === f.ELLIPSE) {
                   var i =
-                      Math.min(Math.abs(o), Math.abs(o - n.height)) /
+                      Math.min(Math.abs(a), Math.abs(a - n.height)) /
                       Math.min(Math.abs(B), Math.abs(B - n.width)),
-                    c = v(n, B, o, !0)
-                  ;(a = (0, u.distance)(c.x - B, (c.y - o) / i)), (s = i * a)
+                    c = v(n, B, a, !0)
+                  ;(o = (0, u.distance)(c.x - B, (c.y - a) / i)), (s = i * o)
                 }
                 break
               case 'farthest-side':
-                e === F.CIRCLE
-                  ? (a = s = Math.max(
+                e === f.CIRCLE
+                  ? (o = s = Math.max(
                       Math.abs(B),
                       Math.abs(B - n.width),
-                      Math.abs(o),
-                      Math.abs(o - n.height)
+                      Math.abs(a),
+                      Math.abs(a - n.height)
                     ))
-                  : e === F.ELLIPSE &&
-                    ((a = Math.max(Math.abs(B), Math.abs(B - n.width))),
-                    (s = Math.max(Math.abs(o), Math.abs(o - n.height))))
+                  : e === f.ELLIPSE &&
+                    ((o = Math.max(Math.abs(B), Math.abs(B - n.width))),
+                    (s = Math.max(Math.abs(a), Math.abs(a - n.height))))
                 break
               case 'farthest-corner':
-                if (e === F.CIRCLE)
-                  a = s = Math.max(
-                    (0, u.distance)(B, o),
-                    (0, u.distance)(B, o - n.height),
-                    (0, u.distance)(B - n.width, o),
-                    (0, u.distance)(B - n.width, o - n.height)
+                if (e === f.CIRCLE)
+                  o = s = Math.max(
+                    (0, u.distance)(B, a),
+                    (0, u.distance)(B, a - n.height),
+                    (0, u.distance)(B - n.width, a),
+                    (0, u.distance)(B - n.width, a - n.height)
                   )
-                else if (e === F.ELLIPSE) {
+                else if (e === f.ELLIPSE) {
                   var l =
-                      Math.max(Math.abs(o), Math.abs(o - n.height)) /
+                      Math.max(Math.abs(a), Math.abs(a - n.height)) /
                       Math.max(Math.abs(B), Math.abs(B - n.width)),
-                    Q = v(n, B, o, !1)
-                  ;(a = (0, u.distance)(Q.x - B, (Q.y - o) / l)), (s = l * a)
+                    Q = v(n, B, a, !1)
+                  ;(o = (0, u.distance)(Q.x - B, (Q.y - a) / l)), (s = l * o)
                 }
                 break
               default:
-                ;(a = r.x || 0), (s = void 0 !== r.y ? r.y : a)
+                ;(o = r.x || 0), (s = void 0 !== r.y ? r.y : o)
             }
-            return { x: a, y: s }
+            return { x: o, y: s }
           },
           b = (e.transformWebkitRadialGradientArgs = function(A) {
             var e = '',
@@ -5904,12 +5986,12 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               r = '',
               n = '',
               B = 0,
-              o = /^(left|center|right|\d+(?:px|r?em|%)?)(?:\s+(top|center|bottom|\d+(?:px|r?em|%)?))?$/i,
-              a = /^(circle|ellipse)?\s*(closest-side|closest-corner|farthest-side|farthest-corner|contain|cover)?$/i,
+              a = /^(left|center|right|\d+(?:px|r?em|%)?)(?:\s+(top|center|bottom|\d+(?:px|r?em|%)?))?$/i,
+              o = /^(circle|ellipse)?\s*(closest-side|closest-corner|farthest-side|farthest-corner|contain|cover)?$/i,
               s = /^\d+(px|r?em|%)?(?:\s+\d+(px|r?em|%)?)?$/i,
-              i = A[B].match(o)
+              i = A[B].match(a)
             i && B++
-            var c = A[B].match(a)
+            var c = A[B].match(o)
             c &&
               ((e = c[1] || ''),
               (r = c[2] || ''),
@@ -5919,7 +6001,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               B++)
             var l = A[B].match(s)
             l && B++
-            var u = A[B].match(o)
+            var u = A[B].match(a)
             u && B++
             var Q = A[B].match(s)
             Q && B++
@@ -6001,16 +6083,16 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 B = void 0
               try {
                 for (
-                  var o, a = A[Symbol.iterator]();
-                  !(r = (o = a.next()).done) &&
-                  (t.push(o.value), !e || t.length !== e);
+                  var a, o = A[Symbol.iterator]();
+                  !(r = (a = o.next()).done) &&
+                  (t.push(a.value), !e || t.length !== e);
                   r = !0
                 );
               } catch (A) {
                 ;(n = !0), (B = A)
               } finally {
                 try {
-                  !r && a.return && a.return()
+                  !r && o.return && o.return()
                 } finally {
                   if (n) throw B
                 }
@@ -6025,7 +6107,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               )
             }
           })(),
-          o = (function() {
+          a = (function() {
             function A(A, e) {
               for (var t = 0; t < e.length; t++) {
                 var r = e[t]
@@ -6039,7 +6121,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               return t && A(e.prototype, t), r && A(e, r), e
             }
           })(),
-          a = t(22),
+          o = t(22),
           s = t(183),
           i = t(428),
           c = r(i),
@@ -6049,7 +6131,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           w = r(Q),
           g = t(429),
           U = (e.DocumentCloner = (function() {
-            function A(e, t, r, B, o) {
+            function A(e, t, r, B, a) {
               n(this, A),
                 (this.referenceElement = e),
                 (this.scrolledElements = []),
@@ -6057,7 +6139,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 (this.inlineImages = B),
                 (this.logger = r),
                 (this.options = t),
-                (this.renderer = o),
+                (this.renderer = a),
                 (this.resourceLoader = new c.default(t, r, window)),
                 (this.pseudoContentData = { counters: {}, quoteDepth: 0 }),
                 (this.documentElement = this.cloneNode(
@@ -6065,7 +6147,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 ))
             }
             return (
-              o(A, [
+              a(A, [
                 {
                   key: 'inlineAllImages',
                   value: function(A) {
@@ -6193,10 +6275,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     }
                     if (A instanceof HTMLIFrameElement) {
                       var r = A.cloneNode(!1),
-                        n = m()
+                        n = K()
                       r.setAttribute('data-html2canvas-internal-iframe-key', n)
-                      var B = (0, a.parseBounds)(A, 0, 0),
-                        o = B.width,
+                      var B = (0, o.parseBounds)(A, 0, 0),
+                        a = B.width,
                         s = B.height
                       return (
                         (this.resourceLoader.cache[n] = y(A, this.options)
@@ -6217,7 +6299,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                                   e.options.foreignObjectRendering,
                                 useCORS: e.options.useCORS,
                                 target: new w.default(),
-                                width: o,
+                                width: a,
                                 height: s,
                                 x: 0,
                                 y: 0,
@@ -6294,13 +6376,13 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     this.referenceElement === A &&
                       e instanceof t.HTMLElement &&
                       (this.clonedReferenceElement = e),
-                      e instanceof t.HTMLBodyElement && I(e)
+                      e instanceof t.HTMLBodyElement && m(e)
                     for (
-                      var o = (0, g.parseCounterReset)(
+                      var a = (0, g.parseCounterReset)(
                           r,
                           this.pseudoContentData
                         ),
-                        a = (0, g.resolvePseudoContent)(
+                        o = (0, g.resolvePseudoContent)(
                           A,
                           n,
                           this.pseudoContentData
@@ -6320,10 +6402,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                       this.pseudoContentData
                     )
                     if (
-                      ((0, g.popCounters)(o, this.pseudoContentData),
+                      ((0, g.popCounters)(a, this.pseudoContentData),
                       A instanceof t.HTMLElement && e instanceof t.HTMLElement)
                     )
-                      switch ((n && this.inlineAllImages(h(A, e, n, a, E)),
+                      switch ((n && this.inlineAllImages(h(A, e, n, o, E)),
                       B && this.inlineAllImages(h(A, e, B, i, H)),
                       !r ||
                         !this.copyStyles ||
@@ -6338,7 +6420,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                         ]),
                       A.nodeName)) {
                         case 'CANVAS':
-                          this.copyStyles || f(A, e)
+                          this.copyStyles || F(A, e)
                           break
                         case 'TEXTAREA':
                         case 'SELECT':
@@ -6373,8 +6455,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   ) {
                     var B = e.createElement('a')
                     ;(B.href = t[n].args[0]), e.body && e.body.appendChild(B)
-                    var o = { src: B.href, format: t[n + 1].args[0] }
-                    r.push(o)
+                    var a = { src: B.href, format: t[n + 1].args[0] }
+                    r.push(a)
                   }
                 return {
                   formats: r.filter(function(A) {
@@ -6399,13 +6481,13 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               n.sheet ? d(n.sheet, t) : []
             )
           },
-          F = function(A, e, t) {
+          f = function(A, e, t) {
             !A.defaultView ||
               (e === A.defaultView.pageXOffset &&
                 t === A.defaultView.pageYOffset) ||
               A.defaultView.scrollTo(e, t)
           },
-          f = function(A, e) {
+          F = function(A, e) {
             try {
               if (e) {
                 ;(e.width = A.width), (e.height = A.height)
@@ -6431,8 +6513,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             ) {
               var B = e.ownerDocument.createElement('html2canvaspseudoelement')
               if (((0, l.copyCSSStyles)(t, B), r))
-                for (var o = r.length, a = 0; a < o; a++) {
-                  var s = r[a]
+                for (var a = r.length, o = 0; o < a; o++) {
+                  var s = r[o]
                   switch (s.type) {
                     case g.PSEUDO_CONTENT_ITEM_TYPE.IMAGE:
                       var i = e.ownerDocument.createElement('img')
@@ -6458,8 +6540,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           H = ':after',
           p = '___html2canvas___pseudoelement_before',
           N = '___html2canvas___pseudoelement_after',
-          I = function(A) {
-            T(
+          m = function(A) {
+            I(
               A,
               '.' +
                 p +
@@ -6470,18 +6552,18 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 '{\n    content: "" !important;\n    display: none !important;\n}'
             )
           },
-          T = function(A, e) {
+          I = function(A, e) {
             var t = A.ownerDocument.createElement('style')
             ;(t.innerHTML = e), A.appendChild(t)
           },
-          K = function(A) {
+          T = function(A) {
             var e = B(A, 3),
               t = e[0],
               r = e[1],
               n = e[2]
             ;(t.scrollLeft = r), (t.scrollTop = n)
           },
-          m = function() {
+          K = function() {
             return Math.ceil(Date.now() + 1e7 * Math.random()).toString(16)
           },
           v = /^data:text\/(.+);(base64)?,(.*)$/i,
@@ -6502,7 +6584,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     .then(function(e) {
                       return b(
                         A.ownerDocument,
-                        (0, a.parseBounds)(A, 0, 0)
+                        (0, o.parseBounds)(A, 0, 0)
                       ).then(function(A) {
                         var t = A.contentWindow,
                           r = t.document
@@ -6548,29 +6630,29 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             })
           },
           _ = ((e.cloneWindow = function(A, e, t, r, n, B) {
-            var o = new U(t, r, n, !1, B),
-              a = A.defaultView.pageXOffset,
+            var a = new U(t, r, n, !1, B),
+              o = A.defaultView.pageXOffset,
               s = A.defaultView.pageYOffset
             return b(A, e).then(function(r) {
               var n = r.contentWindow,
                 B = n.document,
                 i = L(r).then(function() {
                   return (
-                    o.scrolledElements.forEach(K),
+                    a.scrolledElements.forEach(T),
                     n.scrollTo(e.left, e.top),
                     !/(iPad|iPhone|iPod)/g.test(navigator.userAgent) ||
                       (n.scrollY === e.top && n.scrollX === e.left) ||
                       ((B.documentElement.style.top = -e.top + 'px'),
                       (B.documentElement.style.left = -e.left + 'px'),
                       (B.documentElement.style.position = 'absolute')),
-                    o.clonedReferenceElement instanceof n.HTMLElement ||
-                    o.clonedReferenceElement instanceof
+                    a.clonedReferenceElement instanceof n.HTMLElement ||
+                    a.clonedReferenceElement instanceof
                       A.defaultView.HTMLElement ||
-                    o.clonedReferenceElement instanceof HTMLElement
+                    a.clonedReferenceElement instanceof HTMLElement
                       ? Promise.resolve([
                           r,
-                          o.clonedReferenceElement,
-                          o.resourceLoader
+                          a.clonedReferenceElement,
+                          a.resourceLoader
                         ])
                       : Promise.reject('')
                   )
@@ -6578,9 +6660,9 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               return (
                 B.open(),
                 B.write(_(document.doctype) + '<html></html>'),
-                F(t.ownerDocument, a, s),
+                f(t.ownerDocument, o, s),
                 B.replaceChild(
-                  B.adoptNode(o.documentElement),
+                  B.adoptNode(a.documentElement),
                   B.documentElement
                 ),
                 B.close(),
@@ -6625,10 +6707,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             }
           })(),
           B = t(73),
-          o = (function(A) {
+          a = (function(A) {
             return A && A.__esModule ? A : { default: A }
           })(B),
-          a = t(183),
+          o = t(183),
           s = (function() {
             function A(e, t, n) {
               r(this, A),
@@ -6646,7 +6728,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   value: function(A) {
                     var e = this
                     if (this.hasResourceInCache(A)) return A
-                    if (!g(A) || o.default.SUPPORT_SVG_DRAWING) {
+                    if (!g(A) || a.default.SUPPORT_SVG_DRAWING) {
                       if (
                         !0 === this.options.allowTaint ||
                         Q(A) ||
@@ -6656,7 +6738,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                       if (!this.isSameOrigin(A)) {
                         if ('string' == typeof this.options.proxy)
                           return (
-                            (this.cache[A] = (0, a.Proxy)(A, this.options).then(
+                            (this.cache[A] = (0, o.Proxy)(A, this.options).then(
                               function(A) {
                                 return U(A, e.options.imageTimeout || 0)
                               }
@@ -6665,7 +6747,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                           )
                         if (
                           !0 === this.options.useCORS &&
-                          o.default.SUPPORT_CORS_IMAGES
+                          a.default.SUPPORT_CORS_IMAGES
                         )
                           return this.addImage(A, A, !0)
                       }
@@ -6683,7 +6765,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                         : this.isSameOrigin(A) ||
                           'string' != typeof this.options.proxy
                           ? this.xhrImage(A)
-                          : (this.cache[A] = (0, a.Proxy)(A, this.options).then(
+                          : (this.cache[A] = (0, o.Proxy)(A, this.options).then(
                               function(A) {
                                 return U(A, e.options.imageTimeout || 0)
                               }
@@ -6763,31 +6845,31 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     var r = this,
                       n = function(A) {
                         return new Promise(function(n, B) {
-                          var o = new Image()
+                          var a = new Image()
                           if (
-                            ((o.onload = function() {
-                              return n(o)
+                            ((a.onload = function() {
+                              return n(a)
                             }),
-                            (A && !t) || (o.crossOrigin = 'anonymous'),
-                            (o.onerror = B),
-                            (o.src = e),
-                            !0 === o.complete &&
+                            (A && !t) || (a.crossOrigin = 'anonymous'),
+                            (a.onerror = B),
+                            (a.src = e),
+                            !0 === a.complete &&
                               setTimeout(function() {
-                                n(o)
+                                n(a)
                               }, 500),
                             r.options.imageTimeout)
                           ) {
-                            var a = r.options.imageTimeout
+                            var o = r.options.imageTimeout
                             setTimeout(function() {
                               return B('')
-                            }, a)
+                            }, o)
                           }
                         })
                       }
                     return (
                       (this.cache[A] =
                         w(e) && !g(e)
-                          ? o.default.SUPPORT_BASE64_DRAWING(e).then(n)
+                          ? a.default.SUPPORT_BASE64_DRAWING(e).then(n)
                           : n(!0)),
                       A
                     )
@@ -6892,16 +6974,16 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 B = void 0
               try {
                 for (
-                  var o, a = A[Symbol.iterator]();
-                  !(r = (o = a.next()).done) &&
-                  (t.push(o.value), !e || t.length !== e);
+                  var a, o = A[Symbol.iterator]();
+                  !(r = (a = o.next()).done) &&
+                  (t.push(a.value), !e || t.length !== e);
                   r = !0
                 );
               } catch (A) {
                 ;(n = !0), (B = A)
               } finally {
                 try {
-                  !r && a.return && a.return()
+                  !r && o.return && o.return()
                 } finally {
                   if (n) throw B
                 }
@@ -6918,8 +7000,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           })(),
           n = t(110),
           B = t(71),
-          o = (e.PSEUDO_CONTENT_ITEM_TYPE = { TEXT: 0, IMAGE: 1 }),
-          a = (e.TOKEN_TYPE = {
+          a = (e.PSEUDO_CONTENT_ITEM_TYPE = { TEXT: 0, IMAGE: 1 }),
+          o = (e.TOKEN_TYPE = {
             STRING: 0,
             ATTRIBUTE: 1,
             URL: 2,
@@ -6934,12 +7016,12 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               var t = [],
                 n = A.counterReset.split(/\s*,\s*/),
                 B = n.length,
-                o = 0;
-              o < B;
-              o++
+                a = 0;
+              a < B;
+              a++
             ) {
-              var a = n[o].split(/\s+/),
-                s = r(a, 2),
+              var o = n[a].split(/\s+/),
+                s = r(o, 2),
                 i = s[0],
                 c = s[1]
               t.push(i)
@@ -6973,37 +7055,37 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 C = t.counters[U]
               C && (C[C.length - 1] += void 0 === d ? 1 : parseInt(d, 10))
             }
-            for (var F = 0; F < B; F++) {
-              var f = n[F]
-              switch (f.type) {
-                case a.STRING:
-                  u += f.value || ''
+            for (var f = 0; f < B; f++) {
+              var F = n[f]
+              switch (F.type) {
+                case o.STRING:
+                  u += F.value || ''
                   break
-                case a.ATTRIBUTE:
+                case o.ATTRIBUTE:
                   A instanceof HTMLElement &&
-                    f.value &&
-                    (u += A.getAttribute(f.value) || '')
+                    F.value &&
+                    (u += A.getAttribute(F.value) || '')
                   break
-                case a.COUNTER:
-                  var h = t.counters[f.name || '']
-                  h && (u += l([h[h.length - 1]], '', f.format))
+                case o.COUNTER:
+                  var h = t.counters[F.name || '']
+                  h && (u += l([h[h.length - 1]], '', F.format))
                   break
-                case a.COUNTERS:
-                  var E = t.counters[f.name || '']
-                  E && (u += l(E, f.glue, f.format))
+                case o.COUNTERS:
+                  var E = t.counters[F.name || '']
+                  E && (u += l(E, F.glue, F.format))
                   break
-                case a.OPENQUOTE:
+                case o.OPENQUOTE:
                   ;(u += c(e, !0, t.quoteDepth)), t.quoteDepth++
                   break
-                case a.CLOSEQUOTE:
+                case o.CLOSEQUOTE:
                   t.quoteDepth--, (u += c(e, !1, t.quoteDepth))
                   break
-                case a.URL:
-                  u && (i.push({ type: o.TEXT, value: u }), (u = '')),
-                    i.push({ type: o.IMAGE, value: f.value || '' })
+                case o.URL:
+                  u && (i.push({ type: a.TEXT, value: u }), (u = '')),
+                    i.push({ type: a.IMAGE, value: F.value || '' })
               }
             }
-            return u && i.push({ type: o.TEXT, value: u }), i
+            return u && i.push({ type: a.TEXT, value: u }), i
           }),
           (e.parseContent = function(A, e) {
             if (e && e[A]) return e[A]
@@ -7012,7 +7094,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 r = A.length,
                 n = !1,
                 B = !1,
-                o = !1,
+                a = !1,
                 s = '',
                 c = '',
                 l = [],
@@ -7027,46 +7109,46 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   B
                     ? (s += Q)
                     : ((n = !n),
-                      o ||
+                      a ||
                         n ||
-                        (t.push({ type: a.STRING, value: s }), (s = '')))
+                        (t.push({ type: o.STRING, value: s }), (s = '')))
                   break
                 case '\\':
                   B ? ((s += Q), (B = !1)) : (B = !0)
                   break
                 case '(':
-                  n ? (s += Q) : ((o = !0), (c = s), (s = ''), (l = []))
+                  n ? (s += Q) : ((a = !0), (c = s), (s = ''), (l = []))
                   break
                 case ')':
                   if (n) s += Q
-                  else if (o) {
+                  else if (a) {
                     switch ((s && l.push(s), c)) {
                       case 'attr':
                         l.length > 0 &&
-                          t.push({ type: a.ATTRIBUTE, value: l[0] })
+                          t.push({ type: o.ATTRIBUTE, value: l[0] })
                         break
                       case 'counter':
                         if (l.length > 0) {
-                          var w = { type: a.COUNTER, name: l[0] }
+                          var w = { type: o.COUNTER, name: l[0] }
                           l.length > 1 && (w.format = l[1]), t.push(w)
                         }
                         break
                       case 'counters':
                         if (l.length > 0) {
-                          var g = { type: a.COUNTERS, name: l[0] }
+                          var g = { type: o.COUNTERS, name: l[0] }
                           l.length > 1 && (g.glue = l[1]),
                             l.length > 2 && (g.format = l[2]),
                             t.push(g)
                         }
                         break
                       case 'url':
-                        l.length > 0 && t.push({ type: a.URL, value: l[0] })
+                        l.length > 0 && t.push({ type: o.URL, value: l[0] })
                     }
-                    ;(o = !1), (s = '')
+                    ;(a = !1), (s = '')
                   }
                   break
                 case ',':
-                  n ? (s += Q) : o && (l.push(s), (s = ''))
+                  n ? (s += Q) : a && (l.push(s), (s = ''))
                   break
                 case ' ':
                 case '\t':
@@ -7082,10 +7164,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           i = function(A, e) {
             switch (e) {
               case 'open-quote':
-                A.push({ type: a.OPENQUOTE })
+                A.push({ type: o.OPENQUOTE })
                 break
               case 'close-quote':
-                A.push({ type: a.CLOSEQUOTE })
+                A.push({ type: o.CLOSEQUOTE })
             }
           },
           c = function(A, e, t) {
@@ -7098,14 +7180,14 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             )
           },
           l = function(A, e, t) {
-            for (var r = A.length, o = '', a = 0; a < r; a++)
-              a > 0 && (o += e || ''),
-                (o += (0, n.createCounterText)(
-                  A[a],
+            for (var r = A.length, a = '', o = 0; o < r; o++)
+              o > 0 && (a += e || ''),
+                (a += (0, n.createCounterText)(
+                  A[o],
                   (0, B.parseListStyleType)(t || 'decimal'),
                   !1
                 ))
-            return o
+            return a
           }
       },
       46: function(A, e, t) {
@@ -7120,9 +7202,9 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
         Object.defineProperty(e, '__esModule', { value: !0 }),
           (e.parseBackgroundImage = e.parseBackground = e.calculateBackgroundRepeatPath = e.calculateBackgroundPosition = e.calculateBackgroungPositioningArea = e.calculateBackgroungPaintingArea = e.calculateGradientBackgroundSize = e.calculateBackgroundSize = e.BACKGROUND_ORIGIN = e.BACKGROUND_CLIP = e.BACKGROUND_SIZE = e.BACKGROUND_REPEAT = void 0)
         var B = t(21),
-          o = r(B),
-          a = t(27),
-          s = r(a),
+          a = r(B),
+          o = t(27),
+          s = r(o),
           i = t(404),
           c = r(i),
           l = t(70),
@@ -7147,7 +7229,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             CONTENT_BOX: 2
           }),
           C = (e.BACKGROUND_ORIGIN = d),
-          F = function A(e) {
+          f = function A(e) {
             switch ((n(this, A), e)) {
               case 'contain':
                 this.size = U.CONTAIN
@@ -7162,16 +7244,16 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 this.value = new s.default(e)
             }
           },
-          f = ((e.calculateBackgroundSize = function(A, e, t) {
+          F = ((e.calculateBackgroundSize = function(A, e, t) {
             var r = 0,
               n = 0,
               B = A.size
             if (B[0].size === U.CONTAIN || B[0].size === U.COVER) {
-              var o = t.width / t.height,
-                a = e.width / e.height
-              return o < a != (B[0].size === U.COVER)
-                ? new c.default(t.width, t.width / a)
-                : new c.default(t.height * a, t.height)
+              var a = t.width / t.height,
+                o = e.width / e.height
+              return a < o != (B[0].size === U.COVER)
+                ? new c.default(t.width, t.width / o)
+                : new c.default(t.height * o, t.height)
             }
             return (
               B[0].value && (r = B[0].value.getAbsoluteValue(t.width)),
@@ -7192,7 +7274,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 : t[0].value ? r : e.height
             return new c.default(r, n)
           }),
-          new F('auto')),
+          new f('auto')),
           h = ((e.calculateBackgroungPaintingArea = function(A, e) {
             switch (e) {
               case d.BORDER_BOX:
@@ -7209,14 +7291,14 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 return e
               case C.CONTENT_BOX:
                 var B = t[w.PADDING_SIDES.LEFT].getAbsoluteValue(e.width),
-                  o = t[w.PADDING_SIDES.RIGHT].getAbsoluteValue(e.width),
-                  a = t[w.PADDING_SIDES.TOP].getAbsoluteValue(e.width),
+                  a = t[w.PADDING_SIDES.RIGHT].getAbsoluteValue(e.width),
+                  o = t[w.PADDING_SIDES.TOP].getAbsoluteValue(e.width),
                   s = t[w.PADDING_SIDES.BOTTOM].getAbsoluteValue(e.width)
                 return new Q.Bounds(
                   n.left + B,
-                  n.top + a,
-                  n.width - B - o,
-                  n.height - a - s
+                  n.top + o,
+                  n.width - B - a,
+                  n.height - o - s
                 )
               case C.PADDING_BOX:
               default:
@@ -7302,7 +7384,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
           }),
           (e.parseBackground = function(A, e) {
             return {
-              backgroundColor: new o.default(A.backgroundColor),
+              backgroundColor: new a.default(A.backgroundColor),
               backgroundImage: p(A, e),
               backgroundClip: h(A.backgroundClip),
               backgroundOrigin: E(A.backgroundOrigin)
@@ -7342,7 +7424,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             return g.REPEAT
           },
           p = function(A, e) {
-            var t = T(A.backgroundImage).map(function(A) {
+            var t = I(A.backgroundImage).map(function(A) {
                 if ('url' === A.method) {
                   var t = e.loadImage(A.args[0])
                   A.args = t ? [t] : []
@@ -7357,22 +7439,22 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   .trim()
                   .split(' ')
                   .map(N),
-                o = (r[e] || 'auto')
+                a = (r[e] || 'auto')
                   .trim()
                   .split(' ')
-                  .map(I)
+                  .map(m)
               return {
                 source: A,
                 repeat: H('string' == typeof n[e] ? n[e] : n[0]),
-                size: t.length < 2 ? [t[0], f] : [t[0], t[1]],
-                position: o.length < 2 ? [o[0], o[0]] : [o[0], o[1]]
+                size: t.length < 2 ? [t[0], F] : [t[0], t[1]],
+                position: a.length < 2 ? [a[0], a[0]] : [a[0], a[1]]
               }
             })
           },
           N = function(A) {
-            return 'auto' === A ? f : new F(A)
+            return 'auto' === A ? F : new f(A)
           },
-          I = function(A) {
+          m = function(A) {
             switch (A) {
               case 'bottom':
               case 'right':
@@ -7385,20 +7467,20 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             }
             return new s.default(A)
           },
-          T = (e.parseBackgroundImage = function(A) {
+          I = (e.parseBackgroundImage = function(A) {
             var e = /^\s$/,
               t = [],
               r = [],
               n = '',
               B = null,
-              o = '',
-              a = 0,
+              a = '',
+              o = 0,
               s = 0,
               i = function() {
                 var A = ''
                 if (n) {
-                  '"' === o.substr(0, 1) && (o = o.substr(1, o.length - 2)),
-                    o && r.push(o.trim())
+                  '"' === a.substr(0, 1) && (a = a.substr(1, a.length - 2)),
+                    a && r.push(a.trim())
                   var e = n.indexOf('-', 1) + 1
                   '-' === n.substr(0, 1) &&
                     e > 0 &&
@@ -7406,34 +7488,34 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                     (n = n.toLowerCase()),
                     'none' !== n && t.push({ prefix: A, method: n, args: r })
                 }
-                ;(r = []), (n = o = '')
+                ;(r = []), (n = a = '')
               }
             return (
               A.split('').forEach(function(A) {
-                if (0 !== a || !e.test(A)) {
+                if (0 !== o || !e.test(A)) {
                   switch (A) {
                     case '"':
                       B ? B === A && (B = null) : (B = A)
                       break
                     case '(':
                       if (B) break
-                      if (0 === a) return void (a = 1)
+                      if (0 === o) return void (o = 1)
                       s++
                       break
                     case ')':
                       if (B) break
-                      if (1 === a) {
-                        if (0 === s) return (a = 0), void i()
+                      if (1 === o) {
+                        if (0 === s) return (o = 0), void i()
                         s--
                       }
                       break
                     case ',':
                       if (B) break
-                      if (0 === a) return void i()
-                      if (1 === a && 0 === s && !n.match(/^url$/i))
-                        return r.push(o.trim()), void (o = '')
+                      if (0 === o) return void i()
+                      if (1 === o && 0 === s && !n.match(/^url$/i))
+                        return r.push(a.trim()), void (a = '')
                   }
-                  0 === a ? (n += A) : (o += A)
+                  0 === o ? (n += A) : (a += A)
                 }
               }),
               i(),
@@ -7521,7 +7603,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             DISCLOSURE_OPEN: 50,
             DISCLOSURE_CLOSED: 51
           }),
-          o = (e.parseListStyleType = function(A) {
+          a = (e.parseListStyleType = function(A) {
             switch (A) {
               case 'disc':
                 return B.DISC
@@ -7634,14 +7716,14 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                 return B.NONE
             }
           }),
-          a = ((e.parseListStyle = function(A) {
+          o = ((e.parseListStyle = function(A) {
             var e = (0, r.parseBackgroundImage)(
               A.getPropertyValue('list-style-image')
             )
             return {
-              listStyleType: o(A.getPropertyValue('list-style-type')),
+              listStyleType: a(A.getPropertyValue('list-style-type')),
               listStyleImage: e.length ? e[0] : null,
-              listStylePosition: a(A.getPropertyValue('list-style-position'))
+              listStylePosition: o(A.getPropertyValue('list-style-position'))
             }
           }),
           function(A) {
@@ -7678,8 +7760,8 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               return t && A(e.prototype, t), r && A(e, r), e
             }
           })(),
-          o = t(177),
-          a = t(179),
+          a = t(177),
+          o = t(179),
           s = (function() {
             function A(e, t, n) {
               r(this, A), (this.text = e), (this.parent = t), (this.bounds = n)
@@ -7690,7 +7772,7 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   key: 'fromTextNode',
                   value: function(e, t) {
                     var r = c(e.data, t.style.textTransform)
-                    return new A(r, t, (0, a.parseTextBounds)(r, t, e))
+                    return new A(r, t, (0, o.parseTextBounds)(r, t, e))
                   }
                 }
               ]),
@@ -7701,11 +7783,11 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
         var i = /(^|\s|:|-|\(|\))([a-z])/g,
           c = function(A, e) {
             switch (e) {
-              case o.TEXT_TRANSFORM.LOWERCASE:
+              case a.TEXT_TRANSFORM.LOWERCASE:
                 return A.toLowerCase()
-              case o.TEXT_TRANSFORM.CAPITALIZE:
+              case a.TEXT_TRANSFORM.CAPITALIZE:
                 return A.replace(i, n)
-              case o.TEXT_TRANSFORM.UPPERCASE:
+              case a.TEXT_TRANSFORM.UPPERCASE:
                 return A.toUpperCase()
               default:
                 return A
@@ -7756,10 +7838,10 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
                   }, 500)
             })
           },
-          o = function() {
+          a = function() {
             return void 0 !== new Image().crossOrigin
           },
-          a = function() {
+          o = function() {
             return 'string' == typeof new XMLHttpRequest().responseType
           },
           s = function(A) {
@@ -7786,22 +7868,22 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
             var n = new Image(),
               B = e.toDataURL()
             n.src = B
-            var o = (0, r.createForeignObjectSVG)(100, 100, 0, 0, n)
+            var a = (0, r.createForeignObjectSVG)(100, 100, 0, 0, n)
             return (
               (t.fillStyle = 'red'),
               t.fillRect(0, 0, 100, 100),
-              (0, r.loadSerializedSVG)(o)
+              (0, r.loadSerializedSVG)(a)
                 .then(function(e) {
                   t.drawImage(e, 0, 0)
                   var n = t.getImageData(0, 0, 100, 100).data
                   ;(t.fillStyle = 'red'), t.fillRect(0, 0, 100, 100)
-                  var o = A.createElement('div')
+                  var a = A.createElement('div')
                   return (
-                    (o.style.backgroundImage = 'url(' + B + ')'),
-                    (o.style.height = '100px'),
+                    (a.style.backgroundImage = 'url(' + B + ')'),
+                    (a.style.height = '100px'),
                     i(n)
                       ? (0, r.loadSerializedSVG)(
-                          (0, r.createForeignObjectSVG)(100, 100, 0, 0, o)
+                          (0, r.createForeignObjectSVG)(100, 100, 0, 0, a)
                         )
                       : Promise.reject(!1)
                   )
@@ -7857,13 +7939,13 @@ window.__NEXT_REGISTER_PAGE('/qr-code', function() {
               )
             },
             get SUPPORT_CORS_IMAGES() {
-              var A = o()
+              var A = a()
               return (
                 Object.defineProperty(l, 'SUPPORT_CORS_IMAGES', { value: A }), A
               )
             },
             get SUPPORT_RESPONSE_TYPE() {
-              var A = a()
+              var A = o()
               return (
                 Object.defineProperty(l, 'SUPPORT_RESPONSE_TYPE', { value: A }),
                 A
