@@ -23,42 +23,37 @@ export default class extends React.Component {
 
   /** Update value in input */
   updateInputValue = event => {
-    if (document.getElementById('rendered_canvas')) {
-      document.getElementById('rendered_canvas').style.display = 'none'
-    }
-
     this.setState({
       inputValue: event.target.value
     })
   }
 
   /** Update value in input */
-  /*closeModal = event => {
-    document.getElementById("modal-id").style.display = "none";
-  }*/
+  closeModal = event => {
+    let elem = document.getElementById('rendered_canvas')
+    elem.remove()
+
+    document.getElementById('modal-id').style.display = 'none'
+  }
 
   /** Generate password */
-  /*generatorHandleClick = value => {
+  generatorHandleClick = value => {
     if (value) {
-      if (document.getElementById("rendered_canvas")) {
-        document.getElementById("rendered_canvas").style.display = "none";
-      }
+      const canvas = document.querySelector('#qr')
 
-      const canvas = document.querySelector("#qr");
-
-      html2canvas( canvas, {
+      html2canvas(canvas, {
         scale: 0.52
-      } )
-        .then((canvas) => {
-          document.getElementById("modal-id").style.display = "flex";
-          document.getElementById('qr_result').appendChild(canvas);
+      })
+        .then(canvas => {
+          document.getElementById('modal-id').style.display = 'flex'
+          document.getElementById('qr_result').appendChild(canvas)
           canvas.id = 'rendered_canvas'
         })
         .catch(err => {
-          console.error(err);
-        });
+          console.error(err)
+        })
     }
-  }*/
+  }
 
   /** Render HTML */
   render() {
@@ -67,6 +62,18 @@ export default class extends React.Component {
         <style jsx>{`
           #modal-id {
             display: none;
+          }
+
+          #qr_result {
+            margin-left: -100px;
+          }
+
+          .modal-container .modal-body {
+            max-height: 60vh !important;
+          }
+
+          #start_button {
+            margin-top: 40px;
           }
 
           .form-input {
@@ -93,20 +100,32 @@ export default class extends React.Component {
           }
         `}</style>
 
-        {/*<div className="modal active" id="modal-id">
-          <a onClick={() => { this.closeModal() }} className="modal-overlay" aria-label="Close"></a>
+        <div className="modal active" id="modal-id">
+          <a
+            onClick={() => {
+              this.closeModal()
+            }}
+            className="modal-overlay"
+            aria-label="Close"
+          />
           <div className="modal-container">
             <div className="modal-header">
-              <a onClick={() => { this.closeModal() }} className="btn btn-clear float-right" aria-label="Close"></a>
-              <div className="modal-title h5">Your QR Code</div>
+              <a
+                onClick={() => {
+                  this.closeModal()
+                }}
+                className="btn btn-clear float-right"
+                aria-label="Close"
+              />
+              <div className="modal-title h5 text-center">Your QR Code</div>
             </div>
             <div className="modal-body">
               <div className="content">
-                <div id="qr_result"></div>
+                <div id="qr_result" />
               </div>
             </div>
           </div>
-        </div>*/}
+        </div>
 
         <div className="container">
           <div className="columns">
@@ -129,26 +148,28 @@ export default class extends React.Component {
                       className="form-input"
                     />
                   </div>
+                </div>
 
-                  {/*<button
+                <div className="card-footer">
+                  <div id="qr">
+                    <QRCode
+                      bgColor="#FFFFFF"
+                      fgColor="#000000"
+                      level="Q"
+                      style={{ width: 250 }}
+                      value={this.state.inputValue}
+                    />
+                  </div>
+
+                  <button
                     onClick={() => {
                       this.generatorHandleClick(this.state.inputValue)
                     }}
                     className="btn btn-primary"
                     id="start_button"
                   >
-                    Generate now!
-                  </button>*/}
-                </div>
-
-                <div id="qr" className="card-footer">
-                  <QRCode
-                    bgColor="#FFFFFF"
-                    fgColor="#000000"
-                    level="Q"
-                    style={{ width: 250 }}
-                    value={this.state.inputValue}
-                  />
+                    Generate image
+                  </button>
                 </div>
               </div>
             </div>
