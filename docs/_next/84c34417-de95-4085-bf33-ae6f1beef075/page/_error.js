@@ -1,116 +1,109 @@
-window.__NEXT_REGISTER_PAGE('/_error', function() {
-  var comp = (module.exports = webpackJsonp(
-    [4],
+module.exports = __NEXT_REGISTER_PAGE('/_error', function() {
+  var e = webpackJsonp(
+    [3],
     {
-      432: function(e, t, n) {
-        e.exports = n(433)
+      308: function(e, t, n) {
+        e.exports = n(309)
       },
-      433: function(e, t, n) {
-        'use strict'
-        e.exports = n(434)
+      309: function(e, t, n) {
+        e.exports = n(310)
       },
-      434: function(e, t, n) {
+      310: function(e, t, n) {
+        e.exports = n(311)
+      },
+      311: function(e, t, n) {
         'use strict'
-        function E(e) {
+        Object.defineProperty(t, '__esModule', { value: true })
+        var r = n(21)
+        var E = f(r)
+        var a = n(5)
+        var o = f(a)
+        var i = n(6)
+        var T = f(i)
+        var l = n(22)
+        var d = f(l)
+        var u = n(23)
+        var R = f(u)
+        var _ = n(1)
+        var s = f(_)
+        var N = n(7)
+        var O = f(N)
+        var A = n(312)
+        var I = f(A)
+        var c = n(122)
+        var p = f(c)
+        function f(e) {
           return e && e.__esModule ? e : { default: e }
         }
-        Object.defineProperty(t, '__esModule', { value: !0 })
-        var o = n(9),
-          i = E(o),
-          a = n(2),
-          r = E(a),
-          T = n(3),
-          l = E(T),
-          d = n(10),
-          R = E(d),
-          u = n(11),
-          _ = E(u),
-          s = n(0),
-          N = E(s),
-          O = n(7),
-          A = E(O),
-          I = n(435),
-          c = E(I),
-          p = n(26),
-          S = E(p),
-          D = (function(e) {
-            function t() {
-              return (
-                (0, r.default)(this, t),
-                (0, R.default)(
-                  this,
-                  (t.__proto__ || (0, i.default)(t)).apply(this, arguments)
-                )
-              )
-            }
-            return (
-              (0, _.default)(t, e),
-              (0, l.default)(
-                t,
-                [
-                  {
-                    key: 'render',
-                    value: function() {
-                      var e = this.props.statusCode,
-                        t =
-                          404 === e
-                            ? 'This page could not be found'
-                            : c.default[e] || 'An unexpected error has occurred'
-                      return N.default.createElement(
-                        'div',
-                        { style: f.error },
-                        N.default.createElement(
-                          S.default,
-                          null,
-                          N.default.createElement('meta', {
-                            name: 'viewport',
-                            content: 'width=device-width, initial-scale=1.0'
-                          })
-                        ),
-                        N.default.createElement(
-                          'div',
-                          null,
-                          N.default.createElement('style', {
-                            dangerouslySetInnerHTML: {
-                              __html: 'body { margin: 0 }'
-                            }
-                          }),
-                          e
-                            ? N.default.createElement('h1', { style: f.h1 }, e)
-                            : null,
-                          N.default.createElement(
-                            'div',
-                            { style: f.desc },
-                            N.default.createElement(
-                              'h2',
-                              { style: f.h2 },
-                              t,
-                              '.'
-                            )
-                          )
-                        )
-                      )
-                    }
-                  }
-                ],
-                [
-                  {
-                    key: 'getInitialProps',
-                    value: function(e) {
-                      var t = e.res,
-                        n = e.err
-                      return {
-                        statusCode: t ? t.statusCode : n ? n.statusCode : null
-                      }
-                    }
-                  }
-                ]
-              ),
-              t
+        var S = (function(e) {
+          ;(0, R.default)(t, e)
+          function t() {
+            ;(0, o.default)(this, t)
+            return (0, d.default)(
+              this,
+              (t.__proto__ || (0, E.default)(t)).apply(this, arguments)
             )
-          })(N.default.Component)
-        ;(D.propTypes = { statusCode: A.default.number }), (t.default = D)
-        var f = {
+          }
+          ;(0, T.default)(
+            t,
+            [
+              {
+                key: 'render',
+                value: function e() {
+                  var t = this.props.statusCode
+                  var n =
+                    404 === t
+                      ? 'This page could not be found'
+                      : I.default[t] || 'An unexpected error has occurred'
+                  return s.default.createElement(
+                    'div',
+                    { style: D.error },
+                    s.default.createElement(
+                      p.default,
+                      null,
+                      s.default.createElement('meta', {
+                        name: 'viewport',
+                        content: 'width=device-width, initial-scale=1.0'
+                      })
+                    ),
+                    s.default.createElement(
+                      'div',
+                      null,
+                      s.default.createElement('style', {
+                        dangerouslySetInnerHTML: {
+                          __html: 'body { margin: 0 }'
+                        }
+                      }),
+                      t
+                        ? s.default.createElement('h1', { style: D.h1 }, t)
+                        : null,
+                      s.default.createElement(
+                        'div',
+                        { style: D.desc },
+                        s.default.createElement('h2', { style: D.h2 }, n, '.')
+                      )
+                    )
+                  )
+                }
+              }
+            ],
+            [
+              {
+                key: 'getInitialProps',
+                value: function e(t) {
+                  var n = t.res,
+                    r = t.err
+                  var E = n ? n.statusCode : r ? r.statusCode : null
+                  return { statusCode: E }
+                }
+              }
+            ]
+          )
+          return t
+        })(s.default.Component)
+        S.propTypes = { statusCode: O.default.number }
+        t.default = S
+        var D = {
           error: {
             color: '#000',
             background: '#fff',
@@ -149,7 +142,7 @@ window.__NEXT_REGISTER_PAGE('/_error', function() {
           }
         }
       },
-      435: function(e, t) {
+      312: function(e, t) {
         e.exports = {
           100: 'Continue',
           101: 'Switching Protocols',
@@ -274,7 +267,7 @@ window.__NEXT_REGISTER_PAGE('/_error', function() {
         }
       }
     },
-    [432]
-  ))
-  return { page: comp.default }
+    [308]
+  )
+  return { page: e.default }
 })
