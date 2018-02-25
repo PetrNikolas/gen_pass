@@ -12,6 +12,10 @@ var _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');
 
 var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
+var _slicedToArray2 = require('babel-runtime/helpers/slicedToArray');
+
+var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
+
 var _map = require('babel-runtime/core-js/map');
 
 var _map2 = _interopRequireDefault(_map);
@@ -23,10 +27,6 @@ var _set2 = _interopRequireDefault(_set);
 var _keys = require('babel-runtime/core-js/object/keys');
 
 var _keys2 = _interopRequireDefault(_keys);
-
-var _slicedToArray2 = require('babel-runtime/helpers/slicedToArray');
-
-var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
 
 var _getIterator2 = require('babel-runtime/core-js/get-iterator');
 
@@ -66,9 +66,13 @@ var _onDemandEntryHandler = require('./on-demand-entry-handler');
 
 var _onDemandEntryHandler2 = _interopRequireDefault(_onDemandEntryHandler);
 
-var _webpack = require('./build/webpack');
+var _webpack = require('webpack');
 
 var _webpack2 = _interopRequireDefault(_webpack);
+
+var _webpack3 = require('./build/webpack');
+
+var _webpack4 = _interopRequireDefault(_webpack3);
 
 var _clean = require('./build/clean');
 
@@ -121,12 +125,26 @@ var HotReloader = function () {
       var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(req, res) {
         var _this = this;
 
-        var _loop, _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, fn;
+        var _addCorsSupport, preflight, _loop, _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, fn;
 
         return _regenerator2.default.wrap(function _callee$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
+                // Usually CORS support is not needed for the hot-reloader (this is dev only feature)
+                // With when the app runs for multi-zones support behind a proxy,
+                // the current page is trying to access this URL via assetPrefix.
+                // That's when the CORS support is needed.
+                _addCorsSupport = (0, _utils.addCorsSupport)(req, res), preflight = _addCorsSupport.preflight;
+
+                if (!preflight) {
+                  _context2.next = 3;
+                  break;
+                }
+
+                return _context2.abrupt('return');
+
+              case 3:
                 _loop = /*#__PURE__*/_regenerator2.default.mark(function _loop(fn) {
                   return _regenerator2.default.wrap(function _loop$(_context) {
                     while (1) {
@@ -150,63 +168,63 @@ var HotReloader = function () {
                 _iteratorNormalCompletion = true;
                 _didIteratorError = false;
                 _iteratorError = undefined;
-                _context2.prev = 4;
+                _context2.prev = 7;
                 _iterator = (0, _getIterator3.default)(this.middlewares);
 
-              case 6:
+              case 9:
                 if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
-                  _context2.next = 12;
+                  _context2.next = 15;
                   break;
                 }
 
                 fn = _step.value;
-                return _context2.delegateYield(_loop(fn), 't0', 9);
-
-              case 9:
-                _iteratorNormalCompletion = true;
-                _context2.next = 6;
-                break;
+                return _context2.delegateYield(_loop(fn), 't0', 12);
 
               case 12:
-                _context2.next = 18;
+                _iteratorNormalCompletion = true;
+                _context2.next = 9;
                 break;
 
-              case 14:
-                _context2.prev = 14;
-                _context2.t1 = _context2['catch'](4);
+              case 15:
+                _context2.next = 21;
+                break;
+
+              case 17:
+                _context2.prev = 17;
+                _context2.t1 = _context2['catch'](7);
                 _didIteratorError = true;
                 _iteratorError = _context2.t1;
 
-              case 18:
-                _context2.prev = 18;
-                _context2.prev = 19;
+              case 21:
+                _context2.prev = 21;
+                _context2.prev = 22;
 
                 if (!_iteratorNormalCompletion && _iterator.return) {
                   _iterator.return();
                 }
 
-              case 21:
-                _context2.prev = 21;
+              case 24:
+                _context2.prev = 24;
 
                 if (!_didIteratorError) {
-                  _context2.next = 24;
+                  _context2.next = 27;
                   break;
                 }
 
                 throw _iteratorError;
 
-              case 24:
+              case 27:
+                return _context2.finish(24);
+
+              case 28:
                 return _context2.finish(21);
 
-              case 25:
-                return _context2.finish(18);
-
-              case 26:
+              case 29:
               case 'end':
                 return _context2.stop();
             }
           }
-        }, _callee, this, [[4, 14, 18, 26], [19,, 21, 25]]);
+        }, _callee, this, [[7, 17, 21, 29], [22,, 24, 28]]);
       }));
 
       function run(_x2, _x3) {
@@ -219,34 +237,36 @@ var HotReloader = function () {
     key: 'start',
     value: function () {
       var _ref3 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee2() {
-        var _ref4, _ref5, compiler, buildTools;
-
+        var configs, compiler, buildTools;
         return _regenerator2.default.wrap(function _callee2$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
                 _context3.next = 2;
-                return _promise2.default.all([(0, _webpack2.default)(this.dir, { buildId: this.buildId, dev: true, quiet: this.quiet }), (0, _clean2.default)(this.dir)]);
+                return (0, _clean2.default)(this.dir);
 
               case 2:
-                _ref4 = _context3.sent;
-                _ref5 = (0, _slicedToArray3.default)(_ref4, 1);
-                compiler = _ref5[0];
-                _context3.next = 7;
+                _context3.next = 4;
+                return _promise2.default.all([(0, _webpack4.default)(this.dir, { dev: true, isServer: false, config: this.config }), (0, _webpack4.default)(this.dir, { dev: true, isServer: true, config: this.config })]);
+
+              case 4:
+                configs = _context3.sent;
+                compiler = (0, _webpack2.default)(configs);
+                _context3.next = 8;
                 return this.prepareBuildTools(compiler);
 
-              case 7:
+              case 8:
                 buildTools = _context3.sent;
 
                 this.assignBuildTools(buildTools);
 
-                _context3.next = 11;
+                _context3.next = 12;
                 return this.waitUntilValid();
 
-              case 11:
-                this.stats = _context3.sent;
-
               case 12:
+                this.stats = _context3.sent.stats[0];
+
+              case 13:
               case 'end':
                 return _context3.stop();
             }
@@ -263,7 +283,7 @@ var HotReloader = function () {
   }, {
     key: 'stop',
     value: function () {
-      var _ref6 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee3(webpackDevMiddleware) {
+      var _ref4 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee3(webpackDevMiddleware) {
         var middleware;
         return _regenerator2.default.wrap(function _callee3$(_context4) {
           while (1) {
@@ -292,7 +312,7 @@ var HotReloader = function () {
       }));
 
       function stop(_x4) {
-        return _ref6.apply(this, arguments);
+        return _ref4.apply(this, arguments);
       }
 
       return stop;
@@ -300,9 +320,8 @@ var HotReloader = function () {
   }, {
     key: 'reload',
     value: function () {
-      var _ref7 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee4() {
-        var _ref8, _ref9, compiler, buildTools, oldWebpackDevMiddleware;
-
+      var _ref5 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee4() {
+        var configs, compiler, buildTools, oldWebpackDevMiddleware;
         return _regenerator2.default.wrap(function _callee4$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
@@ -310,30 +329,33 @@ var HotReloader = function () {
                 this.stats = null;
 
                 _context5.next = 3;
-                return _promise2.default.all([(0, _webpack2.default)(this.dir, { buildId: this.buildId, dev: true, quiet: this.quiet }), (0, _clean2.default)(this.dir)]);
+                return (0, _clean2.default)(this.dir);
 
               case 3:
-                _ref8 = _context5.sent;
-                _ref9 = (0, _slicedToArray3.default)(_ref8, 1);
-                compiler = _ref9[0];
-                _context5.next = 8;
+                _context5.next = 5;
+                return _promise2.default.all([(0, _webpack4.default)(this.dir, { dev: true, isServer: false, config: this.config }), (0, _webpack4.default)(this.dir, { dev: true, isServer: true, config: this.config })]);
+
+              case 5:
+                configs = _context5.sent;
+                compiler = (0, _webpack2.default)(configs);
+                _context5.next = 9;
                 return this.prepareBuildTools(compiler);
 
-              case 8:
+              case 9:
                 buildTools = _context5.sent;
-                _context5.next = 11;
+                _context5.next = 12;
                 return this.waitUntilValid(buildTools.webpackDevMiddleware);
 
-              case 11:
+              case 12:
                 this.stats = _context5.sent;
                 oldWebpackDevMiddleware = this.webpackDevMiddleware;
 
 
                 this.assignBuildTools(buildTools);
-                _context5.next = 16;
+                _context5.next = 17;
                 return this.stop(oldWebpackDevMiddleware);
 
-              case 16:
+              case 17:
               case 'end':
                 return _context5.stop();
             }
@@ -342,17 +364,17 @@ var HotReloader = function () {
       }));
 
       function reload() {
-        return _ref7.apply(this, arguments);
+        return _ref5.apply(this, arguments);
       }
 
       return reload;
     }()
   }, {
     key: 'assignBuildTools',
-    value: function assignBuildTools(_ref10) {
-      var webpackDevMiddleware = _ref10.webpackDevMiddleware,
-          webpackHotMiddleware = _ref10.webpackHotMiddleware,
-          onDemandEntries = _ref10.onDemandEntries;
+    value: function assignBuildTools(_ref6) {
+      var webpackDevMiddleware = _ref6.webpackDevMiddleware,
+          webpackHotMiddleware = _ref6.webpackHotMiddleware,
+          onDemandEntries = _ref6.onDemandEntries;
 
       this.webpackDevMiddleware = webpackDevMiddleware;
       this.webpackHotMiddleware = webpackHotMiddleware;
@@ -362,7 +384,7 @@ var HotReloader = function () {
   }, {
     key: 'prepareBuildTools',
     value: function () {
-      var _ref11 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee5(compiler) {
+      var _ref7 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee5(compiler) {
         var _this2 = this;
 
         var ignored, webpackDevMiddlewareConfig, webpackDevMiddleware, webpackHotMiddleware, onDemandEntries;
@@ -370,69 +392,72 @@ var HotReloader = function () {
           while (1) {
             switch (_context6.prev = _context6.next) {
               case 0:
-                compiler.plugin('after-emit', function (compilation, callback) {
-                  var assets = compilation.assets;
+                // This flushes require.cache after emitting the files. Providing 'hot reloading' of server files.
+                compiler.compilers.forEach(function (singleCompiler) {
+                  singleCompiler.plugin('after-emit', function (compilation, callback) {
+                    var assets = compilation.assets;
 
 
-                  if (_this2.prevAssets) {
-                    var _iteratorNormalCompletion2 = true;
-                    var _didIteratorError2 = false;
-                    var _iteratorError2 = undefined;
+                    if (_this2.prevAssets) {
+                      var _iteratorNormalCompletion2 = true;
+                      var _didIteratorError2 = false;
+                      var _iteratorError2 = undefined;
 
-                    try {
-                      for (var _iterator2 = (0, _getIterator3.default)((0, _keys2.default)(assets)), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-                        var f = _step2.value;
-
-                        deleteCache(assets[f].existsAt);
-                      }
-                    } catch (err) {
-                      _didIteratorError2 = true;
-                      _iteratorError2 = err;
-                    } finally {
                       try {
-                        if (!_iteratorNormalCompletion2 && _iterator2.return) {
-                          _iterator2.return();
+                        for (var _iterator2 = (0, _getIterator3.default)((0, _keys2.default)(assets)), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                          var f = _step2.value;
+
+                          deleteCache(assets[f].existsAt);
                         }
+                      } catch (err) {
+                        _didIteratorError2 = true;
+                        _iteratorError2 = err;
                       } finally {
-                        if (_didIteratorError2) {
-                          throw _iteratorError2;
+                        try {
+                          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+                            _iterator2.return();
+                          }
+                        } finally {
+                          if (_didIteratorError2) {
+                            throw _iteratorError2;
+                          }
+                        }
+                      }
+
+                      var _iteratorNormalCompletion3 = true;
+                      var _didIteratorError3 = false;
+                      var _iteratorError3 = undefined;
+
+                      try {
+                        for (var _iterator3 = (0, _getIterator3.default)((0, _keys2.default)(_this2.prevAssets)), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+                          var _f = _step3.value;
+
+                          if (!assets[_f]) {
+                            deleteCache(_this2.prevAssets[_f].existsAt);
+                          }
+                        }
+                      } catch (err) {
+                        _didIteratorError3 = true;
+                        _iteratorError3 = err;
+                      } finally {
+                        try {
+                          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+                            _iterator3.return();
+                          }
+                        } finally {
+                          if (_didIteratorError3) {
+                            throw _iteratorError3;
+                          }
                         }
                       }
                     }
+                    _this2.prevAssets = assets;
 
-                    var _iteratorNormalCompletion3 = true;
-                    var _didIteratorError3 = false;
-                    var _iteratorError3 = undefined;
-
-                    try {
-                      for (var _iterator3 = (0, _getIterator3.default)((0, _keys2.default)(_this2.prevAssets)), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-                        var _f = _step3.value;
-
-                        if (!assets[_f]) {
-                          deleteCache(_this2.prevAssets[_f].existsAt);
-                        }
-                      }
-                    } catch (err) {
-                      _didIteratorError3 = true;
-                      _iteratorError3 = err;
-                    } finally {
-                      try {
-                        if (!_iteratorNormalCompletion3 && _iterator3.return) {
-                          _iterator3.return();
-                        }
-                      } finally {
-                        if (_didIteratorError3) {
-                          throw _iteratorError3;
-                        }
-                      }
-                    }
-                  }
-                  _this2.prevAssets = assets;
-
-                  callback();
+                    callback();
+                  });
                 });
 
-                compiler.plugin('done', function (stats) {
+                compiler.compilers[0].plugin('done', function (stats) {
                   var compilation = stats.compilation;
 
                   var chunkNames = new _set2.default(compilation.chunks.map(function (c) {
@@ -504,12 +529,12 @@ var HotReloader = function () {
 
                     try {
                       for (var _iterator5 = (0, _getIterator3.default)(chunkHashes), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-                        var _ref12 = _step5.value;
+                        var _ref8 = _step5.value;
 
-                        var _ref13 = (0, _slicedToArray3.default)(_ref12, 2);
+                        var _ref9 = (0, _slicedToArray3.default)(_ref8, 2);
 
-                        var _n = _ref13[0];
-                        var hash = _ref13[1];
+                        var _n = _ref9[0];
+                        var hash = _ref9[1];
 
                         if (!_this2.prevChunkHashes.has(_n)) continue;
                         if (_this2.prevChunkHashes.get(_n) === hash) continue;
@@ -546,7 +571,7 @@ var HotReloader = function () {
                 ignored = [/(^|[/\\])\../, // .dotfiles
                 /node_modules/];
                 webpackDevMiddlewareConfig = {
-                  publicPath: '/_next/' + this.buildId + '/webpack/',
+                  publicPath: '/_next/webpack/',
                   noInfo: true,
                   quiet: true,
                   clientLogLevel: 'warning',
@@ -560,12 +585,12 @@ var HotReloader = function () {
                 }
 
                 webpackDevMiddleware = (0, _webpackDevMiddleware2.default)(compiler, webpackDevMiddlewareConfig);
-                webpackHotMiddleware = (0, _webpackHotMiddleware2.default)(compiler, {
+                webpackHotMiddleware = (0, _webpackHotMiddleware2.default)(compiler.compilers[0], {
                   path: '/_next/webpack-hmr',
                   log: false,
                   heartbeat: 2500
                 });
-                onDemandEntries = (0, _onDemandEntryHandler2.default)(webpackDevMiddleware, compiler, (0, _extends3.default)({
+                onDemandEntries = (0, _onDemandEntryHandler2.default)(webpackDevMiddleware, compiler.compilers, (0, _extends3.default)({
                   dir: this.dir,
                   dev: true,
                   reload: this.reload.bind(this)
@@ -585,7 +610,7 @@ var HotReloader = function () {
       }));
 
       function prepareBuildTools(_x5) {
-        return _ref11.apply(this, arguments);
+        return _ref7.apply(this, arguments);
       }
 
       return prepareBuildTools;
@@ -601,7 +626,7 @@ var HotReloader = function () {
   }, {
     key: 'getCompilationErrors',
     value: function () {
-      var _ref14 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee6() {
+      var _ref10 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee6() {
         var _stats$compilation, compiler, errors, _iteratorNormalCompletion6, _didIteratorError6, _iteratorError6, _iterator6, _step6, err, _iteratorNormalCompletion7, _didIteratorError7, _iteratorError7, _iterator7, _step7, r, _iteratorNormalCompletion8, _didIteratorError8, _iteratorError8, _iterator8, _step8, c, path, _errors;
 
         return _regenerator2.default.wrap(function _callee6$(_context7) {
@@ -788,7 +813,7 @@ var HotReloader = function () {
       }));
 
       function getCompilationErrors() {
-        return _ref14.apply(this, arguments);
+        return _ref10.apply(this, arguments);
       }
 
       return getCompilationErrors;
@@ -804,9 +829,29 @@ var HotReloader = function () {
     }
   }, {
     key: 'ensurePage',
-    value: function ensurePage(page) {
-      return this.onDemandEntries.ensurePage(page);
-    }
+    value: function () {
+      var _ref11 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee7(page) {
+        return _regenerator2.default.wrap(function _callee7$(_context8) {
+          while (1) {
+            switch (_context8.prev = _context8.next) {
+              case 0:
+                _context8.next = 2;
+                return this.onDemandEntries.ensurePage(page);
+
+              case 2:
+              case 'end':
+                return _context8.stop();
+            }
+          }
+        }, _callee7, this);
+      }));
+
+      function ensurePage(_x6) {
+        return _ref11.apply(this, arguments);
+      }
+
+      return ensurePage;
+    }()
   }]);
   return HotReloader;
 }();

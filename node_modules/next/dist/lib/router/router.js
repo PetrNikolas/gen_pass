@@ -278,13 +278,12 @@ var Router = function () {
                 }
 
                 this.abortComponentLoad(as);
-                _parse = (0, _url2.parse)(url, true), pathname = _parse.pathname, query = _parse.query;
 
                 // If the url change is only related to a hash change
                 // We should not proceed. We should only change the state.
 
                 if (!this.onlyAHashChange(as)) {
-                  _context3.next = 9;
+                  _context3.next = 8;
                   break;
                 }
 
@@ -292,12 +291,14 @@ var Router = function () {
                 this.scrollToHash(as);
                 return _context3.abrupt('return');
 
-              case 9:
+              case 8:
+                _parse = (0, _url2.parse)(url, true), pathname = _parse.pathname, query = _parse.query;
 
                 // If asked to change the current URL we should reload the current page
                 // (not location.reload() but reload getInitalProps and other Next.js stuffs)
                 // We also need to set the method = replaceState always
                 // as this should not go into the history (That's how browsers work)
+
                 if (!this.urlIsNew(pathname, query)) {
                   method = 'replaceState';
                 }
@@ -380,7 +381,9 @@ var Router = function () {
     value: function changeState(method, url, as) {
       var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
 
-      if (method !== 'pushState' || (0, _utils.getURL)() !== as) {
+      if (window.frameElement) {
+        (0, _utils.execOnce)(_utils.warn)('Warning: You\'re using Next.js inside an iFrame. Browser history is disabled.');
+      } else if (method !== 'pushState' || (0, _utils.getURL)() !== as) {
         window.history[method]({ url: url, as: as, options: options }, null, as);
       }
     }
@@ -415,30 +418,31 @@ var Router = function () {
 
               case 8:
                 _routeInfo2 = routeInfo, Component = _routeInfo2.Component;
+
+                if (!(typeof Component !== 'function')) {
+                  _context4.next = 11;
+                  break;
+                }
+
+                throw new Error('The default export is not a React Component in page: "' + pathname + '"');
+
+              case 11:
                 ctx = { pathname: pathname, query: query, asPath: as };
-                _context4.next = 12;
+                _context4.next = 14;
                 return this.getInitialProps(Component, ctx);
 
-              case 12:
+              case 14:
                 routeInfo.props = _context4.sent;
 
 
                 this.components[route] = routeInfo;
-                _context4.next = 32;
+                _context4.next = 37;
                 break;
 
-              case 16:
-                _context4.prev = 16;
+              case 18:
+                _context4.prev = 18;
                 _context4.t1 = _context4['catch'](1);
 
-                if (!_context4.t1.cancelled) {
-                  _context4.next = 20;
-                  break;
-                }
-
-                return _context4.abrupt('return', { error: _context4.t1 });
-
-              case 20:
                 if (!_context4.t1.buildIdMismatched) {
                   _context4.next = 24;
                   break;
@@ -452,35 +456,54 @@ var Router = function () {
                 return _context4.abrupt('return', { error: _context4.t1 });
 
               case 24:
-
-                if (_context4.t1.statusCode === 404) {
-                  // Indicate main error display logic to
-                  // ignore rendering this error as a runtime error.
-                  _context4.t1.ignore = true;
+                if (!(_context4.t1.statusCode === 404)) {
+                  _context4.next = 28;
+                  break;
                 }
 
+                // If there's 404 error for the page, it could be due to two reasons.
+                //  1. Page is not exists
+                //  2. Page is exists in a different zone
+                // We are not sure whether this is actual 404 or exists in a different zone.
+                // So, doing a hard reload is the proper way to deal with this.
+                window.location.href = as;
+
+                // Changing the URL doesn't block executing the current code path.
+                // So, we need to mark it as a cancelled error and stop the routing logic.
+                _context4.t1.cancelled = true;
+                return _context4.abrupt('return', { error: _context4.t1 });
+
+              case 28:
+                if (!_context4.t1.cancelled) {
+                  _context4.next = 30;
+                  break;
+                }
+
+                return _context4.abrupt('return', { error: _context4.t1 });
+
+              case 30:
                 _Component = this.ErrorComponent;
 
                 routeInfo = { Component: _Component, err: _context4.t1 };
                 _ctx = { err: _context4.t1, pathname: pathname, query: query };
-                _context4.next = 30;
+                _context4.next = 35;
                 return this.getInitialProps(_Component, _ctx);
 
-              case 30:
+              case 35:
                 routeInfo.props = _context4.sent;
 
 
                 routeInfo.error = _context4.t1;
 
-              case 32:
+              case 37:
                 return _context4.abrupt('return', routeInfo);
 
-              case 33:
+              case 38:
               case 'end':
                 return _context4.stop();
             }
           }
-        }, _callee4, this, [[1, 16]]);
+        }, _callee4, this, [[1, 18]]);
       }));
 
       function getRouteInfo(_x13, _x14, _x15, _x16) {
@@ -608,15 +631,14 @@ var Router = function () {
                   cancelled = true;
                 };
 
-                _context6.prev = 2;
-                _context6.next = 5;
+                _context6.next = 4;
                 return this.fetchRoute(route);
 
-              case 5:
+              case 4:
                 Component = _context6.sent;
 
                 if (!cancelled) {
-                  _context6.next = 10;
+                  _context6.next = 9;
                   break;
                 }
 
@@ -625,7 +647,7 @@ var Router = function () {
                 error.cancelled = true;
                 throw error;
 
-              case 10:
+              case 9:
 
                 if (cancel === this.componentLoadCancel) {
                   this.componentLoadCancel = null;
@@ -633,24 +655,12 @@ var Router = function () {
 
                 return _context6.abrupt('return', Component);
 
-              case 14:
-                _context6.prev = 14;
-                _context6.t0 = _context6['catch'](2);
-
-                // There's an error in loading the route.
-                // Usually this happens when there's a failure in the webpack build
-                // So in that case, we need to load the page with full SSR
-                // That'll clean the invalid exising client side information.
-                // (Like cached routes)
-                window.location.href = as;
-                throw _context6.t0;
-
-              case 18:
+              case 11:
               case 'end':
                 return _context6.stop();
             }
           }
-        }, _callee6, this, [[2, 14]]);
+        }, _callee6, this);
       }));
 
       function fetchComponent(_x18, _x19) {

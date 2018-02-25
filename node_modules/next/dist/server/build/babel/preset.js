@@ -14,8 +14,6 @@ var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var relativeResolve = require('../root-module-relative-path').default(require);
-
 // Resolve styled-jsx plugins
 function styledJsxOptions(opts) {
   if (!opts) {
@@ -54,18 +52,10 @@ module.exports = function (context) {
     presets: [[require.resolve('babel-preset-env'), (0, _extends3.default)({
       modules: false
     }, opts['preset-env'])], require.resolve('babel-preset-react')],
-    plugins: [require.resolve('babel-plugin-react-require'), require.resolve('./plugins/handle-import'), require.resolve('babel-plugin-transform-object-rest-spread'), require.resolve('babel-plugin-transform-class-properties'), [require.resolve('babel-plugin-transform-runtime'), opts['transform-runtime'] || {}], [require.resolve('styled-jsx/babel'), styledJsxOptions(opts['styled-jsx'])]].concat((0, _toConsumableArray3.default)(plugins), [[require.resolve('babel-plugin-module-resolver'), {
-      alias: {
-        'babel-runtime': relativeResolve('babel-runtime/package'),
-        'next/link': relativeResolve('../../../lib/link'),
-        'next/prefetch': relativeResolve('../../../lib/prefetch'),
-        'next/css': relativeResolve('../../../lib/css'),
-        'next/dynamic': relativeResolve('../../../lib/dynamic'),
-        'next/head': relativeResolve('../../../lib/head'),
-        'next/document': relativeResolve('../../../server/document'),
-        'next/router': relativeResolve('../../../lib/router'),
-        'next/error': relativeResolve('../../../lib/error')
-      }
-    }]])
+    plugins: [require.resolve('babel-plugin-react-require'), require.resolve('./plugins/handle-import'), require.resolve('babel-plugin-transform-object-rest-spread'), require.resolve('babel-plugin-transform-class-properties'), [require.resolve('babel-plugin-transform-runtime'), opts['transform-runtime'] || {
+      helpers: false,
+      polyfill: false,
+      regenerator: true
+    }], [require.resolve('styled-jsx/babel'), styledJsxOptions(opts['styled-jsx'])]].concat((0, _toConsumableArray3.default)(plugins))
   };
 };

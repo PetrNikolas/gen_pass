@@ -18,9 +18,9 @@ var _map2 = _interopRequireDefault(_map);
 
 exports.default = getConfig;
 
-var _path = require('path');
+var _findUp = require('find-up');
 
-var _fs = require('fs');
+var _findUp2 = _interopRequireDefault(_findUp);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29,7 +29,6 @@ var cache = new _map2.default();
 var defaultConfig = {
   webpack: null,
   webpackDevMiddleware: null,
-  poweredByHeader: true,
   distDir: '.next',
   assetPrefix: '',
   configOrigin: 'default',
@@ -48,14 +47,18 @@ function loadConfig(dir, customConfig) {
     customConfig.configOrigin = 'server';
     return withDefaults(customConfig);
   }
-  var path = (0, _path.join)(dir, 'next.config.js');
+  var path = _findUp2.default.sync('next.config.js', {
+    cwd: dir
+  });
 
   var userConfig = {};
 
-  var userHasConfig = (0, _fs.existsSync)(path);
-  if (userHasConfig) {
+  if (path && path.length) {
     var userConfigModule = require(path);
     userConfig = userConfigModule.default || userConfigModule;
+    if (userConfig.poweredByHeader === true || userConfig.poweredByHeader === false) {
+      console.warn('> the `poweredByHeader` option has been removed https://err.sh/zeit/next.js/powered-by-header-option-removed');
+    }
     userConfig.configOrigin = 'next.config.js';
   }
 

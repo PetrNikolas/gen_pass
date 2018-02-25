@@ -12,6 +12,8 @@ var _createClass2 = require('babel-runtime/helpers/createClass');
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
+var _webpackSources = require('webpack-sources');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // This plugin combines a set of assets into a single asset
@@ -32,27 +34,24 @@ var CombineAssetsPlugin = function () {
     value: function apply(compiler) {
       var _this = this;
 
-      compiler.plugin('after-compile', function (compilation, callback) {
-        var newSource = '';
-        _this.input.forEach(function (name) {
-          var asset = compilation.assets[name];
-          if (!asset) return;
+      compiler.plugin('compilation', function (compilation) {
+        // This is triggered after uglify and other optimizers have ran.
+        compilation.plugin('after-optimize-chunk-assets', function (chunks) {
+          var concat = new _webpackSources.ConcatSource();
 
-          newSource += asset.source() + '\n';
+          _this.input.forEach(function (name) {
+            var asset = compilation.assets[name];
+            if (!asset) return;
 
-          // We keep existing assets since that helps when analyzing the bundle
+            // We add each matched asset from this.input to a new bundle
+            concat.add(asset);
+            // The original assets are kept because they show up when analyzing the bundle using webpack-bundle-analyzer
+            // See https://github.com/zeit/next.js/tree/canary/examples/with-webpack-bundle-analyzer
+          });
+
+          // Creates a new asset holding the concatted source
+          compilation.assets[_this.output] = concat;
         });
-
-        compilation.assets[_this.output] = {
-          source: function source() {
-            return newSource;
-          },
-          size: function size() {
-            return newSource.length;
-          }
-        };
-
-        callback();
       });
     }
   }]);

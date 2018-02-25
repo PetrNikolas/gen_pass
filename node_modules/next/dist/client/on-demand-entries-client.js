@@ -28,6 +28,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /* global location */
 
+var _window = window,
+    assetPrefix = _window.__NEXT_DATA__.assetPrefix;
+
 exports.default = function () {
   var ping = function () {
     var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
@@ -37,10 +40,10 @@ exports.default = function () {
           switch (_context.prev = _context.next) {
             case 0:
               _context.prev = 0;
-              url = '/_next/on-demand-entries-ping?page=' + _router2.default.pathname;
+              url = assetPrefix + '/_next/on-demand-entries-ping?page=' + _router2.default.pathname;
               _context.next = 4;
               return (0, _unfetch2.default)(url, {
-                credentials: 'same-origin'
+                credentials: 'omit'
               });
 
             case 4:
@@ -58,7 +61,7 @@ exports.default = function () {
 
               _context.next = 11;
               return (0, _unfetch2.default)(location.href, {
-                credentials: 'same-origin'
+                credentials: 'omit'
               });
 
             case 11:

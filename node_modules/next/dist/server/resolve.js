@@ -270,11 +270,14 @@ function getPaths(id) {
   var i = _path.sep === '/' ? id : id.replace(/\//g, _path.sep);
 
   if (i.slice(-3) === '.js') return [i];
+  if (i.slice(-4) === '.jsx') return [i];
+  if (i.slice(-4) === '.tsx') return [i];
+  if (i.slice(-3) === '.ts') return [i];
   if (i.slice(-5) === '.json') return [i];
 
   if (i[i.length - 1] === _path.sep) {
-    return [i + 'index.js', i + 'index.json'];
+    return [i + 'index.js', i + 'index.jsx', i + 'index.ts', i + 'index.tsx', i + 'index.json'];
   }
 
-  return [i + '.js', (0, _path.join)(i, 'index.js'), i + '.json', (0, _path.join)(i, 'index.json')];
+  return [i + '.js', (0, _path.join)(i, 'index.js'), i + '.jsx', (0, _path.join)(i, 'index.jsx'), i + '.tsx', (0, _path.join)(i, 'index.tsx'), i + '.ts', (0, _path.join)(i, 'index.ts'), i + '.json', (0, _path.join)(i, 'index.json')];
 }

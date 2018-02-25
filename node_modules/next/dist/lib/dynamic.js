@@ -241,6 +241,16 @@ function flushChunks() {
 }
 
 var SameLoopPromise = exports.SameLoopPromise = function () {
+  (0, _createClass3.default)(SameLoopPromise, null, [{
+    key: 'resolve',
+    value: function resolve(value) {
+      var promise = new SameLoopPromise(function (done) {
+        return done(value);
+      });
+      return promise;
+    }
+  }]);
+
   function SameLoopPromise(cb) {
     (0, _classCallCheck3.default)(this, SameLoopPromise);
 

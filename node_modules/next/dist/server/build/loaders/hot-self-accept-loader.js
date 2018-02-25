@@ -13,7 +13,9 @@ module.exports = function (content, sourceMap) {
 
   var route = getRoute(this);
 
-  this.callback(null, content + '\n    (function (Component, route) {\n      if (!module.hot) return\n      if (!__resourceQuery) return\n\n      var qs = require(\'querystring\')\n      var params = qs.parse(__resourceQuery.slice(1))\n      if (params.entry == null) return\n\n      module.hot.accept()\n      Component.__route = route\n\n      if (module.hot.status() === \'idle\') return\n\n      var components = next.router.components\n      for (var r in components) {\n        if (!components.hasOwnProperty(r)) continue\n\n        if (components[r].Component.__route === route) {\n          next.router.update(r, Component)\n        }\n      }\n    })(typeof __webpack_exports__ !== \'undefined\' ? __webpack_exports__.default : (module.exports.default || module.exports), ' + (0, _stringify2.default)(route) + ')\n  ', sourceMap);
+  // Webpack has a built in system to prevent default from colliding, giving it a random letter per export.
+  // We can safely check if Component is undefined since all other pages imported into the entrypoint don't have __webpack_exports__.default
+  this.callback(null, content + '\n    (function (Component, route) {\n      if(!Component) return\n      if (!module.hot) return\n      module.hot.accept()\n      Component.__route = route\n\n      if (module.hot.status() === \'idle\') return\n\n      var components = next.router.components\n      for (var r in components) {\n        if (!components.hasOwnProperty(r)) continue\n\n        if (components[r].Component.__route === route) {\n          next.router.update(r, Component)\n        }\n      }\n    })(typeof __webpack_exports__ !== \'undefined\' ? __webpack_exports__.default : (module.exports.default || module.exports), ' + (0, _stringify2.default)(route) + ')\n  ', sourceMap);
 };
 
 var nextPagesDir = (0, _path.resolve)(__dirname, '..', '..', '..', 'pages');

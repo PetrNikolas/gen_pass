@@ -101,11 +101,7 @@ var App = function (_Component) {
       }
       var containerProps = { Component: Component, props: props, hash: hash, router: router, url: url };
 
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(Container, containerProps)
-      );
+      return _react2.default.createElement(Container, containerProps);
     }
   }]);
   return App;

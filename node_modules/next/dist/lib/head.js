@@ -81,10 +81,15 @@ function reduceComponents(components) {
     return _react2.default.Children.toArray(children);
   }).reduce(function (a, b) {
     return a.concat(b);
+  }, []).reduce(function (a, b) {
+    if (_react2.default.Fragment && b.type === _react2.default.Fragment) {
+      return a.concat(_react2.default.Children.toArray(b.props.children));
+    }
+    return a.concat(b);
   }, []).reverse()).concat.apply(_components$map$map$r, (0, _toConsumableArray3.default)(defaultHead())).filter(function (c) {
     return !!c;
   }).filter(unique()).reverse().map(function (c) {
-    var className = (c.className ? c.className + ' ' : '') + 'next-head';
+    var className = (c.props && c.props.className ? c.props.className + ' ' : '') + 'next-head';
     return _react2.default.cloneElement(c, { className: className });
   });
 }
@@ -105,11 +110,16 @@ var METATYPES = ['name', 'httpEquiv', 'charSet', 'itemProp', 'property'];
 // which shouldn't be duplicated, like <title/>.
 
 function unique() {
+  var keys = new _set2.default();
   var tags = new _set2.default();
   var metaTypes = new _set2.default();
   var metaCategories = {};
 
   return function (h) {
+    if (h.key && h.key.startsWith('.$')) {
+      if (keys.has(h.key)) return false;
+      keys.add(h.key);
+    }
     switch (h.type) {
       case 'title':
       case 'base':

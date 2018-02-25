@@ -36,7 +36,7 @@ var _createClass2 = require('babel-runtime/helpers/createClass');
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _pathMatch = require('path-match');
+var _pathMatch = require('./lib/path-match');
 
 var _pathMatch2 = _interopRequireDefault(_pathMatch);
 

@@ -25,8 +25,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // We've added support for SSR with this version
 var TYPE_IMPORT = 'Import';
 
+/*
+ Added "typeof require.resolveWeak !== 'function'" check instead of
+ "typeof window === 'undefined'" to support dynamic impports in non-webpack environments.
+ "require.resolveWeak" and "require.ensure" are webpack specific methods.
+ They would fail in Node/CommonJS environments.
+*/
+
 var buildImport = function buildImport(args) {
-  return (0, _babelTemplate2.default)('\n  (\n    typeof window === \'undefined\' ?\n      new (require(\'next/dynamic\').SameLoopPromise)((resolve, reject) => {\n        eval(\'require.ensure = function (deps, callback) { callback(require) }\')\n        require.ensure([], (require) => {\n          let m = require(SOURCE)\n          m.__webpackChunkName = \'' + args.name + '.js\'\n          resolve(m);\n        }, \'chunks/' + args.name + '.js\');\n      })\n      :\n      new (require(\'next/dynamic\').SameLoopPromise)((resolve, reject) => {\n        const weakId = require.resolveWeak(SOURCE)\n        try {\n          const weakModule = __webpack_require__(weakId)\n          return resolve(weakModule)\n        } catch (err) {}\n\n        require.ensure([], (require) => {\n          try {\n            let m = require(SOURCE)\n            resolve(m)\n          } catch(error) {\n            reject(error)\n          }\n        }, \'chunks/' + args.name + '.js\');\n      })\n  )\n');
+  return (0, _babelTemplate2.default)('\n  (\n    new (require(\'next/dynamic\').SameLoopPromise)((resolve, reject) => {\n      const weakId = require.resolveWeak(SOURCE)\n      try {\n        const weakModule = __webpack_require__(weakId)\n        return resolve(weakModule)\n      } catch (err) {}\n\n      require.ensure([], (require) => {\n        try {\n          let m = require(SOURCE)\n          m.__webpackChunkName = \'' + args.name + '\'\n          resolve(m)\n        } catch(error) {\n          reject(error)\n        }\n      }, \'chunks/' + args.name + '\');\n    })\n  )\n');
 };
 
 function getModulePath(sourceFilename, moduleName) {

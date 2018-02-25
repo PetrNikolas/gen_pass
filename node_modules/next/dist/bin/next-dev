@@ -13,8 +13,6 @@ var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
-require('source-map-support/register');
-
 var _path = require('path');
 
 var _minimist = require('minimist');
@@ -28,10 +26,6 @@ var _server = require('../server');
 var _server2 = _interopRequireDefault(_server);
 
 var _utils = require('../lib/utils');
-
-var _pkgUp = require('pkg-up');
-
-var _pkgUp2 = _interopRequireDefault(_pkgUp);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -85,7 +79,7 @@ srv.start(argv.port, argv.hostname).then((0, _asyncToGenerator3.default)( /*#__P
 }))).catch(function (err) {
   if (err.code === 'EADDRINUSE') {
     var errorMessage = 'Port ' + argv.port + ' is already in use.';
-    var pkgAppPath = _pkgUp2.default.sync('.');
+    var pkgAppPath = require('pkg-up').sync('.');
     var appPackage = JSON.parse((0, _fs.readFileSync)(pkgAppPath, 'utf8'));
     var nextScript = (0, _entries2.default)(appPackage.scripts).find(function (scriptLine) {
       return scriptLine[1] === 'next';

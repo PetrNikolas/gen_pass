@@ -8,9 +8,8 @@
     "npm": "5.0.3"
   },
   "scripts": {
-    "precommit": "lint-staged",
     "dev": "node server.js",
-    "build": "npm run precommit && next build",
+    "build": "yarn run precommit && next build",
     "build:deploy": "yarn run build && yarn run export",
     "export": "next export -o docs",
     "heroku-postbuild": "npm run build",
@@ -23,9 +22,9 @@
     "fela-dom": "^7.0.0",
     "fela-preset-web": "^8.0.0",
     "html2canvas": "^1.0.0-alpha.9",
-    "next": "^4.1.4",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-fela": "^6.1.1",
     "react-qr-svg": "^2.1.0"
   },

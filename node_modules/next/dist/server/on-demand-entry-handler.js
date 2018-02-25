@@ -36,6 +36,10 @@ var _keys = require('babel-runtime/core-js/object/keys');
 
 var _keys2 = _interopRequireDefault(_keys);
 
+var _set = require('babel-runtime/core-js/set');
+
+var _set2 = _interopRequireDefault(_set);
+
 var _symbol = require('babel-runtime/core-js/symbol');
 
 var _symbol2 = _interopRequireDefault(_symbol);
@@ -52,15 +56,17 @@ var _path = require('path');
 
 var _url = require('url');
 
-var _resolve = require('./resolve');
-
-var _resolve2 = _interopRequireDefault(_resolve);
-
 var _touch = require('touch');
 
 var _touch2 = _interopRequireDefault(_touch);
 
-var _utils = require('./utils');
+var _resolve = require('./resolve');
+
+var _resolve2 = _interopRequireDefault(_resolve);
+
+var _utils = require('./build/webpack/utils');
+
+var _utils2 = require('./utils');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68,12 +74,12 @@ var ADDED = (0, _symbol2.default)('added');
 var BUILDING = (0, _symbol2.default)('building');
 var BUILT = (0, _symbol2.default)('built');
 
-function onDemandEntryHandler(devMiddleware, compiler, _ref) {
+function onDemandEntryHandler(devMiddleware, compilers, _ref) {
   var dir = _ref.dir,
       dev = _ref.dev,
       reload = _ref.reload,
       _ref$maxInactiveAge = _ref.maxInactiveAge,
-      maxInactiveAge = _ref$maxInactiveAge === undefined ? 1000 * 25 : _ref$maxInactiveAge,
+      maxInactiveAge = _ref$maxInactiveAge === undefined ? 1000 * 60 : _ref$maxInactiveAge,
       _ref$pagesBufferLengt = _ref.pagesBufferLength,
       pagesBufferLength = _ref$pagesBufferLengt === undefined ? 2 : _ref$pagesBufferLengt;
 
@@ -85,91 +91,102 @@ function onDemandEntryHandler(devMiddleware, compiler, _ref) {
   var reloading = false;
   var stopped = false;
   var reloadCallbacks = new _events.EventEmitter();
+  // Keep the names of compilers which are building pages at a given moment.
+  var currentBuilders = new _set2.default();
 
-  compiler.plugin('make', function (compilation, done) {
-    var _this = this;
+  compilers.forEach(function (compiler) {
+    compiler.plugin('make', function (compilation, done) {
+      var _this = this;
 
-    invalidator.startBuilding();
+      invalidator.startBuilding();
+      currentBuilders.add(compiler.name);
 
-    var allEntries = (0, _keys2.default)(entries).map(function (page) {
-      var _entries$page = entries[page],
-          name = _entries$page.name,
-          entry = _entries$page.entry;
+      var allEntries = (0, _keys2.default)(entries).map(function (page) {
+        var _entries$page = entries[page],
+            name = _entries$page.name,
+            entry = _entries$page.entry;
 
-      entries[page].status = BUILDING;
-      return addEntry(compilation, _this.context, name, entry);
-    });
-
-    _promise2.default.all(allEntries).then(function () {
-      return done();
-    }).catch(done);
-  });
-
-  compiler.plugin('done', function (stats) {
-    var compilation = stats.compilation;
-
-    var hardFailedPages = compilation.errors.filter(function (e) {
-      // Make sure to only pick errors which marked with missing modules
-      var hasNoModuleFoundError = /ENOENT/.test(e.message) || /Module not found/.test(e.message);
-      if (!hasNoModuleFoundError) return false;
-
-      // The page itself is missing. So this is a failed page.
-      if (_utils.IS_BUNDLED_PAGE.test(e.module.name)) return true;
-
-      // No dependencies means this is a top level page.
-      // So this is a failed page.
-      return e.module.dependencies.length === 0;
-    }).map(function (e) {
-      return e.module.chunks;
-    }).reduce(function (a, b) {
-      return [].concat((0, _toConsumableArray3.default)(a), (0, _toConsumableArray3.default)(b));
-    }, []).map(function (c) {
-      var pageName = _utils.MATCH_ROUTE_NAME.exec(c.name)[1];
-      return normalizePage('/' + pageName);
-    });
-
-    // Call all the doneCallbacks
-    (0, _keys2.default)(entries).forEach(function (page) {
-      var entryInfo = entries[page];
-      if (entryInfo.status !== BUILDING) return;
-
-      // With this, we are triggering a filesystem based watch trigger
-      // It'll memorize some timestamp related info related to common files used
-      // in the page
-      // That'll reduce the page building time significantly.
-      if (!touchedAPage) {
-        setTimeout(function () {
-          _touch2.default.sync(entryInfo.pathname);
-        }, 1000);
-        touchedAPage = true;
-      }
-
-      entryInfo.status = BUILT;
-      entries[page].lastActiveTime = Date.now();
-      doneCallbacks.emit(page);
-    });
-
-    invalidator.doneBuilding();
-
-    if (hardFailedPages.length > 0 && !reloading) {
-      console.log('> Reloading webpack due to inconsistant state of pages(s): ' + hardFailedPages.join(', '));
-      reloading = true;
-      reload().then(function () {
-        console.log('> Webpack reloaded.');
-        reloadCallbacks.emit('done');
-        stop();
-      }).catch(function (err) {
-        console.error('> Webpack reloading failed: ' + err.message);
-        console.error(err.stack);
-        process.exit(1);
+        entries[page].status = BUILDING;
+        return addEntry(compilation, _this.context, name, entry);
       });
-    }
+
+      _promise2.default.all(allEntries).then(function () {
+        return done();
+      }).catch(done);
+    });
+
+    compiler.plugin('done', function (stats) {
+      // Wait until all the compilers mark the build as done.
+      currentBuilders.delete(compiler.name);
+      if (currentBuilders.size !== 0) return;
+
+      var compilation = stats.compilation;
+
+      var hardFailedPages = compilation.errors.filter(function (e) {
+        // Make sure to only pick errors which marked with missing modules
+        var hasNoModuleFoundError = /ENOENT/.test(e.message) || /Module not found/.test(e.message);
+        if (!hasNoModuleFoundError) return false;
+
+        // The page itself is missing. So this is a failed page.
+        if (_utils2.IS_BUNDLED_PAGE.test(e.module.name)) return true;
+
+        // No dependencies means this is a top level page.
+        // So this is a failed page.
+        return e.module.dependencies.length === 0;
+      }).map(function (e) {
+        return e.module.chunks;
+      }).reduce(function (a, b) {
+        return [].concat((0, _toConsumableArray3.default)(a), (0, _toConsumableArray3.default)(b));
+      }, []).map(function (c) {
+        var pageName = _utils2.MATCH_ROUTE_NAME.exec(c.name)[1];
+        return normalizePage('/' + pageName);
+      });
+
+      // Call all the doneCallbacks
+      (0, _keys2.default)(entries).forEach(function (page) {
+        var entryInfo = entries[page];
+        if (entryInfo.status !== BUILDING) return;
+
+        // With this, we are triggering a filesystem based watch trigger
+        // It'll memorize some timestamp related info related to common files used
+        // in the page
+        // That'll reduce the page building time significantly.
+        if (!touchedAPage) {
+          setTimeout(function () {
+            _touch2.default.sync(entryInfo.pathname);
+          }, 1000);
+          touchedAPage = true;
+        }
+
+        entryInfo.status = BUILT;
+        entries[page].lastActiveTime = Date.now();
+        doneCallbacks.emit(page);
+      });
+
+      invalidator.doneBuilding(compiler.name);
+
+      if (hardFailedPages.length > 0 && !reloading) {
+        console.log('> Reloading webpack due to inconsistant state of pages(s): ' + hardFailedPages.join(', '));
+        reloading = true;
+        reload().then(function () {
+          console.log('> Webpack reloaded.');
+          reloadCallbacks.emit('done');
+          stop();
+        }).catch(function (err) {
+          console.error('> Webpack reloading failed: ' + err.message);
+          console.error(err.stack);
+          process.exit(1);
+        });
+      }
+    });
   });
 
   var disposeHandler = setInterval(function () {
     if (stopped) return;
     disposeInactiveEntries(devMiddleware, entries, lastAccessPages, maxInactiveAge);
   }, 5000);
+
+  disposeHandler.unref();
 
   function stop() {
     clearInterval(disposeHandler);
@@ -189,7 +206,8 @@ function onDemandEntryHandler(devMiddleware, compiler, _ref) {
     },
     ensurePage: function () {
       var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(page) {
-        var pagePath, pathname, name, entry;
+        var pagePath, pathname, _createEntry, name, files;
+
         return _regenerator2.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -206,9 +224,8 @@ function onDemandEntryHandler(devMiddleware, compiler, _ref) {
 
               case 6:
                 pathname = _context.sent;
-                name = (0, _path.join)('bundles', pathname.substring(dir.length));
-                entry = [pathname + '?entry'];
-                _context.next = 11;
+                _createEntry = (0, _utils.createEntry)((0, _path.relative)(dir, pathname)), name = _createEntry.name, files = _createEntry.files;
+                _context.next = 10;
                 return new _promise2.default(function (resolve, reject) {
                   var entryInfo = entries[page];
 
@@ -219,25 +236,25 @@ function onDemandEntryHandler(devMiddleware, compiler, _ref) {
                     }
 
                     if (entryInfo.status === BUILDING) {
-                      doneCallbacks.on(page, processCallback);
+                      doneCallbacks.once(page, handleCallback);
                       return;
                     }
                   }
 
                   console.log('> Building page: ' + page);
 
-                  entries[page] = { name: name, entry: entry, pathname: pathname, status: ADDED };
-                  doneCallbacks.on(page, processCallback);
+                  entries[page] = { name: name, entry: files, pathname: pathname, status: ADDED };
+                  doneCallbacks.once(page, handleCallback);
 
                   invalidator.invalidate();
 
-                  function processCallback(err) {
+                  function handleCallback(err) {
                     if (err) return reject(err);
                     resolve();
                   }
                 });
 
-              case 11:
+              case 10:
               case 'end':
                 return _context.stop();
             }
@@ -307,6 +324,7 @@ function onDemandEntryHandler(devMiddleware, compiler, _ref) {
   };
 }
 
+// Based on https://github.com/webpack/webpack/blob/master/lib/DynamicEntryPlugin.js#L29-L37
 function addEntry(compilation, context, name, entry) {
   return new _promise2.default(function (resolve, reject) {
     var dep = _DynamicEntryPlugin2.default.createDependency(entry, name);
@@ -369,6 +387,7 @@ var Invalidator = function () {
     (0, _classCallCheck3.default)(this, Invalidator);
 
     this.devMiddleware = devMiddleware;
+    // contains an array of types of compilers currently building
     this.building = false;
     this.rebuildAgain = false;
   }
@@ -397,6 +416,7 @@ var Invalidator = function () {
     key: 'doneBuilding',
     value: function doneBuilding() {
       this.building = false;
+
       if (this.rebuildAgain) {
         this.rebuildAgain = false;
         this.invalidate();
