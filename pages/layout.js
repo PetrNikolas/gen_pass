@@ -76,6 +76,11 @@ export default ({ children }) => (
         `
         }}
       />
+
+      <script
+        async=""
+        src="https://cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"
+      />
     </Head>
 
     <header className="navbar animated fadeIn">

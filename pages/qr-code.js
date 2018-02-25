@@ -28,26 +28,19 @@ export default class extends React.Component {
     })
   }
 
-  /** Update value in input */
-  closeModal = event => {
-    let elem = document.getElementById('rendered_canvas')
-    elem.remove()
-
-    document.getElementById('modal-id').style.display = 'none'
-  }
-
   /** Generate password */
   generatorHandleClick = value => {
     if (value) {
       const canvas = document.querySelector('#qr')
 
       html2canvas(canvas, {
-        scale: 0.52
+        scale: 0.52,
+        useCORS: true
       })
         .then(canvas => {
-          document.getElementById('modal-id').style.display = 'flex'
-          document.getElementById('qr_result').appendChild(canvas)
-          canvas.id = 'rendered_canvas'
+          canvas.toBlob(function(blob) {
+            window.saveAs(blob, 'qrcode.png')
+          })
         })
         .catch(err => {
           console.error(err)
@@ -100,33 +93,6 @@ export default class extends React.Component {
           }
         `}</style>
 
-        <div className="modal active" id="modal-id">
-          <a
-            onClick={() => {
-              this.closeModal()
-            }}
-            className="modal-overlay"
-            aria-label="Close"
-          />
-          <div className="modal-container">
-            <div className="modal-header">
-              <a
-                onClick={() => {
-                  this.closeModal()
-                }}
-                className="btn btn-clear float-right"
-                aria-label="Close"
-              />
-              <div className="modal-title h5 text-center">Your QR Code</div>
-            </div>
-            <div className="modal-body">
-              <div className="content">
-                <div id="qr_result" />
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="container">
           <div className="columns">
             <div className="column col-xs-12 text-center">
@@ -168,7 +134,7 @@ export default class extends React.Component {
                     className="btn btn-primary"
                     id="start_button"
                   >
-                    Generate image
+                    Download as image (Firefox is not supported)
                   </button>
                 </div>
               </div>
