@@ -11,7 +11,7 @@
     "precommit": "lint-staged",
     "dev": "node server.js",
     "build": "yarn run precommit && next build",
-    "build:deploy": "yarn run build && yarn run export",
+    "build:deploy": "yarn run export",
     "export": "npm run build && next export -o docs",
     "heroku-postbuild": "npm run build",
     "serve": "yarn run build && NODE_ENV=development node server.js",
