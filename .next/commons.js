@@ -2543,7 +2543,7 @@ webpackJsonp(
             a.a.createElement('link', {
               rel: 'shortcut icon',
               type: 'image/ico',
-              href: '/static/img/favicon.ico'
+              href: '/static/img/favicon.png'
             }),
             a.a.createElement('meta', {
               name: 'author',

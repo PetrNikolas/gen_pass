@@ -28,7 +28,7 @@ export default ({ children }) => (
       <link
         rel="shortcut icon"
         type="image/ico"
-        href="/static/img/favicon.ico"
+        href="/static/img/favicon.png"
       />
 
       <meta name="author" content="Petr Nikolas" />
