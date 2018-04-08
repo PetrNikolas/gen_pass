@@ -1,6 +1,6 @@
 .root {
-    padding: 30px 50px 50px 50px;
     font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+    min-height: 100vh;
 }
 
 .navbar a {
@@ -9,9 +9,14 @@
 
 .navbar a:hover,
 .navbar a:focus,
-.navbar a:active {
+.navbar a:active,
+.desktop_header a:hover,
+.desktop_header a:focus,
+.desktop_header a:active {
     border: none !important;
     border-bottom: 2px solid #f8114d !important;
+    color: #f8114d !important;
+    text-decoration: none;
 }
 
 .logo h1 {
@@ -29,8 +34,4 @@
     .root {
         padding: 3px;
     }
-}
-
-.container {
-    margin-bottom: 1.5rem;
 }

@@ -3911,28 +3911,28 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                   g['default'],
                   null,
                   B.a.createElement(n.a, {
-                    styleId: '3778141828',
+                    styleId: '293156649',
                     css: [
-                      '#modal-id.jsx-3778141828{display:none;}',
-                      '#qr_result.jsx-3778141828{margin-left:-100px;}',
-                      '.modal-container.jsx-3778141828 .modal-body.jsx-3778141828{max-height:60vh !important;}',
-                      '#start_button.jsx-3778141828{margin-top:40px;}',
-                      '.form-input.jsx-3778141828{max-width:450px !important;}',
-                      '.card.jsx-3778141828{width:100%;max-width:45rem;margin:0.7rem auto 0;background-color:#fff;border:none;padding:2rem 1.5rem;}',
-                      '@media only screen and (max-width:1100px){.card.jsx-3778141828{width:100%;}h2.jsx-3778141828{font-size:1rem;}}'
+                      '#modal-id.jsx-293156649{display:none;}',
+                      '#qr_result.jsx-293156649{margin-left:-100px;}',
+                      '.modal-container.jsx-293156649 .modal-body.jsx-293156649{max-height:60vh !important;}',
+                      '#start_button.jsx-293156649{margin-top:40px;}',
+                      '.form-input.jsx-293156649{max-width:450px !important;}',
+                      '.card.jsx-293156649{width:100%;max-width:45rem;margin:1.7rem auto 0;background-color:#fff;border:none;padding:2rem 1.5rem;}',
+                      '@media only screen and (max-width:1100px){.card.jsx-293156649{width:100%;}h2.jsx-293156649{font-size:1rem;}}'
                     ]
                   }),
                   B.a.createElement(
                     'div',
-                    { className: 'jsx-3778141828' + ' ' + 'container' },
+                    { className: 'jsx-293156649' + ' ' + 'container' },
                     B.a.createElement(
                       'div',
-                      { className: 'jsx-3778141828' + ' ' + 'columns' },
+                      { className: 'jsx-293156649' + ' ' + 'columns' },
                       B.a.createElement(
                         'div',
                         {
                           className:
-                            'jsx-3778141828' +
+                            'jsx-293156649' +
                             ' ' +
                             'column col-xs-12 text-center'
                         },
@@ -3940,35 +3940,35 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                           'div',
                           {
                             id: 'main_card',
-                            className: 'jsx-3778141828' + ' ' + 'card'
+                            className: 'jsx-293156649' + ' ' + 'card'
                           },
                           B.a.createElement(
                             'div',
                             {
-                              className: 'jsx-3778141828' + ' ' + 'card-header'
+                              className: 'jsx-293156649' + ' ' + 'card-header'
                             },
                             B.a.createElement(
                               'h2',
                               {
                                 className:
-                                  'jsx-3778141828' + ' ' + 'card-title h3'
+                                  'jsx-293156649' + ' ' + 'card-title h3'
                               },
                               'QR codes generator'
                             )
                           ),
                           B.a.createElement(
                             'div',
-                            { className: 'jsx-3778141828' + ' ' + 'card-body' },
+                            { className: 'jsx-293156649' + ' ' + 'card-body' },
                             B.a.createElement(
                               'div',
                               {
-                                className: 'jsx-3778141828' + ' ' + 'form-group'
+                                className: 'jsx-293156649' + ' ' + 'form-group'
                               },
                               B.a.createElement(
                                 'label',
                                 {
                                   className:
-                                    'jsx-3778141828' + ' ' + 'form-label'
+                                    'jsx-293156649' + ' ' + 'form-label'
                                 },
                                 'Set value of your QR code and see the code update in real-time!'
                               ),
@@ -3978,18 +3978,18 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                                   return e.updateInputValue(r)
                                 },
                                 type: 'text',
-                                className: 'jsx-3778141828' + ' ' + 'form-input'
+                                className: 'jsx-293156649' + ' ' + 'form-input'
                               })
                             )
                           ),
                           B.a.createElement(
                             'div',
                             {
-                              className: 'jsx-3778141828' + ' ' + 'card-footer'
+                              className: 'jsx-293156649' + ' ' + 'card-footer'
                             },
                             B.a.createElement(
                               'div',
-                              { id: 'qr', className: 'jsx-3778141828' },
+                              { id: 'qr', className: 'jsx-293156649' },
                               B.a.createElement(u['QRCode'], {
                                 bgColor: '#FFFFFF',
                                 fgColor: '#000000',
@@ -4006,7 +4006,7 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                                 },
                                 id: 'start_button',
                                 className:
-                                  'jsx-3778141828' + ' ' + 'btn btn-primary'
+                                  'jsx-293156649' + ' ' + 'btn btn-primary'
                               },
                               'Download as image (Firefox is not supported)'
                             )

@@ -117,23 +117,23 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                   i['default'],
                   null,
                   l.a.createElement(n.a, {
-                    styleId: '2831617738',
+                    styleId: '673063405',
                     css: [
-                      '.card.jsx-2831617738{width:100%;max-width:45rem;margin:0.7rem auto 0;background-color:#fff;border:none;padding:1.5rem;}',
-                      '@media only screen and (max-width:1100px){.card.jsx-2831617738{width:100%;}h2.jsx-2831617738{font-size:1rem;}}'
+                      '.card.jsx-673063405{width:100%;max-width:45rem;margin:1.7rem auto 0;background-color:#fff;border:none;padding:1.5rem;}',
+                      '@media only screen and (max-width:1100px){.card.jsx-673063405{width:100%;}h2.jsx-673063405{font-size:1rem;}}'
                     ]
                   }),
                   l.a.createElement(
                     'div',
-                    { className: 'jsx-2831617738' + ' ' + 'container' },
+                    { className: 'jsx-673063405' + ' ' + 'container' },
                     l.a.createElement(
                       'div',
-                      { className: 'jsx-2831617738' + ' ' + 'columns' },
+                      { className: 'jsx-673063405' + ' ' + 'columns' },
                       l.a.createElement(
                         'div',
                         {
                           className:
-                            'jsx-2831617738' +
+                            'jsx-673063405' +
                             ' ' +
                             'column col-xs-12 text-center'
                         },
@@ -141,18 +141,18 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                           'div',
                           {
                             id: 'main_card',
-                            className: 'jsx-2831617738' + ' ' + 'card'
+                            className: 'jsx-673063405' + ' ' + 'card'
                           },
                           l.a.createElement(
                             'div',
                             {
-                              className: 'jsx-2831617738' + ' ' + 'card-header'
+                              className: 'jsx-673063405' + ' ' + 'card-header'
                             },
                             l.a.createElement(
                               'h2',
                               {
                                 className:
-                                  'jsx-2831617738' + ' ' + 'card-title h3'
+                                  'jsx-673063405' + ' ' + 'card-title h3'
                               },
                               'Usernames generator'
                             ),
@@ -160,20 +160,20 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                               'div',
                               {
                                 className:
-                                  'jsx-2831617738' +
+                                  'jsx-673063405' +
                                   ' ' +
                                   'card-subtitle text-gray'
                               },
                               'So, click on the button and generate your username from your name and surname now!'
                             ),
                             l.a.createElement('br', {
-                              className: 'jsx-2831617738'
+                              className: 'jsx-673063405'
                             }),
                             l.a.createElement(
                               'div',
                               {
                                 className:
-                                  'jsx-2831617738' +
+                                  'jsx-673063405' +
                                   ' ' +
                                   'card-subtitle text-gray'
                               },
@@ -182,22 +182,22 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                           ),
                           l.a.createElement(
                             'div',
-                            { className: 'jsx-2831617738' + ' ' + 'card-body' },
+                            { className: 'jsx-673063405' + ' ' + 'card-body' },
                             l.a.createElement(
                               'div',
                               {
-                                className: 'jsx-2831617738' + ' ' + 'form-group'
+                                className: 'jsx-673063405' + ' ' + 'form-group'
                               },
                               l.a.createElement(
                                 'div',
                                 {
-                                  className: 'jsx-2831617738' + ' ' + 'columns'
+                                  className: 'jsx-673063405' + ' ' + 'columns'
                                 },
                                 l.a.createElement(
                                   'div',
                                   {
                                     className:
-                                      'jsx-2831617738' +
+                                      'jsx-673063405' +
                                       ' ' +
                                       'column col-lg-4 col-xs-12'
                                   },
@@ -205,7 +205,7 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                     'label',
                                     {
                                       className:
-                                        'jsx-2831617738' + ' ' + 'form-label'
+                                        'jsx-673063405' + ' ' + 'form-label'
                                     },
                                     'Your name'
                                   ),
@@ -217,14 +217,14 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                     type: 'text',
                                     id: 'name',
                                     className:
-                                      'jsx-2831617738' + ' ' + 'form-input'
+                                      'jsx-673063405' + ' ' + 'form-input'
                                   })
                                 ),
                                 l.a.createElement(
                                   'div',
                                   {
                                     className:
-                                      'jsx-2831617738' +
+                                      'jsx-673063405' +
                                       ' ' +
                                       'column col-lg-4 col-xs-12'
                                   },
@@ -232,7 +232,7 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                     'label',
                                     {
                                       className:
-                                        'jsx-2831617738' + ' ' + 'form-label'
+                                        'jsx-673063405' + ' ' + 'form-label'
                                     },
                                     'Your surname'
                                   ),
@@ -244,7 +244,7 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                     type: 'text',
                                     id: 'surname',
                                     className:
-                                      'jsx-2831617738' + ' ' + 'form-input'
+                                      'jsx-673063405' + ' ' + 'form-input'
                                   })
                                 )
                               )
@@ -260,31 +260,31 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                 },
                                 id: 'start_button',
                                 className:
-                                  'jsx-2831617738' + ' ' + 'btn btn-primary'
+                                  'jsx-673063405' + ' ' + 'btn btn-primary'
                               },
                               'Generate now!'
                             ),
                             l.a.createElement(
                               'span',
-                              { id: 'error', className: 'jsx-2831617738' },
+                              { id: 'error', className: 'jsx-673063405' },
                               'Name and surname are required'
                             )
                           ),
                           l.a.createElement(
                             'div',
                             {
-                              className: 'jsx-2831617738' + ' ' + 'card-footer'
+                              className: 'jsx-673063405' + ' ' + 'card-footer'
                             },
                             l.a.createElement(
                               'div',
                               {
-                                className: 'jsx-2831617738' + ' ' + 'form-group'
+                                className: 'jsx-673063405' + ' ' + 'form-group'
                               },
                               l.a.createElement(
                                 'label',
                                 {
                                   className:
-                                    'jsx-2831617738' + ' ' + 'form-label'
+                                    'jsx-673063405' + ' ' + 'form-label'
                                 },
                                 'Your username is:'
                               ),
@@ -293,19 +293,19 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                 id: 'result',
                                 rows: '3',
                                 readOnly: true,
-                                className: 'jsx-2831617738' + ' ' + 'form-input'
+                                className: 'jsx-673063405' + ' ' + 'form-input'
                               })
                             ),
                             l.a.createElement(
                               'div',
-                              { className: 'jsx-2831617738' },
+                              { className: 'jsx-673063405' },
                               'Generated from:',
                               this.state.nameValue &&
                                 l.a.createElement(
                                   'span',
                                   {
                                     id: 'name_chip',
-                                    className: 'jsx-2831617738' + ' ' + 'chip'
+                                    className: 'jsx-673063405' + ' ' + 'chip'
                                   },
                                   ' ',
                                   this.state.nameValue,
@@ -316,7 +316,7 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                   'span',
                                   {
                                     id: 'surname_chip',
-                                    className: 'jsx-2831617738' + ' ' + 'chip'
+                                    className: 'jsx-673063405' + ' ' + 'chip'
                                   },
                                   ' ',
                                   this.state.surnameValue,
@@ -327,7 +327,7 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                               'div',
                               {
                                 className:
-                                  'jsx-2831617738' +
+                                  'jsx-673063405' +
                                   ' ' +
                                   'card-subtitle text-gray'
                               },

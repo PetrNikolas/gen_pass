@@ -76,7 +76,7 @@ export default class extends React.Component {
           .card {
             width: 100%;
             max-width: 45rem;
-            margin: 0.7rem auto 0;
+            margin: 1.7rem auto 0;
             background-color: #fff;
             border: none;
             padding: 2rem 1.5rem;
