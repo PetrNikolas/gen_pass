@@ -165,12 +165,6 @@ export default ({ children }) => (
               Send me a feedback.
             </a>
           </p>
-          <p>
-            Built with <span className="hearth_icon">♥</span> by{' '}
-            <a target="_blank" href="http://www.petrnikolas.com/">
-              Petr Nikolas.
-            </a>
-          </p>
         </div>
       </div>
     </header>

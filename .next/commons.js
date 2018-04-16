@@ -2798,19 +2798,6 @@ webpackJsonp(
                     { href: 'mailto:petr.nikolas@icloud.com?subject=Hello' },
                     'Send me a feedback.'
                   )
-                ),
-                a.a.createElement(
-                  'p',
-                  null,
-                  'Built with ',
-                  a.a.createElement('span', { className: 'hearth_icon' }, '♥'),
-                  ' by',
-                  ' ',
-                  a.a.createElement(
-                    'a',
-                    { target: '_blank', href: 'http://www.petrnikolas.com/' },
-                    'Petr Nikolas.'
-                  )
                 )
               )
             )
