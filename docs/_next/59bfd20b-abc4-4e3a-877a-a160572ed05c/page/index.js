@@ -37,14 +37,14 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
           if (!(e instanceof a))
             throw new TypeError('Cannot call a class as a function')
         }
-        function p(e, a) {
+        function x(e, a) {
           if (!e)
             throw new ReferenceError(
               "this hasn't been initialised - super() hasn't been called"
             )
           return a && ('object' === typeof a || 'function' === typeof a) ? a : e
         }
-        function b(e, a) {
+        function p(e, a) {
           if ('function' !== typeof a && null !== a)
             throw new TypeError(
               'Super expression must either be null or a function, not ' +
@@ -63,11 +63,11 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
               ? Object.setPrototypeOf(e, a)
               : (e.__proto__ = a)
         }
-        var x = (function(e) {
-          b(a, e)
+        var h = (function(e) {
+          p(a, e)
           function a(e) {
             f(this, a)
-            return p(
+            return x(
               this,
               (a.__proto__ || Object.getPrototypeOf(a)).call(this, e)
             )
@@ -80,57 +80,54 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                   d['default'],
                   null,
                   c.a.createElement(n.a, {
-                    styleId: '2900894080',
+                    styleId: '2419311786',
                     css: [
-                      '.columns.jsx-2900894080{min-height:100vh;}',
-                      '.card.jsx-2900894080{width:auto;background:transparent;border:none;padding:10vh 1.5rem;cursor:pointer;-moz-transition:all 0.3s;-webkit-transition:all 0.3s;-webkit-transition:all 0.3s;transition:all 0.3s;margin:0 0.5rem;}',
-                      '.card.jsx-2900894080 h2.jsx-2900894080{color:#fff;}',
-                      '.card-header.jsx-2900894080{padding-bottom:7vh;}',
-                      ".qr-bg.jsx-2900894080{background:url('static/img/bg-2.jpg') #1c1a27 no-repeat;background-size:cover;}",
-                      ".usernames-bg.jsx-2900894080{background:url('static/img/bg-1.jpg') #1c1a27 no-repeat;background-size:cover;}",
-                      ".passwords-bg.jsx-2900894080{background:url('static/img/bg-3.jpg') #1c1a27 no-repeat;background-size:cover;}",
-                      '@media only screen and (max-width:1100px){.card.jsx-2900894080{width:100%;}h2.jsx-2900894080{font-size:1rem;}}'
+                      '.columns.jsx-2419311786{min-height:100vh;}',
+                      '.card.jsx-2419311786{width:auto;background:transparent;border:none;padding:10vh 1.5rem;cursor:pointer;-moz-transition:all 0.3s;-webkit-transition:all 0.3s;-webkit-transition:all 0.3s;transition:all 0.3s;margin:0 0.5rem;}',
+                      '.card-header.jsx-2419311786{padding-bottom:7vh;}',
+                      '.col-12.jsx-2419311786,.col-6.jsx-2419311786{box-shadow:0 0 1px rgba(0,0,0,0.1);}',
+                      '@media only screen and (max-width:1100px){.card.jsx-2419311786{width:100%;}h2.jsx-2419311786{font-size:1rem;}}'
                     ]
                   }),
                   c.a.createElement(
                     'div',
-                    { className: 'jsx-2900894080' + ' ' + 'container' },
+                    { className: 'jsx-2419311786' + ' ' + 'container' },
                     c.a.createElement(
                       'h2',
                       {
                         className:
-                          'jsx-2900894080' + ' ' + 'h1 rwd_title text-center'
+                          'jsx-2419311786' + ' ' + 'h1 rwd_title text-center'
                       },
                       'Random generators'
                     ),
                     c.a.createElement(
                       'div',
-                      { className: 'jsx-2900894080' + ' ' + 'columns' },
+                      { className: 'jsx-2419311786' + ' ' + 'columns' },
                       c.a.createElement(
                         'div',
                         {
                           className:
-                            'jsx-2900894080' +
+                            'jsx-2419311786' +
                             ' ' +
-                            'column col-xs-12 col-6 text-center qr-bg'
+                            'column col-xs-12 col-6 text-center'
                         },
                         c.a.createElement(
                           m.a,
                           { href: '/qr-code' },
                           c.a.createElement(
                             'div',
-                            { className: 'jsx-2900894080' + ' ' + 'card' },
+                            { className: 'jsx-2419311786' + ' ' + 'card' },
                             c.a.createElement(
                               'div',
                               {
                                 className:
-                                  'jsx-2900894080' + ' ' + 'card-header'
+                                  'jsx-2419311786' + ' ' + 'card-header'
                               },
                               c.a.createElement(
                                 'h2',
                                 {
                                   className:
-                                    'jsx-2900894080' + ' ' + 'card-title h3'
+                                    'jsx-2419311786' + ' ' + 'card-title h3'
                                 },
                                 'QR codes generator'
                               )
@@ -139,13 +136,13 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                               'div',
                               {
                                 className:
-                                  'jsx-2900894080' + ' ' + 'card-footer'
+                                  'jsx-2419311786' + ' ' + 'card-footer'
                               },
                               c.a.createElement(
                                 'a',
                                 {
                                   className:
-                                    'jsx-2900894080' + ' ' + 'btn btn-primary'
+                                    'jsx-2419311786' + ' ' + 'btn btn-primary'
                                 },
                                 'Generate now'
                               )
@@ -157,27 +154,27 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                         'div',
                         {
                           className:
-                            'jsx-2900894080' +
+                            'jsx-2419311786' +
                             ' ' +
-                            'column col-xs-12 col-6 text-center passwords-bg'
+                            'column col-xs-12 col-6 text-center'
                         },
                         c.a.createElement(
                           m.a,
                           { href: '/passwords' },
                           c.a.createElement(
                             'div',
-                            { className: 'jsx-2900894080' + ' ' + 'card' },
+                            { className: 'jsx-2419311786' + ' ' + 'card' },
                             c.a.createElement(
                               'div',
                               {
                                 className:
-                                  'jsx-2900894080' + ' ' + 'card-header'
+                                  'jsx-2419311786' + ' ' + 'card-header'
                               },
                               c.a.createElement(
                                 'h2',
                                 {
                                   className:
-                                    'jsx-2900894080' + ' ' + 'card-title h3'
+                                    'jsx-2419311786' + ' ' + 'card-title h3'
                                 },
                                 'Passwords generator'
                               )
@@ -186,13 +183,13 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                               'div',
                               {
                                 className:
-                                  'jsx-2900894080' + ' ' + 'card-footer'
+                                  'jsx-2419311786' + ' ' + 'card-footer'
                               },
                               c.a.createElement(
                                 'a',
                                 {
                                   className:
-                                    'jsx-2900894080' + ' ' + 'btn btn-primary'
+                                    'jsx-2419311786' + ' ' + 'btn btn-primary'
                                 },
                                 'Generate now'
                               )
@@ -204,27 +201,27 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                         'div',
                         {
                           className:
-                            'jsx-2900894080' +
+                            'jsx-2419311786' +
                             ' ' +
-                            'column col-xs-12 col-12 text-center usernames-bg'
+                            'column col-xs-12 col-12 text-center'
                         },
                         c.a.createElement(
                           m.a,
                           { href: '/usernames' },
                           c.a.createElement(
                             'div',
-                            { className: 'jsx-2900894080' + ' ' + 'card' },
+                            { className: 'jsx-2419311786' + ' ' + 'card' },
                             c.a.createElement(
                               'div',
                               {
                                 className:
-                                  'jsx-2900894080' + ' ' + 'card-header'
+                                  'jsx-2419311786' + ' ' + 'card-header'
                               },
                               c.a.createElement(
                                 'h2',
                                 {
                                   className:
-                                    'jsx-2900894080' + ' ' + 'card-title h3'
+                                    'jsx-2419311786' + ' ' + 'card-title h3'
                                 },
                                 'Usernames generator'
                               )
@@ -233,13 +230,13 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                               'div',
                               {
                                 className:
-                                  'jsx-2900894080' + ' ' + 'card-footer'
+                                  'jsx-2419311786' + ' ' + 'card-footer'
                               },
                               c.a.createElement(
                                 'a',
                                 {
                                   className:
-                                    'jsx-2900894080' + ' ' + 'btn btn-primary'
+                                    'jsx-2419311786' + ' ' + 'btn btn-primary'
                                 },
                                 'Generate now'
                               )
@@ -255,7 +252,7 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
           ])
           return a
         })(c.a.Component)
-        a['default'] = x
+        a['default'] = h
       }
     },
     [228]
