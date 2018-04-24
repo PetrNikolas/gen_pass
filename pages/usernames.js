@@ -96,12 +96,11 @@ export default class extends React.Component {
       <Page>
         <style jsx>{`
           .card {
-            width: 100%;
-            max-width: 45rem;
+            max-width: 500px;
             margin: 1.7rem auto 0;
             background-color: #fff;
             border: none;
-            padding: 1.5rem;
+            padding: 1rem 0rem;
           }
 
           @media only screen and (max-width: 1100px) {
@@ -118,23 +117,16 @@ export default class extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column col-xs-12 text-center">
-              <div id="main_card" className="card">
-                <div className="card-header">
-                  <h2 className="card-title h3">Usernames generator</h2>
-                  <div className="card-subtitle text-gray">
-                    So, click on the button and generate your username from your
-                    name and surname now!
-                  </div>
-                  <br />
-                  <div className="card-subtitle text-gray">
-                    * second name is not required
-                  </div>
-                </div>
+              <h2 className="h3 text-center subtitle">USERNAME</h2>
+              <h1 className="h1 rwd_title text-center">
+                Generate your username from your name and surname now!
+              </h1>
 
+              <div className="card">
                 <div className="card-body">
                   <div className="form-group">
                     <div className="columns">
-                      <div className="column col-lg-4 col-xs-12">
+                      <div className="column col-lg-6 col-md-6 col-xs-12">
                         <label className="form-label">Your name</label>
                         <input
                           value={this.state.nameValue}
@@ -145,7 +137,7 @@ export default class extends React.Component {
                         />
                       </div>
 
-                      <div className="column col-lg-4 col-xs-12">
+                      <div className="column col-lg-6 col-md-6 col-xs-12">
                         <label className="form-label">Your surname</label>
                         <input
                           value={this.state.surnameValue}
@@ -199,11 +191,16 @@ export default class extends React.Component {
                       </span>
                     )}
                   </div>
-
-                  <div className="card-subtitle text-gray">
-                    Random, secure, custom, easy and fast.
-                  </div>
                 </div>
+              </div>
+
+              <div className="buttons-section">
+                <Link href="/passwords">
+                  <a className="btn btn-secondary">Generate password</a>
+                </Link>
+                <Link href="/qr-code">
+                  <a className="btn btn-secondary">Generate qr code</a>
+                </Link>
               </div>
             </div>
           </div>

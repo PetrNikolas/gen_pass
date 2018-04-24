@@ -3911,85 +3911,78 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                   g['default'],
                   null,
                   B.a.createElement(n.a, {
-                    styleId: '293156649',
+                    styleId: '1803136930',
                     css: [
-                      '#modal-id.jsx-293156649{display:none;}',
-                      '#qr_result.jsx-293156649{margin-left:-100px;}',
-                      '.modal-container.jsx-293156649 .modal-body.jsx-293156649{max-height:60vh !important;}',
-                      '#start_button.jsx-293156649{margin-top:40px;}',
-                      '.form-input.jsx-293156649{max-width:450px !important;}',
-                      '.card.jsx-293156649{width:100%;max-width:45rem;margin:1.7rem auto 0;background-color:#fff;border:none;padding:2rem 1.5rem;}',
-                      '@media only screen and (max-width:1100px){.card.jsx-293156649{width:100%;}h2.jsx-293156649{font-size:1rem;}}'
+                      '#modal-id.jsx-1803136930{display:none;}',
+                      '#qr_result.jsx-1803136930{margin-left:-100px;}',
+                      '.modal-container.jsx-1803136930 .modal-body.jsx-1803136930{max-height:60vh !important;}',
+                      '#start_button.jsx-1803136930{margin-top:40px;}',
+                      '.form-input.jsx-1803136930{max-width:450px !important;}',
+                      '.card.jsx-1803136930{max-width:500px;margin:1.7rem auto 0;background-color:#fff;border:none;padding:1rem 0rem;}',
+                      '@media only screen and (max-width:1100px){.card.jsx-1803136930{width:100%;}h2.jsx-1803136930{font-size:1rem;}}'
                     ]
                   }),
                   B.a.createElement(
                     'div',
-                    { className: 'jsx-293156649' + ' ' + 'container' },
+                    { className: 'jsx-1803136930' + ' ' + 'container' },
                     B.a.createElement(
                       'div',
-                      { className: 'jsx-293156649' + ' ' + 'columns' },
+                      { className: 'jsx-1803136930' + ' ' + 'columns' },
                       B.a.createElement(
                         'div',
                         {
                           className:
-                            'jsx-293156649' +
+                            'jsx-1803136930' +
                             ' ' +
                             'column col-xs-12 text-center'
                         },
                         B.a.createElement(
-                          'div',
+                          'h2',
                           {
-                            id: 'main_card',
-                            className: 'jsx-293156649' + ' ' + 'card'
+                            className:
+                              'jsx-1803136930' + ' ' + 'h3 text-center subtitle'
                           },
+                          'QR CODE'
+                        ),
+                        B.a.createElement(
+                          'h1',
+                          {
+                            className:
+                              'jsx-1803136930' +
+                              ' ' +
+                              'h1 rwd_title text-center'
+                          },
+                          'Set the value of your QR code and watch it updating in real-time!'
+                        ),
+                        B.a.createElement(
+                          'div',
+                          { className: 'jsx-1803136930' + ' ' + 'card' },
                           B.a.createElement(
                             'div',
-                            {
-                              className: 'jsx-293156649' + ' ' + 'card-header'
-                            },
-                            B.a.createElement(
-                              'h2',
-                              {
-                                className:
-                                  'jsx-293156649' + ' ' + 'card-title h3'
-                              },
-                              'QR codes generator'
-                            )
-                          ),
-                          B.a.createElement(
-                            'div',
-                            { className: 'jsx-293156649' + ' ' + 'card-body' },
+                            { className: 'jsx-1803136930' + ' ' + 'card-body' },
                             B.a.createElement(
                               'div',
                               {
-                                className: 'jsx-293156649' + ' ' + 'form-group'
+                                className: 'jsx-1803136930' + ' ' + 'form-group'
                               },
-                              B.a.createElement(
-                                'label',
-                                {
-                                  className:
-                                    'jsx-293156649' + ' ' + 'form-label'
-                                },
-                                'Set value of your QR code and see the code update in real-time!'
-                              ),
                               B.a.createElement('input', {
                                 value: this.state.inputValue,
                                 onChange: function A(r) {
                                   return e.updateInputValue(r)
                                 },
                                 type: 'text',
-                                className: 'jsx-293156649' + ' ' + 'form-input'
+                                className: 'jsx-1803136930' + ' ' + 'form-input'
                               })
                             )
                           ),
                           B.a.createElement(
                             'div',
                             {
-                              className: 'jsx-293156649' + ' ' + 'card-footer'
+                              className: 'jsx-1803136930' + ' ' + 'card-footer'
                             },
                             B.a.createElement(
                               'div',
-                              { id: 'qr', className: 'jsx-293156649' },
+                              { id: 'qr', className: 'jsx-1803136930' },
                               B.a.createElement(u['QRCode'], {
                                 bgColor: '#FFFFFF',
                                 fgColor: '#000000',
@@ -4006,9 +3999,40 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                                 },
                                 id: 'start_button',
                                 className:
-                                  'jsx-293156649' + ' ' + 'btn btn-primary'
+                                  'jsx-1803136930' + ' ' + 'btn btn-primary'
                               },
-                              'Download as image (Firefox is not supported)'
+                              'Save as image'
+                            )
+                          )
+                        ),
+                        B.a.createElement(
+                          'div',
+                          {
+                            className:
+                              'jsx-1803136930' + ' ' + 'buttons-section'
+                          },
+                          B.a.createElement(
+                            l.a,
+                            { href: '/passwords' },
+                            B.a.createElement(
+                              'a',
+                              {
+                                className:
+                                  'jsx-1803136930' + ' ' + 'btn btn-secondary'
+                              },
+                              'Generate password'
+                            )
+                          ),
+                          B.a.createElement(
+                            l.a,
+                            { href: '/usernames' },
+                            B.a.createElement(
+                              'a',
+                              {
+                                className:
+                                  'jsx-1803136930' + ' ' + 'btn btn-secondary'
+                              },
+                              'Generate username'
                             )
                           )
                         )

@@ -21,28 +21,40 @@ export default class extends React.Component {
       <Page>
         <style jsx>{`
           .columns {
-            min-height: 100vh;
+            padding-top: 58px;
           }
 
           .card {
             width: auto;
-            background: transparent;
+            background: white;
             border: none;
-            padding: 10vh 1.5rem;
+            padding: 90px 1rem;
             cursor: pointer;
             -moz-transition: all 0.3s;
             -webkit-transition: all 0.3s;
             transition: all 0.3s;
-            margin: 0 0.5rem;
+            margin: 1rem 0.5rem;
           }
 
-          .card-header {
-            padding-bottom: 7vh;
+          .card .h3 {
+            color: rgb(54, 2, 254);
+            font-size: 44px;
+            font-weight: 900;
           }
 
-          .col-12,
-          .col-6 {
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+          .qr-code-bg {
+            background: url('static/img/qr.png') #fff no-repeat;
+            background-size: cover;
+          }
+
+          .password-bg {
+            background: url('static/img/password.png') #fff no-repeat;
+            background-size: cover;
+          }
+
+          .username-bg {
+            background: url('static/img/username.png') #fff no-repeat;
+            background-size: cover;
           }
 
           @media only screen and (max-width: 1100px) {
@@ -57,43 +69,46 @@ export default class extends React.Component {
         `}</style>
 
         <div className="container">
-          <h2 className="h1 rwd_title text-center">Random generators</h2>
+          <h2 className="h3 text-center subtitle">WELCOME TO GENPASS</h2>
+          <h1 className="h1 rwd_title text-center">
+            Generator that doesn’t save your personal data
+          </h1>
 
           <div className="columns">
-            <div className="column col-xs-12 col-6 text-center">
+            <div className="column col-xs-12 col-md-12 col-4 text-center">
               <Link href="/qr-code">
-                <div className="card">
+                <div className="card qr-code-bg">
                   <div className="card-header">
-                    <h2 className="card-title h3">QR codes generator</h2>
+                    <h3 className="card-title h3">QR code</h3>
                   </div>
                   <div className="card-footer">
-                    <a className="btn btn-primary">Generate now</a>
+                    <a className="btn btn-primary">Generate</a>
                   </div>
                 </div>
               </Link>
             </div>
 
-            <div className="column col-xs-12 col-6 text-center">
+            <div className="column col-xs-12 col-md-12 col-4 text-center">
               <Link href="/passwords">
-                <div className="card">
+                <div className="card password-bg">
                   <div className="card-header">
-                    <h2 className="card-title h3">Passwords generator</h2>
+                    <h3 className="card-title h3">Password</h3>
                   </div>
                   <div className="card-footer">
-                    <a className="btn btn-primary">Generate now</a>
+                    <a className="btn btn-primary">Generate</a>
                   </div>
                 </div>
               </Link>
             </div>
 
-            <div className="column col-xs-12 col-12 text-center">
+            <div className="column col-xs-12 col-md-12 col-4 text-center">
               <Link href="/usernames">
-                <div className="card">
+                <div className="card username-bg">
                   <div className="card-header">
-                    <h2 className="card-title h3">Usernames generator</h2>
+                    <h3 className="card-title h3">Username</h3>
                   </div>
                   <div className="card-footer">
-                    <a className="btn btn-primary">Generate now</a>
+                    <a className="btn btn-primary">Generate</a>
                   </div>
                 </div>
               </Link>

@@ -73,12 +73,11 @@ export default class extends React.Component {
       <Page>
         <style jsx>{`
           .card {
-            width: 100%;
-            max-width: 45rem;
+            max-width: 500px;
             margin: 1.7rem auto 0;
             background-color: #fff;
             border: none;
-            padding: 2rem 1.5rem;
+            padding: 1rem 0rem;
           }
 
           @media only screen and (max-width: 1100px) {
@@ -95,19 +94,14 @@ export default class extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column col-xs-12 text-center">
-              <div id="main_card" className="card">
-                <div className="card-header">
-                  <h2 className="card-title h3">Passwords generator</h2>
-                  <div className="card-subtitle text-gray">
-                    So, click on the button and generate your password now!
-                  </div>
-                </div>
+              <h2 className="h3 text-center subtitle">PASSWORD</h2>
+              <h1 className="h1 rwd_title text-center">
+                Set lenght of your password and generate your password now!
+              </h1>
 
+              <div className="card">
                 <div className="card-body">
                   <div className="form-group">
-                    <label className="form-label">
-                      Set lenght of your password (default is 20)
-                    </label>
                     <input
                       value={this.state.inputValue}
                       onChange={event => this.updateInputValue(event)}
@@ -141,11 +135,16 @@ export default class extends React.Component {
                       readOnly
                     />
                   </div>
-
-                  <div className="card-subtitle text-gray">
-                    Random, secure, custom, easy and fast.
-                  </div>
                 </div>
+              </div>
+
+              <div className="buttons-section">
+                <Link href="/qr-code">
+                  <a className="btn btn-secondary">Generate qr code</a>
+                </Link>
+                <Link href="/usernames">
+                  <a className="btn btn-secondary">Generate username</a>
+                </Link>
               </div>
             </div>
           </div>

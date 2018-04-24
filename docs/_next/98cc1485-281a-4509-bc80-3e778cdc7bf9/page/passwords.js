@@ -16,8 +16,8 @@ module.exports = __NEXT_REGISTER_PAGE('/passwords', function() {
         var c = a.n(l)
         var u = a(40)
         var i = a.n(u)
-        var d = a(41)
-        var m = (function() {
+        var m = a(41)
+        var d = (function() {
           function e(e, t) {
             for (var a = 0; a < t.length; a++) {
               var r = t[a]
@@ -44,7 +44,7 @@ module.exports = __NEXT_REGISTER_PAGE('/passwords', function() {
             )
           return t && ('object' === typeof t || 'function' === typeof t) ? t : e
         }
-        function v(e, t) {
+        function y(e, t) {
           if ('function' !== typeof t && null !== t)
             throw new TypeError(
               'Super expression must either be null or a function, not ' +
@@ -63,8 +63,8 @@ module.exports = __NEXT_REGISTER_PAGE('/passwords', function() {
               ? Object.setPrototypeOf(e, t)
               : (e.__proto__ = t)
         }
-        var y = (function(e) {
-          v(t, e)
+        var v = (function(e) {
+          y(t, e)
           function t(e) {
             f(this, t)
             var a = p(
@@ -94,81 +94,64 @@ module.exports = __NEXT_REGISTER_PAGE('/passwords', function() {
             a.state = { inputValue: 20, generatedPassword: '' }
             return a
           }
-          m(t, [
+          d(t, [
             {
               key: 'render',
               value: function e() {
                 var t = this
                 return o.a.createElement(
-                  d['default'],
+                  m['default'],
                   null,
                   o.a.createElement(n.a, {
-                    styleId: '2524554563',
+                    styleId: '2330160520',
                     css: [
-                      '.card.jsx-2524554563{width:100%;max-width:45rem;margin:1.7rem auto 0;background-color:#fff;border:none;padding:2rem 1.5rem;}',
-                      '@media only screen and (max-width:1100px){.card.jsx-2524554563{width:100%;}h2.jsx-2524554563{font-size:1rem;}}'
+                      '.card.jsx-2330160520{max-width:500px;margin:1.7rem auto 0;background-color:#fff;border:none;padding:1rem 0rem;}',
+                      '@media only screen and (max-width:1100px){.card.jsx-2330160520{width:100%;}h2.jsx-2330160520{font-size:1rem;}}'
                     ]
                   }),
                   o.a.createElement(
                     'div',
-                    { className: 'jsx-2524554563' + ' ' + 'container' },
+                    { className: 'jsx-2330160520' + ' ' + 'container' },
                     o.a.createElement(
                       'div',
-                      { className: 'jsx-2524554563' + ' ' + 'columns' },
+                      { className: 'jsx-2330160520' + ' ' + 'columns' },
                       o.a.createElement(
                         'div',
                         {
                           className:
-                            'jsx-2524554563' +
+                            'jsx-2330160520' +
                             ' ' +
                             'column col-xs-12 text-center'
                         },
                         o.a.createElement(
-                          'div',
+                          'h2',
                           {
-                            id: 'main_card',
-                            className: 'jsx-2524554563' + ' ' + 'card'
+                            className:
+                              'jsx-2330160520' + ' ' + 'h3 text-center subtitle'
                           },
+                          'PASSWORD'
+                        ),
+                        o.a.createElement(
+                          'h1',
+                          {
+                            className:
+                              'jsx-2330160520' +
+                              ' ' +
+                              'h1 rwd_title text-center'
+                          },
+                          'Set lenght of your password and generate your password now!'
+                        ),
+                        o.a.createElement(
+                          'div',
+                          { className: 'jsx-2330160520' + ' ' + 'card' },
                           o.a.createElement(
                             'div',
-                            {
-                              className: 'jsx-2524554563' + ' ' + 'card-header'
-                            },
-                            o.a.createElement(
-                              'h2',
-                              {
-                                className:
-                                  'jsx-2524554563' + ' ' + 'card-title h3'
-                              },
-                              'Passwords generator'
-                            ),
+                            { className: 'jsx-2330160520' + ' ' + 'card-body' },
                             o.a.createElement(
                               'div',
                               {
-                                className:
-                                  'jsx-2524554563' +
-                                  ' ' +
-                                  'card-subtitle text-gray'
+                                className: 'jsx-2330160520' + ' ' + 'form-group'
                               },
-                              'So, click on the button and generate your password now!'
-                            )
-                          ),
-                          o.a.createElement(
-                            'div',
-                            { className: 'jsx-2524554563' + ' ' + 'card-body' },
-                            o.a.createElement(
-                              'div',
-                              {
-                                className: 'jsx-2524554563' + ' ' + 'form-group'
-                              },
-                              o.a.createElement(
-                                'label',
-                                {
-                                  className:
-                                    'jsx-2524554563' + ' ' + 'form-label'
-                                },
-                                'Set lenght of your password (default is 20)'
-                              ),
                               o.a.createElement('input', {
                                 value: this.state.inputValue,
                                 onChange: function e(a) {
@@ -178,7 +161,7 @@ module.exports = __NEXT_REGISTER_PAGE('/passwords', function() {
                                 min: '1',
                                 max: '100000',
                                 id: 'count',
-                                className: 'jsx-2524554563' + ' ' + 'form-input'
+                                className: 'jsx-2330160520' + ' ' + 'form-input'
                               })
                             ),
                             o.a.createElement(
@@ -189,31 +172,31 @@ module.exports = __NEXT_REGISTER_PAGE('/passwords', function() {
                                 },
                                 id: 'start_button',
                                 className:
-                                  'jsx-2524554563' + ' ' + 'btn btn-primary'
+                                  'jsx-2330160520' + ' ' + 'btn btn-primary'
                               },
                               'Generate now!'
                             ),
                             o.a.createElement(
                               'span',
-                              { id: 'error', className: 'jsx-2524554563' },
+                              { id: 'error', className: 'jsx-2330160520' },
                               'Max value is 100000'
                             )
                           ),
                           o.a.createElement(
                             'div',
                             {
-                              className: 'jsx-2524554563' + ' ' + 'card-footer'
+                              className: 'jsx-2330160520' + ' ' + 'card-footer'
                             },
                             o.a.createElement(
                               'div',
                               {
-                                className: 'jsx-2524554563' + ' ' + 'form-group'
+                                className: 'jsx-2330160520' + ' ' + 'form-group'
                               },
                               o.a.createElement(
                                 'label',
                                 {
                                   className:
-                                    'jsx-2524554563' + ' ' + 'form-label'
+                                    'jsx-2330160520' + ' ' + 'form-label'
                                 },
                                 'Your password is:'
                               ),
@@ -222,18 +205,39 @@ module.exports = __NEXT_REGISTER_PAGE('/passwords', function() {
                                 id: 'result',
                                 rows: '7',
                                 readOnly: true,
-                                className: 'jsx-2524554563' + ' ' + 'form-input'
+                                className: 'jsx-2330160520' + ' ' + 'form-input'
                               })
-                            ),
+                            )
+                          )
+                        ),
+                        o.a.createElement(
+                          'div',
+                          {
+                            className:
+                              'jsx-2330160520' + ' ' + 'buttons-section'
+                          },
+                          o.a.createElement(
+                            i.a,
+                            { href: '/qr-code' },
                             o.a.createElement(
-                              'div',
+                              'a',
                               {
                                 className:
-                                  'jsx-2524554563' +
-                                  ' ' +
-                                  'card-subtitle text-gray'
+                                  'jsx-2330160520' + ' ' + 'btn btn-secondary'
                               },
-                              'Random, secure, custom, easy and fast.'
+                              'Generate qr code'
+                            )
+                          ),
+                          o.a.createElement(
+                            i.a,
+                            { href: '/usernames' },
+                            o.a.createElement(
+                              'a',
+                              {
+                                className:
+                                  'jsx-2330160520' + ' ' + 'btn btn-secondary'
+                              },
+                              'Generate username'
                             )
                           )
                         )
@@ -246,7 +250,7 @@ module.exports = __NEXT_REGISTER_PAGE('/passwords', function() {
           ])
           return t
         })(o.a.Component)
-        t['default'] = y
+        t['default'] = v
       }
     },
     [265]

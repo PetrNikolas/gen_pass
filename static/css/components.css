@@ -31,8 +31,13 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'Krungthep';
+  src: url('../fonts/Krungthep.ttf') format('truetype');
+}
+
 body{
-    background: #fff;
+    background: rgb(54, 2, 254);
 }
 
 .wrapper{
@@ -41,7 +46,10 @@ body{
 }
 
 header {
-    box-shadow: 0 0 1px rgba(0,0,0,0.1);
+    padding: 0 0 0 50px;
+    background: rgb(54, 2, 254); 
+    overflow: hidden;
+    z-index: 9999;
 }
 
 header ul.social li a,
@@ -54,9 +62,16 @@ header nav ul li a {
 }
 
 h1, h2, h3, h4, h5 ,h6{
-    color: #4b4848;
-    font-family: "raleway-regular", arial;
+    color: #fff;
+    font-family: "Krungthep", "raleway-regular", arial;
     letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding-top: 7vh;
+    padding-bottom: 26px;
 }
 
 .clearfix:before,  
@@ -74,24 +89,52 @@ h1, h2, h3, h4, h5 ,h6{
 }
 
 .main {
-    width: 100%;
+    width: 90%;
     height: 100%;
-    padding-left: 300px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
     z-index: 55;
-    background: #fff;
+    background: rgb(54, 2, 254);
     clear: both;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.buttons-section {
+    padding-top: 50px;
+}
+
+.buttons-section a {
+    margin-right: 50px;
+}
+
+.buttons-section a:last-child {
+    margin-right: 0;
 }
 
 .btn-primary,
 .btn-primary:focus,
 .btn-primary:active {
-    background: #f8114d !important;
-    border-color: #f8114d !important;
+    background: rgb(54, 2, 254) !important;
+    border-color: rgb(54, 2, 254) !important;
     color: #fff !important;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    height: auto !important;
+    padding: 0.6rem 1.5rem;
+    text-transform: uppercase;
+}
+
+.btn-secondary,
+.btn-secondary:focus,
+.btn-secondary:active {
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    height: auto !important;
+    padding: 0.7rem 1.7rem;
+    text-transform: uppercase;
 }
 
 input {

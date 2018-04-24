@@ -74,12 +74,11 @@ export default class extends React.Component {
           }
 
           .card {
-            width: 100%;
-            max-width: 45rem;
+            max-width: 500px;
             margin: 1.7rem auto 0;
             background-color: #fff;
             border: none;
-            padding: 2rem 1.5rem;
+            padding: 1rem 0rem;
           }
 
           @media only screen and (max-width: 1100px) {
@@ -96,17 +95,15 @@ export default class extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column col-xs-12 text-center">
-              <div id="main_card" className="card">
-                <div className="card-header">
-                  <h2 className="card-title h3">QR codes generator</h2>
-                </div>
+              <h2 className="h3 text-center subtitle">QR CODE</h2>
+              <h1 className="h1 rwd_title text-center">
+                Set the value of your QR code and watch it updating in
+                real-time!
+              </h1>
 
+              <div className="card">
                 <div className="card-body">
                   <div className="form-group">
-                    <label className="form-label">
-                      Set value of your QR code and see the code update in
-                      real-time!
-                    </label>
                     <input
                       value={this.state.inputValue}
                       onChange={event => this.updateInputValue(event)}
@@ -134,9 +131,18 @@ export default class extends React.Component {
                     className="btn btn-primary"
                     id="start_button"
                   >
-                    Download as image (Firefox is not supported)
+                    Save as image
                   </button>
                 </div>
+              </div>
+
+              <div className="buttons-section">
+                <Link href="/passwords">
+                  <a className="btn btn-secondary">Generate password</a>
+                </Link>
+                <Link href="/usernames">
+                  <a className="btn btn-secondary">Generate username</a>
+                </Link>
               </div>
             </div>
           </div>

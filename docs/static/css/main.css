@@ -1,6 +1,7 @@
 .root {
-    font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+    font: 14px 'Krungthep', 'Lucida Grande', Helvetica, Arial, sans-serif;
     min-height: 100vh;
+    background: rgb(54, 2, 254);
 }
 
 .navbar a {
@@ -9,20 +10,19 @@
 
 .navbar a:hover,
 .navbar a:focus,
-.navbar a:active,
-.desktop_header a:hover,
-.desktop_header a:focus,
-.desktop_header a:active {
+.navbar a:active {
     border: none !important;
-    border-bottom: 2px solid #f8114d !important;
-    color: #f8114d !important;
+    border-bottom: 2px solid rgb(54, 2, 254) !important;
+    color: rgb(54, 2, 254) !important;
     text-decoration: none;
 }
 
 .logo h1 {
-    color: #1c1a27 !important;
-    font-size: 35px;
+    color: #fff !important;
+    font-size: 36px;
     cursor: pointer;
+    font-weight: 900;
+    letter-spacing: 2.2px;
 }
 
 .logo h1:hover {
@@ -32,6 +32,6 @@
 
 @media only screen and (max-width: 1100px) {
     .root {
-        padding: 3px;
+        padding: 20px;
     }
 }
