@@ -30,10 +30,13 @@ export default class extends React.Component {
             border: none;
             padding: 90px 1rem;
             cursor: pointer;
-            -moz-transition: all 0.3s;
-            -webkit-transition: all 0.3s;
-            transition: all 0.3s;
             margin: 1rem 0.5rem;
+            -webkit-transition: 0.7s;
+            transition: 0.7s;
+          }
+
+          .card:hover {
+            margin-top: -7px;
           }
 
           .card .h3 {

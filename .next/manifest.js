@@ -4,18 +4,18 @@
     var c,
       u,
       i = 0,
-      d = [],
-      l
+      l = [],
+      d
     for (; i < a.length; i++) {
       u = a[i]
-      if (t[u]) d.push(t[u][0])
+      if (t[u]) l.push(t[u][0])
       t[u] = 0
     }
     for (c in f) if (Object.prototype.hasOwnProperty.call(f, c)) e[c] = f[c]
     if (r) r(a, f, s)
-    while (d.length) d.shift()()
-    if (s) for (i = 0; i < s.length; i++) l = o((o.s = s[i]))
-    return l
+    while (l.length) l.shift()()
+    if (s) for (i = 0; i < s.length; i++) d = o((o.s = s[i]))
+    return d
   }
   var n = {}
   var t = { 9: 0 }
@@ -72,7 +72,7 @@
         3: 'd87cff709f0ff082b105',
         4: 'e336b77df119b1a2af38',
         5: '1408aa90fa005bba1745',
-        6: '20ed72d4c998db1d5e23',
+        6: '93b511e49ffa8cd10f9e',
         7: '2a89b2dca7332d8c25bf',
         8: 'b8e9a33f03f69fc133cf'
       }[r] +

@@ -80,25 +80,26 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                   d['default'],
                   null,
                   c.a.createElement(n.a, {
-                    styleId: '227669760',
+                    styleId: '3300207150',
                     css: [
-                      '.columns.jsx-227669760{padding-top:58px;}',
-                      '.card.jsx-227669760{width:auto;background:white;border:none;padding:90px 1rem;cursor:pointer;-moz-transition:all 0.3s;-webkit-transition:all 0.3s;-webkit-transition:all 0.3s;transition:all 0.3s;margin:1rem 0.5rem;}',
-                      '.card.jsx-227669760 .h3.jsx-227669760{color:rgb(54,2,254);font-size:44px;font-weight:900;}',
-                      ".qr-code-bg.jsx-227669760{background:url('static/img/qr.png') #fff no-repeat;background-size:cover;}",
-                      ".password-bg.jsx-227669760{background:url('static/img/password.png') #fff no-repeat;background-size:cover;}",
-                      ".username-bg.jsx-227669760{background:url('static/img/username.png') #fff no-repeat;background-size:cover;}",
-                      '@media only screen and (max-width:1100px){.card.jsx-227669760{width:100%;}h2.jsx-227669760{font-size:1rem;}}'
+                      '.columns.jsx-3300207150{padding-top:58px;}',
+                      '.card.jsx-3300207150{width:auto;background:white;border:none;padding:90px 1rem;cursor:pointer;margin:1rem 0.5rem;-webkit-transition:.7s;-webkit-transition:.7s;transition:.7s;}',
+                      '.card.jsx-3300207150:hover{margin-top:-7px;}',
+                      '.card.jsx-3300207150 .h3.jsx-3300207150{color:rgb(54,2,254);font-size:44px;font-weight:900;}',
+                      ".qr-code-bg.jsx-3300207150{background:url('static/img/qr.png') #fff no-repeat;background-size:cover;}",
+                      ".password-bg.jsx-3300207150{background:url('static/img/password.png') #fff no-repeat;background-size:cover;}",
+                      ".username-bg.jsx-3300207150{background:url('static/img/username.png') #fff no-repeat;background-size:cover;}",
+                      '@media only screen and (max-width:1100px){.card.jsx-3300207150{width:100%;}h2.jsx-3300207150{font-size:1rem;}}'
                     ]
                   }),
                   c.a.createElement(
                     'div',
-                    { className: 'jsx-227669760' + ' ' + 'container' },
+                    { className: 'jsx-3300207150' + ' ' + 'container' },
                     c.a.createElement(
                       'h2',
                       {
                         className:
-                          'jsx-227669760' + ' ' + 'h3 text-center subtitle'
+                          'jsx-3300207150' + ' ' + 'h3 text-center subtitle'
                       },
                       'WELCOME TO GENPASS'
                     ),
@@ -106,18 +107,18 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                       'h1',
                       {
                         className:
-                          'jsx-227669760' + ' ' + 'h1 rwd_title text-center'
+                          'jsx-3300207150' + ' ' + 'h1 rwd_title text-center'
                       },
                       'Generator that doesn’t save your personal data'
                     ),
                     c.a.createElement(
                       'div',
-                      { className: 'jsx-227669760' + ' ' + 'columns' },
+                      { className: 'jsx-3300207150' + ' ' + 'columns' },
                       c.a.createElement(
                         'div',
                         {
                           className:
-                            'jsx-227669760' +
+                            'jsx-3300207150' +
                             ' ' +
                             'column col-xs-12 col-md-12 col-4 text-center'
                         },
@@ -128,18 +129,19 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                             'div',
                             {
                               className:
-                                'jsx-227669760' + ' ' + 'card qr-code-bg'
+                                'jsx-3300207150' + ' ' + 'card qr-code-bg'
                             },
                             c.a.createElement(
                               'div',
                               {
-                                className: 'jsx-227669760' + ' ' + 'card-header'
+                                className:
+                                  'jsx-3300207150' + ' ' + 'card-header'
                               },
                               c.a.createElement(
                                 'h3',
                                 {
                                   className:
-                                    'jsx-227669760' + ' ' + 'card-title h3'
+                                    'jsx-3300207150' + ' ' + 'card-title h3'
                                 },
                                 'QR code'
                               )
@@ -147,13 +149,14 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                             c.a.createElement(
                               'div',
                               {
-                                className: 'jsx-227669760' + ' ' + 'card-footer'
+                                className:
+                                  'jsx-3300207150' + ' ' + 'card-footer'
                               },
                               c.a.createElement(
                                 'a',
                                 {
                                   className:
-                                    'jsx-227669760' + ' ' + 'btn btn-primary'
+                                    'jsx-3300207150' + ' ' + 'btn btn-primary'
                                 },
                                 'Generate'
                               )
@@ -165,7 +168,7 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                         'div',
                         {
                           className:
-                            'jsx-227669760' +
+                            'jsx-3300207150' +
                             ' ' +
                             'column col-xs-12 col-md-12 col-4 text-center'
                         },
@@ -176,18 +179,19 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                             'div',
                             {
                               className:
-                                'jsx-227669760' + ' ' + 'card password-bg'
+                                'jsx-3300207150' + ' ' + 'card password-bg'
                             },
                             c.a.createElement(
                               'div',
                               {
-                                className: 'jsx-227669760' + ' ' + 'card-header'
+                                className:
+                                  'jsx-3300207150' + ' ' + 'card-header'
                               },
                               c.a.createElement(
                                 'h3',
                                 {
                                   className:
-                                    'jsx-227669760' + ' ' + 'card-title h3'
+                                    'jsx-3300207150' + ' ' + 'card-title h3'
                                 },
                                 'Password'
                               )
@@ -195,13 +199,14 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                             c.a.createElement(
                               'div',
                               {
-                                className: 'jsx-227669760' + ' ' + 'card-footer'
+                                className:
+                                  'jsx-3300207150' + ' ' + 'card-footer'
                               },
                               c.a.createElement(
                                 'a',
                                 {
                                   className:
-                                    'jsx-227669760' + ' ' + 'btn btn-primary'
+                                    'jsx-3300207150' + ' ' + 'btn btn-primary'
                                 },
                                 'Generate'
                               )
@@ -213,7 +218,7 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                         'div',
                         {
                           className:
-                            'jsx-227669760' +
+                            'jsx-3300207150' +
                             ' ' +
                             'column col-xs-12 col-md-12 col-4 text-center'
                         },
@@ -224,18 +229,19 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                             'div',
                             {
                               className:
-                                'jsx-227669760' + ' ' + 'card username-bg'
+                                'jsx-3300207150' + ' ' + 'card username-bg'
                             },
                             c.a.createElement(
                               'div',
                               {
-                                className: 'jsx-227669760' + ' ' + 'card-header'
+                                className:
+                                  'jsx-3300207150' + ' ' + 'card-header'
                               },
                               c.a.createElement(
                                 'h3',
                                 {
                                   className:
-                                    'jsx-227669760' + ' ' + 'card-title h3'
+                                    'jsx-3300207150' + ' ' + 'card-title h3'
                                 },
                                 'Username'
                               )
@@ -243,13 +249,14 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                             c.a.createElement(
                               'div',
                               {
-                                className: 'jsx-227669760' + ' ' + 'card-footer'
+                                className:
+                                  'jsx-3300207150' + ' ' + 'card-footer'
                               },
                               c.a.createElement(
                                 'a',
                                 {
                                   className:
-                                    'jsx-227669760' + ' ' + 'btn btn-primary'
+                                    'jsx-3300207150' + ' ' + 'btn btn-primary'
                                 },
                                 'Generate'
                               )
