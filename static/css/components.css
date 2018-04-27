@@ -125,6 +125,14 @@ h1, h2, h3, h4, h5 ,h6{
     height: auto !important;
     padding: 0.6rem 1.5rem;
     text-transform: uppercase;
+    transition: .6s;
+}
+
+.btn-primary:hover {
+    background: #fff !important;
+    border-color: rgb(54, 2, 254) !important;
+    color: rgb(54, 2, 254) !important;
+    text-decoration: none;
 }
 
 .btn-secondary,
@@ -135,6 +143,14 @@ h1, h2, h3, h4, h5 ,h6{
     height: auto !important;
     padding: 0.7rem 1.7rem;
     text-transform: uppercase;
+    transition: .6s;
+}
+
+.btn-secondary:hover {
+    background: rgb(54, 2, 254) !important;
+    border-color: #fff !important;
+    color: #fff;
+    text-decoration: none;
 }
 
 input {
