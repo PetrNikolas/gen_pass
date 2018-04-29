@@ -3899,7 +3899,7 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                   })
               }
             }
-            r.state = { inputValue: 'some text' }
+            r.state = { inputValue: 'Type something' }
             return r
           }
           f(e, [
@@ -3911,28 +3911,28 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                   g['default'],
                   null,
                   B.a.createElement(n.a, {
-                    styleId: '1803136930',
+                    styleId: '2273744902',
                     css: [
-                      '#modal-id.jsx-1803136930{display:none;}',
-                      '#qr_result.jsx-1803136930{margin-left:-100px;}',
-                      '.modal-container.jsx-1803136930 .modal-body.jsx-1803136930{max-height:60vh !important;}',
-                      '#start_button.jsx-1803136930{margin-top:40px;}',
-                      '.form-input.jsx-1803136930{max-width:450px !important;}',
-                      '.card.jsx-1803136930{max-width:500px;margin:1.7rem auto 0;background-color:#fff;border:none;padding:1rem 0rem;}',
-                      '@media only screen and (max-width:1100px){.card.jsx-1803136930{width:100%;}h2.jsx-1803136930{font-size:1rem;}}'
+                      '#modal-id.jsx-2273744902{display:none;}',
+                      '#qr_result.jsx-2273744902{margin-left:-100px;}',
+                      '.modal-container.jsx-2273744902 .modal-body.jsx-2273744902{max-height:60vh !important;}',
+                      '#start_button.jsx-2273744902{margin-top:40px;}',
+                      '.card.jsx-2273744902{max-width:500px;margin:1.7rem auto 0;background-color:#fff;border:none;padding:1rem 0rem;}',
+                      '.card-body.jsx-2273744902{padding:0;}',
+                      '@media only screen and (max-width:1100px){.card.jsx-2273744902{width:100%;}h2.jsx-2273744902{font-size:1rem;}}'
                     ]
                   }),
                   B.a.createElement(
                     'div',
-                    { className: 'jsx-1803136930' + ' ' + 'container' },
+                    { className: 'jsx-2273744902' + ' ' + 'container' },
                     B.a.createElement(
                       'div',
-                      { className: 'jsx-1803136930' + ' ' + 'columns' },
+                      { className: 'jsx-2273744902' + ' ' + 'columns' },
                       B.a.createElement(
                         'div',
                         {
                           className:
-                            'jsx-1803136930' +
+                            'jsx-2273744902' +
                             ' ' +
                             'column col-xs-12 text-center'
                         },
@@ -3940,7 +3940,7 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                           'h2',
                           {
                             className:
-                              'jsx-1803136930' + ' ' + 'h3 text-center subtitle'
+                              'jsx-2273744902' + ' ' + 'h3 text-center subtitle'
                           },
                           'QR CODE'
                         ),
@@ -3948,7 +3948,7 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                           'h1',
                           {
                             className:
-                              'jsx-1803136930' +
+                              'jsx-2273744902' +
                               ' ' +
                               'h1 rwd_title text-center'
                           },
@@ -3956,14 +3956,14 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                         ),
                         B.a.createElement(
                           'div',
-                          { className: 'jsx-1803136930' + ' ' + 'card' },
+                          { className: 'jsx-2273744902' + ' ' + 'card' },
                           B.a.createElement(
                             'div',
-                            { className: 'jsx-1803136930' + ' ' + 'card-body' },
+                            { className: 'jsx-2273744902' + ' ' + 'card-body' },
                             B.a.createElement(
                               'div',
                               {
-                                className: 'jsx-1803136930' + ' ' + 'form-group'
+                                className: 'jsx-2273744902' + ' ' + 'form-group'
                               },
                               B.a.createElement('input', {
                                 value: this.state.inputValue,
@@ -3971,18 +3971,18 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                                   return e.updateInputValue(r)
                                 },
                                 type: 'text',
-                                className: 'jsx-1803136930' + ' ' + 'form-input'
+                                className: 'jsx-2273744902' + ' ' + 'form-input'
                               })
                             )
                           ),
                           B.a.createElement(
                             'div',
                             {
-                              className: 'jsx-1803136930' + ' ' + 'card-footer'
+                              className: 'jsx-2273744902' + ' ' + 'card-footer'
                             },
                             B.a.createElement(
                               'div',
-                              { id: 'qr', className: 'jsx-1803136930' },
+                              { id: 'qr', className: 'jsx-2273744902' },
                               B.a.createElement(u['QRCode'], {
                                 bgColor: '#FFFFFF',
                                 fgColor: '#000000',
@@ -3999,7 +3999,7 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                                 },
                                 id: 'start_button',
                                 className:
-                                  'jsx-1803136930' + ' ' + 'btn btn-primary'
+                                  'jsx-2273744902' + ' ' + 'btn btn-primary'
                               },
                               'Save as image'
                             )
@@ -4009,7 +4009,7 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                           'div',
                           {
                             className:
-                              'jsx-1803136930' + ' ' + 'buttons-section'
+                              'jsx-2273744902' + ' ' + 'buttons-section'
                           },
                           B.a.createElement(
                             l.a,
@@ -4018,7 +4018,7 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                               'a',
                               {
                                 className:
-                                  'jsx-1803136930' + ' ' + 'btn btn-secondary'
+                                  'jsx-2273744902' + ' ' + 'btn btn-secondary'
                               },
                               'Generate password'
                             )
@@ -4030,7 +4030,7 @@ module.exports = __NEXT_REGISTER_PAGE('/qr-code', function() {
                               'a',
                               {
                                 className:
-                                  'jsx-1803136930' + ' ' + 'btn btn-secondary'
+                                  'jsx-2273744902' + ' ' + 'btn btn-secondary'
                               },
                               'Generate username'
                             )

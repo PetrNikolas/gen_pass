@@ -36,7 +36,7 @@ export default class extends React.Component {
           }
 
           .card:hover {
-            margin-top: -7px;
+            margin-top: 3px;
           }
 
           .card .h3 {

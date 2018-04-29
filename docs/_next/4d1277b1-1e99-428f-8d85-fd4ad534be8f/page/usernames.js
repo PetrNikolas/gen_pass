@@ -8,8 +8,8 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
       307: function(e, a, t) {
         'use strict'
         Object.defineProperty(a, '__esModule', { value: true })
-        var r = t(55)
-        var n = t.n(r)
+        var n = t(55)
+        var r = t.n(n)
         var s = t(1)
         var l = t.n(s)
         var o = t(39)
@@ -20,16 +20,16 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
         var d = (function() {
           function e(e, a) {
             for (var t = 0; t < a.length; t++) {
-              var r = a[t]
-              r.enumerable = r.enumerable || false
-              r.configurable = true
-              if ('value' in r) r.writable = true
-              Object.defineProperty(e, r.key, r)
+              var n = a[t]
+              n.enumerable = n.enumerable || false
+              n.configurable = true
+              if ('value' in n) n.writable = true
+              Object.defineProperty(e, n.key, n)
             }
           }
-          return function(a, t, r) {
+          return function(a, t, n) {
             if (t) e(a.prototype, t)
-            if (r) e(a, r)
+            if (n) e(a, n)
             return a
           }
         })()
@@ -44,7 +44,7 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
             )
           return a && ('object' === typeof a || 'function' === typeof a) ? a : e
         }
-        function v(e, a) {
+        function x(e, a) {
           if ('function' !== typeof a && null !== a)
             throw new TypeError(
               'Super expression must either be null or a function, not ' +
@@ -63,8 +63,8 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
               ? Object.setPrototypeOf(e, a)
               : (e.__proto__ = a)
         }
-        var x = (function(e) {
-          v(a, e)
+        var E = (function(e) {
+          x(a, e)
           function a(e) {
             f(this, a)
             var t = p(
@@ -81,25 +81,20 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
             }
             t.generatorHandleClick = function(e, a) {
               document.getElementById('error').style.display = 'none'
-              var r = ''
               var n = ''
-              var s = ''
+              var r = ''
               if (
                 e &&
                 'undefined' !== typeof e &&
                 a &&
                 'undefined' !== typeof a
               ) {
-                var l = e + a
-                var o = '1234567890'
-                var c = l.length
+                var s = '1234567890'
                 try {
-                  for (var m = 0; m < 5; m++)
-                    r += l.charAt(Math.floor(Math.random() * l.length))
-                  for (var u = 0; u < 3; u++)
-                    n += o.charAt(Math.floor(7 * Math.random()))
-                  s = r + n
-                  t.setState({ generatedUsername: s })
+                  for (var l = 0; l < 3; l++)
+                    n += s.charAt(Math.floor(7 * Math.random()))
+                  r = e.slice(0, 3) + a.slice(0, 5) + n
+                  t.setState({ generatedUsername: r })
                 } catch (e) {
                   console.log(e)
                 }
@@ -116,7 +111,7 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                 return l.a.createElement(
                   i['default'],
                   null,
-                  l.a.createElement(n.a, {
+                  l.a.createElement(r.a, {
                     styleId: '2330160520',
                     css: [
                       '.card.jsx-2330160520{max-width:500px;margin:1.7rem auto 0;background-color:#fff;border:none;padding:1rem 0rem;}',
@@ -343,7 +338,7 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
           ])
           return a
         })(l.a.Component)
-        a['default'] = x
+        a['default'] = E
       }
     },
     [306]

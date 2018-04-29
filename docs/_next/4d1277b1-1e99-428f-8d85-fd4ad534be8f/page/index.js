@@ -80,26 +80,26 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                   d['default'],
                   null,
                   c.a.createElement(n.a, {
-                    styleId: '3210511249',
+                    styleId: '127738663',
                     css: [
-                      '.columns.jsx-3210511249{padding-top:58px;}',
-                      '.card.jsx-3210511249{width:auto;background:white;border:none;padding:90px 1rem;cursor:pointer;margin:1rem 0.5rem;-webkit-transition:0.7s;-webkit-transition:0.7s;transition:0.7s;}',
-                      '.card.jsx-3210511249:hover{margin-top:-7px;}',
-                      '.card.jsx-3210511249 .h3.jsx-3210511249{color:rgb(54,2,254);font-size:44px;font-weight:900;}',
-                      ".qr-code-bg.jsx-3210511249{background:url('static/img/qr.png') #fff no-repeat;background-size:cover;}",
-                      ".password-bg.jsx-3210511249{background:url('static/img/password.png') #fff no-repeat;background-size:cover;}",
-                      ".username-bg.jsx-3210511249{background:url('static/img/username.png') #fff no-repeat;background-size:cover;}",
-                      '@media only screen and (max-width:1100px){.card.jsx-3210511249{width:100%;}h2.jsx-3210511249{font-size:1rem;}}'
+                      '.columns.jsx-127738663{padding-top:58px;}',
+                      '.card.jsx-127738663{width:auto;background:white;border:none;padding:90px 1rem;cursor:pointer;margin:1rem 0.5rem;-webkit-transition:0.7s;-webkit-transition:0.7s;transition:0.7s;}',
+                      '.card.jsx-127738663:hover{margin-top:3px;}',
+                      '.card.jsx-127738663 .h3.jsx-127738663{color:rgb(54,2,254);font-size:44px;font-weight:900;}',
+                      ".qr-code-bg.jsx-127738663{background:url('static/img/qr.png') #fff no-repeat;background-size:cover;}",
+                      ".password-bg.jsx-127738663{background:url('static/img/password.png') #fff no-repeat;background-size:cover;}",
+                      ".username-bg.jsx-127738663{background:url('static/img/username.png') #fff no-repeat;background-size:cover;}",
+                      '@media only screen and (max-width:1100px){.card.jsx-127738663{width:100%;}h2.jsx-127738663{font-size:1rem;}}'
                     ]
                   }),
                   c.a.createElement(
                     'div',
-                    { className: 'jsx-3210511249' + ' ' + 'container' },
+                    { className: 'jsx-127738663' + ' ' + 'container' },
                     c.a.createElement(
                       'h2',
                       {
                         className:
-                          'jsx-3210511249' + ' ' + 'h3 text-center subtitle'
+                          'jsx-127738663' + ' ' + 'h3 text-center subtitle'
                       },
                       'WELCOME TO GENPASS'
                     ),
@@ -107,18 +107,18 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                       'h1',
                       {
                         className:
-                          'jsx-3210511249' + ' ' + 'h1 rwd_title text-center'
+                          'jsx-127738663' + ' ' + 'h1 rwd_title text-center'
                       },
                       'Generator that doesn’t save your personal data'
                     ),
                     c.a.createElement(
                       'div',
-                      { className: 'jsx-3210511249' + ' ' + 'columns' },
+                      { className: 'jsx-127738663' + ' ' + 'columns' },
                       c.a.createElement(
                         'div',
                         {
                           className:
-                            'jsx-3210511249' +
+                            'jsx-127738663' +
                             ' ' +
                             'column col-xs-12 col-md-12 col-4 text-center'
                         },
@@ -129,19 +129,18 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                             'div',
                             {
                               className:
-                                'jsx-3210511249' + ' ' + 'card qr-code-bg'
+                                'jsx-127738663' + ' ' + 'card qr-code-bg'
                             },
                             c.a.createElement(
                               'div',
                               {
-                                className:
-                                  'jsx-3210511249' + ' ' + 'card-header'
+                                className: 'jsx-127738663' + ' ' + 'card-header'
                               },
                               c.a.createElement(
                                 'h3',
                                 {
                                   className:
-                                    'jsx-3210511249' + ' ' + 'card-title h3'
+                                    'jsx-127738663' + ' ' + 'card-title h3'
                                 },
                                 'QR code'
                               )
@@ -149,14 +148,13 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                             c.a.createElement(
                               'div',
                               {
-                                className:
-                                  'jsx-3210511249' + ' ' + 'card-footer'
+                                className: 'jsx-127738663' + ' ' + 'card-footer'
                               },
                               c.a.createElement(
                                 'a',
                                 {
                                   className:
-                                    'jsx-3210511249' + ' ' + 'btn btn-primary'
+                                    'jsx-127738663' + ' ' + 'btn btn-primary'
                                 },
                                 'Generate'
                               )
@@ -168,7 +166,7 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                         'div',
                         {
                           className:
-                            'jsx-3210511249' +
+                            'jsx-127738663' +
                             ' ' +
                             'column col-xs-12 col-md-12 col-4 text-center'
                         },
@@ -179,19 +177,18 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                             'div',
                             {
                               className:
-                                'jsx-3210511249' + ' ' + 'card password-bg'
+                                'jsx-127738663' + ' ' + 'card password-bg'
                             },
                             c.a.createElement(
                               'div',
                               {
-                                className:
-                                  'jsx-3210511249' + ' ' + 'card-header'
+                                className: 'jsx-127738663' + ' ' + 'card-header'
                               },
                               c.a.createElement(
                                 'h3',
                                 {
                                   className:
-                                    'jsx-3210511249' + ' ' + 'card-title h3'
+                                    'jsx-127738663' + ' ' + 'card-title h3'
                                 },
                                 'Password'
                               )
@@ -199,14 +196,13 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                             c.a.createElement(
                               'div',
                               {
-                                className:
-                                  'jsx-3210511249' + ' ' + 'card-footer'
+                                className: 'jsx-127738663' + ' ' + 'card-footer'
                               },
                               c.a.createElement(
                                 'a',
                                 {
                                   className:
-                                    'jsx-3210511249' + ' ' + 'btn btn-primary'
+                                    'jsx-127738663' + ' ' + 'btn btn-primary'
                                 },
                                 'Generate'
                               )
@@ -218,7 +214,7 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                         'div',
                         {
                           className:
-                            'jsx-3210511249' +
+                            'jsx-127738663' +
                             ' ' +
                             'column col-xs-12 col-md-12 col-4 text-center'
                         },
@@ -229,19 +225,18 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                             'div',
                             {
                               className:
-                                'jsx-3210511249' + ' ' + 'card username-bg'
+                                'jsx-127738663' + ' ' + 'card username-bg'
                             },
                             c.a.createElement(
                               'div',
                               {
-                                className:
-                                  'jsx-3210511249' + ' ' + 'card-header'
+                                className: 'jsx-127738663' + ' ' + 'card-header'
                               },
                               c.a.createElement(
                                 'h3',
                                 {
                                   className:
-                                    'jsx-3210511249' + ' ' + 'card-title h3'
+                                    'jsx-127738663' + ' ' + 'card-title h3'
                                 },
                                 'Username'
                               )
@@ -249,14 +244,13 @@ module.exports = __NEXT_REGISTER_PAGE('/', function() {
                             c.a.createElement(
                               'div',
                               {
-                                className:
-                                  'jsx-3210511249' + ' ' + 'card-footer'
+                                className: 'jsx-127738663' + ' ' + 'card-footer'
                               },
                               c.a.createElement(
                                 'a',
                                 {
                                   className:
-                                    'jsx-3210511249' + ' ' + 'btn btn-primary'
+                                    'jsx-127738663' + ' ' + 'btn btn-primary'
                                 },
                                 'Generate'
                               )

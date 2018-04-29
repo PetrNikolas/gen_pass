@@ -170,6 +170,17 @@ input {
     appearance: none !important;
 }
 
+input.form-input {
+    max-width: 269px !important;
+    height: 65px !important;
+    margin-bottom: 36px !important;
+    text-align: center;
+    font-size: 18px !important;
+    color: rgb(151, 155, 164) !important;
+    letter-spacing: 0.3px;
+    background: rgb(237, 237, 237) !important;
+}
+
 label {
     color: #868f96 !important;
 }
@@ -182,7 +193,6 @@ textarea {
     padding-bottom: 1rem !important;
     border: 0 !important;
     border-radius: 3px !important;
-    background-color: #f4f4fb !important;
     border-radius: 3px !important;
     line-height: 1.5 !important;
     -webkit-transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s !important;
@@ -195,6 +205,11 @@ textarea {
     max-width: 620px !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    text-align: center;
+    font-size: 18px !important;
+    color: rgb(151, 155, 164) !important;
+    letter-spacing: 0.3px;
+    background: rgb(237, 237, 237) !important;
 }
 
 .form-input:focus {

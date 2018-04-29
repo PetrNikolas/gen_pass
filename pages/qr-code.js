@@ -17,7 +17,7 @@ export default class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      inputValue: 'some text'
+      inputValue: 'Type something'
     }
   }
 
@@ -69,16 +69,16 @@ export default class extends React.Component {
             margin-top: 40px;
           }
 
-          .form-input {
-            max-width: 450px !important;
-          }
-
           .card {
             max-width: 500px;
             margin: 1.7rem auto 0;
             background-color: #fff;
             border: none;
             padding: 1rem 0rem;
+          }
+
+          .card-body {
+            padding: 0;
           }
 
           @media only screen and (max-width: 1100px) {

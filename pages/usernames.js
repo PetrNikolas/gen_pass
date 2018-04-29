@@ -46,7 +46,6 @@ export default class extends React.Component {
     document.getElementById('error').style.display = 'none'
 
     /** Password */
-    let name_variant = ''
     let numbers_varinat = ''
     let username = ''
 
@@ -57,26 +56,17 @@ export default class extends React.Component {
       typeof surname !== 'undefined'
     ) {
       /** Possible variants */
-      const possible_of_name = name + surname
       const possible_of_numbers = '1234567890'
-
-      const length_of_name = possible_of_name.length
 
       try {
         /** Iterator */
-        for (let i = 0; i < 5; i++) {
-          name_variant += possible_of_name.charAt(
-            Math.floor(Math.random() * possible_of_name.length)
-          )
-        }
-
         for (let i = 0; i < 3; i++) {
           numbers_varinat += possible_of_numbers.charAt(
             Math.floor(Math.random() * 7)
           )
         }
 
-        username = name_variant + numbers_varinat
+        username = name.slice(0, 3) + surname.slice(0, 5) + numbers_varinat
 
         this.setState({
           generatedUsername: username
