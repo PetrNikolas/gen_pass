@@ -16,8 +16,24 @@ export default class extends React.Component {
     this.state = {
       nameValue: '',
       surnameValue: '',
-      generatedUsername: ''
+      generatedUsername: '',
+      numbersIncluded: false
     }
+  }
+
+  /** Update numbers included value */
+  updateNumbersIncludedValue = event => {
+    let value
+
+    if (event.target.value === true || event.target.value === 'true') {
+      value = false
+    } else {
+      value = true
+    }
+
+    this.setState({
+      numbersIncluded: value
+    })
   }
 
   /** Update value in input - name */
@@ -59,11 +75,13 @@ export default class extends React.Component {
       const possible_of_numbers = '1234567890'
 
       try {
-        /** Iterator */
-        for (let i = 0; i < 3; i++) {
-          numbers_varinat += possible_of_numbers.charAt(
-            Math.floor(Math.random() * 7)
-          )
+        if (this.state.numbersIncluded) {
+          /** Iterator */
+          for (let i = 0; i < 3; i++) {
+            numbers_varinat += possible_of_numbers.charAt(
+              Math.floor(Math.random() * 7)
+            )
+          }
         }
 
         username = name.slice(0, 3) + surname.slice(0, 5) + numbers_varinat
@@ -91,6 +109,10 @@ export default class extends React.Component {
             background-color: #fff;
             border: none;
             padding: 1rem 0rem;
+          }
+
+          #start_button {
+            margin-top: 15px;
           }
 
           @media only screen and (max-width: 1100px) {
@@ -136,6 +158,21 @@ export default class extends React.Component {
                           className="form-input"
                           id="surname"
                         />
+                      </div>
+                    </div>
+
+                    <div className="columns">
+                      <div className="column col-lg-12 col-md-12 col-xs-12">
+                        <label className="form-checkbox">
+                          <input
+                            type="checkbox"
+                            value={this.state.numbersIncluded}
+                            onChange={event =>
+                              this.updateNumbersIncludedValue(event)
+                            }
+                          />
+                          <i className="form-icon" /> Included numbers
+                        </label>
                       </div>
                     </div>
                   </div>
