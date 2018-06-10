@@ -14,8 +14,8 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
         var l = t.n(s)
         var c = t(39)
         var o = t.n(c)
-        var u = t(40)
-        var m = t.n(u)
+        var m = t(40)
+        var u = t.n(m)
         var i = t(41)
         var d = (function() {
           function e(e, a) {
@@ -321,28 +321,61 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                             l.a.createElement(
                               'div',
                               { className: 'jsx-3857553884' },
-                              'Generated from:',
-                              this.state.nameValue &&
+                              this.state.generatedUsername &&
                                 l.a.createElement(
                                   'span',
-                                  {
-                                    id: 'name_chip',
-                                    className: 'jsx-3857553884' + ' ' + 'chip'
-                                  },
-                                  ' ',
-                                  this.state.nameValue,
-                                  ' '
-                                ),
-                              this.state.surnameValue &&
-                                l.a.createElement(
-                                  'span',
-                                  {
-                                    id: 'surname_chip',
-                                    className: 'jsx-3857553884' + ' ' + 'chip'
-                                  },
-                                  ' ',
-                                  this.state.surnameValue,
-                                  ' '
+                                  { className: 'jsx-3857553884' },
+                                  'With this username you can register for example on ',
+                                  l.a.createElement(
+                                    'a',
+                                    {
+                                      href: 'https://www.facebook.com/',
+                                      target: '_blank',
+                                      className: 'jsx-3857553884'
+                                    },
+                                    'facebook'
+                                  ),
+                                  ', ',
+                                  l.a.createElement(
+                                    'a',
+                                    {
+                                      href: 'https://www.instagram.com/',
+                                      target: '_blank',
+                                      className: 'jsx-3857553884'
+                                    },
+                                    'instagram'
+                                  ),
+                                  ', ',
+                                  l.a.createElement(
+                                    'a',
+                                    {
+                                      href: 'https://twitter.com/',
+                                      target: '_blank',
+                                      className: 'jsx-3857553884'
+                                    },
+                                    'twitter'
+                                  ),
+                                  ', ',
+                                  l.a.createElement(
+                                    'a',
+                                    {
+                                      href: 'https://www.linkedin.com/',
+                                      target: '_blank',
+                                      className: 'jsx-3857553884'
+                                    },
+                                    'linkedIn'
+                                  ),
+                                  ', ',
+                                  l.a.createElement(
+                                    'a',
+                                    {
+                                      href: 'https://www.snapchat.com/',
+                                      target: '_blank',
+                                      className: 'jsx-3857553884'
+                                    },
+                                    'snapchat'
+                                  ),
+                                  ', etc..'
                                 )
                             )
                           )
@@ -354,7 +387,7 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                               'jsx-3857553884' + ' ' + 'buttons-section'
                           },
                           l.a.createElement(
-                            m.a,
+                            u.a,
                             { href: '/passwords' },
                             l.a.createElement(
                               'a',
@@ -366,7 +399,7 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                             )
                           ),
                           l.a.createElement(
-                            m.a,
+                            u.a,
                             { href: '/qr-code' },
                             l.a.createElement(
                               'a',

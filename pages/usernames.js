@@ -204,17 +204,24 @@ export default class extends React.Component {
                   </div>
 
                   <div>
-                    Generated from:
-                    {this.state.nameValue && (
-                      <span id="name_chip" className="chip">
-                        {' '}
-                        {this.state.nameValue}{' '}
-                      </span>
-                    )}
-                    {this.state.surnameValue && (
-                      <span id="surname_chip" className="chip">
-                        {' '}
-                        {this.state.surnameValue}{' '}
+                    {this.state.generatedUsername && (
+                      <span>
+                        With this username you can register for example on{' '}
+                        <a href="https://www.facebook.com/" target="_blank">
+                          facebook
+                        </a>,{' '}
+                        <a href="https://www.instagram.com/" target="_blank">
+                          instagram
+                        </a>,{' '}
+                        <a href="https://twitter.com/" target="_blank">
+                          twitter
+                        </a>,{' '}
+                        <a href="https://www.linkedin.com/" target="_blank">
+                          linkedIn
+                        </a>,{' '}
+                        <a href="https://www.snapchat.com/" target="_blank">
+                          snapchat
+                        </a>, etc..
                       </span>
                     )}
                   </div>

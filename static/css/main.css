@@ -35,3 +35,7 @@
         padding: 20px;
     }
 }
+
+a, a:visited {
+    color: rgb(54, 2, 254) !important;
+}
