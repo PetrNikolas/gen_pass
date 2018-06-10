@@ -4,8 +4,8 @@
   "version": "1.1.6",
   "main": "server.js",
   "engines": {
-    "node": "8.1.4",
-    "npm": "5.0.3"
+    "node": ">=8.1.4",
+    "npm": ">=5.0.3"
   },
   "scripts": {
     "precommit": "lint-staged",
