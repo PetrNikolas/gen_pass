@@ -7,6 +7,7 @@
 * [fastify](https://www.fastify.io/)
 * [prettier](https://prettier.io/)
 * [Babel](https://babeljs.io/)
+* [Spectre.css](https://picturepan2.github.io/spectre/)
 
 ## How to use
 
