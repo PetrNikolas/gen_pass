@@ -325,7 +325,8 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                 l.a.createElement(
                                   'span',
                                   { className: 'jsx-3857553884' },
-                                  'With this username you can register for example on ',
+                                  'With this username you can register for example on',
+                                  ' ',
                                   l.a.createElement(
                                     'a',
                                     {
@@ -335,7 +336,8 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                     },
                                     'facebook'
                                   ),
-                                  ', ',
+                                  ',',
+                                  ' ',
                                   l.a.createElement(
                                     'a',
                                     {
@@ -345,7 +347,8 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                     },
                                     'instagram'
                                   ),
-                                  ', ',
+                                  ',',
+                                  ' ',
                                   l.a.createElement(
                                     'a',
                                     {
@@ -355,7 +358,8 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                     },
                                     'twitter'
                                   ),
-                                  ', ',
+                                  ',',
+                                  ' ',
                                   l.a.createElement(
                                     'a',
                                     {
@@ -365,7 +369,8 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                     },
                                     'linkedIn'
                                   ),
-                                  ', ',
+                                  ',',
+                                  ' ',
                                   l.a.createElement(
                                     'a',
                                     {
