@@ -1,50 +1,40 @@
 module.exports = __NEXT_REGISTER_PAGE('/_error', function() {
   var e = webpackJsonp(
-    [3],
+    [1],
     {
-      308: function(e, t, n) {
-        e.exports = n(309)
+      442: function(e, t, n) {
+        e.exports = n(443)
       },
-      309: function(e, t, n) {
-        e.exports = n(310)
+      443: function(e, t, n) {
+        e.exports = n(444)
       },
-      310: function(e, t, n) {
-        e.exports = n(311)
+      444: function(e, t, n) {
+        e.exports = n(445)
       },
-      311: function(e, t, n) {
+      445: function(e, t, n) {
         'use strict'
+        var r = n(5)
         Object.defineProperty(t, '__esModule', { value: true })
-        var r = n(21)
-        var E = f(r)
-        var a = n(5)
-        var o = f(a)
-        var i = n(6)
-        var T = f(i)
-        var l = n(22)
-        var d = f(l)
-        var u = n(23)
-        var R = f(u)
-        var _ = n(1)
-        var s = f(_)
-        var N = n(7)
-        var O = f(N)
-        var A = n(312)
-        var I = f(A)
-        var c = n(122)
-        var p = f(c)
-        function f(e) {
-          return e && e.__esModule ? e : { default: e }
-        }
-        var S = (function(e) {
-          ;(0, R.default)(t, e)
+        t.default = void 0
+        var E = r(n(38))
+        var a = r(n(12))
+        var o = r(n(13))
+        var i = r(n(39))
+        var l = r(n(40))
+        var T = r(n(1))
+        var d = r(n(7))
+        var u = r(n(446))
+        var R = r(n(181))
+        var _ = (function(e) {
+          ;(0, l.default)(t, e)
           function t() {
-            ;(0, o.default)(this, t)
-            return (0, d.default)(
+            ;(0, a.default)(this, t)
+            return (0, i.default)(
               this,
               (t.__proto__ || (0, E.default)(t)).apply(this, arguments)
             )
           }
-          ;(0, T.default)(
+          ;(0, o.default)(
             t,
             [
               {
@@ -54,33 +44,33 @@ module.exports = __NEXT_REGISTER_PAGE('/_error', function() {
                   var n =
                     404 === t
                       ? 'This page could not be found'
-                      : I.default[t] || 'An unexpected error has occurred'
-                  return s.default.createElement(
+                      : u.default[t] || 'An unexpected error has occurred'
+                  return T.default.createElement(
                     'div',
-                    { style: D.error },
-                    s.default.createElement(
-                      p.default,
+                    { style: s.error },
+                    T.default.createElement(
+                      R.default,
                       null,
-                      s.default.createElement('meta', {
+                      T.default.createElement('meta', {
                         name: 'viewport',
                         content: 'width=device-width, initial-scale=1.0'
                       })
                     ),
-                    s.default.createElement(
+                    T.default.createElement(
                       'div',
                       null,
-                      s.default.createElement('style', {
+                      T.default.createElement('style', {
                         dangerouslySetInnerHTML: {
                           __html: 'body { margin: 0 }'
                         }
                       }),
                       t
-                        ? s.default.createElement('h1', { style: D.h1 }, t)
+                        ? T.default.createElement('h1', { style: s.h1 }, t)
                         : null,
-                      s.default.createElement(
+                      T.default.createElement(
                         'div',
-                        { style: D.desc },
-                        s.default.createElement('h2', { style: D.h2 }, n, '.')
+                        { style: s.desc },
+                        T.default.createElement('h2', { style: s.h2 }, n, '.')
                       )
                     )
                   )
@@ -100,10 +90,15 @@ module.exports = __NEXT_REGISTER_PAGE('/_error', function() {
             ]
           )
           return t
-        })(s.default.Component)
-        S.propTypes = { statusCode: O.default.number }
-        t.default = S
-        var D = {
+        })(T.default.Component)
+        t.default = _
+        Object.defineProperty(_, 'propTypes', {
+          configurable: true,
+          enumerable: true,
+          writable: true,
+          value: { statusCode: d.default.number }
+        })
+        var s = {
           error: {
             color: '#000',
             background: '#fff',
@@ -142,7 +137,7 @@ module.exports = __NEXT_REGISTER_PAGE('/_error', function() {
           }
         }
       },
-      312: function(e, t) {
+      446: function(e, t) {
         e.exports = {
           100: 'Continue',
           101: 'Switching Protocols',
@@ -267,7 +262,7 @@ module.exports = __NEXT_REGISTER_PAGE('/_error', function() {
         }
       }
     },
-    [308]
+    [442]
   )
   return { page: e.default }
 })

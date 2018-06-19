@@ -1,56 +1,69 @@
 module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
   var e = webpackJsonp(
-    [4],
+    [3],
     {
-      306: function(e, a, t) {
-        e.exports = t(307)
+      435: function(e, t, a) {
+        e.exports = a(436)
       },
-      307: function(e, a, t) {
+      436: function(e, t, a) {
         'use strict'
-        Object.defineProperty(a, '__esModule', { value: true })
-        var n = t(55)
-        var r = t.n(n)
-        var s = t(1)
-        var l = t.n(s)
-        var c = t(39)
-        var o = t.n(c)
-        var m = t(40)
-        var u = t.n(m)
-        var i = t(41)
-        var d = (function() {
-          function e(e, a) {
-            for (var t = 0; t < a.length; t++) {
-              var n = a[t]
-              n.enumerable = n.enumerable || false
-              n.configurable = true
-              if ('value' in n) n.writable = true
-              Object.defineProperty(e, n.key, n)
-            }
-          }
-          return function(a, t, n) {
-            if (t) e(a.prototype, t)
-            if (n) e(a, n)
-            return a
-          }
-        })()
-        function f(e, a) {
-          if (!(e instanceof a))
+        Object.defineProperty(t, '__esModule', { value: true })
+        a.d(t, 'default', function() {
+          return v
+        })
+        var r = a(73)
+        var n = a.n(r)
+        var s = a(1)
+        var l = a.n(s)
+        var c = a(56)
+        var o = a.n(c)
+        var u = a(57)
+        var m = a.n(u)
+        var i = a(58)
+        function d(e) {
+          d =
+            'function' === typeof Symbol && 'symbol' === typeof Symbol.iterator
+              ? function e(t) {
+                  return typeof t
+                }
+              : function e(t) {
+                  return t &&
+                    'function' === typeof Symbol &&
+                    t.constructor === Symbol &&
+                    t !== Symbol.prototype
+                    ? 'symbol'
+                    : typeof t
+                }
+          return d(e)
+        }
+        function f(e, t) {
+          if (!(e instanceof t))
             throw new TypeError('Cannot call a class as a function')
         }
-        function p(e, a) {
-          if (!e)
-            throw new ReferenceError(
-              "this hasn't been initialised - super() hasn't been called"
-            )
-          return a && ('object' === typeof a || 'function' === typeof a) ? a : e
+        function b(e, t) {
+          for (var a = 0; a < t.length; a++) {
+            var r = t[a]
+            r.enumerable = r.enumerable || false
+            r.configurable = true
+            'value' in r && (r.writable = true)
+            Object.defineProperty(e, r.key, r)
+          }
         }
-        function x(e, a) {
-          if ('function' !== typeof a && null !== a)
+        function p(e, t, a) {
+          t && b(e.prototype, t)
+          a && b(e, a)
+          return e
+        }
+        function x(e, t) {
+          if (t && ('object' === d(t) || 'function' === typeof t)) return t
+          return E(e)
+        }
+        function y(e, t) {
+          if ('function' !== typeof t && null !== t)
             throw new TypeError(
-              'Super expression must either be null or a function, not ' +
-                typeof a
+              'Super expression must either be null or a function'
             )
-          e.prototype = Object.create(a && a.prototype, {
+          e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
               enumerable: false,
@@ -58,73 +71,96 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
               configurable: true
             }
           })
-          if (a)
-            Object.setPrototypeOf
-              ? Object.setPrototypeOf(e, a)
-              : (e.__proto__ = a)
+          t &&
+            (Object.setPrototypeOf
+              ? Object.setPrototypeOf(e, t)
+              : (e.__proto__ = t))
         }
-        var b = (function(e) {
-          x(a, e)
-          function a(e) {
-            f(this, a)
-            var t = p(
-              this,
-              (a.__proto__ || Object.getPrototypeOf(a)).call(this, e)
+        function E(e) {
+          if (void 0 === e)
+            throw new ReferenceError(
+              "this hasn't been initialised - super() hasn't been called"
             )
-            t.updateNumbersIncludedValue = function(e) {
-              var a = void 0
-              if (true === e.target.value || 'true' === e.target.value)
-                a = false
-              else a = true
-              t.setState({ numbersIncluded: a })
-            }
-            t.updateNameValue = function(e) {
-              document.getElementById('error').style.display = 'none'
-              t.setState({ nameValue: e.target.value })
-            }
-            t.updateSurnameValue = function(e) {
-              document.getElementById('error').style.display = 'none'
-              t.setState({ surnameValue: e.target.value })
-            }
-            t.generatorHandleClick = function(e, a) {
-              document.getElementById('error').style.display = 'none'
-              var n = ''
-              var r = ''
-              if (
-                e &&
-                'undefined' !== typeof e &&
-                a &&
-                'undefined' !== typeof a
-              ) {
-                var s = '1234567890'
-                try {
-                  if (t.state.numbersIncluded)
-                    for (var l = 0; l < 3; l++)
-                      n += s.charAt(Math.floor(7 * Math.random()))
-                  r = e.slice(0, 3) + a.slice(0, 5) + n
-                  t.setState({ generatedUsername: r })
-                } catch (e) {
-                  console.log(e)
-                }
-              } else document.getElementById('error').style.display = 'block'
-            }
-            t.state = {
+          return e
+        }
+        var v = (function(e) {
+          y(t, e)
+          function t(e) {
+            var a
+            f(this, t)
+            a = x(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e))
+            Object.defineProperty(E(a), 'updateNumbersIncludedValue', {
+              configurable: true,
+              enumerable: true,
+              writable: true,
+              value: function e(t) {
+                var e
+                e = true !== t.target.value && 'true' !== t.target.value
+                a.setState({ numbersIncluded: e })
+              }
+            })
+            Object.defineProperty(E(a), 'updateNameValue', {
+              configurable: true,
+              enumerable: true,
+              writable: true,
+              value: function e(t) {
+                document.getElementById('error').style.display = 'none'
+                a.setState({ nameValue: t.target.value })
+              }
+            })
+            Object.defineProperty(E(a), 'updateSurnameValue', {
+              configurable: true,
+              enumerable: true,
+              writable: true,
+              value: function e(t) {
+                document.getElementById('error').style.display = 'none'
+                a.setState({ surnameValue: t.target.value })
+              }
+            })
+            Object.defineProperty(E(a), 'generatorHandleClick', {
+              configurable: true,
+              enumerable: true,
+              writable: true,
+              value: function e(t, r) {
+                document.getElementById('error').style.display = 'none'
+                var n = ''
+                var s = ''
+                if (
+                  t &&
+                  'undefined' !== typeof t &&
+                  r &&
+                  'undefined' !== typeof r
+                ) {
+                  var l = '1234567890'
+                  try {
+                    if (a.state.numbersIncluded)
+                      for (var c = 0; c < 3; c++)
+                        n += l.charAt(Math.floor(7 * Math.random()))
+                    s = t.slice(0, 3) + r.slice(0, 5) + n
+                    a.setState({ generatedUsername: s })
+                  } catch (e) {
+                    console.log(e)
+                  }
+                } else document.getElementById('error').style.display = 'block'
+              }
+            })
+            a.state = {
               nameValue: '',
               surnameValue: '',
               generatedUsername: '',
               numbersIncluded: false
             }
-            return t
+            return a
           }
-          d(a, [
+          p(t, [
             {
               key: 'render',
               value: function e() {
-                var a = this
+                var t = this
                 return l.a.createElement(
                   i['default'],
                   null,
-                  l.a.createElement(r.a, {
+                  l.a.createElement(n.a, {
                     styleId: '3857553884',
                     css: [
                       '.card.jsx-3857553884{max-width:500px;margin:1.7rem auto 0;background-color:#fff;border:none;padding:1rem 0rem;}',
@@ -134,137 +170,109 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                   }),
                   l.a.createElement(
                     'div',
-                    { className: 'jsx-3857553884' + ' ' + 'container' },
+                    { className: 'jsx-3857553884 container' },
                     l.a.createElement(
                       'div',
-                      { className: 'jsx-3857553884' + ' ' + 'columns' },
+                      { className: 'jsx-3857553884 columns' },
                       l.a.createElement(
                         'div',
                         {
                           className:
-                            'jsx-3857553884' +
-                            ' ' +
-                            'column col-xs-12 text-center'
+                            'jsx-3857553884 column col-xs-12 text-center'
                         },
                         l.a.createElement(
                           'h2',
                           {
-                            className:
-                              'jsx-3857553884' + ' ' + 'h3 text-center subtitle'
+                            className: 'jsx-3857553884 h3 text-center subtitle'
                           },
                           'USERNAME'
                         ),
                         l.a.createElement(
                           'h1',
                           {
-                            className:
-                              'jsx-3857553884' +
-                              ' ' +
-                              'h1 rwd_title text-center'
+                            className: 'jsx-3857553884 h1 rwd_title text-center'
                           },
                           'Generate your username from your name and surname now!'
                         ),
                         l.a.createElement(
                           'div',
-                          { className: 'jsx-3857553884' + ' ' + 'card' },
+                          { className: 'jsx-3857553884 card' },
                           l.a.createElement(
                             'div',
-                            { className: 'jsx-3857553884' + ' ' + 'card-body' },
+                            { className: 'jsx-3857553884 card-body' },
                             l.a.createElement(
                               'div',
-                              {
-                                className: 'jsx-3857553884' + ' ' + 'form-group'
-                              },
+                              { className: 'jsx-3857553884 form-group' },
                               l.a.createElement(
                                 'div',
-                                {
-                                  className: 'jsx-3857553884' + ' ' + 'columns'
-                                },
+                                { className: 'jsx-3857553884 columns' },
                                 l.a.createElement(
                                   'div',
                                   {
                                     className:
-                                      'jsx-3857553884' +
-                                      ' ' +
-                                      'column col-lg-6 col-md-6 col-xs-12'
+                                      'jsx-3857553884 column col-lg-6 col-md-6 col-xs-12'
                                   },
                                   l.a.createElement(
                                     'label',
-                                    {
-                                      className:
-                                        'jsx-3857553884' + ' ' + 'form-label'
-                                    },
+                                    { className: 'jsx-3857553884 form-label' },
                                     'Your name'
                                   ),
                                   l.a.createElement('input', {
                                     value: this.state.nameValue,
-                                    onChange: function e(t) {
-                                      return a.updateNameValue(t)
+                                    onChange: function e(a) {
+                                      return t.updateNameValue(a)
                                     },
                                     type: 'text',
                                     id: 'name',
-                                    className:
-                                      'jsx-3857553884' + ' ' + 'form-input'
+                                    className: 'jsx-3857553884 form-input'
                                   })
                                 ),
                                 l.a.createElement(
                                   'div',
                                   {
                                     className:
-                                      'jsx-3857553884' +
-                                      ' ' +
-                                      'column col-lg-6 col-md-6 col-xs-12'
+                                      'jsx-3857553884 column col-lg-6 col-md-6 col-xs-12'
                                   },
                                   l.a.createElement(
                                     'label',
-                                    {
-                                      className:
-                                        'jsx-3857553884' + ' ' + 'form-label'
-                                    },
+                                    { className: 'jsx-3857553884 form-label' },
                                     'Your surname'
                                   ),
                                   l.a.createElement('input', {
                                     value: this.state.surnameValue,
-                                    onChange: function e(t) {
-                                      return a.updateSurnameValue(t)
+                                    onChange: function e(a) {
+                                      return t.updateSurnameValue(a)
                                     },
                                     type: 'text',
                                     id: 'surname',
-                                    className:
-                                      'jsx-3857553884' + ' ' + 'form-input'
+                                    className: 'jsx-3857553884 form-input'
                                   })
                                 )
                               ),
                               l.a.createElement(
                                 'div',
-                                {
-                                  className: 'jsx-3857553884' + ' ' + 'columns'
-                                },
+                                { className: 'jsx-3857553884 columns' },
                                 l.a.createElement(
                                   'div',
                                   {
                                     className:
-                                      'jsx-3857553884' +
-                                      ' ' +
-                                      'column col-lg-12 col-md-12 col-xs-12'
+                                      'jsx-3857553884 column col-lg-12 col-md-12 col-xs-12'
                                   },
                                   l.a.createElement(
                                     'label',
                                     {
-                                      className:
-                                        'jsx-3857553884' + ' ' + 'form-checkbox'
+                                      className: 'jsx-3857553884 form-checkbox'
                                     },
                                     l.a.createElement('input', {
                                       type: 'checkbox',
                                       value: this.state.numbersIncluded,
-                                      onChange: function e(t) {
-                                        return a.updateNumbersIncludedValue(t)
+                                      onChange: function e(a) {
+                                        return t.updateNumbersIncludedValue(a)
                                       },
                                       className: 'jsx-3857553884'
                                     }),
                                     l.a.createElement('i', {
-                                      className:
-                                        'jsx-3857553884' + ' ' + 'form-icon'
+                                      className: 'jsx-3857553884 form-icon'
                                     }),
                                     ' Included numbers'
                                   )
@@ -275,14 +283,13 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                               'button',
                               {
                                 onClick: function e() {
-                                  a.generatorHandleClick(
-                                    a.state.nameValue,
-                                    a.state.surnameValue
+                                  t.generatorHandleClick(
+                                    t.state.nameValue,
+                                    t.state.surnameValue
                                   )
                                 },
                                 id: 'start_button',
-                                className:
-                                  'jsx-3857553884' + ' ' + 'btn btn-primary'
+                                className: 'jsx-3857553884 btn btn-primary'
                               },
                               'Generate now!'
                             ),
@@ -294,20 +301,13 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                           ),
                           l.a.createElement(
                             'div',
-                            {
-                              className: 'jsx-3857553884' + ' ' + 'card-footer'
-                            },
+                            { className: 'jsx-3857553884 card-footer' },
                             l.a.createElement(
                               'div',
-                              {
-                                className: 'jsx-3857553884' + ' ' + 'form-group'
-                              },
+                              { className: 'jsx-3857553884 form-group' },
                               l.a.createElement(
                                 'label',
-                                {
-                                  className:
-                                    'jsx-3857553884' + ' ' + 'form-label'
-                                },
+                                { className: 'jsx-3857553884 form-label' },
                                 'Your username is:'
                               ),
                               l.a.createElement('textarea', {
@@ -315,7 +315,7 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                                 id: 'result',
                                 rows: '3',
                                 readOnly: true,
-                                className: 'jsx-3857553884' + ' ' + 'form-input'
+                                className: 'jsx-3857553884 form-input'
                               })
                             ),
                             l.a.createElement(
@@ -387,31 +387,22 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
                         ),
                         l.a.createElement(
                           'div',
-                          {
-                            className:
-                              'jsx-3857553884' + ' ' + 'buttons-section'
-                          },
+                          { className: 'jsx-3857553884 buttons-section' },
                           l.a.createElement(
-                            u.a,
+                            m.a,
                             { href: '/passwords' },
                             l.a.createElement(
                               'a',
-                              {
-                                className:
-                                  'jsx-3857553884' + ' ' + 'btn btn-secondary'
-                              },
+                              { className: 'jsx-3857553884 btn btn-secondary' },
                               'Generate password'
                             )
                           ),
                           l.a.createElement(
-                            u.a,
+                            m.a,
                             { href: '/qr-code' },
                             l.a.createElement(
                               'a',
-                              {
-                                className:
-                                  'jsx-3857553884' + ' ' + 'btn btn-secondary'
-                              },
+                              { className: 'jsx-3857553884 btn btn-secondary' },
                               'Generate qr code'
                             )
                           )
@@ -423,12 +414,11 @@ module.exports = __NEXT_REGISTER_PAGE('/usernames', function() {
               }
             }
           ])
-          return a
+          return t
         })(l.a.Component)
-        a['default'] = b
       }
     },
-    [306]
+    [435]
   )
   return { page: e.default }
 })
