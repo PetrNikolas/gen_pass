@@ -14,18 +14,18 @@
 Install it and run:
 
 ```bash
-yarn install
-yarn run serve
+yarn
+yarn serve
 ```
 
 Build:
 
 ```bash
-yarn run build
+yarn build
 ```
 
-Build docs:
+Build doc folder (export):
 
 ```bash
-yarn run build:deploy
+yarn build:deploy
 ```

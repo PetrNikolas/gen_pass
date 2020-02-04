@@ -1,21 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { createComponent } from 'react-fela'
-
-// ------------------------------------------------------------------------------
-// Styles
-// ------------------------------------------------------------------------------
-const Container = createComponent(() => ({
-  maxWidth: 700,
-  marginLeft: 'auto',
-  marginRight: 'auto',
-  lineHeight: 1.5
-}))
-
-// ------------------------------------------------------------------------------
-// Export layout
-// ------------------------------------------------------------------------------
 export default ({ children }) => (
   <div className="root">
     <Head>

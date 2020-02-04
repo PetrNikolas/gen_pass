@@ -1,24 +1,20 @@
-// ------------------------------------------------------------------------------
-// Import libs
-// ------------------------------------------------------------------------------
 import React from 'react'
-import Head from 'next/head'
 import Link from 'next/link'
 
 import { QRCode } from 'react-qr-svg'
-import html2canvas from 'html2canvas'
 
 import Page from './layout'
 
-// ------------------------------------------------------------------------------
-// Export component
-// ------------------------------------------------------------------------------
 export default class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       inputValue: 'Type something'
     }
+  }
+
+  componentDidMount() {
+    this.html2canvas = require('html2canvas')
   }
 
   /** Update value in input */
@@ -33,7 +29,7 @@ export default class extends React.Component {
     if (value) {
       const canvas = document.querySelector('#qr')
 
-      html2canvas(canvas, {
+      this.html2canvas(canvas, {
         scale: 0.52,
         useCORS: true
       })

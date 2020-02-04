@@ -1,15 +1,8 @@
-// ------------------------------------------------------------------------------
-// Import libs
-// ------------------------------------------------------------------------------
 import React from 'react'
-import Head from 'next/head'
 import Link from 'next/link'
 
 import Page from './layout'
 
-// ------------------------------------------------------------------------------
-// Export component
-// ------------------------------------------------------------------------------
 export default class extends React.Component {
   constructor(props) {
     super(props)
