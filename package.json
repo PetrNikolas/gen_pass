@@ -18,7 +18,7 @@
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
-    "fastify": "^2.11.0",
+    "fastify": "^2.15.1",
     "fela": "^11.0.2",
     "fela-dom": "^11.0.2",
     "fela-preset-web": "^11.0.2",
